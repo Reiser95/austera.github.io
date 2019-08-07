@@ -1,0 +1,129 @@
+:root{
+	font-size: 10px;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+	font-weight: 400;
+	color: #fff;
+}
+
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+	color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+	margin: 0;
+}
+
+.container{
+	width: 1430px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+/*---------Header---------*/
+
+.header{
+	height: 100vh;
+	min-height: 700px;
+	background: url(../img/fon.png) center no-repeat;
+	background-size: cover;
+}
+
+.header__menu-bg{
+	padding: 45px 0;
+	background: rgba(0, 0, 0, .7);
+}
+
+.header__inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo{
+	position: relative;
+}
+
+.header__logo-link{
+	font-size: 5rem;
+	font-weight: 900;
+
+	transition: .2s linear;
+}
+
+.header__logo-link:before{
+	content: "";
+	display: block;
+	width: 0;
+	height: 3px;
+	background: #2ebaee;
+
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+
+	transition: .2s linear;
+}
+
+.header__logo-link:hover{
+	color: #2ebaee;
+}
+
+.header__logo-link:hover:before{
+	width: 100%;
+}
+
+.nav{
+	display: flex;
+}
+
+.header__menu-link{
+	font-size: 2rem;
+	margin-left: 30px;
+	outline: none;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	color: inherit;
+	position: relative;
+
+	transition: .2s linear;
+}
+
+.header__menu-link:first-child{
+	margin-left: 0;
+}
+
+.header__menu-link:before{
+	content: "";
+	display: block;
+	width: 0;
+	height: 2px;
+	background: #2ebaee;
+
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+
+	transition: .2s linear;
+}
+
+.header__menu-link:hover{
+	color: #2ebaee;
+}
+
+.header__menu-link:hover:before{
+	width: 100%;
+}
