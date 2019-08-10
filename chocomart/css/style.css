@@ -60,7 +60,15 @@ h1, h2, h3, h4, h5, h6, p{
 	background: #fff;
 	overflow-x: auto;
 	overflow-y: hidden;
+	position: relative;
 	display: none;
+}
+
+.slick__menu-1, .slick__menu-2, .slick__menu-3, .slick__menu-4,
+.slick__menu-5{
+	position: absolute;
+    top: 16px;
+    left: 10px;
 }
 
 .slick__menu-1{
@@ -676,6 +684,11 @@ h1, h2, h3, h4, h5, h6, p{
 	    left: -17px;
 	}
 
+	.carousel-hider {
+	    width: 488px;
+	    margin: 35px auto 0;
+	}
+
 	.icon-shopping-cart{
 		font-size: 22px;
 		top: -6px;
@@ -720,11 +733,6 @@ h1, h2, h3, h4, h5, h6, p{
 
 	.sale {
 	    font-size: 14px;
-	}
-
-	.carousel-hider {
-	    width: 488px;
-	    margin: 35px auto 0;
 	}
 
 	.carousel-arrow-left, .job-arrow-left, .litirature-arrow-left,
@@ -798,6 +806,23 @@ h1, h2, h3, h4, h5, h6, p{
 	    top: -52px;
 	    right: -290px;
 	}
+	
+
+	.carousel-arrow-left:before, .job-arrow-left:before,
+	.litirature-arrow-left:before, .gadjet-arrow-left:before,
+	.food-arrow-left:before, .special-arrow-left:before{
+	    font-size: 40px;
+	    top: 0px;
+	    left: 20px;
+    }
+
+    .carousel-arrow-right:before, .job-arrow-right:before,
+	.litirature-arrow-right:before, .gadjet-arrow-right:before,
+	.food-arrow-right:before, .special-arrow-right:before{
+		font-size: 40px;
+	    top: 0px;
+	    left: 20px;
+	}
 
 	.login__icon {
 	    top: -7px;
@@ -828,13 +853,17 @@ h1, h2, h3, h4, h5, h6, p{
 	.carousel-arrow-left, .job-arrow-left, .litirature-arrow-left,
 	.gadjet-arrow-left, .food-arrow-left, .special-arrow-left{
     	left: 4px;
-    	top: 145px;
+    	top: 140px;
+    	width: 50px;
+    	height: 50px;
 	}
 
 	.carousel-arrow-right, .job-arrow-right, .litirature-arrow-right,
 	.gadjet-arrow-right, .food-arrow-right, .special-arrow-right{
 	    right: 4px;
-	    top: 145px;
+	    top: 140px;
+	    width: 50px;
+    	height: 50px;
 	}
 
 	.header__fon {
@@ -919,6 +948,11 @@ h1, h2, h3, h4, h5, h6, p{
 
 	.name__text{
 		display: none;
+	}
+
+	.carousel-hider {
+	    width: 488px;
+	    margin: 0 auto;
 	}
 
 	.slick__menu-inner-1, .slick__menu-inner-2, .slick__menu-inner-3,
