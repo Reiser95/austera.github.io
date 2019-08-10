@@ -19,8 +19,12 @@ $(document).ready(function() {
     var foodright = $('.food-arrow-right');
     var foodList = $('.food-list');
  
-    var pixelsOffset = 236;
-    var currentLeftValue = 0;
+
+    var currentLeftValue = 0,
+    	jobValue = 0,
+    	litiratureValue = 0,
+    	gadjetValue = 0,
+    	foodValue = 0;
  
     leftUIEl.click(function() {
         currentLeftValue += 236;
@@ -33,43 +37,43 @@ $(document).ready(function() {
     });
 
     jobleft.click(function() {
-        currentLeftValue += 236;
-        jobList.animate({ left : currentLeftValue + "px"}, 500);
+        jobValue += 236;
+        jobList.animate({ left : jobValue + "px"}, 500);
     });
  
     jobright.click(function() {
-        currentLeftValue -= 236;
-        jobList.animate({ left : currentLeftValue + "px"}, 500);
+        jobValue -= 236;
+        jobList.animate({ left : jobValue + "px"}, 500);
     });
 
     litiratureleft.click(function() {
-        currentLeftValue += 236;
-        litiratureList.animate({ left : currentLeftValue + "px"}, 500);
+        litiratureValue += 236;
+        litiratureList.animate({ left : litiratureValue + "px"}, 500);
     });
  
     litiratureright.click(function() {
-        currentLeftValue -= 236;
-        litiratureList.animate({ left : currentLeftValue + "px"}, 500);
+        litiratureValue -= 236;
+        litiratureList.animate({ left : litiratureValue + "px"}, 500);
     });
 
     gadjetleft.click(function() {
-        currentLeftValue += 236;
-        gadjetList.animate({ left : currentLeftValue + "px"}, 500);
+        gadjetValue += 236;
+        gadjetList.animate({ left : gadjetValue + "px"}, 500);
     });
  
     gadjetright.click(function() {
-        currentLeftValue -= 236;
-        gadjetList.animate({ left : currentLeftValue + "px"}, 500);
+        gadjetValue -= 236;
+        gadjetList.animate({ left : gadjetValue + "px"}, 500);
     });
 
     foodleft.click(function() {
-        currentLeftValue += 236;
-        foodList.animate({ left : currentLeftValue + "px"}, 500);
+        foodValue += 236;
+        foodList.animate({ left : foodValue + "px"}, 500);
     });
  
     foodright.click(function() {
-        currentLeftValue -= 236;
-        foodList.animate({ left : currentLeftValue + "px"}, 500);
+        foodValue -= 236;
+        foodList.animate({ left : foodValue + "px"}, 500);
     });
  
 });
