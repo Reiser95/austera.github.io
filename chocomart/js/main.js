@@ -18,6 +18,10 @@ $(document).ready(function() {
     var foodleft = $('.food-arrow-left');
     var foodright = $('.food-arrow-right');
     var foodList = $('.food-list');
+
+    var specialleft = $('.special-arrow-left');
+    var specialright = $('.special-arrow-right');
+    var specialList = $('.special-list');
  
 
     var currentLeftValue = 0,
@@ -25,6 +29,7 @@ $(document).ready(function() {
     	litiratureValue = 0,
     	gadjetValue = 0,
     	foodValue = 0,
+    	specialValue = 0,
     	animate = 400;
  
     leftUIEl.click(function() {
@@ -75,6 +80,16 @@ $(document).ready(function() {
     foodright.click(function() {
         foodValue -= 236;
         foodList.animate({ left : foodValue + "px"}, animate);
+    });
+
+    specialleft.click(function() {
+        specialValue += 236;
+        specialList.animate({ left : specialValue + "px"}, animate);
+    });
+ 
+    specialright.click(function() {
+        specialValue -= 236;
+        specialList.animate({ left : specialValue + "px"}, animate);
     });
  
 });

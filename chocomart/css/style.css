@@ -285,9 +285,13 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .offer__inner{
-	display: flex;
-	justify-content: space-between;
 	margin-top: 30px;
+}
+
+.offer__card{
+	width: 220px;
+	height: 310px;
+	margin-right: 16px;
 }
 
 /*--------Tools--------*/
@@ -310,7 +314,8 @@ h1, h2, h3, h4, h5, h6, p{
     margin-top: 35px;
 }
 
-.carousel-list, .job-list, .litirature-list, .gadjet-list, .food-list{    
+.carousel-list, .job-list, .litirature-list, .gadjet-list, .food-list,
+.special-list{    
     width: 10000px;
     display: flex;
     padding: 0px 16px;
@@ -318,7 +323,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .tools__carousel-item, .job__carousel-item, .litirature__carousel-item,
-.gadjet__carousel-item, .food__carousel-item{
+.gadjet__carousel-item, .food__carousel-item, .special__carousel-item{
 	width: 220px;
 	height: 310px;
 	border-radius: 10px;
@@ -331,7 +336,8 @@ h1, h2, h3, h4, h5, h6, p{
 
 .carousel-arrow-left, .carousel-arrow-right, .job-arrow-left, .job-arrow-right,
 .litirature-arrow-right, .litirature-arrow-left, .gadjet-arrow-right,
-.gadjet-arrow-left, .food-arrow-right, .food-arrow-left{
+.gadjet-arrow-left, .food-arrow-right, .food-arrow-left, .special-arrow-left,
+.special-arrow-right{
     width: 34px;
     height: 34px;
     border-radius: 50%;
@@ -341,20 +347,22 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .carousel-arrow-left, .job-arrow-left, .litirature-arrow-left,
-.gadjet-arrow-left, .food-arrow-left{
+.gadjet-arrow-left, .food-arrow-left, .special-arrow-left{
 	top: 200px;
     left: -35px;
+    box-shadow: 0px 0px 4px #000;
 }
 
 .carousel-arrow-right, .job-arrow-right, .litirature-arrow-right,
-.gadjet-arrow-right, .food-arrow-right{
+.gadjet-arrow-right, .food-arrow-right, .special-arrow-right{
 	top: 200px;
     right: -35px;
+    box-shadow: 0px 0px 4px #000;
 }
 
 .carousel-arrow-left:before, .job-arrow-left:before,
 .litirature-arrow-left:before, .gadjet-arrow-left:before,
-.food-arrow-left:before{
+.food-arrow-left:before, .special-arrow-left:before{
 	content: "\f104";
 	font-family: icomoon;
 	font-size: 30px;
@@ -366,7 +374,7 @@ h1, h2, h3, h4, h5, h6, p{
 
 .carousel-arrow-right:before, .job-arrow-right:before,
 .litirature-arrow-right:before, .gadjet-arrow-right:before,
-.food-arrow-right:before{
+.food-arrow-right:before, .special-arrow-right:before{
 	content: "\f105";
 	font-family: icomoon;
 	font-size: 30px;
@@ -667,24 +675,19 @@ h1, h2, h3, h4, h5, h6, p{
 	    font-size: 14px;
 	}
 
-	.offer__card{
-		width: 140px;
-		height: 220px;
-	}
-
 	.carousel-hider {
 	    width: 488px;
 	    margin: 35px auto 0;
 	}
 
 	.carousel-arrow-left, .job-arrow-left, .litirature-arrow-left,
-	.gadjet-arrow-left, .food-arrow-left {
+	.gadjet-arrow-left, .food-arrow-left, .special-arrow-left{
     	left: 55px;
     	z-index: 5;
 	}
 
 	.carousel-arrow-right, .job-arrow-right, .litirature-arrow-right,
-	.gadjet-arrow-right, .food-arrow-right {
+	.gadjet-arrow-right, .food-arrow-right, .special-arrow-right{
 	    right: 55px;
 	}
 
@@ -758,15 +761,6 @@ h1, h2, h3, h4, h5, h6, p{
     	padding: 40px 0px 55px 0px;
 	}
 
-	.offer__card:nth-child(3), .offer__card:nth-child(4){
-		display: none;
-	}
-
-	.offer__card{
-		width: 180px;
-		height: 300px;	
-	}
-
 	.tools__btns{
 		display: none;
 	}
@@ -777,15 +771,13 @@ h1, h2, h3, h4, h5, h6, p{
 	}
 
 	.carousel-arrow-left, .job-arrow-left, .litirature-arrow-left,
-	.gadjet-arrow-left, .food-arrow-left {
+	.gadjet-arrow-left, .food-arrow-left, .special-arrow-left{
     	left: 4px;
-    	box-shadow: 0px 0px 4px #000;
 	}
 
 	.carousel-arrow-right, .job-arrow-right, .litirature-arrow-right,
-	.gadjet-arrow-right, .food-arrow-right {
+	.gadjet-arrow-right, .food-arrow-right, .special-arrow-right{
 	    right: 4px;
-	    box-shadow: 0px 0px 4px #000;
 	}
 
 	.header__fon {
@@ -874,11 +866,6 @@ h1, h2, h3, h4, h5, h6, p{
 	.search__icon {
 	    top: -42px;
 	    right: -163px;
-	}
-
-	.offer__card {
-	    width: 124px;
-	    height: 195px;
 	}
 
 	.carousel-hider {
