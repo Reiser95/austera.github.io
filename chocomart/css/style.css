@@ -46,11 +46,10 @@ h1, h2, h3, h4, h5, h6, p{
 
 .section__mobile-title{
 	width: 100%;
-	height: 128px;
+	height: 60px;
 	background: #f7f7f7;
 	text-align: center;
 	display: none;
-	padding: 40px 0;
 }
 
 .slick__menu-inner-1, .slick__menu-inner-2, .slick__menu-inner-3,
@@ -131,6 +130,7 @@ h1, h2, h3, h4, h5, h6, p{
 	margin-top: 14px;
 	font-family: OpenSansReg;
 	height: 45px;
+	padding: 0 10px;
 }
 
 .card__value{
@@ -871,6 +871,7 @@ h1, h2, h3, h4, h5, h6, p{
 	}
 
 	.name__text, .name__text-mob{
+		line-height: 60px;
 		font-size: 22px;
 	}
 
