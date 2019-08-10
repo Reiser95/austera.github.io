@@ -98,6 +98,10 @@ h1, h2, h3, h4, h5, h6, p{
 	transition: .3s linear;
 }
 
+.icon-bars{
+	display: none;
+}
+
 .header__phone{
 	margin: 0 0 0 65px;
 	position: relative;
@@ -151,30 +155,25 @@ h1, h2, h3, h4, h5, h6, p{
 	transition: .3s linear;
 }
 
-.cart:before{
-	content: "\f07a";
-	font-family: icomoon;
-	display: block;
+.icon-shopping-cart{
+	font-size: 27px;
 	position: absolute;
-	font-size: 30px;
-	top: -8px;
+	top: -5px;
     left: -40px;
 }
 
-.cart:after{
-	content: "15";
-	display: block;
-	position: absolute;
-	font-size: 10px;
+.cart__suptext{
 	color: #fff;
+	font-size: 10px;
+	line-height: 17px;
+	text-align: center;
 	width: 19px;
 	height: 19px;
-	border-radius: 50%;
 	background: #ff5d5d;
-	text-align: center;
-	line-height: 18px;
-	top: -10px;
+	position: absolute;
+	top: -11px;
     left: -22px;
+	border-radius: 50%;
 }
 
 .login{
@@ -183,15 +182,13 @@ h1, h2, h3, h4, h5, h6, p{
 	transition: .3s linear;
 }
 
-.login:before{
-	content: "";
-	display: block;
+.login__icon{
 	position: absolute;
-	width: 20px;
-	height: 20px;
-	background: url(../img/login.png) center no-repeat;
 	top: -1px;
-    left: -23px;
+	left: -23px;
+	width: 20px;
+	height: 19px;
+	background: url(../img/login.png);
 }
 
 /*---------Search--------*/
@@ -229,6 +226,16 @@ h1, h2, h3, h4, h5, h6, p{
 	position: relative;
 }
 
+.search__icon{
+	width: 24px;
+	height: 24px;
+	background: url(../img/search.png) center no-repeat;
+	position: absolute;
+	cursor: pointer;
+	top: 5px;
+	right: 5px;
+}
+
 .search{
 	width: 480px;
 	height: 36px;
@@ -237,18 +244,6 @@ h1, h2, h3, h4, h5, h6, p{
 	border-radius: 5px;
 	font-size: 14px;
 	outline: none;
-}
-
-.search__inner:after{
-	content: "";
-	display: block;
-	width: 24px;
-	height: 24px;
-	background: url(../img/search.png) center no-repeat;
-	position: absolute;
-	top: 5px;
-	right: 8px;
-	cursor: pointer;
 }
 
 .sale__inner{
@@ -494,6 +489,12 @@ h1, h2, h3, h4, h5, h6, p{
 	display: flex;
 }
 
+.footer__inner-mob{
+	display: flex;
+	flex-direction: column;
+	display: none;
+}
+
 .footer__box{
 	display: flex;
 	flex-direction: column;
@@ -570,4 +571,313 @@ h1, h2, h3, h4, h5, h6, p{
 	color: #888;
 	font-size: 14px;
 	margin-top: 29px;
+}
+
+/*--------Media--------*/
+
+@media (max-width: 992px){
+	.container{
+		width: 720px;
+	}
+
+	.header__fon {
+	    height: 300px;
+	    transition: .3s linear;
+	}
+
+	.header__logo{
+		width: 150px;
+	}
+
+	.header__phone {
+	    font-size: 13px;
+	    margin: 0 0 0 40px;
+	}
+
+	.header__phone-2 {
+	    font-size: 13px;
+	    margin: 0 0 0 40px;
+	}
+
+	.support {
+	    font-size: 14px;
+	    margin-left: 10px;
+	}
+
+	.cart {
+	    font-size: 14px;
+	    margin-left: 55px;
+	}
+
+	.cart__suptext {
+		font-size: 8px;
+	    line-height: 13px;
+	    width: 15px;
+	    height: 15px;
+	    left: -17px;
+	}
+
+	.icon-shopping-cart{
+		font-size: 22px;
+		top: -6px;
+    	left: -29px;
+	}
+
+	.login{
+		margin-left: 34px;
+	}
+
+	.login__text{
+		font-size: 15px;	
+	}
+
+	.katalog__inner {
+	    padding: 1px 33px 1px 43px;
+	}
+
+	.katalog:before {
+	    font-size: 16px;
+	    top: 10px;
+	    left: 13px;
+	}
+
+	.katalog {
+	    font-size: 15px;
+	}
+
+	.search {
+		width: 343px;
+		height: 38px;
+	}
+
+	.sale__inner {
+	    padding: 1px 20px 1px 55px;
+	}
+
+	.sale:before {
+	    top: 5px;
+	    left: -42px;
+	}
+
+	.sale {
+	    font-size: 14px;
+	}
+
+	.offer__card{
+		width: 140px;
+		height: 220px;
+	}
+
+	.carousel-hider {
+	    width: 488px;
+	    margin: 35px auto 0;
+	}
+
+	.carousel-arrow-left, .job-arrow-left, .litirature-arrow-left,
+	.gadjet-arrow-left, .food-arrow-left {
+    	left: 55px;
+    	z-index: 5;
+	}
+
+	.carousel-arrow-right, .job-arrow-right, .litirature-arrow-right,
+	.gadjet-arrow-right, .food-arrow-right {
+	    right: 55px;
+	}
+
+	.button {
+	    font-size: 12px;
+	}
+
+	.tools__button{
+		padding: 12px 20px;
+	}
+
+	.tools__btns {
+	    padding: 0px 98px;
+	}
+
+	.yandex__img{
+		width: 220px;
+	}
+}
+
+@media (max-width: 768px){
+	.container{
+		width: 400px;
+	}
+
+	.header__phone, .header__phone-2, .support, .cart__text, .login__text,
+	.katalog__inner, .sale__inner, .search {
+	    display: none;
+	}
+
+	.header__logo{
+		width: 220px;
+		margin-left: 30px;
+	}
+
+	.icon-bars{
+		display: block;
+		font-size: 30px;
+	}
+
+	.header__fon {
+	    margin-top: 0;
+	}
+
+	.icon-shopping-cart {
+	    font-size: 29px;
+	    top: -15px;
+	    left: 11px;
+	}
+
+	.cart__suptext {
+	    font-size: 11px;
+	    line-height: 17px;
+	    width: 19px;
+	    height: 19px;
+	    left: 26px;
+	    top: -20px;
+	}
+
+	.search__icon {
+	    top: -52px;
+	    right: -290px;
+	}
+
+	.login__icon {
+	    top: -7px;
+	    left: 27px;
+	}
+
+	.offer {
+    	padding: 40px 0px 55px 0px;
+	}
+
+	.offer__card:nth-child(3), .offer__card:nth-child(4){
+		display: none;
+	}
+
+	.offer__card{
+		width: 180px;
+		height: 300px;	
+	}
+
+	.tools__btns{
+		display: none;
+	}
+
+	.time__container{
+		width: 100%;
+		position: relative;
+	}
+
+	.carousel-arrow-left, .job-arrow-left, .litirature-arrow-left,
+	.gadjet-arrow-left, .food-arrow-left {
+    	left: 4px;
+    	box-shadow: 0px 0px 4px #000;
+	}
+
+	.carousel-arrow-right, .job-arrow-right, .litirature-arrow-right,
+	.gadjet-arrow-right, .food-arrow-right {
+	    right: 4px;
+	    box-shadow: 0px 0px 4px #000;
+	}
+
+	.header__fon {
+	    height: 200px;
+	}
+
+	.name__text{
+		font-size: 22px;
+	}
+
+	.footer__inner{
+		display: none;
+	}
+
+	.footer__copiright{
+		display: none;
+	}
+
+	.footer__inner-mob{
+		display: block;
+		color: #444;
+		font-size: 21px;
+		text-align: center;
+	}
+
+	.footer__text-box-mob, .footer__number-mob{
+		margin-top: 30px;
+	}
+
+	.footer__number-mob{
+		font-size: 27px;
+		font-weight: 700;
+	}
+
+	.grey{
+		font-weight: 700;
+	}
+
+	.footer__social-text{
+		font-size: 26px;
+		color: #FF8E81;
+		margin-top: 38px;
+	}
+
+	.footer__social-icon{
+		margin-top: 25px;
+	}
+
+	.icon-mob{
+		font-size: 40px;
+		color: #fff;
+		background: #575555;
+		padding: 5px;
+		border-radius: 5px;
+		margin-right: 10px;
+		transition: .2s linear;
+	}
+
+	.icon-mob:hover{
+		background: #1065c4;
+	}
+
+	.icon-mob-w{
+		padding: 5px 7px;
+	}
+}
+
+@media (max-width: 480px){
+	.container{
+		width: 290px;
+	}
+
+	.header {
+    	padding: 10px 0 0 0;
+	}
+
+	.header__fon {
+    	height: 125px;
+	}
+
+	.header__logo {
+	    width: 115px;
+	    margin-left: 15px;
+	}
+
+	.search__icon {
+	    top: -42px;
+	    right: -163px;
+	}
+
+	.offer__card {
+	    width: 124px;
+	    height: 195px;
+	}
+
+	.carousel-hider {
+	    width: 252px;
+	}
 }
