@@ -573,6 +573,10 @@ h1, h2, h3, h4, h5, h6, p{
 	margin-top: 29px;
 }
 
+.footer__link-underline{
+	text-decoration: underline;
+}
+
 /*--------Media--------*/
 
 @media (max-width: 992px){
@@ -879,5 +883,12 @@ h1, h2, h3, h4, h5, h6, p{
 
 	.carousel-hider {
 	    width: 252px;
+	}
+
+	.footer__inner-mob{
+		display: block;
+		color: #444;
+		font-size: 15px;
+		text-align: center;
 	}
 }
