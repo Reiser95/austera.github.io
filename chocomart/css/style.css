@@ -158,6 +158,22 @@ h1, h2, h3, h4, h5, h6, p{
 	margin-right: 16px;
 }
 
+.offer__card-special{
+	width: 220px;
+	height: 335px;
+	margin-right: 16px;
+}
+
+.special__carousel-item{
+	width: 220px;
+	height: 335px;
+	border-radius: 10px;
+	background: #fff;
+	display: block;
+    margin-right: 16px;
+    text-align: center;
+}
+
 /*--------Tools--------*/
 
 .tools{
@@ -187,7 +203,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .tools__carousel-item, .job__carousel-item, .litirature__carousel-item,
-.gadjet__carousel-item, .food__carousel-item, .special__carousel-item{
+.gadjet__carousel-item, .food__carousel-item{
 	width: 220px;
 	height: 310px;
 	border-radius: 10px;
