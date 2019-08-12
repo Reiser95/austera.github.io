@@ -2,6 +2,8 @@ body{
 	margin: 0;
 	overflow-x: hidden;
 	font-family: sans-serif;
+	background: url(../img/header-fon.jpg) center no-repeat;
+	background-size: cover;
 }
 
 *,
@@ -28,11 +30,6 @@ a{
 }
 
 /*--------Header--------*/
-
-.header{
-	background: url(../img/header-fon.jpg) center no-repeat;
-	background-size: cover;
-}
 
 .header__title{
 	font-weight: 700;
@@ -68,23 +65,25 @@ a{
 	margin-top: 15px;
 }
 
-.header__text{
+/*--------Content--------*/
+
+.content__text{
 	font-size: 20px;
 	color: #e7e7e7;
 	text-transform: uppercase;
 	text-shadow: 0px 0px 5px #000;
 }
 
-.header__date{
+.content__date{
 	margin-top: 40px;
 }
 
-.header__login-box{
+.content__login-box{
 	margin: 40px 0;
 	display: flex;
 }
 
-.header__login-img{
+.content__login-img{
 	display: flex;
 	flex-direction: column;
 }
@@ -99,7 +98,7 @@ a{
 	margin-top: 15px;
 }
 
-.header__img{
+.content__img{
 	width: 260px;
 	height: auto;
 	border: 1px solid #2ebaee;
@@ -137,13 +136,13 @@ a{
 	margin: 10px 0;
 }
 
-.header__desc{
+.content__desc{
 	margin-top: 15px;
 	font-size: 17px;
 	color: #ccc;
 }
 
-.header__desc-text{
+.content__desc-text{
 	margin-top: 25px;
 }
 
@@ -166,6 +165,22 @@ a{
 .from__google{
 	font-weight: 600;
 	margin-left: 20px;
+}
+
+/*--------Footer--------*/
+
+.footer__inner{
+	display: flex;
+	justify-content: space-around;
+}
+
+.footer__link{
+	color: #fa14bd;
+	font-weight: 600;
+}
+
+.footer__copyright{
+	color: gold;
 }
 
 /*--------Media--------*/
@@ -294,5 +309,14 @@ a{
 	    margin-left: 0;
 	    font-size: 12px;
 	    margin-top: 10px;
+	}
+
+	.footer__inner{
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.footer__copyright{
+		margin-top: 15px;
 	}
 }
