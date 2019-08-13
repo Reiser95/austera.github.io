@@ -188,6 +188,10 @@ h1, h2, h3, h4, h5, h6, p{
 
 /*--------Tools carousel--------*/
 
+.special-arrow-right, .special-arrow-left{
+	display: none;
+}
+
 .carousel-hider {
     width: 960px;
     overflow: hidden;
@@ -398,6 +402,11 @@ h1, h2, h3, h4, h5, h6, p{
 	.tools__btns {
 	    padding: 0px 98px;
 	}
+
+	.special-arrow-right, .special-arrow-left{
+		display: block;
+	}
+
 }
 
 @media (max-width: 768px){
