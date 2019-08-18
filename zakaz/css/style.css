@@ -212,7 +212,9 @@ ul{
 	display: flex;
 }
 
-/*--------Home--------*/
+/*==========================================
+====================HOME====================
+===========================================*/
 
 .home{
 	padding: 80px 0 0;
@@ -224,17 +226,17 @@ ul{
 	display: flex;
 	align-items: flex-end;
 }
-.home__suptext{
+.home__suptext, .uslug__suptext{
 	font-size: 1.1rem;
 	color: #262a33;
 	font-family: TtnormBold;
 }
-.home__title{
+.home__title, .uslug__title{
 	font-size: 3.5rem;
 	text-transform: uppercase;
 	margin-top: 15px;
 }
-.home__text{
+.home__text, .uslug__text{
 	width: 250px;
 	font-size: 1.6rem;
 	margin-top: 20px;
@@ -248,7 +250,7 @@ ul{
 	background: rgba(20, 92, 158, .6);
 	box-shadow: 0px 6px 5px 0px rgba(19, 94, 232, 0.75);
 	border-radius: 22px;
-	margin: 0 0 30px 200px;
+	margin: 0 auto 30px;
 }
 .home__button:after{
 	content: "\f105";
@@ -262,7 +264,8 @@ ul{
 	padding-bottom: 60px;
 }
 .uslugi__title, .letter__title, .garant__title,
-.pluses__title, .work__title, .works__title{
+.pluses__title, .work__title, .works__title,
+.contact__title{
 	margin-top: 80px;
 	font-size: 2rem;
 	color: #646464;
@@ -272,7 +275,8 @@ ul{
 }
 .uslugi__title:before, .letter__title:before,
 .garant__title:before, .pluses__title:before,
-.work__title:before, .works__title:before{
+.work__title:before, .works__title:before,
+.contact__title:before{
 	content: "";
 	display: block;
 	width: 110px;
@@ -466,6 +470,16 @@ ul{
 .letter__left, .letter__right{
 	font-size: 2.9rem;
 	color: #fff;
+}
+.letter__left{
+	position: relative;
+	top: -1px;
+	left: -1px;	
+}
+.icon-angle-right.letter__right{
+	position: relative;
+	top: 0px;
+    left: 2px;
 }
 .letter__circle{
 	width: 25px;
@@ -824,17 +838,404 @@ ul{
 	margin-top: 15px;
 }
 
+/*==================================
+===============CONTACT==============
+==================================*/
 
+.contact{
+	padding: 20px 0px 75px;
+}
+.contact__way{
+	color: #262a33;
+	font-size: 1.2rem;
+}
+.contact__inner{
+	display: flex;
+	margin-top: 60px;
+}
+.contact__map{
+	width: 720px;
+	height: auto;
+}
+.contact__address{
+	display: flex;
+	flex-direction: column;
+	margin-left: 30px;
+}
+.address__title, .number__title, .mail__title{
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	color: #313640;
+	font-family: TtnormMedium;
+}
+.number__title, .mail__title{
+	margin-top: 25px;
+}
+.address__text{
+	font-size: 1.3rem;
+	color: #6b6b6c;
+	margin-top: 10px;
+}
+.email__link{
+	display: flex;
+	flex-direction: column;
+	margin-top: 5px;
+}
+.mail__link{
+	color: #006ae5;
+	font-size: 1.3rem;
+	font-family: TtnormMedium;
+	margin-top: 5px;
+}
+.number__text{
+	display: flex;
+	flex-direction: column;
+	margin-top: 5px;
+}
+.contact__number{
+	font-size: 1.4rem;
+	color: #006ae5;
+}
+.number__mode{
+	text-transform: uppercase;
+	color: #6b6b6b;
+	font-size: 1.2rem;
+	margin-top: 5px;
+}
+.contact__form{
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+}
+.email__label, .number__label{
+	font-size: 1.2rem;
+	color: #006ae5;
+	font-family: TtnormMedium;
+}
+.email__input, .number__input{
+	color: #6b6b6c;
+	font-size: 1.3rem;
+	outline: none;
+	border: none;
+	border-bottom: 3px solid #dedeef;
+	margin-top: 10px;
+	padding-bottom: 3px;
+	transition: .3s linear;
+}
+.number__label{
+	margin-top: 15px;
+}
+.email__input:focus, .number__input:focus{
+	border-bottom: 3px solid #006ae5;
+}
+.contact__button{
+	box-shadow: none;
+	margin: 20px 50px 0 0px;
+}
+.who__title{
+	color: #646464;
+	font-size: 2rem;
+	margin-top: 50px;
+}
+.contact__slider{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+	align-items: center;
+}
+.contact__img{
+	width: 220px;
+	height: auto;
+	margin: 0px 5px;
+}
+.contact__arrow{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #006ae5;
+	cursor: pointer;
+	position: relative;
+	top: 0;
+}
+.right-c{
+	left: 20px;
+}
+.left-c{
+	left: -20px;
+}
+.contact__left, .contact__right{
+	font-size: 2rem;
+	color: #fff;
+	position: relative;
+	top: 2px;
+	left: 7px;
+}
+.contact__right{
+	left: 10px;
+}
+.time__title{
+	font-size: 1.7rem;
+	color: #222632;
+	font-family: TtnormMedium;
+	margin-top: 50px;
+}
+.time__text{
+	font-size: 1.5rem;
+	color: #222632;
+	margin-top: 20px;
+}
 
+/*====================================
+==============USLUG===================
+=====================================*/
 
+.uslug{
+	padding: 20px 0px 75px;
+}
+.uslug-bg{
+	display: flex;
+	align-items: flex-end;
+	background: url(../img/uslugi-bg.jpg) center no-repeat;
+	height: 580px; /*УБРАТЬ!*/
+	padding: 230px 0px 45px 50px;
+	margin-bottom: 40px;
+}
+.uslug__button{
+	box-shadow: none;
+	padding: 14px 36px 14px 25px;
+	margin: 0 auto;
+}
+.uslug__button:after{
+	top: 14px;
+}
+.uslug__inner{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.uslug__item{
+	width: 310px;
+	height: 255px;
+	margin: 20px 20px 0 0;
+	border-radius: 12px;
+  	box-shadow: 0px 4px 54px 0px rgba(199, 225, 255, 0.75);
+	padding: 45px 25px 25px 45px;
+	position: relative;
+}
+.uslug__item:after{
+	content: "";
+	width: 8px;
+	height: 100%;
+	background: #006ae5;
+	border-radius: 20px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.item-1{
+	background: url(../img/uslug-item-1.jpg) center no-repeat;
+}
+.item-2{
+	background: url(../img/uslug-item-2.jpg) center no-repeat;
+}
+.item-3{
+	background: url(../img/uslug-item-3.jpg) center no-repeat;
+}
+.item-4{
+	background: url(../img/uslug-item-4.jpg) center no-repeat;
+}
+.item-5{
+	background: url(../img/uslug-item-5.jpg) center no-repeat;
+}
+.item-6{
+	background: url(../img/uslug-item-6.jpg) center no-repeat;
+}
+.item-7{
+	background: url(../img/uslug-item-7.jpg) center no-repeat;
+}
+.item-8{
+	background: url(../img/uslug-item-8.jpg) center no-repeat;
+}
+.item__title{
+	font-size: 2rem;
+	color: #222835;
+	font-family: TtnormBold;
+}
+.item__links{
+	margin-top: 20px;
+}
 
+.item__link{
+	text-decoration: underline;
+	font-size: 1.5rem;
+	color: #222835;
+	margin: 6px 5px 0 0;
+	display: inline-block;
+}
+.uslug__item-button{
+	font-size: 1.8rem;
+	color: #006ae5;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: TtnormBold;
+	border: 1px solid #006ae5;
+	border-radius: 10px;
+	padding: 5px 10px;
+	margin: 50px auto 0;
+}
 
+/*--------Send--------*/
 
+.send{
+	padding: 70px 0;
+	background: #d71732;
+}
+.send__container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 20px;
+}
+.send__inner{
+	text-align: center;
+}
+.send__title{
+	font-size: 3rem;
+	color: #fff;
+}
+.send__text{
+	font-size: 1.3rem;
+	color: #f0dada;
+	margin-top: 10px;
+}
+.send__file{
+	padding: 25px 10px 10px;
+	border: 2px solid #df5467;
+	margin: 30px 15px 0;
+}
+.send__submit{
+	padding: 18px 20px
+}
+.send__format{
+	margin-top: 15px;
+	font-size: 1.3rem;
+	color: #eed1d2;
+	text-align: left;
+	line-height: 20px;
+}
+.send__input{
+	margin-top: 15px;
+}
+.send__inner{
+	margin-top: 5px;
+}
+.send__area{
+	resize: none;
+	border: 1px solid #df5467;
+	border-radius: 12px;
+	outline: none;
+	background: transparent;
+	padding: 5px 15px;
+	color: #eed1d2;
+	font-size: 1.6rem;
+	width: 325px;
+	height: 105px;
+}
+.send__submit-2{
+	margin-top: 20px;
+}
+.inner__flex{
+	width: 35%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.send__check{
+	margin-top: 20px;
+}
+.send__icon{
+	left: -20px;
+}
 
+/*================================
+=============PRICE================
+=================================*/
 
-
-
-
+.price{
+	padding: 20px 0px 70px;
+}
+.price__container{
+	width: 1100px;
+	margin: 0 auto;
+	position: relative;
+}
+.price__inner{
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+	margin-top: 40px;
+}
+.price__text-box{
+	width: 50%;
+}
+.price__title{
+	font-size: 3.5rem;
+	color: #262a33;
+}
+.price__text{
+	margin-top: 20px;
+	color: #262a33;
+	font-size: 1.4rem;
+}
+.grandpa{
+	height: 300px;
+	width: auto;
+}
+.price__btn{
+	display: flex;
+	justify-content: flex-end;
+}
+.price__button{
+	font-size: 2.8rem;
+	font-family: TtnormBold;
+	color: #fff;
+	background: #006ae5;
+	border-radius: 10px;
+	padding: 8px 45px;
+	margin-top: 50px;
+}
+.prices{
+	border: 1px solid #006ae5;
+	margin-top: 30px;
+}
+.punkt{
+	margin-right: 16px;
+	font-size: 1.9rem;
+	font-family: TtnormBold;
+	color: #fff;
+	background: #006ae5;
+	border-radius: 10px;
+}
+.price__par{
+	display: flex;
+	flex-wrap: nowrap;
+	margin-top: 30px;
+}
+.price-1{
+	padding: 8px 20px;
+}
+.price-2{
+	padding: 8px 115px;
+}
+.price-3{
+	padding: 8px 90px;
+}
+.price-4{
+	padding: 8px 50px;
+}
+.price-5{
+	padding: 8px 76px;
+}
 
 
 
