@@ -22,10 +22,34 @@ $(document).ready(function(){
         infinite: true,
         autoplay: true,
   		autoplaySpeed: 6000,
-  		nextArrow: '<div class="footer__arrow--right slider__arrow"><i class="fas fa-chevron-right arrow"></i></div>',
-        prevArrow: '<div class="footer__arrow--left slider__arrow"><i class="fas fa-chevron-left arrow"></i></div>',
+  		nextArrow: '<div class="footer__arrow--right footer__slider--arr"><i class="fas fa-chevron-right arrow"></i></div>',
+        prevArrow: '<div class="footer__arrow--left footer__slider--arr"><i class="fas fa-chevron-left arrow"></i></div>',
         slidesToShow: 5,
-  		slidesToScroll: 1
+  		slidesToScroll: 1,
+  		responsive: [
+  		    {
+  		      breakpoint: 1800,
+  		      settings: {
+  		        slidesToShow: 4,
+  		        slidesToScroll: 1,
+  		        infinite: true,
+  		      }
+  		    },
+  		    {
+  		      breakpoint: 1540,
+  		      settings: {
+  		        slidesToShow: 2,
+  		        slidesToScroll: 1
+  		      }
+  		    },
+  		    {
+  		      breakpoint: 810,
+  		      settings: {
+  		        slidesToShow: 1,
+  		        slidesToScroll: 1
+  		      }
+  		    }
+  		  ]
     });
 
     $(".right__sidebar--inner").slick({
@@ -34,7 +58,7 @@ $(document).ready(function(){
         infinite: true,
         autoplay: true,
   		autoplaySpeed: 6000,
-  		nextArrow: '<div class="right__slider--arrow--up right__arrow"><i class="fas fa-chevron-up right__arrows"></i></div>',
+  		nextArrow: '<div class="right__slider--arrow--up right__arrow"><i class="fas fa-chevron-up right__arrows"></i></div> ',
         prevArrow: '<div class="right__slider--arrow--down right__arrow"><i class="fas fa-chevron-down right__arrows"></i></div>',
         slidesToShow: 4,
   		slidesToScroll: 1
@@ -58,6 +82,26 @@ $(document).ready(function(){
     	var stics = $(this);
     	stics.toggleClass("active__vlo");
     	$(".column__item--vlo--vlo").slideToggle(300).css("display", "flex");
+    });
+
+    var menu = $(".menu__button");
+    menu.on("click", function(){
+    	$(".modal__menu--header").fadeIn(200);
+    });
+
+    var cross = $(".modal__exit");
+    cross.on("click", function(){
+    	$(".modal__menu--header").fadeOut(200);
+    });
+
+    var arr = $(".ar__right");
+    arr.on("click", function(){
+    	$(".left__sidebar").fadeIn(200);
+    });
+
+    var krest = $(".krestik");
+    krest.on("click", function(){
+    	$(".left__sidebar").fadeOut(200);
     });
 
 });
