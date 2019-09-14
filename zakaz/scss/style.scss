@@ -954,6 +954,12 @@ li:hover{
 	.header__slider--right{
 		display: none;
 	}
+	.header__slider--left{
+		display: none;
+	}
+	.news{
+		border-top: 1px solid $sidebar-bg;
+	}
 }
 @media(max-width: 1030px){
 	.header__menu--bottom--inner{
