@@ -774,10 +774,16 @@ li:hover{
 	.footer__menu--item{
 		width: 25%;
 	}
+	.footer__arrow--right {
+	    left: 1445px;
+	}
 }
 @media(max-width: 1800px){
 	.footer__arrow--right {
 	    left: 1325px;
+	}
+	.footer__arrow--right {
+	    left: 1385px;
 	}
 }
 @media(max-width: 1725px){
@@ -808,10 +814,20 @@ li:hover{
 	.footer__arrow--right {
 	    left: 1325px;
 	}
+	.footer__arrow--right {
+	    left: 1260px;
+	}
 }
 @media(max-width: 1700px){
 	.footer__arrow--right {
 	    left: 1245px;
+	}
+	.footer__slider--inner {
+	    max-width: 1100px;
+	    margin: 50px auto;
+	}
+	.footer__arrow--right {
+	    left: 1120px;
 	}
 }
 @media(max-width: 1545px){
