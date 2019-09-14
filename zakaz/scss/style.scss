@@ -258,10 +258,6 @@ li:hover{
 	color: $white-color;
 	font-size: 1.5rem;
 }
-.slider__right--img{
-	position: relative;
-	top: -307px;
-}
 .slider__right{
 	width: 100%;
 	height: 100%;
@@ -549,7 +545,7 @@ li:hover{
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	z-index: 99999;
+	z-index: 1001;
 	opacity: .9;
 	background: $blue-color;
 	padding: 60px 50px;
@@ -840,7 +836,7 @@ li:hover{
 	}
 	.left__sidebar{
 		position: absolute;
-		z-index: 9999999;
+		z-index: 100;
 		background: $white-color;
 	}
 	.button__bottom--inner{
@@ -955,6 +951,9 @@ li:hover{
 		width: 100%;
 		margin: 30px 0 0 0;
 	}
+	.header__slider--right{
+		display: none;
+	}
 }
 @media(max-width: 1030px){
 	.header__menu--bottom--inner{
@@ -1044,6 +1043,15 @@ li:hover{
 	.footer__arrow--left{
 		left: -40px;
 	}
+	.news{
+		padding: 0;
+	}
+	.modal__menu--header{
+		padding: 10px 0;
+	}
+	.modal__link{
+		font-size: 1.2rem;
+	}
 }
 @media(max-width: 360px){
 	.footer__arrow--right {
@@ -1051,5 +1059,33 @@ li:hover{
 	}
 	.header__title{
 		font-size: 1rem;
+	}
+	.news__block--img{
+		width: 280px;
+	}
+	.news__small--block:hover .news__mask{
+		width: 280px;
+		height: 200px;
+	}
+	.footer__slider{
+		padding: 50px 0;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+	.footer__slider--inner{
+		max-width: 260px;
+		position: relative;
+	}
+	.footer__arrow--left{
+		position: absolute;
+		top: 50%;
+		left: 0px;
+	}
+	.footer__arrow--right{
+		position: absolute;
+		top: 50%;
+		right: 0px;
 	}
 }
