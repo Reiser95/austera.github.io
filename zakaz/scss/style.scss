@@ -503,6 +503,9 @@ li:hover{
 .big__img{
 	max-width: 720px;
 }
+.news__block--img.big__img{
+	width: 720px;
+}
 .mr--img{
 	margin-right: 35px;
 }
@@ -621,7 +624,7 @@ li:hover{
 }
 .priem__title{
 	color: $blue-color;
-	font-size: 2.5rem;
+	font-size: $contact-fz;
 	margin-top: 25px;
 	font-family: $semibold;
 }
@@ -644,6 +647,119 @@ li:hover{
 	font-family: $semibold;
 	margin-top: 25px;
 }
+
+/* Chavo */
+
+.chavo{
+	padding: 0 50px
+}
+.chavo__in{
+	padding-bottom: 35px;
+	border-bottom: 1px solid $sidebar-bg;
+}
+.chavo__inner{
+	cursor: pointer;
+	background: $white-color;
+	box-shadow: 0px 0px 30px 0px rgba(3, 3, 57, 0.2);
+	padding: 10px 20px;
+	width: 100%;
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.chavo__inner.active{
+	background: $blue-color;
+}
+.chavo__inner.active .chavo__inner--text{
+	color: $white-color;
+}
+.chavo__inner.active .circle__minus{
+	display: flex;
+}
+.chavo__inner.active .circle__plus{
+	display: none;
+}
+.chavo__inner--text{
+	color: $lightblue-color;
+	font-family: $bold;
+	font-size: $button-fz;
+}
+.circle__plus, .circle__minus{
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	background: $blue-color;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.white__minus, .white__plus{
+	color: $white-color;
+}
+.circle__minus{
+	display: none;
+}
+.chavo__inner.active .chavo__subinner{
+	display: inline-block;
+}
+.chavo__subinner{
+	display: none;
+	padding: 15px;
+	background: $sidebar-bg;
+}
+.chavo__subinner--text{
+	color: $lightblue-color;
+	font-size: $button-fz;
+	font-family: $semibold;
+}
+
+/* Otzivi */
+
+.otzivi{
+	padding: 0px 50px;
+}
+.otzivi__text{
+	font-size: $button-fz;
+	color: $lightblue-color;
+	font-family: $semibold;
+	margin-top: 25px;
+}
+.otzivi__inner{
+	padding: 25px;
+	box-shadow: 0px 0px 30px 0px rgba(3, 3, 57, 0.2);
+	margin-top: 35px;
+}
+.otzivi__inner--title{
+	font-size: $contact-fz;
+	color: $blue-color;
+	font-family: $semibold;
+	padding-bottom: 25px;
+	border-bottom: 1px solid $sidebar-bg;
+}
+.author__inner{
+	display: flex;
+	align-items: center;
+	padding: 25px 0;
+	border-bottom: 1px solid $sidebar-bg;
+}
+.author, .author__date{
+	margin-right: 25px;
+	font-size: $button-fz;
+	color: $lightblue-color;
+	font-family: $semibold;
+}
+.author__date{
+	opacity: .5;
+}
+
+
+
+
+
+
+
 
 /* Right sidebar */
 
@@ -738,16 +854,39 @@ li:hover{
 	color: $white-color;
 	cursor: pointer;
 }
-.fas.ar__right{
+.fas.menu__modal{
 	cursor: pointer;
-	font-size: 2.5rem;
+	font-size: $contact-fz;
 	position: absolute;
-	top: 50px;
-	left: 50px;
 	display: none;
+}
+.ar__right{
+	font-size: 2rem;
+	display: inline-block;
+	cursor: pointer;
+}
+.krestt__text{
+	display: inline-block;
 }
 .fas.krestik{
 	display: none;
+}
+.height{
+	height: 0;
+}
+.krestt__text{
+	font-size: $button-fz;
+	color: $lightblue-color;
+	font-family: $bold;
+	cursor: pointer;
+	margin-right: 10px;
+}
+.menu__modal{
+	display: none;
+	align-items: center;
+	position: absolute;
+	top: 10px;
+	left: 10px;
 }
 
 
@@ -940,6 +1079,9 @@ li:hover{
 	.footer__arrow--right {
 	    left: 1445px;
 	}
+	.news__block--img .big__img{
+		width: 720px;
+	}
 }
 @media(max-width: 1800px){
 	.footer__arrow--right {
@@ -1021,7 +1163,7 @@ li:hover{
 	.button__bottom--inner{
 		margin-left: 0;
 	}
-	.fas.ar__right{
+	.fas.menu__modal{
 		display: inline-block;
 	}
 	.fas.krestik{
@@ -1033,6 +1175,9 @@ li:hover{
 	.footer__slider--inner{
 		max-width: 600px;
 		margin: 50px auto;
+	}
+	.menu__modal{
+		display: flex;
 	}
 }
 @media(max-width: 1385px){
@@ -1141,7 +1286,7 @@ li:hover{
 		flex-wrap: wrap;
 	}
 	.phone, .hours, .email, .address, .boss, .graphic{
-		width: 100%;
+		width: 50%;
 		margin: 30px 0 0 0;
 	}
 	.header__slider--right{
@@ -1152,6 +1297,13 @@ li:hover{
 	}
 	.news{
 		border-top: 1px solid $sidebar-bg;
+	}
+	.news__block--img{
+		width: 720px;
+	}
+	.news__small--block:hover .news__mask{
+		width: 720px;
+		height: 510px;
 	}
 }
 @media(max-width: 1030px){
@@ -1208,6 +1360,19 @@ li:hover{
 	.footer__arrow--left{
 		left: -63px;
 	}
+	.otzivi{
+		padding: 0px 10px;
+	}
+	.otzivi__text{
+		font-size: 1.2rem;
+	}
+	.otzivi__inner--title{
+		font-size: 2rem;
+	}
+	.author, .author__date{
+		margin-right: 15px;
+		font-size: 1.2rem;
+	}
 }
 @media(max-width: 778px){
 	.news__big--block{
@@ -1225,18 +1390,41 @@ li:hover{
 	.priem__inner--text, .punkt__text, .punkt{
 		font-size: 1.2rem;
 	}
+	.chavo__subinner--text{
+		font-size: 1.3rem;
+	}
+	.chavo__inner--text{
+		font-size: 1.3rem;
+	}
+	.news__block--img{
+		width: 480px;
+	}
+	.news__small--block:hover .news__mask{
+		width: 480px;
+		height: 340px;
+	}
 }
 @media(max-width: 575px){
 	.priem__img{
 		width: 300px;
 		height: 250px;
 	}
+	.phone, .hours, .email, .address, .boss, .graphic{
+		width: 100%;
+	}
+	.news__block--img{
+		width: 360px;
+	}
+	.news__small--block:hover .news__mask{
+		width: 360px;
+		height: 255px;
+	}
 }
 @media(max-width: 450px){
 	.header__title{
 		font-size: 1.2rem;
 	}
-	.fas.ar__right{
+	.fas.menu__modal{
 		top: 42px;
 		left: 25px;
 	}
@@ -1259,9 +1447,6 @@ li:hover{
 	}
 	.footer__arrow--left{
 		left: -40px;
-	}
-	.news{
-		padding: 0;
 	}
 	.modal__menu--header{
 		padding: 10px 0;
