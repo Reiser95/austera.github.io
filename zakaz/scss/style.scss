@@ -554,6 +554,8 @@ li:hover{
 .news__actual--box{
 	display: flex;
 	margin-top: 35px;
+	width: 100%;
+	justify-content: space-between;
 }
 .button__bottom--inner{
 	display: flex;
@@ -647,6 +649,21 @@ li:hover{
 	font-family: $semibold;
 	margin-top: 25px;
 }
+.subblock__text, .subblock__date{
+	font-size: $subtext;
+	color: $lightblue-color;
+	font-family: $semibold;
+	margin-top: 20px;
+	width: 300px;
+}
+
+/* Fotogallery */
+
+.fotogallery{
+	padding: 0 50px;
+	width: 100%;
+} 
+
 
 /* Chavo */
 
@@ -713,6 +730,47 @@ li:hover{
 	color: $lightblue-color;
 	font-size: $button-fz;
 	font-family: $semibold;
+}
+
+/* Document */
+
+.document{
+	padding: 0 50px;
+}
+.fa-long-arrow-alt-down{
+	position: relative;
+	top: 2px;
+	left: 10px;
+}
+.document__text{
+	font-size: $button-fz;
+	font-family: $semibold;
+	color: $lightblue-color;
+	padding-bottom: 35px;
+}
+.document__box{
+	height: 268px;
+}
+.img__format{
+	margin-right: 10px;
+}
+.format__text, .format__weight{
+	font-size: 1.25rem;
+	color: $lightblue-color;
+	font-family: $semibold;
+}
+.format__weight{
+	margin-top: 20px;
+	opacity: .5;
+}
+.format__document{
+	display: flex;
+	align-items: center;
+}
+.format__text--inner{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 /* Otzivi */
@@ -995,7 +1053,6 @@ li:hover{
 	width: 28%;
 }
 .footer__menu{
-	margin-top: 50px;
 	padding: 50px 170px 35px 170px;
 	background: $lightblue-color;
 }
@@ -1305,8 +1362,13 @@ li:hover{
 		width: 720px;
 		height: 510px;
 	}
+	.news__small--in{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 }
-@media(max-width: 1030px){
+@media(max-width: 1020px){
 	.header__menu--bottom--inner{
 		width: 95%;
 	}
@@ -1318,6 +1380,10 @@ li:hover{
 	}
 	.footer__slider{
 		padding: 50px;
+	}
+	.document__box{
+		height: auto;
+		min-height: 268px;
 	}
 }
 @media(max-width: 810px){
@@ -1403,6 +1469,12 @@ li:hover{
 		width: 480px;
 		height: 340px;
 	}
+	.subblock__text, .subblock__date{
+		font-size: 1.2rem;
+	}
+	.fotogallery{
+		padding: 0 10px;
+	} 
 }
 @media(max-width: 575px){
 	.priem__img{
@@ -1418,6 +1490,20 @@ li:hover{
 	.news__small--block:hover .news__mask{
 		width: 360px;
 		height: 255px;
+	}
+	.oprosi__button{
+		font-size: 1rem;
+	}
+	.document__text{
+		font-size: 1.2rem;
+	}
+	.fa-long-arrow-alt-down{
+		position: relative;
+		top: 1px;
+		left: 2px;
+	}
+	.document{
+		padding: 0px 10px;
 	}
 }
 @media(max-width: 450px){
@@ -1453,6 +1539,12 @@ li:hover{
 	}
 	.modal__link{
 		font-size: 1.2rem;
+	}
+	.oprosidate{
+		flex-direction: column;
+	}
+	.oprosi__button{
+		margin-top: 10px;
 	}
 }
 @media(max-width: 360px){
