@@ -64,6 +64,19 @@ $(document).ready(function(){
   		slidesToScroll: 1
     });
 
+    $('.gallery__slick').slick({
+      infinite: true,
+      speed: 500,
+      fade: true,
+      slidesToShow: 1,
+  	  slidesToScroll: 1,
+  	  css: "linear",
+  	  nextArrow: '<div class="gallery__arrow gal--r"><i class="fas fa-chevron-right gallery__ar"></i></div>',
+  	  prevArrow: '<div class="gallery__arrow gal--l"><i class="fas fa-chevron-left gallery__ar"></i></div>'
+    });
+
+
+
     $('.footer__button').on('click', function(e){
       $('html,body').stop().animate({ scrollTop: $('#home').offset().top }, 500);
       e.preventDefault();
@@ -111,6 +124,15 @@ $(document).ready(function(){
     var krest = $(".krestik");
     krest.on("click", function(){
     	$(".left__sidebar").fadeOut(200);
+    });
+
+    var krestt = $(".modal__fotogallery--krest");
+    var gallery = $(".button__gallery");
+    gallery.on("click", function(){
+    	$(".modal__fotogallery").fadeIn(300);
+    });
+    krestt.on("click", function(){
+    	$(".modal__fotogallery").fadeOut(300);
     });
 
 });
