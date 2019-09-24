@@ -107,6 +107,9 @@ a{
 /* Header */
 
 .header{
+	position: fixed;
+    width: 100%;
+    z-index: 100;
 	background: $white;
 	padding: 15px 0;
 }
@@ -1011,6 +1014,9 @@ a{
 	}
 	.sale__img{
 		width: 300px;
+	}
+	.checkbox__text{
+		font-size: 2.2rem;
 	}
 }
 
