@@ -947,11 +947,22 @@ a{
 	.title__title{
 		text-shadow: 0 0 5px $black;
 	}
+	.pay__img{
+		width: 90px;
+	}
+	.pay{
+		display: flex;
+		align-items: center;
+		margin-right: 10px;
+	}
 }
 
 @media(max-width: 768px){
 	.container{
 		width: 460px;
+	}
+	.pay__logo{
+		flex-direction: column;
 	}
 	.title__title{
 		font-size: 1.8rem;
@@ -981,12 +992,6 @@ a{
 	}
 	.cards__item{
 		width: 85%;
-	}
-	.pay__logo{
-		display: none;
-	}
-	.pay__text{
-		width: 100%;
 	}
 	.free__block{
 		flex-direction: column;
@@ -1024,10 +1029,17 @@ a{
 	.container{
 		width: 300px;
 	}
+	.pay__logo{
+		margin-right: 5px;
+	}
 	.header__register{
 		font-size: 1.1em;
 		padding: 6px 13px;
 		display: flex;
+	}
+	.pay__inner{
+		margin: 100px 0px 0px 0px;
+		width: 100%;
 	}
 	.header__logo{
 		width: 100px;
