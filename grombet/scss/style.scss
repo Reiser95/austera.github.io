@@ -235,6 +235,10 @@ a{
 	color: $white;
 }
 
+.modal__menu--item.profile__item{
+	display: none;
+}
+
 /* Forecast */
 
 .forecast{
@@ -978,6 +982,9 @@ a{
 	.logo{
 		width: 160px;
 	}
+	.header__logo{
+		width: 160px;
+	}
 	.profile__name{
 		font-size: 2rem;
 		padding: 5px 20px;
@@ -991,7 +998,6 @@ a{
 	.container{
 		width: 748px;
 	}
-
 	.title__title{
 		font-size: 2.5rem;
 	}
@@ -1055,28 +1061,21 @@ a{
 		align-items: center;
 		margin-right: 10px;
 	}
-	.profile__img{
-		width: 55px;
-	}
-	.menu__icon{
-		height: 40px;
-		width: 40px;
-	}
-	.logo{
-		width: 160px;
-	}
-	.profile__name{
-		font-size: 2rem;
-		padding: 5px 20px;
-	}
-	.profile__console{
-		font-size: 1.5rem;
-	}
 }
 
 @media(max-width: 768px){
 	.container{
 		width: 460px;
+	}
+	.modal__menu--item.profile__item{
+		display: block;
+	}
+	.header__profile{
+		display: none;
+	}
+	.modal__menu{
+		width: 100%;
+		min-height: 100vh;
 	}
 	.pay__logo{
 		flex-direction: column;
@@ -1140,6 +1139,10 @@ a{
 	.checkbox__text{
 		font-size: 2.2rem;
 	}
+	.modal__menu--item{
+		padding: 10px 35px;
+		font-size: 1.5rem;
+	}
 }
 
 @media(max-width: 480px){
@@ -1157,9 +1160,6 @@ a{
 	.pay__inner{
 		margin: 100px 0px 0px 0px;
 		width: 100%;
-	}
-	.header__logo{
-		width: 100px;
 	}
 	.login{
 		display: none;
