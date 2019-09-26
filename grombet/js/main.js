@@ -9,7 +9,7 @@ $(document).ready(function(){
 	var checkbox = $(".checkbox");
 
 	var modalIconOff = $(".modal__menu--iconin");
-	var modalIconOn = $(".header__menu");
+	var modalIconOn = $(".menu__icon");
 	var modalMenu = $(".modal__menu");
 
 	checkbox.on("click", function(){
