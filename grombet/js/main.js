@@ -8,6 +8,10 @@ $(document).ready(function(){
 
 	var checkbox = $(".checkbox");
 
+	var modalIconOff = $(".modal__menu--iconin");
+	var modalIconOn = $(".header__menu");
+	var modalMenu = $(".modal__menu");
+
 	checkbox.on("click", function(){
 		money.toggleClass("checkbox__grey");
 		money.toggleClass("checkbox__red");
@@ -20,6 +24,14 @@ $(document).ready(function(){
 		iconFree.toggleClass("icon--black");
 
 		checkbox.toggleClass("money__checkbox");
+	});
+
+	modalIconOff.on("click", function(){
+		modalMenu.removeClass("menu__none");
+	});
+
+	modalIconOn.on("click", function(){
+		modalMenu.addClass("menu__none");
 	});
 
 });

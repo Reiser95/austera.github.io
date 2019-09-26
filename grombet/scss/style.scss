@@ -114,48 +114,65 @@ a{
 	padding: 15px 0;
 }
 
-.header__menu--inner{
+.header__inner{
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
+	align-items: center;
 }
 
-.header__menu--link{
-	color: $black;
-	font-size: $menu-fz;
-	font-family: $medium;
-	margin-right: 60px;
-}
-
-.header__menu--link:last-child{
-	margin-right: 0;
-}
-
-.login{
+.profile__logo{
 	display: flex;
 	align-items: center;
 }
 
-.header__enter{
-	font-size: 1.2rem;
-	color: $black;
-	margin-right: 15px;
-	font-family: $bold;
+.header__profile{
+	display: flex;
+	align-items: center;
 }
 
-.header__register{
-	padding: 8px 17px;
-	font-size: 1.2rem;
-	background: $red;
+.profile__user{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-right: 20px;
+}
+
+.profile__arrow{
+	cursor: pointer;
+	font-size: 1.5rem;
+	color: grey;
+	margin-left: 10px;
+}
+
+.profile__name{
+	font-family: $bold;
+	font-size: 3rem;
 	color: $white;
-	border-radius: 15px;
-	font-family: $bold;
-	transition: .2s linear;
+	padding: 3px 40px;
+	background: $red;
+	border-radius: 25px;
 }
 
-.header__register:hover{
-	background: darken($red, 5);
+.profile__console{
+	margin-top: 10px;
+	font-size: 2rem;
+	font-family: $bold;
+	color: rgba(0, 0, 0, .86);
 }
+
+.menu__icon{
+	fill: $black;
+	height: 60px;
+	width: 60px;
+	cursor: pointer;
+	transition: .3s linear;
+}
+
+.menu__icon:hover{
+	fill: $red;
+}
+
 
 /* Title */
 
@@ -803,10 +820,6 @@ a{
 	padding: 6px 20px;
 }
 
-.menu__icon{
-	display: none;
-}
-
 .menu__icons{
 	font-size: 2rem;
 	transition: .3s linear;
@@ -826,6 +839,76 @@ a{
 	display: none;
 }
 
+
+/* Modal */
+
+.modal__menu{
+	background: $white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 430px;
+	z-index: 1000;
+	border-radius: 0 10px 10px 0;
+	padding-bottom: 150px;
+	transform: translateX(-100%);
+	transition: .3s linear;
+}
+
+.menu__none{
+	transform: translateX(0%);
+}
+
+.modal__menu--iconin{
+	padding: 20px 35px;
+}
+
+.modal__menu--item{
+	display: flex;
+	align-items: center;
+	border-top: 3px solid #ebebeb;
+	padding: 30px 35px;
+	color: #464646;
+	font-size: 2.5rem;
+	cursor: pointer;
+	text-transform: lowercase;
+	transition: .2s linear;
+}
+
+.modal__menu--item:hover{
+	background: $red;
+	color: $white;
+}
+
+.modal__menu--item:hover .modal__menu--icon{
+	fill: $white;
+}
+
+.modal__menu--icon{
+	width: 35px;
+	height: 35px;
+	fill: $black;
+	margin-right: 20px;
+	transition: .2s linear;
+}
+
+.after__item:after{
+	content: "1";
+	display: block;
+	width: 17px;
+	height: 17px;
+	background: #4895fa;
+	border-radius: 50%;
+	font-family: $medium;
+	font-size: 1rem;
+	color: $white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	right: -5px;
+	top: -5px;
+}
 
 
 
@@ -883,6 +966,23 @@ a{
 		display: none;
 		font-family: $bold;
 		color: $black;
+		font-size: 1.5rem;
+	}
+	.profile__img{
+		width: 65px;
+	}
+	.menu__icon{
+		height: 45px;
+		width: 45px;
+	}
+	.logo{
+		width: 160px;
+	}
+	.profile__name{
+		font-size: 2rem;
+		padding: 5px 20px;
+	}
+	.profile__console{
 		font-size: 1.5rem;
 	}
 }
@@ -954,6 +1054,23 @@ a{
 		display: flex;
 		align-items: center;
 		margin-right: 10px;
+	}
+	.profile__img{
+		width: 55px;
+	}
+	.menu__icon{
+		height: 40px;
+		width: 40px;
+	}
+	.logo{
+		width: 160px;
+	}
+	.profile__name{
+		font-size: 2rem;
+		padding: 5px 20px;
+	}
+	.profile__console{
+		font-size: 1.5rem;
 	}
 }
 
