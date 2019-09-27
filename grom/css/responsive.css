@@ -1,12 +1,16 @@
 @media (max-width: 1080px) {
-    body {
-        overflow-x: hidden;
+    .flex__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .container {
-        width: 96%;
+        width: 100%;
+        padding: 0px 10px;
     }
     .game .game-content {
-        width: 95%;
+        width: 100%;
     }
     .main .title-container div {
         font-size: 25px;
@@ -31,9 +35,34 @@
         padding: 1% 6%;
     }
 }
+@media(max-width: 1020px){
+    .tabs-content .bookmakers-appraisal{
+        padding: 0;
+    }
+    .content__flex{
+        flex-direction: column;
+    }
+    .tabs-content .row .company, 
+    .tabs-content .row .logo, 
+    .tabs-content .row .appraisal, 
+    .tabs-content .row .bonus, 
+    .tabs-content .row .bookmakers-appraisal{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .tabs-content .title-table{
+        display: none;
+    }
+}
 @media (max-width: 992px) {
     .main .title-container div {
         font-size: 23px;
+    }
+    .forecast__box{
+        display: none;
+    }
+    .forecast__mobile--inner{
+        display: flex;
     }
     .main .title-name {
         width: 23%;
@@ -45,6 +74,35 @@
     .prediction-buy .prediction-buy-content .prediction-btn {
         padding: 1% 5%;
         margin-right: -8%;
+    }
+}
+@media(max-width: 910px){
+    .team__img{
+        width: 95px;
+    }
+    .game .team-2{
+        margin-left: 25px;
+    }
+    .game .team-1{
+        margin-right: 25px;
+    }
+}
+@media(max-width: 810px){
+    .game .team-2{
+        margin-left: 0;
+        width: 50%;
+        order: 2;
+    }
+    .game .team-1{
+        margin-right: 0;
+        width: 50%;
+        order: 1;
+    }
+    .game-content{
+        flex-wrap: wrap;
+    }
+    .game-info{
+        order: 3;
     }
 }
 @media (max-width: 800px) {
@@ -67,14 +125,14 @@
         text-align: center;
         margin: 0 auto;
     }
-    .game .game-content .game-info .game-start-time > div {
-        width: 8%;
-    }
     .game .game-info {
         text-align: center;
         padding-top: 16px;
-        width: 50%;
+        width: 100%;
         margin-bottom: 1%;
+    }
+    .header1{
+        display: none;
     }
     .game .game-content {
         justify-content: space-between;
@@ -137,7 +195,7 @@
         overflow-x: auto;
     }
     body > .tabs-content .container > div {
-        width: 960px;
+        width: 100%;
     }    
 }
 @media (max-width: 640px) {
@@ -205,16 +263,13 @@
     .tabs-titles .tab-title.popular-bookmakers span::before {
         background-size: 86%;
     }
+    .tabs-content .tab-content.description{
+        font-size: 15px;
+    }
 }
 @media (max-width: 568px) {
     .breadcrumbs .breadcrumbs-container a, .breadcrumbs .breadcrumbs-container span {
         font-size: 14px;
-    }
-    .game .game-info .game-start-time div {
-        width: 25px;
-        height: 36px;
-        margin-right: 5px;
-        padding: 6px;
     }
     .game .game-content .game-info .game-start-title {
         margin-left: 6%;
@@ -231,6 +286,12 @@
     .tabs-titles .tab-title span {
         padding-left: 20%;
     }
+    .soon-wrapper[data-visual]>.soon-group>.soon-group-inner, .soon[data-visual]>.soon-group>.soon-group-inner{
+        font-size: 1.2rem;
+    }
+    .fullstats__button{
+        padding: 12px 40px;
+    }
 }
 @media (max-width: 480px) {
     .breadcrumbs-container span {
@@ -242,21 +303,11 @@
     .main .title-description {
         margin: 0 9%;
     }
-    .game .game-content {
-        display: block;
-    }
-    .game .team-1 {
-        width: 100%;
-    }
-    .game .team-2 {
-        width: 100%;
-    }
     .game .game-info {
         width: 100%;
     }
     .game .game-info .game-start {
-        padding: 3%;
-        width: 87%;
+        width: 100%;
         margin: 0 auto;
     }
     .game .game-content .game-info .game-start-title {
@@ -278,10 +329,6 @@
     }
     .tabs-titles .tab-title span {
         margin-left: -14%;
-    }
-    .tabs-titles .tab-title.description {
-        font-size: 13px;
-        width: 56%;
     }
     .tabs-titles .tab-title.description span::before {
         background-size: 72%;
@@ -326,12 +373,6 @@
     }
     .tabs-titles .container {
         display: block;
-    }
-    .tabs-titles .tab-title {
-        width: 100%;
-    }
-    .tabs-titles .tab-title.description {
-        width: 100%;
     }
 }
 @media (max-width: 375px) {
