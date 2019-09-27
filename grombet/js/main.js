@@ -12,6 +12,9 @@ $(document).ready(function(){
 	var modalIconOn = $(".menu__icon");
 	var modalMenu = $(".modal__menu");
 
+	var moneyInner = $(".inner__money");
+	var freeInner = $(".inner__free");
+
 	checkbox.on("click", function(){
 		money.toggleClass("checkbox__grey");
 		money.toggleClass("checkbox__red");
@@ -24,6 +27,9 @@ $(document).ready(function(){
 		iconFree.toggleClass("icon--black");
 
 		checkbox.toggleClass("money__checkbox");
+
+		moneyInner.toggleClass("money__inner");
+		freeInner.toggleClass("free__inner");
 	});
 
 	modalIconOff.on("click", function(){
@@ -34,4 +40,40 @@ $(document).ready(function(){
 		modalMenu.addClass("menu__none");
 	});
 
+
+	$('.count1').spincrement({
+		from: 100000,
+		to: 1000000,
+		decimalPlaces: 0,
+		decimalPoint: '1000',
+		thousandSeparator: ',',
+		duration: 1000, // ms; TOTAL length animation
+		leeway: 50, // percent of duraion
+		easing: 'spincrementEasing',
+		fade: true
+	});
+
+	$('.count2').spincrement({
+		from: 13000000,
+		to: 13514000,
+		decimalPlaces: 0,
+		decimalPoint: '1000',
+		thousandSeparator: ',',
+		duration: 1000, // ms; TOTAL length animation
+		leeway: 50, // percent of duraion
+		easing: 'spincrementEasing',
+		fade: true
+	});
+
+	$('.count3').spincrement({
+		from: 12000000,
+		to: 12514000,
+		decimalPlaces: 0,
+		decimalPoint: '1000',
+		thousandSeparator: ',',
+		duration: 1000, // ms; TOTAL length animation
+		leeway: 50, // percent of duraion
+		easing: 'spincrementEasing',
+		fade: true
+	});
 });
