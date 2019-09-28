@@ -1552,6 +1552,118 @@ a{
 	transform: translateY(-50%);
 }
 
+/* Forecast-2 */
+
+.forecast-2{
+	padding: 80px 0px 350px 0;
+	background: url("../img/forecast-bg-2.jpg") center no-repeat;
+	background-size: cover; 
+} 
+
+.semi{
+	font-family: $semibold;
+}
+
+.last__forecast{
+	height: 38px;
+	background: #5c647c;
+	border-radius: 0 0 25px 25px;
+}
+
+.date__inner{
+	background: #5c647c;
+	padding: 9px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.free__money--inner{
+	padding: 20px 0;
+	background: $white;
+	border-radius: 25px 25px 0 0;
+}
+
+.checkbox__inner-2{
+	margin-top: 0;
+}
+
+.date__text{
+	color: $white;
+	font-size: 1.6rem;
+	font-family: $semibold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.upload, .kalendar{
+	width: 20px;
+	height: 20px;
+	fill: $white;
+}
+
+.upload{
+	margin-left: 15px;
+}
+
+.kalendar{
+	margin-right: 15px;
+}
+
+.button__status{
+	text-align: center;
+	padding: 20px;
+	color: $white;
+	font-family: $semibold;
+	font-size: 1.5rem;
+	border-radius: 30px 15px;
+	min-width: 130px;
+	display: inline-block;
+}
+
+.cross{
+	font-size: 2rem;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
+.button__succes{
+	background: #9cd0a7;
+}
+
+.button__succes:hover{
+	background: darken(#9cd0a7, 10);
+}
+
+.button__return{
+	background: #4895fa;
+}
+
+.button__return:hover{
+	background: darken(#4895fa, 10);
+}
+
+.next__month{
+	background: transparent;
+	border: 2px solid #babcc1;
+	border-radius: 5px;
+	padding: 7px 10px;
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
+}
+
+.next__month--text{
+	color: #babcc1;
+	font-size: 1.7rem;
+	font-family: $semibold;
+	display: flex;
+	align-items: center;
+}
+
 /* Media */ 
 
 @media(max-width: 1700px){
@@ -1669,6 +1781,12 @@ a{
 	}
 	.container__full{
 		width: 748px;
+	}
+	.last__forecast{
+		display: none;
+	}
+	.date__inner{
+		border-radius: 0 0 25px 25px;
 	}
 	.chart__analitics{
 		margin-top: 30px;

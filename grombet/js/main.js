@@ -15,22 +15,12 @@ $(document).ready(function(){
 	var moneyInner = $(".inner__money");
 	var freeInner = $(".inner__free");
 
-	var select = $(".select__select");
-	var selectInner = $(".select__inner");
 
 	var match = $(".match__inner");
 	var fadeInner = $(".fade__inner");
 
 	match.on("click", function(){
 		fadeInner.fadeToggle(100);
-	});
-
-	select.on("click", function(){
-		selectInner.fadeToggle(100);	
-	});
-
-	$(".select__item").on("click", function(){
-		selectInner.fadeOut(100);
 	});
 
 
