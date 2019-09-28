@@ -1527,6 +1527,30 @@ a{
 	display: none;
 }
 
+.fade__item{
+	padding: 10px 35px;
+}
+
+.fade__inner{
+	background: #e3e9ef;
+	display: none;
+}
+
+.match__icon{
+	position: relative;
+}
+
+.match__icon:before{
+	content: "";
+	display: block;
+	width: 15px;
+	height: 15px;
+	background: url("../img/select.png") center no-repeat;
+	position: absolute;
+	top: 50%;
+	left: -20px;
+	transform: translateY(-50%);
+}
 
 /* Media */ 
 
@@ -1554,6 +1578,10 @@ a{
 	.container__full{
 		width: 1180px;
 	}
+
+	.select__select:after{
+	    right: 39px;
+	}
 }
 
 @media(max-width: 1200px){
@@ -1562,6 +1590,9 @@ a{
 	}
 	.container__full{
 		width: 970px;
+	}
+	.select__select:after{
+	    right: 12px;
 	}
 	.header__nav--inner{
 		display: none;

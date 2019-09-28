@@ -18,6 +18,13 @@ $(document).ready(function(){
 	var select = $(".select__select");
 	var selectInner = $(".select__inner");
 
+	var match = $(".match__inner");
+	var fadeInner = $(".fade__inner");
+
+	match.on("click", function(){
+		fadeInner.fadeToggle(100);
+	});
+
 	select.on("click", function(){
 		selectInner.fadeToggle(100);	
 	});
