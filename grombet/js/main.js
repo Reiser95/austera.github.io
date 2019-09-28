@@ -15,6 +15,21 @@ $(document).ready(function(){
 	var moneyInner = $(".inner__money");
 	var freeInner = $(".inner__free");
 
+	var select = $(".select__select");
+	var selectInner = $(".select__inner");
+
+	select.on("click", function(){
+		selectInner.fadeToggle(100);	
+	});
+
+	$(".select__item").on("click", function(){
+		var text = $(this).text();
+		select.text(text);
+		selectInner.fadeOut(100);
+	});
+
+
+
 	checkbox.on("click", function(){
 		money.toggleClass("checkbox__grey");
 		money.toggleClass("checkbox__red");

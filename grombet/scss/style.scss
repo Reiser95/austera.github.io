@@ -1470,6 +1470,63 @@ a{
 }
 
 
+/* Select */
+
+
+.select__select, .select{
+	position: relative;
+	cursor: pointer;
+}
+
+.select__select:after, .first__item:after{
+	content: "";
+	display: block;
+	width: 15px;
+	height: 15px;
+	background: url("../img/select.png") center no-repeat;
+	position: absolute;
+	top: 50%;
+	right: 60px;
+	cursor: pointer;
+	transform: translateY(-50%);
+	z-index: 1;
+}
+
+.first__item:after{
+	right: 38px;
+}
+
+.first__item{
+	position: relative;
+}
+
+.select__item{
+	padding: 30px 15px;
+	transition: .2s linear;
+	cursor: pointer;
+	border-radius: 10px;
+	color: $black;
+	font-family: $light;
+}
+
+.select__item:hover{
+	background: #8fa9c2;
+}
+
+.select__inner{
+	background: #d4dfea;
+	border: 1px solid $black;
+	border-radius: 10px;
+	position: absolute;
+	top: -30px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+	width: 275px;
+	display: none;
+}
+
+
 /* Media */ 
 
 @media(max-width: 1700px){
