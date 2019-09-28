@@ -23,8 +23,6 @@ $(document).ready(function(){
 	});
 
 	$(".select__item").on("click", function(){
-		var text = $(this).text();
-		select.text(text);
 		selectInner.fadeOut(100);
 	});
 
