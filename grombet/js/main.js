@@ -132,12 +132,10 @@ $(document).ready(function(){
 	$(".date__inner").on("click", function(){
 		if($(this).parents().hasClass("disabled")){
 			$(this).siblings(".active__block").fadeIn(100);
-			$(this).siblings(".forecast__category").fadeIn(100);
 			$(this).parents(".forecast__inner").removeClass("disabled");
 		}
 		else if(!$(this).parents().hasClass("disabled")){
 			$(this).siblings(".active__block").fadeOut(100);
-			$(this).siblings(".forecast__category").fadeOut(100);
 			$(this).parents(".forecast__inner").addClass("disabled");
 		}
 	});
@@ -169,14 +167,10 @@ $(document).ready(function(){
 			//Показ блоков
 			var free = $(this).closest(".free__money--inner").siblings(".free__inner");
 
-			$(".forecast__category").fadeIn(100);
-
 			free.fadeOut(100).removeClass("active__block");
 
 
 			var money = $(this).closest(".free__money--inner").siblings(".money__inner");
-
-			$(".forecast__category").fadeIn(100);
 
 			money.fadeIn(100).addClass("active__block");
 
@@ -205,14 +199,10 @@ $(document).ready(function(){
 			//Показ блоков
 			var free = $(this).closest(".free__money--inner").siblings(".free__inner");
 
-			$(".forecast__category").fadeIn(100);
-
 			free.fadeIn(100).addClass("active__block");
 
 
 			var money = $(this).closest(".free__money--inner").siblings(".money__inner");
-
-			$(".forecast__category").fadeIn(100);
 
 			money.fadeOut(100).removeClass("active__block");
 
