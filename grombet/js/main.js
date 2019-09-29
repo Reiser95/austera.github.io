@@ -1,12 +1,5 @@
 $(document).ready(function(){
 
-	var checkbox = $(".checkbox");
-	var money = $(".checkbox__text--money");
-	var free = $(".checkbox__text--free");
-	var iconMoney = $(".money");
-	var iconFree = $(".free");
-
-	var checkbox = $(".checkbox");
 
 	var modalIconOff = $(".modal__menu--iconin");
 	var modalIconOn = $(".menu__icon");
@@ -132,24 +125,101 @@ $(document).ready(function(){
 	});
 
 
-	
 
-	checkbox.on("click", function(){
-		money.toggleClass("checkbox__grey");
-		money.toggleClass("checkbox__red");
-		iconMoney.toggleClass("icon--grey");
-		iconMoney.toggleClass("icon--black");
 
-		free.toggleClass("checkbox__grey");
-		free.toggleClass("checkbox__red");
-		iconFree.toggleClass("icon--grey");
-		iconFree.toggleClass("icon--black");
 
-		checkbox.toggleClass("money__checkbox");
 
-		moneyInner.toggleClass("money__inner");
-		freeInner.toggleClass("free__inner");
+	$(".date__inner").on("click", function(){
+		if($(this).parents().hasClass("disabled")){
+			$(this).siblings(".active__block").fadeIn(100);
+			$(this).siblings(".forecast__category").fadeIn(100);
+			$(this).parents(".forecast__inner").removeClass("disabled");
+		}
+		else if(!$(this).parents().hasClass("disabled")){
+			$(this).siblings(".active__block").fadeOut(100);
+			$(this).siblings(".forecast__category").fadeOut(100);
+			$(this).parents(".forecast__inner").addClass("disabled");
+		}
 	});
+
+
+
+	$(".checkbox").on("click", function(){
+		if($(this).hasClass("free__check")){
+			$(this).removeClass("free__check");
+			$(this).addClass("money__check");
+			$(this).addClass("money__checkbox");
+
+			// Money
+			$(this).siblings(".checkbox__text--money").addClass("checkbox__red");
+			$(this).siblings(".checkbox__text--money").removeClass("checkbox__grey");
+
+			$(this).siblings(".checkbox__text--money").children(".icon--grey").addClass("icon--black");
+			$(this).siblings(".checkbox__text--money").children(".icon--grey").removeClass("icon--grey");
+
+			//Free
+			$(this).siblings(".checkbox__text--free").addClass("checkbox__grey");
+			$(this).siblings(".checkbox__text--free").removeClass("checkbox__red");
+
+			$(this).siblings(".checkbox__text--free").children(".icon--black").addClass("icon--grey");
+			$(this).siblings(".checkbox__text--free").children(".icon--black").removeClass("icon--black");
+
+
+
+			//Показ блоков
+			var free = $(this).closest(".free__money--inner").siblings(".free__inner");
+
+			$(".forecast__category").fadeIn(100);
+
+			free.fadeOut(100).removeClass("active__block");
+
+
+			var money = $(this).closest(".free__money--inner").siblings(".money__inner");
+
+			$(".forecast__category").fadeIn(100);
+
+			money.fadeIn(100).addClass("active__block");
+
+
+		}
+		else if($(this).hasClass("money__check")){
+			$(this).removeClass("money__check");
+			$(this).addClass("free__check");
+			$(this).removeClass("money__checkbox");
+
+
+			// Money
+			$(this).siblings(".checkbox__text--money").addClass("checkbox__grey");
+			$(this).siblings(".checkbox__text--money").removeClass("checkbox__red");
+
+			$(this).siblings(".checkbox__text--money").children(".icon--black").addClass("icon--grey");
+			$(this).siblings(".checkbox__text--money").children(".icon--black").removeClass("icon--black");
+
+			//Free
+			$(this).siblings(".checkbox__text--free").addClass("checkbox__red");
+			$(this).siblings(".checkbox__text--free").removeClass("checkbox__grey");
+
+			$(this).siblings(".checkbox__text--free").children(".icon--grey").addClass("icon--black");
+			$(this).siblings(".checkbox__text--free").children(".icon--grey").removeClass("icon--grey");
+
+			//Показ блоков
+			var free = $(this).closest(".free__money--inner").siblings(".free__inner");
+
+			$(".forecast__category").fadeIn(100);
+
+			free.fadeIn(100).addClass("active__block");
+
+
+			var money = $(this).closest(".free__money--inner").siblings(".money__inner");
+
+			$(".forecast__category").fadeIn(100);
+
+			money.fadeOut(100).removeClass("active__block");
+
+			
+		}
+	});
+
 
 	modalIconOff.on("click", function(){
 		modalMenu.removeClass("menu__none");
