@@ -125,6 +125,16 @@ $(document).ready(function(){
 
 
 
+	$(".foto").on("click", function(){
+		var img = $(this).children(".foto__comment").attr("src");
+		$(".modal__foto--img").attr("src", img);
+		$(".modal__foto").fadeIn(100).css("display", "flex");
+	});
+
+	$(".cros").on("click", function(){
+		$(".modal__foto").fadeOut(100).css("display", "none");
+	});
+
 
 
 	function LightenDarkenColor(col, amt) {
