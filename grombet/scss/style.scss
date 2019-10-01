@@ -263,14 +263,6 @@ a{
 	width: 100%;
 }
 
-.inner__free{
-	display: none;
-}
-
-.inner__free.free__inner{
-	display: block;
-}
-
 .middle__item{
 	padding: 10px 30px;
 	border-bottom: 1px solid #e8e8e8;
@@ -425,10 +417,6 @@ a{
 .forecast__mobile--inner{
 	display: none;
 	margin-top: 70px;
-}
-
-.money__inner{
-	display: none;
 }
 
 .forecast__last{
@@ -1479,6 +1467,11 @@ a{
 
 .select__select{
 	cursor: pointer;
+	display: inline-block;
+}
+
+.sector{
+	transition: .3s linear;
 }
 
 .select__select:after, .first__item:after{
@@ -1489,7 +1482,7 @@ a{
 	background: url("../img/select.png") center no-repeat;
 	position: absolute;
 	top: 50%;
-	right: 60px;
+	right: -20px;
 	transform: translateY(-50%);
 	z-index: 1;
 }
@@ -1564,10 +1557,6 @@ a{
 	font-family: $semibold;
 }
 
-.disabled__month{
-	display: none;
-}
-
 .last__forecast{
 	height: 38px;
 	background: #5c647c;
@@ -1606,6 +1595,7 @@ a{
 	width: 20px;
 	height: 20px;
 	fill: $white;
+	transition: .5s linear;
 }
 
 .upload{
@@ -1730,6 +1720,50 @@ a{
 	margin-bottom: 10px;
 	fill: #ff8396;
 }
+
+
+
+/* CHECKBOX */
+
+.active__block{
+	display: block;
+}
+
+.disabled__block{
+	display: none;
+}
+
+.active__block.active__list,
+.show__in.active__list{
+	display: block;
+}
+
+.disabled__block.active__list, .disabled__block.disabled__list,
+.active__block.disabled__list, .disabled__list,
+.fade__in.disabled__list{
+	display: none;
+}
+
+.translate{
+	transform: rotateX(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Media */ 
 
@@ -1881,10 +1915,6 @@ a{
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-	}
-
-	.money__inner{
-		display: none;
 	}
 
 	.forecast__last, .forecast__list{

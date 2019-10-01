@@ -1,11 +1,5 @@
 $(document).ready(function(){
 
-	var checkbox = $(".checkbox");
-	var money = $(".checkbox__text--money");
-	var free = $(".checkbox__text--free");
-	var iconMoney = $(".money");
-	var iconFree = $(".free");
-
 	var modalIconOff = $(".modal__menu--iconin");
 	var modalIconOn = $(".menu__icon");
 	var modalMenu = $(".modal__menu");
@@ -133,36 +127,45 @@ $(document).ready(function(){
 
 
 
+	function LightenDarkenColor(col, amt) {
+	  
+	    var usePound = false;
+	  
+	    if (col[0] == "#") {
+	        col = col.slice(1);
+	        usePound = true;
+	    }
+	 
+	    var num = parseInt(col,16);
+	 
+	    var r = (num >> 16) + amt;
+	 
+	    if (r > 255) r = 255;
+	    else if  (r < 0) r = 0;
+	 
+	    var b = ((num >> 8) & 0x00FF) + amt;
+	 
+	    if (b > 255) b = 255;
+	    else if  (b < 0) b = 0;
+	 
+	    var g = (num & 0x0000FF) + amt;
+	 
+	    if (g > 255) g = 255;
+	    else if (g < 0) g = 0;
+	 
+	    return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
+	  
+	}
 
-	$(".date__inner").on("click", function(){
-		if($(this).parents().hasClass("disabled")){
-			$(this).siblings(".active__block").fadeIn(100);
-			$(this).parents(".forecast__inner").removeClass("disabled");
-		}
-		else if(!$(this).parents().hasClass("disabled")){
-			$(this).siblings(".active__block").fadeOut(100);
-			$(this).parents(".forecast__inner").addClass("disabled");
-		}
+
+	$(".sector").on("mouseenter", function(){
+		var color = $(this).attr("data-color");
+		$(this).css("background", LightenDarkenColor(color, 50));
 	});
 
-
-
-	$(".checkbox").on("click", function(){
-		money.toggleClass("checkbox__grey");
-		money.toggleClass("checkbox__red");
-		iconMoney.toggleClass("icon--grey");
-		iconMoney.toggleClass("icon--black");
-
-		free.toggleClass("checkbox__grey");
-		free.toggleClass("checkbox__red");
-		iconFree.toggleClass("icon--grey");
-		iconFree.toggleClass("icon--black");
-
-		checkbox.toggleClass("money__checkbox");
-
-		$(".money__inner").fadeToggle(100);
-
-		$(".free__inner").fadeToggle(100);
+	$(".sector").on("mouseleave", function(){
+		var color = $(this).attr("data-color");
+		$(this).css("background", color);
 	});
 
 
