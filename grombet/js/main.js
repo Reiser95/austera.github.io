@@ -42,7 +42,30 @@ $(document).ready(function(){
 		$(this).addClass("active__sport");
 
 
-
+		if($(this).hasClass("ufc__fight")){
+			$(".inners").fadeOut(100);
+			$(".ufc__box").fadeIn(100);
+		}
+		else if($(this).hasClass("football")){
+			$(".inners").fadeOut(100);
+			$(".football__inn").fadeIn(100);
+		}
+		else if($(this).hasClass("tenis")){
+			$(".inners").fadeOut(100);
+			$(".tenis__inn").fadeIn(100);
+		}
+		else if($(this).hasClass("basketball")){
+			$(".inners").fadeOut(100);
+			$(".basketball__inn").fadeIn(100);
+		}
+		else if($(this).hasClass("baseball")){
+			$(".inners").fadeOut(100);
+			$(".baseball__inn").fadeIn(100);
+		}
+		else if($(this).hasClass("hoccey")){
+			$(".inners").fadeOut(100);
+			$(".hoccey__inn").fadeIn(100);
+		}
 
 
 	})
