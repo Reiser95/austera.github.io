@@ -34,45 +34,55 @@ $(document).ready(function(){
 	});
 
 
+
+	$(".sports__inner").on("click", function(){
+		if($(".sports__inner").hasClass("active__sport")){
+			$(".sports__inner").removeClass("active__sport");
+		}
+		$(this).addClass("active__sport");
+
+
+
+
+
+	})
+
+
+
+
+
+
+
+	$('.comment__create--button').on('click', function(e){
+	  $('html,body').stop().animate({ scrollTop: $('#some__point').offset().top }, 1000);
+	  e.preventDefault();
+	});
+
+	$(document).on('change', 'input[type="file"]', function () {
+	    $(".label__upload").fadeOut(100);
+	});
+
+
+
+
+
+
+
+
+
 	var dataset = [
 	  {
-	    value: 15,
-	    color: '#00cf7f',
-	    profit: 10
-	  }, {
-	    value: 5,
-	    color: '#4895fa',
-	    profit: 100
-	  }, {
-	    value: 15,
-	    color: '#8379c7',
-	    profit: 1000
-	  }, {
-	    value: 20,
-	    color: '#ff8396',
-	    profit: 1100
-	  }, {
-	    value: 5,
-	    color: '#21cdcb',
-	    profit: 1200
-	  }, {
-	    value: 10,
-	    color: '#663cd3',
-	    profit: 1500
-	  }, {
-	    value: 5,
-	    color: '#cd7221',
-	    profit: 2000
-	  }, {
-	    value: 5,
-	    color: '#ff3d5a',
-	    profit: 10000000
-	  },{
 	    value: 25,
-	    color: '#ffa16b',
-	    profit: 121200
+	    color: '#00cf7f',
+	    profit: "+400"
+	  }, {
+	    value: 75,
+	    color: '#4895fa',
+	    profit: "-300"
 	  }
 	];
+
+
 
 	var maxValue = 25;
 	var container = $('.circle__item');
@@ -101,15 +111,17 @@ $(document).ready(function(){
 	dataset.reduce(function (prev, curr) {
 	  return (function addPart(data, angle) {
 	    if (data.value <= maxValue) {
-	      return addSector(data, angle, false);
+	      return addSector(data, angle, true);
 	    }
 	 
 	    return addPart({
 	      value: data.value - maxValue,
-	      color: data.color
+	      color: data.color,
+	      profit: data.profit
 	    }, addSector({
 	      value: maxValue,
 	      color: data.color,
+	      profit: data.profit
 	    }, angle, true));
 	  })(curr, prev);
 	}, 0);
@@ -137,41 +149,41 @@ $(document).ready(function(){
 
 
 
-	function LightenDarkenColor(col, amt) {
+	// function LightenDarkenColor(col, amt) {
 	  
-	    var usePound = false;
+	//     var usePound = false;
 	  
-	    if (col[0] == "#") {
-	        col = col.slice(1);
-	        usePound = true;
-	    }
+	//     if (col[0] == "#") {
+	//         col = col.slice(1);
+	//         usePound = true;
+	//     }
 	 
-	    var num = parseInt(col,16);
+	//     var num = parseInt(col,16);
 	 
-	    var r = (num >> 16) + amt;
+	//     var r = (num >> 16) + amt;
 	 
-	    if (r > 255) r = 255;
-	    else if  (r < 0) r = 0;
+	//     if (r > 255) r = 255;
+	//     else if  (r < 0) r = 0;
 	 
-	    var b = ((num >> 8) & 0x00FF) + amt;
+	//     var b = ((num >> 8) & 0x00FF) + amt;
 	 
-	    if (b > 255) b = 255;
-	    else if  (b < 0) b = 0;
+	//     if (b > 255) b = 255;
+	//     else if  (b < 0) b = 0;
 	 
-	    var g = (num & 0x0000FF) + amt;
+	//     var g = (num & 0x0000FF) + amt;
 	 
-	    if (g > 255) g = 255;
-	    else if (g < 0) g = 0;
+	//     if (g > 255) g = 255;
+	//     else if (g < 0) g = 0;
 	 
-	    return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
+	//     return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
 	  
-	}
+	// }
 
 
-	$(".sector").on("mouseenter", function(){
-		var color = $(this).attr("data-color");
-		$(this).css("background", LightenDarkenColor(color, 50));
-	});
+	// $(".sector").on("mouseenter", function(){
+	// 	var color = $(this).attr("data-color");
+	// 	$(this).css("background", LightenDarkenColor(color, 50));
+	// });
 
 	$(".sector").on("mouseleave", function(){
 		var color = $(this).attr("data-color");

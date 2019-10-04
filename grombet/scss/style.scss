@@ -377,7 +377,6 @@ a{
 	font-family: $bold;
 	font-size: 3.8rem;
 	color: $black;
-	text-transform: lowercase;
 	text-align: center;
 }
 
@@ -1478,10 +1477,6 @@ a{
 	display: inline-block;
 }
 
-.sector{
-	transition: .3s linear;
-}
-
 .select__select:after, .first__item:after{
 	content: "";
 	display: block;
@@ -1699,7 +1694,9 @@ a{
     top: 0;
     transform-origin: left bottom;
     background: #000;
+    transition: .3s linear;
     user-select: none;
+    cursor: pointer;
 }
 
 .text__inner{
@@ -2231,6 +2228,235 @@ a{
 	height: 100%;
 }
 
+.return__password{
+	width: 100%;
+	display: inline-block;
+	margin-top: 30px;
+	background: #006ce5;
+	color: $white;
+	font-size: 1.8rem;
+	font-family: $regular;
+	padding: 10px 0;
+	border-radius: 20px;
+	transition: .3s linear;
+}
+
+.return__password:hover{
+	background: darken(#006ce5, 15);
+}
+
+.buttons__return{
+	margin-top: 120px;
+}
+
+.email__img{
+	margin-top: 20px;
+}
+
+.info__text{
+	max-width: 570px;
+	margin-top: 30px;
+	font-size: 1.8rem;
+	color: #535868;
+	font-family: $regular;
+}
+
+.medium{
+	font-family: $medium;
+}
+
+.button__autorization{
+	font-size: 2rem;
+	color: $white;
+	font-family: $semibold;
+	padding: 7px 30px;
+	display: inline-block;
+	margin-top: 20px;
+	border-radius: 20px;
+}
+
+.ordinar{
+	background: url("../img/ordinar-bg.jpg") center no-repeat;
+	background-size: cover;
+	padding: 125px 0px 95px 0;
+}
+
+.ordinar__flex, .ordinar__title--inner{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ordinar__title{
+	color: $white;
+	font-size: 6.8rem;
+	font-family: $bold;
+	margin-right: 65px;
+	display: flex;
+	align-items: center;
+}
+
+.ordinar__text{
+	color: #cecece;
+	font-size: 2rem;
+	font-family: $regular;
+	max-width: 500px;
+	padding-left: 45px;
+	position: relative;
+}
+
+.ordinar__text:after{
+	content: "";
+	display: block;
+	width: 6px;
+	height: 100%;
+	border-radius: 20px;
+	background: $white;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.actual__forecast{
+	padding: 45px 0px 110px 0;
+	background: url("../img/comment-bg.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.last__five{
+	padding: 95px 0px 115px 0;
+	background: url("../img/ordinar-bg-2.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.football__icon{
+	fill: $white;
+	margin-right: 20px;
+}
+
+.all__view{
+	padding: 40px 0px 25px 0;
+	background: $white;
+}
+
+.left__title{
+	text-align: left;
+}
+
+.all__view--inner{
+	padding: 10px 20px;
+	background: #e6e6e6;
+	width: 100%;
+	margin-top: 30px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.sports__inner{
+	padding: 12px 60px 12px 35px;
+	background: transparent;
+	position: relative;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 2rem;
+	font-family: $medium;
+	color: $black;
+	display: flex;
+	align-items: center;
+	transition: .2s linear;
+}
+
+.sports__inner:hover{
+	background: $red;
+	color: $white;
+}
+
+.sports__inner:hover .ufc{
+	fill: $white;
+}
+
+.sports__inner:after{
+	content: "";
+	display: block;
+	padding: 1px 4px;
+	background: #919191;
+	border-radius: 10px;
+	position: absolute;
+	color: $white;
+	top: 10px;
+	right: 25px;
+	font-size: 1rem;
+	transition: .2s linear;
+}
+
+.sports__inner:hover:after{
+	background: $white;
+	color: $red;
+}
+
+.sport__icon{
+	margin-right: 10px;
+}
+
+.active__sport{
+	background: $red;
+	color: $white;
+}
+
+.active__sport.sports__inner:after{
+	background: $white;
+	color: $red;
+}
+
+.active__sport .ufc{
+	fill: $white;
+}
+
+.ufc{
+	width: 25px;
+	height: 25px;
+	fill: $black;
+}
+
+.football:after{
+	content: "95";
+}
+
+.tenis:after{
+	content: "23";
+}
+
+.basketball:after{
+	content: "223";
+}
+
+.baseball:after{
+	content: "2332";
+}
+
+.hoccey:after{
+	content: "33";
+}
+
+.ufc__fight:after{
+	content: "998";
+}
+
+/* Actual forecast 2 */
+
+.actual__forecast-2{
+	padding: 85px 0px 145px 0;
+	background: url("../img/ordinar-bg-2.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.last__five-2{
+	padding: 50px 0px 90px 0;
+	background: url("../img/comment-bg.jpg") center no-repeat;
+	background-size: cover;
+}
 
 
 
@@ -2272,6 +2498,9 @@ a{
 
 	.select__select:after{
 	    right: 39px;
+	}
+	.sports__inner{
+		padding: 12px 60px 12px 15px;
 	}
 }
 
@@ -2352,11 +2581,30 @@ a{
 	.profit__item{
 		margin-top: 30px;
 	}
+	.all__view--inner{
+		flex-direction: column;
+	}
+	.sports__inner{
+		margin-top: 15px;
+	}
+	.flex__last{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+	.all__view--inner{
+		width: auto;
+	}
 }
 
 @media(max-width: 992px){
 	.container{
 		width: 748px;
+	}
+	.sector {
+	    cursor: default;
 	}
 	.container__full{
 		width: 748px;
@@ -2470,6 +2718,12 @@ a{
 	.send__comment--comment:after{
 		left: 50%;
 		transform: translateX(-50%) rotate(45deg);
+	}
+	.ordinar__title{
+		font-size: 4rem;
+	}
+	.ordinar__text{
+		font-size: 1.5rem;
 	}
 }
 
@@ -2608,7 +2862,20 @@ a{
 	.send__comment--box{
 		width: 100%;
 	}
-
+	.ordinar__title--inner{
+		flex-direction: column;
+	}
+	.ordinar__text:after{
+		display: none;
+	}
+	.ordinar__title{
+		margin-right: 0;
+	}
+	.ordinar__text{
+		margin-top: 20px;
+		padding: 0;
+		text-align: center;
+	}
 }
 
 
@@ -2739,5 +3006,15 @@ a{
 	.comment__content{
 		padding: 10px;
 	}
+	.info__text{
+		font-size: 1.4rem;
+	}
+	.email--img{
+		width: 100px;
+	}
+	.autorization__title{
+		font-size: 2rem;
+	}
+
 
 }
