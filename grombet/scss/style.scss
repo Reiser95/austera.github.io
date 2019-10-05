@@ -1997,6 +1997,8 @@ a{
 .foto{
 	height: 220px;
 	width: 100%;
+	display: flex;
+	justify-content: center;
 	background: #e4e4e4;
 	border: 2px solid #b0b7cd;
 }
@@ -2182,7 +2184,8 @@ a{
 }
 
 .foto__comment{
-	width: 100%;
+	width: auto;
+	max-width: 100%;
 	height: 100%;
 }
 
@@ -2225,11 +2228,15 @@ a{
 .modal__foto--foto{
 	width: 80%;
 	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.modal__foto--img{
-	width: 100%;
-	height: 100%;
+.modal__foto--img {
+    width: auto;
+    max-width: 100%;
+    max-height: 600px;
 }
 
 .return__password{
@@ -2339,7 +2346,7 @@ a{
 }
 
 .all__view{
-	padding: 40px 0px 25px 0;
+	padding: 5px 0px 25px;
 	background: $white;
 }
 
@@ -2354,8 +2361,9 @@ a{
 	margin-top: 30px;
 	border-radius: 5px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .sports__inner{
@@ -2381,20 +2389,6 @@ a{
 	fill: $white;
 }
 
-.sports__inner:after{
-	content: "";
-	display: block;
-	padding: 1px 4px;
-	background: #919191;
-	border-radius: 10px;
-	position: absolute;
-	color: $white;
-	top: 10px;
-	right: 25px;
-	font-size: 1rem;
-	transition: .2s linear;
-}
-
 .sports__inner:hover:after{
 	background: $white;
 	color: $red;
@@ -2409,11 +2403,6 @@ a{
 	color: $white;
 }
 
-.active__sport.sports__inner:after{
-	background: $white;
-	color: $red;
-}
-
 .active__sport .ufc{
 	fill: $white;
 }
@@ -2422,30 +2411,6 @@ a{
 	width: 25px;
 	height: 25px;
 	fill: $black;
-}
-
-.football:after{
-	content: "95";
-}
-
-.tenis:after{
-	content: "23";
-}
-
-.basketball:after{
-	content: "223";
-}
-
-.baseball:after{
-	content: "2332";
-}
-
-.hoccey:after{
-	content: "33";
-}
-
-.ufc__fight:after{
-	content: "998";
 }
 
 /* Actual forecast 2 */
@@ -2462,8 +2427,205 @@ a{
 	background-size: cover;
 }
 
+.sports__inner{
+	margin: 15px 15px 0 0;
+}
 
 
+
+.sports__categori--img{
+	max-width: 30px;
+	margin-right: 5px;
+}
+
+.sports__value{
+	padding: 2px 5px;
+	background: #919191;
+	border-radius: 15px;
+	font-size: 1rem;
+	color: $white;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	transition: .2s linear;
+}
+
+.sports__inner:hover .sports__value, .active__sport .sports__value{
+	background: $white;
+	color: $red;
+}
+
+
+
+
+/* Programm */
+
+.programm{
+	padding: 170px 0px;
+	background: url("../img/ref-bg-1.jpg") center no-repeat;
+	background-size: cover;
+} 
+
+.programm__title{
+	font-size: 7.2rem;
+	color: $white;
+	font-family: $bold;
+	text-align: left;
+}
+
+.programm__subtitle, .programm__text, .programm__button{
+	font-size: 3.2rem;
+	color: $white;
+	font-family: $medium;
+	margin-top: 80px;
+}
+
+.programm__text{
+	font-size: 2.1rem;
+	margin-top: 25px;
+}
+
+.programm__button{
+	font-size: 2.1rem;
+	text-decoration: underline;
+	padding: 10px 20px;
+	display: inline-block;
+	border-radius: 40px 15px;
+}
+
+/* WORK */ 
+
+.work-1{
+	background: $white;
+	padding: 70px 0px 160px 0;
+}
+
+.work__title{
+	text-align: left;
+}
+
+.work__content{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-top: 50px;
+}
+
+.work__img--img{
+	width: 800px;
+}
+
+.work__img{
+	position: relative;
+}
+
+.number__block{
+	content: "1";
+	display: block;
+	font-size: 5rem;
+	color: $white;
+	font-family: $semibold;
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	background: #b1bdca;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: -30px;
+	right: -30px;
+}
+
+.work__img:last-child:after{
+	content: "3";
+}
+
+.work__text{
+	font-size: 3rem;
+	color: $black;
+	font-family: $medium;
+	max-width: 500px;
+	margin-top: 60px;
+	position: relative;
+}
+
+.work__text:after{
+	content: "";
+	display: block;
+	width: 300px;
+	height: 7px;
+	background: $black;
+	position: absolute;
+	bottom: -50px;
+	left: 0;
+}
+
+
+/* WORK-2 */
+
+.work-2{
+	padding: 120px 0px 195px 0;
+	background: url("../img/programm-2-bg.jpg") center no-repeat;
+	background-size: cover;
+} 
+
+.work-2__content{
+	display: flex;
+}
+
+.work-2__number{
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 5rem;
+	font-family: $semibold;
+	color: $white;
+	background: $red;
+	margin-right: 50px;
+}
+
+.red__line{
+	width: 6px;
+	background: $red;
+	border-radius: 10px;
+}
+
+.work-2__text{
+	max-width: 500px;
+	font-size: 3rem;
+	font-family: $medium;
+	margin-left: 50px;
+}
+
+/* WORK-3 */
+
+.work-3{
+	padding: 130px 0px 70px 0;
+	background: url("../img/programm-3-bg.jpg") center no-repeat;
+	background-size: cover;
+}
+
+/* WORK-4 */
+
+.work-4{
+	padding: 120px 0px 195px 0;
+	background: url("../img/programm-4-bg.jpg") center no-repeat;
+	background-size: cover;
+} 
+
+/* Benefit */
+
+.benefit{
+	padding: 50px 0;
+}
+
+.benefit__title{
+	text-transform: uppercase;
+} 
 
 
 
@@ -2506,6 +2668,18 @@ a{
 	.sports__inner{
 		padding: 12px 60px 12px 15px;
 	}
+
+	/* WORK */
+
+	 .work__content{
+	 	flex-direction: column;
+	 	align-items: center;
+	 	justify-content: center;
+	 }
+
+	 .work__title{
+	 	text-align: center;
+	 }
 }
 
 @media(max-width: 1200px){
@@ -2587,9 +2761,6 @@ a{
 	}
 	.all__view--inner{
 		flex-direction: column;
-	}
-	.sports__inner{
-		margin-top: 15px;
 	}
 	.flex__last{
 		display: flex;
@@ -2728,6 +2899,16 @@ a{
 	}
 	.ordinar__text{
 		font-size: 1.5rem;
+	}
+
+	/* WORK */
+
+	.work__img--img{
+		width: 500px;
+	} 
+
+	.work-2, .work-4{
+		padding: 100px 0;
 	}
 }
 
@@ -2880,6 +3061,39 @@ a{
 		padding: 0;
 		text-align: center;
 	}
+
+	/*work*/
+
+	.programm__title{
+		font-size: 4.5rem;
+	}
+
+	.programm__subtitle{
+		margin-top: 50px;
+		font-size: 2.5rem;
+	}
+
+	.programm__text, .programm__button{
+		font-size: 1.7rem;
+	}
+
+	.work-2__number, .number__block{
+		width: 40px;
+		height: 40px;
+		font-size: 1.4rem;
+		margin-right: 20px;
+	}
+
+	.number__block{
+		top: -20px;
+		right: -40px;
+	}
+
+	.work-2__text{
+		font-size: 2rem;
+		margin-left: 20px;
+		max-width: 330px;
+	}
 }
 
 
@@ -3018,6 +3232,60 @@ a{
 	}
 	.autorization__title{
 		font-size: 2rem;
+	}
+
+
+	/*work*/
+
+	.programm__title{
+		font-size: 3.5rem;
+	}
+
+	.programm__subtitle{
+		margin-top: 30px;
+		font-size: 2rem;
+	}
+
+	.programm__text, .programm__button{
+		font-size: 1.4rem;
+	}
+
+	.work-2__number, .number__block{
+		width: 30px;
+		height: 30px;
+		font-size: 1.2rem;
+		margin-right: 10px;
+	}
+
+	.number__block{
+		top: -15px;
+		right: -25px;
+	}
+
+	.work-2__text{
+		font-size: 1.6rem;
+		margin-left: 15px;
+		max-width: 200px;
+	}
+
+	.work__img--img{
+		width: 300px;
+	} 
+
+	.work-2, .work-4{
+		padding: 50px 0;
+	}
+
+	.work__text{
+		font-size: 2rem;
+	}
+
+	.work__text:after{
+		width: 200px;
+	}
+
+	.work-3{
+		padding: 90px 0px 100px 0;
 	}
 
 
