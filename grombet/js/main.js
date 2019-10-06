@@ -11,6 +11,109 @@ $(document).ready(function(){
 	var match = $(".inner__mobile--menu");
 
 
+		var items = $(".carousel__list").children(".reviews__item").length;
+		var leftArrow = $('.arrow__left');
+	    var rightArrow = $('.arrow__right');
+	    var carouselList = $('.carousel__list');
+	 
+	    var pixels = $(".carousel__hider").css("width").substring(0,3);
+	    var pixelsOffset = parseInt(pixels);
+	    var number = items * pixelsOffset;
+	    var currentLeftValue = 0;
+	 
+	    leftArrow.click(function() {
+	    	if(currentLeftValue >= 0 ){
+	    		currentLeftValue = -number;
+	    		currentLeftValue += pixelsOffset;
+	        	carouselList.animate({ left : currentLeftValue + "px"}, 300);
+	    	}
+	    	else{
+	    		currentLeftValue += pixelsOffset;
+	        	carouselList.animate({ left : currentLeftValue + "px"}, 300);
+	    	}
+	    });
+	 
+	    rightArrow.click(function() {
+	    	if(currentLeftValue <= (-number + pixelsOffset)){
+	    		currentLeftValue = 0;
+	        	carouselList.animate({ left : currentLeftValue + "px"}, 300);
+	    	}
+	    	else{
+	    		currentLeftValue -= pixelsOffset;
+	        	carouselList.animate({ left : currentLeftValue + "px"}, 300);
+	    	}
+	    });
+
+
+		var items2 = $(".carousel__contentt").children(".reviews__img--inn").length;
+		var leftArrow2 = $('.arrow__l');
+	    var rightArrow2 = $('.arrow__r');
+	    var carouselList2 = $('.carousel__contentt');
+	 
+	    var pixels2 = $(".carousel__hide").css("width").substring(0,3);
+	    var pixelsOffset2 = parseInt(pixels2) + 10;
+	    var number2 = items2 * pixelsOffset2;
+	    var currentLeftValue2 = 0;
+	 
+	    leftArrow2.click(function() {
+	    		if(currentLeftValue2 >= 0 ){
+	    			currentLeftValue2 = -number2;
+	    			currentLeftValue2 += pixelsOffset2;
+	    	    	carouselList2.animate({ left : currentLeftValue2 + "px"}, 300);
+	    		}
+	    		else{
+	    			currentLeftValue2 += pixelsOffset2;
+	    	    	carouselList2.animate({ left : currentLeftValue2 + "px"}, 300);
+	    		}
+	    });
+	 
+	    rightArrow2.click(function() {
+	    		if(currentLeftValue2 <= (-number2 + pixelsOffset2)){
+	    			currentLeftValue2 = 0;
+	    	    	carouselList2.animate({ left : currentLeftValue2 + "px"}, 300);
+	    		}
+	    		else{
+	    			currentLeftValue2 -= pixelsOffset2;
+	    	    	carouselList2.animate({ left : currentLeftValue2 + "px"}, 300);
+	    		}
+	    });
+
+
+	    	var items3 = $(".sponsors__list").children(".sponsors__item").length;
+	    	var leftArrow3 = $('.left__arrow');
+	        var rightArrow3 = $('.right__arrow');
+	        var carouselList3 = $('.sponsors__list');
+	     
+	        var pixelsOffset3 = 300;
+	        var number3 = items3 * pixelsOffset3;
+	        var currentLeftValue3 = 0;
+	     
+	        leftArrow3.click(function() {
+	        		if(currentLeftValue3 >= 0 ){
+	        			currentLeftValue3 = -number3;
+	        			currentLeftValue3 += pixelsOffset3;
+	        	    	carouselList3.animate({ left : currentLeftValue3 + "px"}, 300);
+	        		}
+	        		else{
+	        			currentLeftValue3 += pixelsOffset3;
+	        	    	carouselList3.animate({ left : currentLeftValue3 + "px"}, 300);
+	        		}
+	        });
+	     
+	        rightArrow3.click(function() {
+	        		if(currentLeftValue3 <= (-number3 + pixelsOffset3)){
+	        			currentLeftValue3 = 0;
+	        	    	carouselList3.animate({ left : currentLeftValue3 + "px"}, 300);
+	        		}
+	        		else{
+	        			currentLeftValue3 -= pixelsOffset3;
+	        	    	carouselList3.animate({ left : currentLeftValue3 + "px"}, 300);
+	        		}
+	        });
+
+
+
+
 	match.on("click", function(){
 		$(this).find(".fade__inner").fadeToggle(100);
 	});
@@ -69,6 +172,18 @@ $(document).ready(function(){
 
 
 	})
+
+
+
+
+
+	$(".chooseme__card").on("mouseenter", function(){
+		$(this).children(".chooseme__card--hover").css("opacity", "1");
+	});
+
+	$(".chooseme__card").on("mouseleave", function(){
+		$(this).children(".chooseme__card--hover").css("opacity", "0");
+	});
 
 
 
