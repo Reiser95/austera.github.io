@@ -77,7 +77,6 @@ a{
 
 .container__full{
 	width: 1700px;
-	margin: 0 auto;
 }
 
 .button{
@@ -92,9 +91,10 @@ a{
 	background: darken($red, 5);
 }
 
-.container{
+.container, .container__full{
 	width: 1370px;
 	margin: 0 auto;
+	position: relative;
 }
 
 .red{
@@ -748,6 +748,7 @@ a{
 	margin: 100px auto 0 auto;
 	width: 95%;
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
 } 
 
@@ -2629,6 +2630,158 @@ a{
 
 
 
+/* Examples */ 
+
+.examples{
+	padding: 105px 0px 125px 0;
+	background: url("../img/programm-5-bg.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.examples__inner{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.exaples__box{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.exaples__box:nth-child(2){
+	margin-top: 80px;
+}
+
+.examples__full, .examples__small{
+	width: 100%;
+	padding: 70px;
+	background: #3f4452;
+	border-radius: 15px;
+}
+
+.examples__small{
+	width: 45%;
+	padding: 45px 50px;
+	position: relative;
+}
+
+.examples__title{
+	color: $white;
+	font-family: $bold;
+	font-size: 2rem;
+}
+
+.examples__text--inner{
+	margin-top: 60px;
+}
+
+.examples__text{
+	margin-top: 20px;
+	color: $white;
+	font-family: $medium;
+	font-size: 1.8rem;
+}
+
+.examples__number{
+	font-size: 2rem;
+	color: $white;
+	font-family: $semibold;
+	background: $red;
+	padding: 10px 60px;
+	display: inline-block;
+	border-radius: 35px 10px;
+	margin: 0 0 40px 30px;
+}
+
+.shadow{
+	box-shadow: 0 0 20px #e7e7e7;
+	margin-top: 0;
+}
+
+.pay__section{
+	background: url("../img/comment-bg.jpg") center no-repeat;
+	background-size: cover;
+	padding: 60px 0 370px 0;
+	position: relative;
+}
+
+.ref__sale{
+	background: url("../img/comment-bg.jpg") center no-repeat;
+	background-size: cover;
+	padding: 25px 150px 35px;
+	position: absolute;
+	bottom: -30px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: inline-flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 0 0 40px #e7e7e7;
+}
+
+.refsale__img{
+	margin-top: 50px;
+}
+
+
+/* Partner */
+
+.partner{
+	padding: 130px 0 340px 0;
+	background: url("../img/programm-6-bg.jpg") center no-repeat;
+	background-size: cover;
+} 
+
+.partners__inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.partners__box{
+	width: 45%;
+}
+
+.partners__title{
+	text-align: center;
+	font-size: 2.2rem;
+	font-family: $semibold;
+	color: $white;
+}
+
+.partners__text{
+	font-size: 1.3rem;
+	color: $white;
+	font-family: $medium;
+	margin-top: 50px;
+}
+
+.partners__btn{
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+}
+
+.partner__button{
+	background: transparent;
+	border: 2px solid #596473;
+	border-radius: 25px;
+	padding: 8px 60px;
+	color: $white;
+	font-size: 1.4rem;
+	font-family: $semibold;
+	display: flex;
+	align-items: center;
+}
+
+.partner__button:hover{
+	background: #596473;
+}
+
+
 
 
 
@@ -2910,6 +3063,21 @@ a{
 	.work-2, .work-4{
 		padding: 100px 0;
 	}
+
+
+	/* Examples */
+
+	.examples__small{
+		width: 100%;
+	}
+
+	.examples__small:nth-child(2){
+		margin-top: 40px;
+	}
+
+	.exaples__box{
+		flex-direction: column;
+	}
 }
 
 @media(max-width: 768px){
@@ -3094,6 +3262,31 @@ a{
 		margin-left: 20px;
 		max-width: 330px;
 	}
+
+	.pay{
+		margin-top: 20px;
+	}
+
+	/* Ref sale */ 
+
+	.ref__sale{
+		width: 100%;
+		padding: 25px 0 35px 0;
+	}
+
+	/* Partners */ 
+
+	.partners__inner{
+		flex-direction: column;
+	}
+
+	.partners__box{
+		width: 100%;
+	}
+
+	.partners__box:nth-child(2){
+		margin-top: 40px;
+	}
 }
 
 
@@ -3258,8 +3451,8 @@ a{
 	}
 
 	.number__block{
-		top: -15px;
-		right: -25px;
+		top: -10px;
+		right: -20px;
 	}
 
 	.work-2__text{
@@ -3287,6 +3480,35 @@ a{
 	.work-3{
 		padding: 90px 0px 100px 0;
 	}
+
+	/* Examples */
+
+	.examples__number{
+		margin-left: 0;
+		font-size: 1.5rem;
+		padding: 7px 30px;
+	} 
+
+	.examples__text{
+		font-size: 1.5rem;
+	}
+
+	.examples__title{
+		font-size: 1.7rem;
+	}
+
+
+	/* Ref sales */
+
+	.ref__img{
+		width: 250px;
+	}
+
+	/* Partners */
+
+	.partners__title{
+		font-size: 1.7rem;
+	} 
 
 
 }
