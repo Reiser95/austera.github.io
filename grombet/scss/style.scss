@@ -3029,7 +3029,7 @@ a{
 }
 
 .sponsors__hider{
-	width: 1500px;
+	width: 1200px;
 }
 
 .carousel__hide{
@@ -3186,11 +3186,11 @@ a{
 }
 
 .right__arrow{
-	right: 540px;
+	right: 0px;
 }
 
 .left__arrow{
-	left: 540px;
+	left: 0px;
 }
 
 
@@ -3250,14 +3250,6 @@ a{
 
 	 .work__title{
 	 	text-align: center;
-	 }
-
-	 .right__arrow {
-	     right: 425px;
-	 }
-
-	 .left__arrow {
-	     left: 425px;
 	 }
 }
 
@@ -3381,19 +3373,15 @@ a{
 		margin-top: 0;
 	}
 
-	.right__arrow {
-	    right: 315px;
-	}
-
-	.left__arrow {
-	    left: 315px;
-	}
-
 	.work-2{
 		background: url("../img/programm-2-bg.jpg") left no-repeat;
 	}
 	.work-4{
 		background: url("../img/programm-4-bg.jpg") left no-repeat;
+	}
+
+	.sponsors__hider{
+		width: 900px;
 	}
 }
 
@@ -3581,12 +3569,8 @@ a{
     	right: 220px;
 	}
 
-	.right__arrow {
-	    right: 205px;
-	}
-
-	.left__arrow {
-	    left: 205px;
+	.sponsors__hider{
+		width: 600px;
 	}
 }
 
@@ -3852,13 +3836,15 @@ a{
 	}
 
 	.right__arrow {
-	    right: 60px;
 	    top: 78px;
 	}
 
 	.left__arrow {
-	    left: 60px;
 	    top: 78px;
+	}
+
+	.sponsors__hider{
+		width: 300px;
 	}
 
 }
@@ -4123,12 +4109,10 @@ a{
 	}
 
 	.right__arrow {
-	    right: 0;
 	    top: 75px;
 	}
 
 	.left__arrow {
-	    left: 0;
 	    top: 75px;
 	}
 }

@@ -85,7 +85,9 @@ $(document).ready(function(){
 	        var carouselList3 = $('.sponsors__list');
 	     
 	        var pixelsOffset3 = 300;
-	        var number3 = items3 * pixelsOffset3;
+	        var itemNumbers = $(".sponsors__hider").css("width").replace(/[^0-9]/gim, "");
+	        itemNumbers = itemNumbers / pixelsOffset3;
+	        var number3 = (items3 - itemNumbers) * pixelsOffset3;
 	        var currentLeftValue3 = 0;
 	     
 	        leftArrow3.click(function() {
@@ -201,8 +203,10 @@ $(document).ready(function(){
 	});
 
 
-
-
+	$(".sponsors__list").owlCarousel({
+		autoWidth: true,
+		slideBy: 2
+	});
 
 
 
