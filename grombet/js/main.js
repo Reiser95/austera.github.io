@@ -11,15 +11,15 @@ $(document).ready(function(){
 	var match = $(".inner__mobile--menu");
 
 
-		var items = $(".carousel__list").children(".reviews__item").length;
-		var leftArrow = $('.arrow__left');
-	    var rightArrow = $('.arrow__right');
-	    var carouselList = $('.carousel__list');
+	var items = $(".carousel__list").children(".reviews__item").length;
+	var leftArrow = $('.arrow__left');
+	var rightArrow = $('.arrow__right');
+	var carouselList = $('.carousel__list');
 	 
-	    var pixels = $(".carousel__hider").css("width").substring(0,3);
-	    var pixelsOffset = parseInt(pixels);
-	    var number = items * pixelsOffset;
-	    var currentLeftValue = 0;
+	var pixels = $(".carousel__hider").css("width").substring(0,3);
+	var pixelsOffset = parseInt(pixels);
+	var number = items * pixelsOffset;
+	var currentLeftValue = 0;
 	 
 	    leftArrow.click(function() {
 	    	if(currentLeftValue >= 0 ){
