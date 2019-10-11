@@ -115,12 +115,18 @@ $(document).ready(function(){
 
 
 	$(".sponsors__list").swipe( {
+        swipeLeft:leftSwipe2,
+        swipeRight:rightSwipe2,
+        threshold:0
+	});
+
+	$(".carousel__list").swipe( {
         swipeLeft:leftSwipe,
         swipeRight:rightSwipe,
         threshold:0
 	});
 
-	function leftSwipe(){
+	function leftSwipe2(){
 		if(currentLeftValue3 <= (-number3 + pixelsOffset3)){
 			currentLeftValue3 = 0;
 			carouselList3.animate({ left : currentLeftValue3 + "px"}, 300);
@@ -131,7 +137,7 @@ $(document).ready(function(){
 		}
 	}
 
-	function rightSwipe(){
+	function rightSwipe2(){
 		if(currentLeftValue3 >= 0 ){
 			currentLeftValue3 = -number3;
 			currentLeftValue3 += pixelsOffset3;
@@ -141,6 +147,31 @@ $(document).ready(function(){
 			currentLeftValue3 += pixelsOffset3;
 		   	carouselList3.animate({ left : currentLeftValue3 + "px"}, 300);
 		}
+	}
+
+
+
+	function leftSwipe(){
+			if(currentLeftValue <= (-number + pixelsOffset)){
+				currentLeftValue = 0;
+		    	carouselList.animate({ left : currentLeftValue + "px"}, 300);
+			}
+			else{
+				currentLeftValue -= pixelsOffset;
+		    	carouselList.animate({ left : currentLeftValue + "px"}, 300);
+			}
+	}
+
+	function rightSwipe(){
+		if(currentLeftValue >= 0 ){
+	    		currentLeftValue = -number;
+	    		currentLeftValue += pixelsOffset;
+	        	carouselList.animate({ left : currentLeftValue + "px"}, 300);
+	    	}
+	    	else{
+	    		currentLeftValue += pixelsOffset;
+	        	carouselList.animate({ left : currentLeftValue + "px"}, 300);
+	    	}
 	}
 
 
