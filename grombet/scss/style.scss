@@ -307,64 +307,140 @@ a{
 .title{
 	background: url(../img/header-bg.jpg) center no-repeat;
 	background-size: cover;
-	min-height: 813px;
+	padding: 225px 0 180px 0;
 	display: flex;
 	align-items: center;
 }
 
 .title__inner{
-	width: 760px;
+	max-width: 650px;
+}
+
+.big__title{
+	font-size: 5.8rem;
 }
 
 .title__title{
-	text-transform: uppercase;
-	font-size: 3.8rem;
+	font-size: 4.8rem;
 	font-family: $bold;
 	color: $white;
 	line-height: 1.3em;
 }
 
-.title__text{
-	margin: 75px 0 0 55px;
-	color: $white;
-	font-size: 2rem;
+.modal__menu--item.profile__item{
+	display: none;
 }
 
-.title__online{
-	margin: 75px 0 0 115px;
-	display: flex;
-	align-items: center;
-}
-
-.online{
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	background: #304c41;
-	margin-right: 25px;
+.promo__input--inner{
 	position: relative;
 }
 
-.online:before{
-	content: "";
-	display: block;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 20px;
-	height: 20px;
-	background: #30b051;
-	border-radius: 50%;
+.promo__input{
+	background: rgba(0, 0, 0, .2);
+	padding: 16px 25px;
+	border-radius: 20px;
+	border: 3px solid #30333a;
+	outline: none;
+	color: $white;
+	font-size: 2rem;
+	margin-top: 55px;
+	font-family: $semibold;
 }
 
-.online__text{
-	font-size: 2.3rem;
+.promo__input--text:before{
+	content: "промокод";
+	display: block;
+	position: absolute;
+	top: 63px;
+	left: 37px;
+	font-family: $semibold;
+	color: #515256;
+	font-size: 1rem;
+	transition: .2s linear;
+}
+
+.promo__input::placeholder{
 	color: $white;
 }
 
-.modal__menu--item.profile__item{
+.promo__input:focus::placeholder{
+	opacity: 0;
+}
+
+.user__agree{
+	margin-top: 50px;
+}
+
+.title__img{
 	display: none;
+}
+
+.user__agree--link{
+	text-decoration: underline;
+}
+
+.user__agree--checkbox{
+	display: none;
+}
+
+.user__agree--label{
+	font-size: 1.1rem;
+	color: $white;
+	font-family: $semibold;
+	display: inline-block;
+	max-width: 305px;
+	margin-left: 50px;
+	position: relative;
+	transition: .3s linear;
+}
+
+.user__agree--link{
+	color: $white;
+}
+
+.user__agree--label:before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 27px;
+	height: 27px;
+	border-radius: 50%;
+	border: 3px solid #6e7077;
+	background: url("../img/check.jpg") center no-repeat;
+	background-size: cover;
+	opacity: 0;
+	top: 50%;
+	left: -40px;
+	transform: translateY(-50%);
+	transition: .3s linear;
+}
+
+.user__agree--label:after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 27px;
+	height: 27px;
+	border-radius: 50%;
+	border: 3px solid #6e7077;
+	top: 50%;
+	left: -40px;
+	transform: translateY(-50%);
+	transition: .3s linear;
+}
+
+.user__agree--checkbox:checked + .user__agree--label:before{
+	opacity: 1;
+}
+
+.register__button{
+	margin-top: 55px;
+	padding: 20px 65px;
+	color: $white;
+	font-family: $semibold;
+	font-size: 2rem;
+	border-radius: 45px 15px;
+	box-shadow: 0 0 60px rgba(255, 255, 255, .5);
 }
 
 /* Forecast */
@@ -3483,9 +3559,6 @@ a{
 	.free__button{
 		margin: 20px auto;
 	}
-	.title__title{
-		text-shadow: 0 0 5px $black;
-	}
 	.pay__img{
 		width: 90px;
 	}
@@ -3576,6 +3649,52 @@ a{
 	.sponsors__hider{
 		width: 600px;
 	}
+
+	/* Title */
+
+	.title{
+		background: url(../img/header-bg.jpg) left no-repeat;
+		background-size: cover;
+		padding: 225px 0 180px 0;
+		display: flex;
+		align-items: center;
+	}
+
+	.title__title{
+		margin-top: 40px;
+	}
+
+	.big__title{
+		font-size: 3rem;
+	} 
+
+	.title__inner{
+		max-width: 100%;
+	}
+
+	.title__img{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.title__img--img{
+		width: 300px;
+	}
+
+	.promo__input--inner, .user__agree{
+		display: flex;
+		justify-content: center;
+	} 
+
+	.promo__input--text:before{
+		left: 255px;
+	}
+
+	.register__button {
+	    display: block;
+	    margin: 55px auto;
+	}
 }
 
 @media(max-width: 768px){
@@ -3640,6 +3759,9 @@ a{
 	.stats__number{
 		font-size: 2rem;
 	}
+	.big__title{
+		font-size: 2.5rem;
+	} 
 	.cards__item{
 		width: 85%;
 	}
@@ -3850,6 +3972,12 @@ a{
 	.sponsors__hider{
 		width: 300px;
 	}
+
+	/* Title */
+
+	.promo__input--text:before{
+		left: 110px;
+	} 
 
 }
 
@@ -4119,4 +4247,14 @@ a{
 	.left__arrow {
 	    top: 75px;
 	}
+
+	/* Title */ 
+
+	.title__img--img{
+		width: 200px;
+	}
+
+	.promo__input--text:before{
+		left: 30px;
+	} 
 }
