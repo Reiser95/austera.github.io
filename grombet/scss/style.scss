@@ -70,11 +70,6 @@ li{
 	list-style-type: none;
 }
 
-a{
-	text-decoration: none;
-	color: $black;
-}
-
 .container__full{
 	width: 1700px;
 	position: relative;
@@ -304,6 +299,8 @@ a{
 
 
 a{
+  text-decoration: none;
+  color: $black;
   span{
     font-weight: 100;
     transition: all .1s;
@@ -477,10 +474,6 @@ a{
 
 .promo__input::placeholder{
 	color: $white;
-}
-
-.promo__input:focus::placeholder{
-	opacity: 0;
 }
 
 .user__agree{
