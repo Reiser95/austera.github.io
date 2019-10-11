@@ -10,6 +10,14 @@ $(document).ready(function(){
 
 	var match = $(".inner__mobile--menu");
 
+	modalIconOff.on("click", function(){
+		modalMenu.removeClass("menu__none");
+	});
+
+	modalIconOn.on("click", function(){
+		modalMenu.addClass("menu__none");
+	});
+
 
 	var items = $(".carousel__list").children(".reviews__item").length;
 	var leftArrow = $('.arrow__left');
@@ -385,15 +393,6 @@ $(document).ready(function(){
 	$(".sector").on("mouseleave", function(){
 		var color = $(this).attr("data-color");
 		$(this).css("background", color);
-	});
-
-
-	modalIconOff.on("click", function(){
-		modalMenu.removeClass("menu__none");
-	});
-
-	modalIconOn.on("click", function(){
-		modalMenu.addClass("menu__none");
 	});
 
 
