@@ -3014,8 +3014,12 @@ a{
 
 .reviews__item, .reviews__img, .sponsors__item{
 	margin-right: 25px;
-    display: inline-block;
+    display: inline;
     float: left;
+}
+
+.money__inner{
+	display: none;
 }
 
 .reviews__img, .sponsors__item{

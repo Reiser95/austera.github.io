@@ -114,6 +114,36 @@ $(document).ready(function(){
 	        });
 
 
+	$(".sponsors__list").swipe( {
+        swipeLeft:leftSwipe,
+        swipeRight:rightSwipe,
+        threshold:0
+	});
+
+	function leftSwipe(){
+		if(currentLeftValue3 <= (-number3 + pixelsOffset3)){
+			currentLeftValue3 = 0;
+			carouselList3.animate({ left : currentLeftValue3 + "px"}, 300);
+		}
+		else{
+			currentLeftValue3 -= pixelsOffset3;
+		  	carouselList3.animate({ left : currentLeftValue3 + "px"}, 300);
+		}
+	}
+
+	function rightSwipe(){
+		if(currentLeftValue3 >= 0 ){
+			currentLeftValue3 = -number3;
+			currentLeftValue3 += pixelsOffset3;
+		    carouselList3.animate({ left : currentLeftValue3 + "px"}, 300);
+		}
+		else{
+			currentLeftValue3 += pixelsOffset3;
+		   	carouselList3.animate({ left : currentLeftValue3 + "px"}, 300);
+		}
+	}
+
+
 
 
 	match.on("click", function(){
@@ -173,7 +203,7 @@ $(document).ready(function(){
 		}
 
 
-	})
+	});
 
 
 
@@ -200,12 +230,6 @@ $(document).ready(function(){
 
 	$(document).on('change', 'input[type="file"]', function () {
 	    $(".label__upload").fadeOut(100);
-	});
-
-
-	$(".sponsors__list").owlCarousel({
-		autoWidth: true,
-		slideBy: 2
 	});
 
 
