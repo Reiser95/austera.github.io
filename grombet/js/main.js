@@ -63,7 +63,7 @@ $(document).ready(function(){
 	    var number2 = items2 * pixelsOffset2;
 	    var currentLeftValue2 = 0;
 	 
-	    leftArrow2.click(function() {
+	    leftArrow.click(function() {
 	    		if(currentLeftValue2 >= 0 ){
 	    			currentLeftValue2 = -number2;
 	    			currentLeftValue2 += pixelsOffset2;
@@ -75,7 +75,7 @@ $(document).ready(function(){
 	    		}
 	    });
 	 
-	    rightArrow2.click(function() {
+	    rightArrow.click(function() {
 	    		if(currentLeftValue2 <= (-number2 + pixelsOffset2)){
 	    			currentLeftValue2 = 0;
 	    	    	carouselList2.animate({ left : currentLeftValue2 + "px"}, 300);
@@ -160,26 +160,45 @@ $(document).ready(function(){
 
 
 	function leftSwipe(){
-			if(currentLeftValue <= (-number + pixelsOffset)){
-				currentLeftValue = 0;
-		    	carouselList.animate({ left : currentLeftValue + "px"}, 300);
+		if(currentLeftValue <= (-number + pixelsOffset)){
+			currentLeftValue = 0;
+		   	carouselList.animate({ left : currentLeftValue + "px"}, 300);
+		}
+		else{
+			currentLeftValue -= pixelsOffset;
+		   	carouselList.animate({ left : currentLeftValue + "px"}, 300);
+		}
+			if(currentLeftValue2 <= (-number2 + pixelsOffset2)){
+				currentLeftValue2 = 0;
+		    	carouselList2.animate({ left : currentLeftValue2 + "px"}, 300);
 			}
 			else{
-				currentLeftValue -= pixelsOffset;
-		    	carouselList.animate({ left : currentLeftValue + "px"}, 300);
+				currentLeftValue2 -= pixelsOffset2;
+		    	carouselList2.animate({ left : currentLeftValue2 + "px"}, 300);
 			}
 	}
 
 	function rightSwipe(){
 		if(currentLeftValue >= 0 ){
-	    		currentLeftValue = -number;
-	    		currentLeftValue += pixelsOffset;
-	        	carouselList.animate({ left : currentLeftValue + "px"}, 300);
-	    	}
-	    	else{
-	    		currentLeftValue += pixelsOffset;
-	        	carouselList.animate({ left : currentLeftValue + "px"}, 300);
-	    	}
+	    	currentLeftValue = -number;
+	    	currentLeftValue += pixelsOffset;
+	       	carouselList.animate({ left : currentLeftValue + "px"}, 300);
+	    }
+	    else{
+	    	currentLeftValue += pixelsOffset;
+	       	carouselList.animate({ left : currentLeftValue + "px"}, 300);
+	   	}
+
+	   		if(currentLeftValue2 >= 0 ){
+	   			currentLeftValue2 = -number2;
+	   			currentLeftValue2 += pixelsOffset2;
+	   	    	carouselList2.animate({ left : currentLeftValue2 + "px"}, 300);
+	   		}
+	   		else{
+	   			currentLeftValue2 += pixelsOffset2;
+	   	    	carouselList2.animate({ left : currentLeftValue2 + "px"}, 300);
+	   		}
+
 	}
 
 
