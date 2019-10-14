@@ -59,7 +59,7 @@ $(document).ready(function(){
 	    var carouselList2 = $('.carousel__contentt');
 	 
 	    var pixels2 = $(".carousel__hide").css("width").substring(0,3);
-	    var pixelsOffset2 = parseInt(pixels2) + 10;
+	    var pixelsOffset2 = parseInt(pixels2);
 	    var number2 = items2 * pixelsOffset2;
 	    var currentLeftValue2 = 0;
 	 
