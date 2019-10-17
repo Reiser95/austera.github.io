@@ -184,6 +184,7 @@ li{
 	background: $red;
 	border: none;
 	cursor: pointer;
+	display: inline-block;
 	transition: .2s linear;
 }
 
@@ -2747,6 +2748,158 @@ a{
 }
 
 
+/* Forecastday */
+
+.forecastday{
+	background: url("../img/forecastday-bg1.jpg") center no-repeat;
+	background-size: cover;
+	padding: 80px 0px 130px 0;
+} 
+
+.game__info{
+	display: flex;
+	align-items: flex-start;
+}
+
+.game__info--inner{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-right: 70px;
+}
+
+.forecastday__title{
+	font-size: 5rem;
+	line-height: 1.2;
+	border-bottom: 4px dashed #696b7c;
+	font-family: $bold
+}
+
+.forecastday__text{
+	font-size: 2.1rem;
+	color: $white;
+	font-family: $medium;
+	margin-top: 5px;
+}
+
+.game-start-time{
+	color: $white;
+	font-size: 2rem;
+}
+
+.soon-wrapper [class*=soon-], .soon [class*=soon-]{
+	font-size: 3rem;
+}
+
+.end__special--text{
+	margin-top: 45px;
+	font-size: 2rem;
+	color: $white;
+	font-family: $regular;
+	padding-bottom: 10px;
+	border-bottom: 3px solid #696b7c;
+}
+
+.button__buy{
+	margin-top: 60px;
+}
+
+.special__button{
+	color: $white;
+	padding: 10px 50px;
+	font-size: 2rem;
+	border-radius: 20px;
+}
+
+.game__team--content{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	flex-direction: column;
+}
+
+.game__team--inner{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 10px;
+	border: 3px dashed #575e71;
+	width: 100%;
+	padding: 25px 120px;
+	background: #404656;
+}
+
+.team1__inner, .team2__inner{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	max-width: 30%;
+	text-align: center;
+}
+
+.team1__img--inner, .team2__img--inner{
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.team1__img, .team2__img{
+	width: 100%;
+}
+
+.total__inner{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.total__title{
+	font-size: 4.2rem;
+	color: $white;
+	font-family: $bold
+}
+
+.total__text, .team__text{
+	margin-top: 8px;
+	color: rgba(255, 255, 255, .6);
+	font-size: 1.7rem;
+}
+
+.team__title{
+	font-size: 2.4rem;
+	color: $white;
+	font-family: $bold;
+	margin-top: 20px;
+}
+
+.team__text{
+	margin-top: 10px;
+	font-size: 2rem;
+	font-family: $bold;
+}
+
+.prof__text, .koef__text{
+	padding: 10px 20px;
+	background: #404656;
+	border-radius: 10px;
+	font-size: 2.5rem;
+	color: $white;
+	font-family: $semibold;
+}
+
+.forecastday__info--inner{
+	display: flex;
+	align-items: center;
+	margin-top: 30px;
+	width: 80%;
+	justify-content: space-around;
+}
+
+
 
 
 /* Programm */
@@ -3681,6 +3834,20 @@ a{
 	.sponsors__hider{
 		width: 900px;
 	}
+
+	/* Forecast Day */
+
+	.game__info{
+		flex-direction: column;
+	} 
+
+	.game__info--inner{
+		margin: 0 auto;
+	}
+
+	.game__team--content{
+		margin-top: 50px;
+	}
 }
 
 @media(max-width: 992px){
@@ -4209,6 +4376,57 @@ a{
 		left: 110px;
 	} 
 
+
+	/* Forecast Day */
+
+	.forecastday__title{
+		font-size: 3.3rem;
+	} 
+
+	.forecastday__text{
+		font-size: 1.6rem;
+	}
+
+	.soon-wrapper [class*=soon-], .soon [class*=soon-]{
+		font-size: 2rem;
+	}
+
+	.button__buy{
+		margin-top: 20px;
+	}
+
+	.special__button{
+		padding: 7px 30px;
+		font-size: 1.7rem;
+	}
+
+	.team1__img--inner, .team2__img--inner{
+		width: 80px;
+		height: 80px;
+	}
+
+	.game__team--inner{
+		padding: 25px;
+	}
+
+	.team__title, .team__text{
+		margin-top: 5px;
+		font-size: 1.6rem;
+	}
+
+	.team__text{
+		font-size: 1.4rem;
+	}
+
+	.forecastday__info--inner{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.koef__text{
+		margin-top: 20px;
+	}
+
 }
 
 
@@ -4495,5 +4713,19 @@ a{
 
 	.btn{
 		font-size: 1.5rem;
+	}
+
+	/* Forecast Day */
+
+	.total__title{
+		font-size: 2.4rem;
+	} 
+
+	.team__title, .total__text, .prof__text, .koef__text{
+		font-size: 1.4rem;
+	}
+
+	.team__text{
+		font-size: 1.2rem;
 	}
 }
