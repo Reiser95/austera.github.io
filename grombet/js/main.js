@@ -18,6 +18,15 @@ $(document).ready(function(){
 		modalMenu.addClass("menu__none");
 	});
 
+	$(".question__question--inner").on("click", function(){
+		/* Переворачивание стрелки */
+
+		$(this).children(".question__slide--icon").toggleClass("question__slide--icon--rotate");
+		$(this).toggleClass("question__question--inner--transform");
+		$(this).parent(".question__card").children(".question__img--inner").fadeToggle(0);
+		$(this).parent(".question__card").children(".question__text--fade").fadeToggle(0);
+	});
+
 
 	var items = $(".carousel__list").children(".reviews__item").length;
 	var leftArrow = $('.arrow__left');

@@ -2804,11 +2804,16 @@ a{
 	margin-top: 60px;
 }
 
-.special__button{
+.button.special__button{
 	color: $white;
 	padding: 10px 50px;
 	font-size: 2rem;
 	border-radius: 20px;
+	background: linear-gradient(to right, $red, #ff694d);
+}
+
+.button.special__button:hover{
+	box-shadow: 0px 0px 30px #ff694d;
 }
 
 .game__team--content{
@@ -2882,7 +2887,7 @@ a{
 	font-family: $bold;
 }
 
-.prof__text, .koef__text{
+.prof__text, .koeff__text{
 	padding: 10px 20px;
 	background: #404656;
 	border-radius: 10px;
@@ -2897,6 +2902,175 @@ a{
 	margin-top: 30px;
 	width: 80%;
 	justify-content: space-around;
+}
+
+.forecastday__stat{
+	padding: 35px 0px 60px 0;
+	background: url("../img/forecastday-bg2.jpg") center no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+.forecastday__titles{
+	margin-top: 0;
+	font-size: 3.8rem;
+	font-family: $bold;
+}
+
+.forecastday-2{
+	padding: 80px 0px 350px 0;
+	background: url("../img/forecastday-bg3.jpg") center no-repeat;
+	background-size: cover; 
+}
+
+	/* Question */
+
+.question{
+	padding: 80px 0px 180px 0;
+	background: url("../img/forecastday-bg4.jpg") center no-repeat;
+	background-size: cover;
+	text-align: center;
+} 
+
+.question__title{
+	font-size: 3rem;
+	color: #818181;
+	font-family: $bold;
+	position: relative;
+	display: inline-block;
+}
+
+.question__icon{
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: $blue;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	right: -30px;
+	font-size: 1rem;
+	color: $white;
+}
+
+.question__inner{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.question__card{
+	width: 35%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: $white;
+	padding: 20px 0 60px 0;
+	margin-top: 90px;
+	box-shadow: 0px 0px 55.08px 12.92px rgba(0, 0, 0, 0.14);
+	position: relative;
+}
+
+.question__card:nth-child(odd):before{
+	content: "";
+	display: block;
+	width: 6px;
+	height: 205px;
+	background: #dee1e3;
+	border-radius: 10px;
+	position: absolute;
+	top: 30px;
+	left: 121%;
+}
+
+.question__img--inner{
+	min-height: 120px;
+}
+
+.question__question--inner{
+	background: $red;
+	padding: 15px 0;
+	margin-top: 20px;
+	font-size: 2rem;
+	color: $white;
+	font-family: $medium;
+	cursor: pointer;
+	position: relative;
+	transition: .2s linear;
+}
+
+.question__text--fade{
+	font-size: 1.6rem;
+	color: #556080;
+	padding: 0px 20px;
+	display: none;
+}
+
+.question__slide--icon{
+	position: relative;
+	top: -2px;
+	margin-left: 7px;
+	transition: .2s linear;
+}
+
+.question__slide--icon--rotate{
+	transform: rotate(180deg);
+	top: 6px;
+}
+
+.question__question--inner--transform{
+	transform: translateY(40px);
+}
+
+.left__before:before{
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 53px;
+	left: -54px;
+	border: 27px solid transparent;
+	border-right: 27px solid #c23e3a;
+    border-bottom: 27px solid #c23e3a;
+	
+}
+
+.left__before:after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: -54px;
+    border: 27px solid transparent;
+    border-right: 27px solid #f4504b;
+    border-bottom: 27px solid #f4504b;
+    transform: rotate(-90deg);
+}
+
+.right__before:after{
+	content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+	right: -54px;
+	border: 27px solid transparent;
+    border-left: 27px solid #f4504b;
+    border-top: 27px solid #f4504b;
+}
+
+.right__before:before{
+	content: "";
+    display: block;
+    position: absolute;
+    bottom: 53px;
+	right: -54px;
+	border: 27px solid transparent;
+	border-left: 27px solid #c23e3a;
+    border-bottom: 27px solid #c23e3a;
 }
 
 
@@ -3848,6 +4022,14 @@ a{
 	.game__team--content{
 		margin-top: 50px;
 	}
+
+	.question__card{
+		width: 51%;
+	}
+
+	.question__card:nth-child(odd):before{
+		display: none;
+	}
 }
 
 @media(max-width: 992px){
@@ -4087,6 +4269,10 @@ a{
 	.register__button {
 	    display: block;
 	    margin: 55px auto;
+	}
+
+	.question__card{
+		width: 61%;
 	}
 }
 
@@ -4423,8 +4609,70 @@ a{
 		align-items: center;
 	}
 
-	.koef__text{
+	.koeff__text{
 		margin-top: 20px;
+	}
+
+	.question__title{
+		font-size: 2.3rem;
+	}
+
+	.question__icon{
+		right: 0;
+	}
+
+	.question__card{
+		width: 70%;
+	}
+
+	.question__question--inner{
+		font-size: 1.5rem;
+	}
+
+	.left__before:before{
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 47px;
+		left: -48px;
+		border: 24px solid transparent;
+		border-right: 24px solid #c23e3a;
+	    border-bottom: 24px solid #c23e3a;
+		
+	}
+
+	.left__before:after{
+	    content: "";
+	    display: block;
+	    position: absolute;
+	    bottom: -1px;
+	    left: -48px;
+	    border: 24px solid transparent;
+	    border-right: 24px solid #f4504b;
+	    border-bottom: 24px solid #f4504b;
+	    transform: rotate(-90deg);
+	}
+
+	.right__before:after{
+		content: "";
+	    display: block;
+	    position: absolute;
+	    bottom: -1px;
+		right: -48px;
+		border: 24px solid transparent;
+	    border-left: 24px solid #f4504b;
+	    border-top: 24px solid #f4504b;
+	}
+
+	.right__before:before{
+		content: "";
+	    display: block;
+	    position: absolute;
+	    bottom: 47px;
+		right: -48px;
+		border: 24px solid transparent;
+		border-left: 24px solid #c23e3a;
+	    border-bottom: 24px solid #c23e3a;
 	}
 
 }
@@ -4721,11 +4969,74 @@ a{
 		font-size: 2.4rem;
 	} 
 
-	.team__title, .total__text, .prof__text, .koef__text{
+	.team__title, .total__text, .prof__text, .koeff__text{
 		font-size: 1.4rem;
 	}
 
 	.team__text{
 		font-size: 1.2rem;
+	}
+
+	.team1__img--inner, .team2__img--inner{
+		width: 50px;
+		height: 50px;
+	}
+
+	.question__title{
+		font-size: 1.5rem;
+	}
+
+	.question__card{
+		width: 76%;
+	}
+
+	.question__question--inner{
+		font-size: 1.2rem;
+	}
+
+	.left__before:before{
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 44px;
+		left: -44px;
+		border: 22px solid transparent;
+		border-right: 22px solid #c23e3a;
+	    border-bottom: 22px solid #c23e3a;
+		
+	}
+
+	.left__before:after{
+	    content: "";
+	    display: block;
+	    position: absolute;
+	    bottom: 0px;
+	    left: -44px;
+	    border: 22px solid transparent;
+	    border-right: 22px solid #f4504b;
+	    border-bottom: 22px solid #f4504b;
+	    transform: rotate(-90deg);
+	}
+
+	.right__before:after{
+		content: "";
+	    display: block;
+	    position: absolute;
+	    bottom: 0px;
+		right: -44px;
+		border: 22px solid transparent;
+	    border-left: 22px solid #f4504b;
+	    border-top: 22px solid #f4504b;
+	}
+
+	.right__before:before{
+		content: "";
+	    display: block;
+	    position: absolute;
+	    bottom: 44px;
+		right: -44px;
+		border: 22px solid transparent;
+		border-left: 22px solid #c23e3a;
+	    border-bottom: 22px solid #c23e3a;
 	}
 }
