@@ -3580,7 +3580,7 @@ a{
 .teams__inner{
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: space-between;
 	margin-top: 50px;
 }
 
@@ -4304,6 +4304,10 @@ a{
 
 
 	/* Teams slider */ 
+
+	.teams__inner{
+		justify-content: flex-start;
+	}
 
 	.teams__hider{
 		width: 420px;
