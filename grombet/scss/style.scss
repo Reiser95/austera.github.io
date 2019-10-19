@@ -172,6 +172,20 @@ li{
 	list-style-type: none;
 }
 
+.etUnit.etDays, .etUnit.etDays + div{
+	position: absolute;
+	opacity: 0;
+}
+
+.eTimer{
+	padding: 0;
+}
+
+.etSign{
+	font-family: $regular;
+	font-size: 1.3rem;
+	transform: scale(.9);
+}
 
 .container__full{
 	width: 1700px;
@@ -277,6 +291,10 @@ li{
 	width: 30px;
 	cursor: pointer;
 	transition: .3s linear;
+}
+
+.r, .l{
+	display: none;
 }
 
 .menu__icon:hover{
@@ -3179,6 +3197,10 @@ a{
 	left: 0;
 }
 
+.game__info--inner{
+	width: 35%;
+}
+
 
 /* WORK-2 */
 
@@ -3558,7 +3580,7 @@ a{
 .teams__inner{
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-start;
 	margin-top: 50px;
 }
 
@@ -3566,6 +3588,8 @@ a{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-right: 30px;
+	width: 180px;
 }
 
 .teams__name, .teams__value{
@@ -3876,6 +3900,10 @@ a{
 	 .work__title{
 	 	text-align: center;
 	 }
+
+	 .game__info--inner{
+		width: 45%;
+	}
 }
 
 @media(max-width: 1200px){
@@ -4035,6 +4063,10 @@ a{
 	.question__card:nth-child(odd):before{
 		display: none;
 	}
+
+	 .game__info--inner{
+		width: auto;
+	}
 }
 
 @media(max-width: 992px){
@@ -4190,16 +4222,6 @@ a{
 		flex-direction: column;
 	}
 
-	/* Teams */
-
-	.teams__inner{
-		flex-direction: column;
-	} 
-
-	.teams__box{
-		margin-top: 30px;
-	}
-
 	/* Sliders */ 
 
 	.carousel__hider{
@@ -4278,6 +4300,57 @@ a{
 
 	.question__card{
 		width: 61%;
+	}
+
+
+	/* Teams slider */ 
+
+	.teams__hider{
+		width: 420px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+
+	.teams__inner{
+		width: 10000px;
+		position: relative;
+		height: 100%;
+		display: block;
+		float: left;
+	}
+
+	.teams__box{
+		display: inline;
+		float: left;
+		text-align: center;
+		margin-right: 0;
+		width: 210px;
+	}
+
+	.teams__img{
+		margin: 0 auto;
+	}
+
+	.r, .l{
+		display: block;
+		font-size: 3rem;
+		color: #E7E7E7;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: .2s linear;
+	}
+
+	.r{
+		right: 0;
+	}
+
+	.l{
+		left: 0;
+	}
+
+	.r:hover, .l:hover{
+		color: darken(#e7e7e7, 10);
 	}
 }
 
@@ -5049,5 +5122,19 @@ a{
 		border: 22px solid transparent;
 		border-left: 22px solid #c23e3a;
 	    border-bottom: 22px solid #c23e3a;
+	}
+
+	/* Teams slider */ 
+
+	.teams__hider{
+		width: 210px;
+	}
+
+	.r{
+		right: 10px;
+	}
+
+	.l{
+		left: 10px;
 	}
 }

@@ -1,5 +1,39 @@
 $(document).ready(function(){
 
+		var items4 = $(".teams__inner").children(".teams__box").length;
+		var leftArrow4 = $('.l');
+	    var rightArrow4 = $('.r');
+	    var carouselList4 = $('.teams__inner');
+	 
+	    var pixelsOffset4 = 210;
+	    var itemNumbers2 = $(".teams__hider").css("width").replace(/[^0-9]/gim, "");
+	    itemNumbers2 = itemNumbers2 / pixelsOffset4;
+	    var number4 = (items4 - itemNumbers2) * pixelsOffset4;
+	    var currentLeftValue4 = 0;
+	 
+	    leftArrow4.click(function() {
+	    		if(currentLeftValue4 >= 0 ){
+	    			currentLeftValue4 = -number4;
+	    	    	carouselList4.animate({ left : currentLeftValue4 + "px"}, 300);
+	    		}
+	    		else{
+	    			currentLeftValue4 += pixelsOffset4;
+	    	    	carouselList4.animate({ left : currentLeftValue4 + "px"}, 300);
+	    		}
+	    });
+	 
+	    rightArrow4.click(function() {
+	    		if(currentLeftValue4 <= (-number4)){
+	    			currentLeftValue4 = 0;
+	    	    	carouselList4.animate({ left : currentLeftValue4 + "px"}, 300);
+	    		}
+	    		else{
+	    			currentLeftValue4 -= pixelsOffset4;
+	    	    	carouselList4.animate({ left : currentLeftValue4 + "px"}, 300);
+	    		}
+	    });
+
+
 	var modalIconOff = $(".modal__menu--iconin");
 	var modalIconOn = $(".menu__icon");
 	var modalMenu = $(".modal__menu");
@@ -25,6 +59,95 @@ $(document).ready(function(){
 		$(this).toggleClass("question__question--inner--transform");
 		$(this).parent(".question__card").children(".question__img--inner").fadeToggle(0);
 		$(this).parent(".question__card").children(".question__text--fade").fadeToggle(0);
+	});
+
+	var select = $(".select");
+
+	select.on("click", function(){
+		if($(this).hasClass("active")){
+			$(this).removeClass("active");
+			$(this).find(".select__inner").fadeOut(100);
+		}
+		else if(!$(this).hasClass("active")){
+			$(".select__inner").fadeOut(100);
+			$(this).addClass("active");
+			$(this).find(".select__inner").fadeIn(100);
+		}
+	});
+
+	$(".select__item").on("click", function(){
+		$(".select__inner").fadeOut(100);
+	});
+
+	$(".etUnit.etDays").css("display", "none");
+
+
+	match.on("click", function(){
+		$(this).find(".fade__inner").fadeToggle(100);
+	});
+
+
+
+	$(".sports__inner").on("click", function(){
+		if($(".sports__inner").hasClass("active__sport")){
+			$(".sports__inner").removeClass("active__sport");
+		}
+		$(this).addClass("active__sport");
+
+
+		if($(this).hasClass("ufc__fight")){
+			$(".inners").fadeOut(100);
+			$(".ufc__box").fadeIn(100);
+		}
+		else if($(this).hasClass("football")){
+			$(".inners").fadeOut(100);
+			$(".football__inn").fadeIn(100);
+		}
+		else if($(this).hasClass("tenis")){
+			$(".inners").fadeOut(100);
+			$(".tenis__inn").fadeIn(100);
+		}
+		else if($(this).hasClass("basketball")){
+			$(".inners").fadeOut(100);
+			$(".basketball__inn").fadeIn(100);
+		}
+		else if($(this).hasClass("baseball")){
+			$(".inners").fadeOut(100);
+			$(".baseball__inn").fadeIn(100);
+		}
+		else if($(this).hasClass("hoccey")){
+			$(".inners").fadeOut(100);
+			$(".hoccey__inn").fadeIn(100);
+		}
+
+
+	});
+
+
+
+
+
+	$(".chooseme__card").on("mouseenter", function(){
+		$(this).children(".chooseme__card--hover").css("opacity", "1");
+	});
+
+	$(".chooseme__card").on("mouseleave", function(){
+		$(this).children(".chooseme__card--hover").css("opacity", "0");
+	});
+
+
+
+
+
+
+
+	$('.comment__create--button').on('click', function(e){
+	  $('html,body').stop().animate({ scrollTop: $('#some__point').offset().top }, 1000);
+	  e.preventDefault();
+	});
+
+	$(document).on('change', 'input[type="file"]', function () {
+	    $(".label__upload").fadeOut(100);
 	});
 
 
@@ -213,94 +336,6 @@ $(document).ready(function(){
 
 
 
-	match.on("click", function(){
-		$(this).find(".fade__inner").fadeToggle(100);
-	});
-
-	var select = $(".select");
-
-	select.on("click", function(){
-		if($(this).hasClass("active")){
-			$(this).removeClass("active");
-			$(this).find(".select__inner").fadeOut(100);
-		}
-		else if(!$(this).hasClass("active")){
-			$(".select__inner").fadeOut(100);
-			$(this).addClass("active");
-			$(this).find(".select__inner").fadeIn(100);
-		}
-	});
-
-	$(".select__item").on("click", function(){
-		$(".select__inner").fadeOut(100);
-	});
-
-
-
-	$(".sports__inner").on("click", function(){
-		if($(".sports__inner").hasClass("active__sport")){
-			$(".sports__inner").removeClass("active__sport");
-		}
-		$(this).addClass("active__sport");
-
-
-		if($(this).hasClass("ufc__fight")){
-			$(".inners").fadeOut(100);
-			$(".ufc__box").fadeIn(100);
-		}
-		else if($(this).hasClass("football")){
-			$(".inners").fadeOut(100);
-			$(".football__inn").fadeIn(100);
-		}
-		else if($(this).hasClass("tenis")){
-			$(".inners").fadeOut(100);
-			$(".tenis__inn").fadeIn(100);
-		}
-		else if($(this).hasClass("basketball")){
-			$(".inners").fadeOut(100);
-			$(".basketball__inn").fadeIn(100);
-		}
-		else if($(this).hasClass("baseball")){
-			$(".inners").fadeOut(100);
-			$(".baseball__inn").fadeIn(100);
-		}
-		else if($(this).hasClass("hoccey")){
-			$(".inners").fadeOut(100);
-			$(".hoccey__inn").fadeIn(100);
-		}
-
-
-	});
-
-
-
-
-
-	$(".chooseme__card").on("mouseenter", function(){
-		$(this).children(".chooseme__card--hover").css("opacity", "1");
-	});
-
-	$(".chooseme__card").on("mouseleave", function(){
-		$(this).children(".chooseme__card--hover").css("opacity", "0");
-	});
-
-
-
-
-
-
-
-	$('.comment__create--button').on('click', function(e){
-	  $('html,body').stop().animate({ scrollTop: $('#some__point').offset().top }, 1000);
-	  e.preventDefault();
-	});
-
-	$(document).on('change', 'input[type="file"]', function () {
-	    $(".label__upload").fadeOut(100);
-	});
-
-
-
 
 
 	var dataset = [
@@ -458,5 +493,12 @@ $(document).ready(function(){
 		leeway: 50,
 		easing: 'spincrementEasing',
 		fade: true
+	});
+});
+
+
+jQuery(document).ready(function() {
+	jQuery(".eTimer").eTimer({
+		etType: 0, etDate: "19.10.2019.20.37", etTitleSize: 20, etShowSign: 1, etSep: ":", etFontFamily: "Arial Black", etTextColor: "white", etPaddingTB: 15, etPaddingLR: 15, etBackground: "transparent", etBorderSize: 0, etBorderRadius: 2, etBorderColor: "transparent", etShadow: " 0px 0px 0px 0px transparent", etLastUnit: 4, etNumberFontFamily: "Impact", etNumberSize: 35, etNumberColor: "white", etNumberPaddingTB: 0, etNumberPaddingLR: 8, etNumberBackground: "transparent", etNumberBorderSize: 0, etNumberBorderRadius: 5, etNumberBorderColor: "transparent", etNumberShadow: "inset 0px 0px 10px 0px transparent"
 	});
 });
