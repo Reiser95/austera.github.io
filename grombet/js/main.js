@@ -1,5 +1,15 @@
 $(document).ready(function(){
 
+	$(".button__info").on("click", function(){
+		$(".info__site--inner").slideDown(400);
+		$(this).fadeOut(0);
+	});
+
+	$(".fade__button").on("click", function(){
+		$(".info__site--inner").slideUp(400);
+		$(".button__info").fadeIn(0);
+	});
+
 		var items4 = $(".teams__inner").children(".teams__box").length;
 		var leftArrow4 = $('.l');
 	    var rightArrow4 = $('.r');
@@ -498,7 +508,8 @@ $(document).ready(function(){
 
 
 jQuery(document).ready(function() {
+	var date = $(".eTimer").attr("data-time");
 	jQuery(".eTimer").eTimer({
-		etType: 0, etDate: "19.10.2019.20.37", etTitleSize: 20, etShowSign: 1, etSep: ":", etFontFamily: "Arial Black", etTextColor: "white", etPaddingTB: 15, etPaddingLR: 15, etBackground: "transparent", etBorderSize: 0, etBorderRadius: 2, etBorderColor: "transparent", etShadow: " 0px 0px 0px 0px transparent", etLastUnit: 4, etNumberFontFamily: "Impact", etNumberSize: 35, etNumberColor: "white", etNumberPaddingTB: 0, etNumberPaddingLR: 8, etNumberBackground: "transparent", etNumberBorderSize: 0, etNumberBorderRadius: 5, etNumberBorderColor: "transparent", etNumberShadow: "inset 0px 0px 10px 0px transparent"
+		etType: 0, etDate: date, etTitleSize: 20, etShowSign: 1, etSep: ":", etFontFamily: "Arial Black", etTextColor: "white", etPaddingTB: 15, etPaddingLR: 15, etBackground: "transparent", etBorderSize: 0, etBorderRadius: 2, etBorderColor: "transparent", etShadow: " 0px 0px 0px 0px transparent", etLastUnit: 4, etNumberFontFamily: "Impact", etNumberSize: 35, etNumberColor: "white", etNumberPaddingTB: 0, etNumberPaddingLR: 8, etNumberBackground: "transparent", etNumberBorderSize: 0, etNumberBorderRadius: 5, etNumberBorderColor: "transparent", etNumberShadow: "inset 0px 0px 10px 0px transparent"
 	});
 });

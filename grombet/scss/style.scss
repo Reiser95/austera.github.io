@@ -413,6 +413,37 @@ li{
 	text-align: right;
 }
 
+.info__site--link{
+	color: $red;
+}
+
+
+.button__info, .fade__button{
+	font-size: 3rem;
+	color: $white;
+	display: inline-block;
+	padding: 10px 20px;
+}
+
+.info__site--inner{
+	margin: 30px 0 0 0;
+	color: $white;
+	font-size: 1.5rem;
+	font-family: $semibold;
+	display: none;
+}
+
+.info__btn--inner{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 20px 0 50px 0;
+}
+
+
+
+
 .price__mobile{
 	fill: #5c647c;
 	width: 80px;
@@ -1144,7 +1175,7 @@ a{
 /* Free */
 
 .free__block{
-	padding: 195px 0px 265px 0;
+	padding: 195px 0px 105px 0;
 	display: flex;
 	align-items: center;
 } 
@@ -1236,7 +1267,7 @@ a{
 .sale__inner{
 	padding: 20px 0px 40px 0;
 	position: absolute;
-	top: -80px;
+	top: 40px;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 100%;
@@ -2850,6 +2881,37 @@ a{
 	width: 100%;
 	padding: 25px 120px;
 	background: #404656;
+	position: relative;
+	min-height: 276px;
+}
+
+.forecast__close{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: -30px;
+	border: 3px dashed #575e71;
+	background: #404656;
+	padding: 15px 40px;
+	color: $white;
+	font-size: 2.3rem;
+	font-family: $bold;
+	
+}
+
+.tomorrow__forecast--title, .tomorrow__forecast--text{
+	color: $white;
+	font-size: 2.3rem;
+	font-family: $bold;
+}
+
+.tomorrow__forecast{
+	text-align: center;
+}
+
+.tomorrow__forecast--text{
+	color: $red;
+	margin-top: 30px;
 }
 
 .team1__inner, .team2__inner{
@@ -2874,7 +2936,7 @@ a{
 	width: 100%;
 }
 
-.total__inner{
+.total__inner, .total__in{
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -2890,6 +2952,7 @@ a{
 	margin-top: 8px;
 	color: rgba(255, 255, 255, .6);
 	font-size: 1.7rem;
+	text-align: center;
 }
 
 .team__title{
@@ -4762,6 +4825,10 @@ a{
 		background-size: cover;
 		padding: 80px 0px 130px 0;
 	} 
+
+	.info__btn--inner{
+		display: none;
+	}
 
 }
 
