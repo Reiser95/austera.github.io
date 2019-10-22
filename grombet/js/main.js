@@ -276,6 +276,12 @@ $(document).ready(function(){
         threshold:0
 	});
 
+	$(".teams__inner").swipe( {
+        swipeLeft:leftSwipeTeam,
+        swipeRight:rightSwipeTeam,
+        threshold:0
+	});
+
 	function leftSwipe2(){
 		if(currentLeftValue3 <= (-number3 + pixelsOffset3)){
 			currentLeftValue3 = 0;
@@ -310,14 +316,15 @@ $(document).ready(function(){
 			currentLeftValue -= pixelsOffset;
 		   	carouselList.animate({ left : currentLeftValue + "px"}, 300);
 		}
-			if(currentLeftValue2 <= (-number2 + pixelsOffset2)){
-				currentLeftValue2 = 0;
-		    	carouselList2.animate({ left : currentLeftValue2 + "px"}, 300);
-			}
-			else{
-				currentLeftValue2 -= pixelsOffset2;
-		    	carouselList2.animate({ left : currentLeftValue2 + "px"}, 300);
-			}
+			
+		if(currentLeftValue2 <= (-number2 + pixelsOffset2)){
+			currentLeftValue2 = 0;
+	    	carouselList2.animate({ left : currentLeftValue2 + "px"}, 300);
+		}
+		else{
+			currentLeftValue2 -= pixelsOffset2;
+		   	carouselList2.animate({ left : currentLeftValue2 + "px"}, 300);
+		}
 	}
 
 	function rightSwipe(){
@@ -340,6 +347,30 @@ $(document).ready(function(){
 	   			currentLeftValue2 += pixelsOffset2;
 	   	    	carouselList2.animate({ left : currentLeftValue2 + "px"}, 300);
 	   		}
+
+	}
+
+
+	function leftSwipeTeam(){
+			if(currentLeftValue4 <= (-number4)){
+				currentLeftValue4 = 0;
+		    	carouselList4.animate({ left : currentLeftValue4 + "px"}, 300);
+			}
+			else{
+				currentLeftValue4 -= pixelsOffset4;
+		    	carouselList4.animate({ left : currentLeftValue4 + "px"}, 300);
+			}
+	}
+
+	function rightSwipeTeam(){
+			if(currentLeftValue4 >= 0 ){
+				currentLeftValue4 = -number4;
+		    	carouselList4.animate({ left : currentLeftValue4 + "px"}, 300);
+			}
+			else{
+				currentLeftValue4 += pixelsOffset4;
+		    	carouselList4.animate({ left : currentLeftValue4 + "px"}, 300);
+			}
 
 	}
 

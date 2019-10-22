@@ -82,7 +82,7 @@
 					
 
 					
-					<div class="eTimer"></div>
+					<div class="eTimer" data-time="20.11.2019.21.37"></div>
 					
 
 
@@ -97,7 +97,16 @@
 
 				<div class="game__team--content">
 					<div class="game__team--inner">
-						<div class="team1__inner">
+
+						<div class="forecast__close" style="display: block">
+							<div class="forecast__close--title">
+								событие <span class="red">завершилось</span>
+							</div>
+						</div>
+
+						<!-- События есть -->
+
+						<div class="team1__inner team__inner" style="display: none">
 							<div class="team1__img--inner">
 								<img src="img/ava.png" alt="Команда 1" class="team1__img">
 							</div>
@@ -111,17 +120,48 @@
 							</div>
 						</div>
 
-						<div class="total__inner">
-							<div class="total__title">
-								VS
+						<!-- События нет -->
+
+						<div class="team1__inner team__inner--for" style="display: block">
+							<div class="team1__img--inner">
+								<img src="img/ava.png" alt="Команда 1" class="team1__img">
 							</div>
 
-							<div class="total__text">
-								5(5%)
+							<div class="team__title">
+								?
 							</div>
 						</div>
 
-						<div class="team2__inner">
+						<div class="total__inner">
+							
+							<!-- Событие есть -->
+
+							<div class="total__inn" style="display: none">
+								<div class="total__title">
+									VS
+								</div>
+
+								<div class="total__text">
+									5(5%)
+								</div>
+							</div>
+
+							<!-- События нет -->
+							
+							<div class="tomorrow__forecast" style="display: block">
+								<div class="tomorrow__forecast--title">
+									Следующая ставка будет
+								</div>
+
+								<div class="tomorrow__forecast--text">
+									Завтра
+								</div>
+							</div>
+						</div>
+
+						<!-- События есть -->
+
+						<div class="team2__inner team__inner" style="display: none">
 							<div class="team2__img--inner">
 								<img src="img/ava.png" alt="Команда 2" class="team2__img">
 							</div>
@@ -132,6 +172,18 @@
 
 							<div class="team__text">
 								"?"
+							</div>
+						</div>
+
+						<!-- События нет -->
+
+						<div class="team1__inner team__inner--for" style="display: block">
+							<div class="team1__img--inner">
+								<img src="img/ava.png" alt="Команда 1" class="team1__img">
+							</div>
+
+							<div class="team__title">
+								?
 							</div>
 						</div>
 					</div>
