@@ -413,34 +413,6 @@ li{
 	text-align: right;
 }
 
-.info__site--link{
-	color: $red;
-}
-
-
-.button__info, .fade__button{
-	font-size: 3rem;
-	color: $white;
-	display: inline-block;
-	padding: 10px 20px;
-}
-
-.info__site--inner{
-	margin: 30px 0 0 0;
-	color: $white;
-	font-size: 1.5rem;
-	font-family: $semibold;
-	display: none;
-}
-
-.info__btn--inner{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	margin: 20px 0 50px 0;
-}
-
 
 
 
@@ -970,7 +942,7 @@ a{
 /* Cards */
 
 .cards{
-	padding: 135px 0px 235px 0;
+	padding: 135px 0px 25px 0;
 	background: url(../img/cards-bg.jpg) center no-repeat;
 	background-size: cover;
 }
@@ -3383,6 +3355,114 @@ a{
 	text-transform: uppercase;
 } 
 
+/* SEO */
+
+.seo{
+	background: #22262f;
+	padding: 70px 0px 50px 0;
+} 
+
+.seo__inner--content{
+	margin-top: 150px;
+}
+
+.seo__inner{
+	padding: 60px 85px;
+	border: 2px dashed $red;
+	border-radius: 20px;
+	position: relative;
+	text-align: center;
+	margin-top: 50px;
+	display: none;
+}
+
+.seo__inner--title{
+	padding: 10px 20px;
+	background: #22262f;
+	font-size: 3rem;
+	font-family: $semibold;
+	position: absolute;
+	top: -30px;
+	left: 50%;
+	color: $white;
+	transform: translateX(-50%);
+}
+
+.seo__inner--text, .seo__inner--text--subtitle{
+	font-size: 1.8rem;
+	color: $white;
+	font-family: $light;
+}
+
+.seo__work{
+	margin-top: 100px;
+	text-align: left;
+}
+
+.seo__inner--text--subtitle{
+	font-family: $semibold;
+	margin: 0px 0px 0px 90px;
+	text-align: left;
+	margin-top: 20px;
+}
+
+.point{
+	margin-left: 30px;
+}
+
+.fade__button--inner{
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 30px;
+}
+
+.fade__button{
+	background: #292e38;
+	color: $red;
+	font-size: 1.8rem;
+	font-family: $semibold;
+	padding: 7px 20px;
+	border-radius: 10px;
+	margin-left: 10px;
+}
+
+.fade__button:hover{
+	background: lighten(#292e38, 3);
+}
+
+.seo__states{
+	margin-top: 50px;
+}
+
+.fade__button--fadeIn{
+	display: none;
+}
+
+.fade__button--all--inner{
+	position: absolute;
+	bottom: -18px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.fade__button--all{
+	color: $white;
+	font-size: 1.4rem;
+	padding: 10px 80px;
+	border-radius: 35px 15px;
+}
+
+.seo__fadeIn--all{
+	display: flex;
+	justify-content: center;
+}
+
+.button__fadeIn--all{
+	color: $white;
+	font-size: 1.5rem;
+	padding: 10px 50px;
+	border-radius: 35px 10px;
+}
 
 /* About */
 
@@ -4475,6 +4555,10 @@ a{
 
 	.r:hover, .l:hover{
 		color: darken(#e7e7e7, 10);
+	}
+
+	.seo{
+		display: none;
 	}
 }
 
