@@ -20,6 +20,11 @@ $(document).ready(function(){
 		$(".button__fadeIn--all").fadeOut(0);
 	});
 
+	$(".info__menu--link").on("click", function(e){
+		e.preventDefault();
+		$(".slide__menu--info").toggleClass("transform__info");
+	});
+
 		var items4 = $(".teams__inner").children(".teams__box").length;
 		var leftArrow4 = $('.l');
 	    var rightArrow4 = $('.r');
