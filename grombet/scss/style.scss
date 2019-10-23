@@ -232,6 +232,7 @@ li{
     z-index: 100;
 	background: $white;
 	padding: 15px 0;
+	box-shadow: 0 0px 5px #000;
 }
 
 .header__inner{
@@ -3438,8 +3439,16 @@ a{
 	padding: 70px 0px 50px 0;
 } 
 
+.rot{
+	transition: .3s linear;
+}
+
 .seo__inner--content{
 	margin-top: 150px;
+}
+
+.seo__work--inner{
+	display: none;
 }
 
 .seo__inner{
@@ -3449,7 +3458,6 @@ a{
 	position: relative;
 	text-align: center;
 	margin-top: 50px;
-	display: none;
 }
 
 .seo__inner--title{
@@ -4354,9 +4362,9 @@ body {
 }
 
 label.hamburger {
-  position: fixed;
-  top: 6px;
-  right: 104px;
+  position: absolute;
+  top: -8px;
+  right: 0px;
 }
 
 .drawer-list li a.enter__menu{

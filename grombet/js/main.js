@@ -1,23 +1,25 @@
 $(document).ready(function(){
 
+	$(".fade__button--all").on("click", function(){
+		$(".seo__work--inner").slideToggle(500);
+
+		var buttonText = $(".fade__button--all").text().trim();
+		if(buttonText == "Подробнее"){
+			$(".fade__button--all").text("Скрыть");
+		}
+		else if(buttonText == "Скрыть"){
+			$(".fade__button--all").text("Подробнее");
+		}
+	});
+
 	$(".fade__button--fadeOut").on("click", function(){
-		$(".seo__work").slideUp(500);
-		$(".fade__button--fadeIn").fadeIn(0);
+		$(".seo__work").slideUp(300);
+		$(".fade__button--fadeIn").fadeIn(100);
 	});
 
 	$(".fade__button--fadeIn").on("click", function(){
-		$(".seo__work").slideDown(500);
-		$(".fade__button--fadeIn").fadeOut(0);
-	});
-
-	$(".fade__button--all").on("click", function(){
-		$(".seo__inner").slideUp(500);
-		$(".button__fadeIn--all").fadeIn(0);
-	});
-
-	$(".button__fadeIn--all").on("click", function(){
-		$(".seo__inner").slideDown(500);
-		$(".button__fadeIn--all").fadeOut(0);
+		$(".seo__work").slideDown(300);
+		$(".fade__button--fadeIn").fadeOut(100);
 	});
 
 	$(".info__menu--link").on("click", function(e){
