@@ -3479,15 +3479,19 @@ a{
 }
 
 .seo__work{
-	margin-top: 100px;
+	margin-top: 50px;
 	text-align: left;
 }
 
 .seo__inner--text--subtitle{
 	font-family: $semibold;
-	margin: 0px 0px 0px 90px;
+	margin: 50px 0px 50px 90px;
 	text-align: left;
-	margin-top: 20px;
+}
+
+.title__seo{
+	margin-left: 0;
+	text-align: center;
 }
 
 .point{
@@ -4201,17 +4205,16 @@ $contrast: darken($main, 10%);
   -ms-transform: translatex(-100vw);
   box-sizing: border-box;
   pointer-events: none;
-  padding-top: 125px;
   transition: width 475ms ease-out, transform 450ms ease, border-radius .8s .1s ease;
   border-bottom-left-radius: 100vw;
-  @include alpha-attribute('background-color', rgba($contrast, 0.8), white);
+  background: rgba(92, 99, 124, .9);
   @media (min-width: 768px) {
     width: 40vw;
   }
   ul {
     height: 100%;
     width: 100%;
-    margin: 0;
+    margin: 125px 0 0 0;
     padding: 0;
     overflow: auto;
     overflow-x: hidden;
@@ -4242,7 +4245,7 @@ $contrast: darken($main, 10%);
       }
       &:hover {
         cursor: pointer;
-        @include alpha-attribute('background-color', rgba($main, 0.5), white);
+        background: $red;
       }
     }
   }
@@ -4273,16 +4276,6 @@ input.hamburger {
           transform: translate(-50%, -50%) rotate(-315deg);
         }
       }
-      close {
-        color: transparent;
-        font-family: $bold;
-        width: 100%;
-        font-size: 1rem;
-      }
-      open {
-        color: rgba(0, 0, 0, 0);
-        width: 0;
-      }
     }
   }
 }
@@ -4295,30 +4288,6 @@ label.hamburger {
   width: 50px;
   &:hover {
     cursor: pointer;
-  }
-  text {
-    close,
-    open {
-      text-transform: uppercase;
-      font-size: .8em;
-      align-text: center;
-      position: absolute;
-      transform: translateY(50px);
-      text-align: center;
-      overflow: hidden;
-      transition: width .25s .35s, color .45s .35s;
-    }
-    close {
-      color: rgba(255, 255, 255, 0);
-      right: 0;
-      width: 0;
-      font-family: $bold;
-      font-size: 1rem;
-    }
-    open {
-      color: transparent;
-      width: 100%;
-    }
   }
   > i {
     position: absolute;

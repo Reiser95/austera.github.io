@@ -1,5 +1,12 @@
 $(document).ready(function(){
 
+	$(document).mouseup(function (e) {
+	    var container2 = $(".slide__menu--info");
+	    if (container2.has(e.target).length === 0){
+	    	container2.removeClass("transform__info");
+	    }
+	  });
+
 	$(".fade__button--all").on("click", function(){
 		$(".seo__work--inner").slideToggle(500);
 
