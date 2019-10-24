@@ -2639,7 +2639,7 @@ header .cart_box .cart:hover {
     font-size: 16px;
 }
 
-.list{
+.list__downloading{
     display: flex;
     align-items: center;
     margin-top: 20px;
@@ -2647,7 +2647,7 @@ header .cart_box .cart:hover {
     font-weight: 500;
 }
 
-.list svg{
+.list__downloading svg{
     margin-right: 10px;
 }
 
