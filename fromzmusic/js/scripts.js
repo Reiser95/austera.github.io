@@ -4,6 +4,60 @@ $(document).ready(function () {
         nav: true,
         navText: [$('.prev'), $('.next')],
     });
+
+    /* Кнопка выбрать все */
+
+    $(".choose__all").on("click", function(){
+        // $(this).siblings(".selects__inner")
+        $(this).siblings(".selects__inner").children(".choose__item").children("input[type=checkbox]").each(function() { 
+            this.checked = true;
+        });
+    });
+
+    /* Кнопка сброса */
+
+    $(".reset__btn").on("click", function(){
+        $(this).parents(".reset__btns").siblings(".selection__content").children(".select__box").children(".selects__inner").children(".choose__item").children("input[type=checkbox]").each(function() { 
+            this.checked = false;
+        });
+    });
+
+    /* Переключение технического каталога */
+
+    var catalogLink = $(".tex-catalog__views--link");
+
+    catalogLink.on("click", function(){
+
+        $(".tex-catalog__views--link").removeClass("active__view");
+        $(this).addClass("active__view");
+
+        $(".tex__inner").fadeOut(0);
+        $(".tex__title").fadeOut(0);
+
+        if($(this).hasClass("cable__link")){
+            $(".cable__inner").fadeIn(0);
+            $(".cable__title").fadeIn(0);
+        }
+        else if($(this).hasClass("itk__link")){
+            $(".iek-catalog__inner").fadeIn(0);
+            $(".iek__title").fadeIn(0);
+        }
+        else if($(this).hasClass("tdm__link")){
+            $(".itk-catalog__inner").fadeIn(0);
+            $(".itk__title").fadeIn(0);
+        }
+        else if($(this).hasClass("iek__link")){
+            $(".tex-catalog__inner").fadeIn(0);
+            $(".cat__title").fadeIn(0);
+        }
+        else if($(this).hasClass("all__link")){
+            $(".tex__inner").fadeIn(0);
+            $(".tex__title").fadeIn(0);
+        }
+    });
+
+    /* Конец переключателей технического каталога */ 
+
     let brands = $('.brands_slider');
     let popular = $('.popular_slider');
     let newprod = $('.new_slider');
