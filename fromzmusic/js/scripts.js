@@ -14,6 +14,18 @@ $(document).ready(function () {
         });
     });
 
+    /* Кнопки переключения физ лица и юр лица */ 
+
+    $(".fizface").on("click", function(){
+        $(".reg__face--tab").fadeOut(0);
+        $(".fiz").fadeIn(0);
+    });
+
+    $(".yurface").on("click", function(){
+        $(".reg__face--tab").fadeOut(0);
+        $(".yur").fadeIn(0);
+    });
+
     /* Кнопка сброса */
 
     $(".reset__btn").on("click", function(){
