@@ -26,12 +26,79 @@ $(document).ready(function () {
         $(".yur").fadeIn(0);
     });
 
+    $(".datal").on("click", function(){
+        $(".reg__face--tab").fadeOut(0);
+        $(".data").fadeIn(0);
+    });
+
+    $(".historyl").on("click", function(){
+        $(".reg__face--tab").fadeOut(0);
+        $(".history").fadeIn(0);
+    });
+
+    $(".likel").on("click", function(){
+        $(".reg__face--tab").fadeOut(0);
+        $(".like").fadeIn(0);
+    });
+
+    $(".tovarl").on("click", function(){
+        $(".reg__face--tab").fadeOut(0);
+        $(".tovar").fadeIn(0);
+    });
+
+
+
+    $(".cart__inner--link").on("click", function(){
+        $(".cart__face--tab").fadeOut(0);
+        $(".cart__inner").fadeIn(0);
+    });
+
+    $(".cart__design--link").on("click", function(){
+        $(".cart__face--tab").fadeOut(0);
+        $(".cart__design").fadeIn(0);
+    });
+
+    $(".cart__accept--link").on("click", function(){
+        $(".cart__face--tab").fadeOut(0);
+        $(".cart__accept").fadeIn(0);
+    });
+
+
+    /* Кнопка оформить заказ */ 
+
+    $(".oform__button").on("click", function(){
+        $(".cart__inner--oform").fadeIn(0);
+        $(".cart__buttons").fadeOut(0);
+    });
+
     /* Кнопка сброса */
 
     $(".reset__btn").on("click", function(){
         $(this).parents(".reset__btns").siblings(".selection__content").children(".select__box").children(".selects__inner").children(".choose__item").children("input[type=checkbox]").each(function() { 
             this.checked = false;
         });
+    });
+
+    /* Переключение оплаты */ 
+
+    $(".cart__inner--checkboxes").on("click", function(){
+        if($("#var2").is(":checked")){
+            $(".option__payment").fadeOut(0);
+            $(".region__delivery").fadeIn(0);
+        }
+        else{
+            $(".option__payment").fadeIn(0);
+            $(".region__delivery").fadeOut(0);
+        }
+
+        if($("#payment2").is(":checked")){
+            $(".curer__text").fadeOut(0);
+            $(".partners__payment").fadeIn(0);
+        }
+        else{
+            $(".curer__text").fadeIn(0);
+            $(".partners__payment").fadeOut(0);
+        }
     });
 
     /* Переключение технического каталога */
@@ -74,6 +141,12 @@ $(document).ready(function () {
     let popular = $('.popular_slider');
     let newprod = $('.new_slider');
     let stockslider = $('.stock_slider');
+    let officeslider = $(".office__slider");
+    officeslider.owlCarousel({
+        items: 3,
+        nav: false,
+        dots: false
+    });
     brands.owlCarousel({
         items: 4,
         nav: false,
@@ -85,7 +158,7 @@ $(document).ready(function () {
         dots: false
     });
     newprod.owlCarousel({
-        items: 4,
+        items: 3,
         nav: false,
         dots: false,
     });
@@ -106,12 +179,23 @@ $(document).ready(function () {
     $('.popular .prev_arr').click(function () {
         popular.trigger('prev.owl.carousel');
     });
+
     $('.new .next_arr').click(function () {
         newprod.trigger('next.owl.carousel');
     });
     $('.new .prev_arr').click(function () {
         newprod.trigger('prev.owl.carousel');
     });
+
+
+    $('.new .next_arr').click(function () {
+        officeslider.trigger('next.owl.carousel');
+    });
+    $('.new .prev_arr').click(function () {
+        officeslider.trigger('prev.owl.carousel');
+    });
+
+
     $('.stock .next_arr').click(function () {
         stockslider.trigger('next.owl.carousel');
     });
