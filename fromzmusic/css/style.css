@@ -4004,6 +4004,15 @@ header .cart_box .cart:hover {
     flex-wrap: wrap;
     width: 1285px;
     box-shadow: 0 0 10px #d7d7d7;
+    transition: .3s linear;
+}
+
+.cabel__list{
+    position: relative;
+}
+
+.cabel__list:hover .menu__header--hover{
+    display: flex;
 }
 
 .email__input{

@@ -14,16 +14,6 @@ $(document).ready(function () {
         });
     });
 
-    /* Меню при наведение раздел каталогов */ 
-
-    $(".menu_header").on("mouseenter", function(){
-        $(".menu__header--hover").slideDown(100).css("display", "flex");
-    });
-
-    $(".menu_header").on("mouseleave", function(){
-        $(".menu__header--hover").slideUp(100);
-    });
-
     /* Кнопки переключения физ лица и юр лица */ 
 
     $(".fizface").on("click", function(){
