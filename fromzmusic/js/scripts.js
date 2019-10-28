@@ -145,27 +145,157 @@ $(document).ready(function () {
     officeslider.owlCarousel({
         items: 3,
         nav: false,
-        dots: false
+        dots: false,
+        responsive:{
+            1700:{
+                items:4
+            },
+            1601:{
+                items:3
+            },
+            1440:{
+                items:4
+            },
+            1280:{
+                items:4
+            },
+            1024:{
+                items:3
+            },
+            768:{
+                items:2
+            },
+            420:{
+                items:1
+            },
+            0:{
+                items:1
+            }
+        }
     });
     brands.owlCarousel({
         items: 4,
         nav: false,
-        dots: false
+        dots: false,
+        responsive:{
+            1700:{
+                items:4
+            },
+            1601:{
+                items:3
+            },
+            1440:{
+                items:4
+            },
+            1280:{
+                items:4
+            },
+            1024:{
+                items:3
+            },
+            768:{
+                items:2
+            },
+            420:{
+                items:1
+            },
+            0:{
+                items:1
+            }
+        }
     });
     popular.owlCarousel({
         items: 4,
         nav: false,
-        dots: false
+        dots: false,
+        responsive:{
+            1700:{
+                items:4
+            },
+            1601:{
+                items:3
+            },
+            1440:{
+                items:4
+            },
+            1280:{
+                items:4
+            },
+            1024:{
+                items:3
+            },
+            768:{
+                items:2
+            },
+            420:{
+                items:1
+            },
+            0:{
+                items:1
+            }
+        }
     });
     newprod.owlCarousel({
         items: 3,
         nav: false,
         dots: false,
+        responsive:{
+            1700:{
+                items:4
+            },
+            1601:{
+                items:3
+            },
+            1440:{
+                items:4
+            },
+            1280:{
+                items:4
+            },
+            1024:{
+                items:3
+            },
+            768:{
+                items:2
+            },
+            420:{
+                items:1
+            },
+            0:{
+                items:1
+            }
+        }
     });
     stockslider.owlCarousel({
         items: 4,
         nav: false,
         dots: false,
+        responsive:{
+            1700:{
+                items:4
+            },
+            1601:{
+                items:3
+            },
+            1440:{
+                items:4
+            },
+            1280:{
+                items:4
+            },
+            1024:{
+                items:3
+            },
+            768:{
+                items:2
+            },
+            420:{
+                items:1
+            },
+            0:{
+                items:1
+            }
+        }
     });
     $('.brands_navs .next_arr').click(function () {
         brands.trigger('next.owl.carousel');
