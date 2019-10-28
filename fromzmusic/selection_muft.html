@@ -1,0 +1,1049 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gulp for Projects</title>
+
+    <!--Fonts-->
+    <link rel="stylesheet" href="fonts/font-face.css">
+    <!--Libs-->
+    <link rel="stylesheet" href="css/libs.min.css">
+    <!--Style sheet-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Mediaqueries-->
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+<!--Pre header-->
+<section class="pre_header" id="pre_header">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-8">
+                <ul class="nav main_menu justify-content-between">
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Технические каталоги</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Видео</a></li>
+                    <li><a href="#">Подбор муфт</a></li>
+                    <li><a href="#">Прайс-лист</a></li>
+                    <li><a href="#">Оплата и доставка</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 ml-auto">
+                <div class="actions_link d-flex">
+                    <a href="#">Вход</a>
+                    <a href="#">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of pre header-->
+<!--Header-->
+<header>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-2">
+                <a href="#" class="logo">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-8 info_row d-flex flex-wrap ml-auto">
+
+                <a href="tel:+74956385766" class="phone"><i class="fa fa-phone"></i>+7 (495) 638-57-56</a>
+                <p class="address">
+                    <i class="fa fa-map-marker-alt"></i><span>г. Москва, ул. Дорожная, д. 60, стр. 4</span>
+                </p>
+                <p class="email"><i class="fa fa-clock"></i>Режим работы: Пн – Пт, с 9:00 до 18:00</p>
+                <a href="#" class="send_message"><i class="fa fa-envelope"></i>Отправить заявку</a>
+                <div class="col-sm-4 mt-3 p-0 d-flex">
+                    <a href="#" class="catalog_trigger"><img src="img/catalog.png" alt="">Каталог продукции</a>
+                    <a href="#" class="mufta_trigger"><img src="img/myfta.png" alt="">Подбор муфт</a>
+                </div>
+                <div class="col-sm-8 mt-3">
+                    <div class="input_box ml-auto">
+                        <i class="fa fa-search"></i>
+                        <input type="search" class="search" placeholder="Поиск по названию">
+                        <i class="fa fa-caret-down"></i>
+                        <div class="category">
+                            <input type="text" placeholder="Все категории">
+                            <i class="fa fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 right_box">
+                <div class="cart_box">
+                    <a href="#" class="cart"><i class="fa fa-shopping-cart"></i></a>
+                    <div class="right_side">
+                        <p>Всего товаров:<span> 1 шт.</span></p>
+                        <p>На сумму:<span> 3 492 596,05  ₽</span></p>
+                    </div>
+                </div>
+                <div class="col-sm-12 pl-0 pr-0 d-flex faworit_row">
+                    <p><a href="#"><i class="fa fa-heart"></i>Избранное</a><span class="count">0</span></p>
+                    <p><a href="#"><i class="fa fa-signal"></i>Сравнить</a><span class="count">0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--End of header-->
+
+<!--Content-->
+<section class="content_section" id="content_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 ml-auto mr-auto">
+                <ul class="nav bread_crumbs">
+                    <li><a href="#">Главная</a></li>
+                    <li>></li>
+                    <li><a class="active" href="#">Подбор муфт</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2 left_column">
+                <div class="left_menu">
+                    <div class="menu_header">Разделы каталога</div>
+                    <ul class="side_menu">
+                        <li><a href="#">Кабель, провод <i class="fa fa-angle-right"></i></a></li>
+                        <li><a href="#">Электротехническая продукция <i class="fa fa-angle-right"></i></a></li>
+                        <li><a href="#">Кабеленесущие системы <i class="fa fa-angle-right"></i></a></li>
+                        <li><a href="#">Светотехническая продукция <i class="fa fa-angle-right"></i></a></li>
+                        <li><a href="#">Электрощитовое оборудование <i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                    <img src="img/left_img1.png" alt="" class="left_banners">
+                    <img src="img/left_img2.png" alt="" class="left_banners">
+                </div>
+            </div>
+            <div class="col-lg-8 content_center">
+                <h1 class="title">Подбор муфт</h1>
+                
+                <div class="selection__inner">
+
+                    <div class="selection__content">
+                        <div class="select__box">
+                            <div class="select__title">
+                                Выберите тип кабеля:
+                            </div>
+
+                            <div class="selects__inner">
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel1" class="choose__item--radio">
+                                    <label for="cabel1" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel2" class="choose__item--radio">
+                                    <label for="cabel2" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel3" class="choose__item--radio">
+                                    <label for="cabel3" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel4" class="choose__item--radio">
+                                    <label for="cabel4" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel5" class="choose__item--radio">
+                                    <label for="cabel5" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel6" class="choose__item--radio">
+                                    <label for="cabel6" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel7" class="choose__item--radio">
+                                    <label for="cabel7" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel8" class="choose__item--radio">
+                                    <label for="cabel8" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel9" class="choose__item--radio">
+                                    <label for="cabel9" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel10" class="choose__item--radio">
+                                    <label for="cabel10" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel11" class="choose__item--radio">
+                                    <label for="cabel11" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel12" class="choose__item--radio">
+                                    <label for="cabel12" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel13" class="choose__item--radio">
+                                    <label for="cabel13" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel14" class="choose__item--radio">
+                                    <label for="cabel14" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel15" class="choose__item--radio">
+                                    <label for="cabel15" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel16" class="choose__item--radio">
+                                    <label for="cabel16" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel17" class="choose__item--radio">
+                                    <label for="cabel17" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel18" class="choose__item--radio">
+                                    <label for="cabel18" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel19" class="choose__item--radio">
+                                    <label for="cabel19" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel20" class="choose__item--radio">
+                                    <label for="cabel20" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel21" class="choose__item--radio">
+                                    <label for="cabel21" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel22" class="choose__item--radio">
+                                    <label for="cabel22" class="choose__item--label">ааб2л</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="cabel23" class="choose__item--radio">
+                                    <label for="cabel23" class="choose__item--label">ааб2л</label>
+                                </div>
+                            </div>
+
+                            <div class="choose__all">
+                                Выбрать все
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="select__box">
+                            <div class="select__title">
+                                Изоляция кабеля:
+                            </div>
+
+                            <div class="selects__inner">
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="izol1" class="choose__item--radio">
+                                    <label for="izol1" class="choose__item--label">Резиновая</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="izol2" class="choose__item--radio">
+                                    <label for="izol2" class="choose__item--label">Пластик</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="izol3" class="choose__item--radio">
+                                    <label for="izol3" class="choose__item--label">Бумажная</label>
+                                </div>
+                            </div>
+
+                            <div class="choose__all">
+                                Выбрать все
+                            </div>
+                        </div>
+
+                        <div class="select__box">
+                            <div class="select__title">
+                                Количество жил кабеля:
+                            </div>
+
+                            <div class="selects__inner">
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="zhil1" class="choose__item--radio">
+                                    <label for="zhil1" class="choose__item--label">1</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="zhil2" class="choose__item--radio">
+                                    <label for="zhil2" class="choose__item--label">2</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="zhil3" class="choose__item--radio">
+                                    <label for="zhil3" class="choose__item--label">3</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="zhil4" class="choose__item--radio">
+                                    <label for="zhil4" class="choose__item--label">4</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="zhil5" class="choose__item--radio">
+                                    <label for="zhil5" class="choose__item--label">5</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="zhil6" class="choose__item--radio">
+                                    <label for="zhil6" class="choose__item--label">6</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="zhil7" class="choose__item--radio">
+                                    <label for="zhil7" class="choose__item--label">7</label>
+                                </div>
+                            </div>
+
+                            <div class="choose__all">
+                                Выбрать все
+                            </div>
+                        </div>
+
+                        <div class="select__box">
+                            <div class="select__title">
+                                Номинальное напряжение:
+                            </div>
+
+                            <div class="selects__inner">
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="nominal1" class="choose__item--radio">
+                                    <label for="nominal1" class="choose__item--label">до 1 кВ</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="nominal2" class="choose__item--radio">
+                                    <label for="nominal2" class="choose__item--label">до 3 кВ</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="nominal3" class="choose__item--radio">
+                                    <label for="nominal3" class="choose__item--label">до 6 кВ</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="nominal4" class="choose__item--radio">
+                                    <label for="nominal4" class="choose__item--label">до 10 кВ</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="nominal5" class="choose__item--radio">
+                                    <label for="nominal5" class="choose__item--label">до 20 кВ</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="nominal6" class="choose__item--radio">
+                                    <label for="nominal6" class="choose__item--label">до 35 кВ</label>
+                                </div>
+                            </div>
+
+                            <div class="choose__all">
+                                Выбрать все
+                            </div>
+                        </div>
+
+                        <div class="select__box">
+                            <div class="select__title">
+                                Сечение кабеля:
+                            </div>
+
+                            <div class="selects__inner">
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="sech1" class="choose__item--radio">
+                                    <label for="sech1" class="choose__item--label">0.50</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="sech2" class="choose__item--radio">
+                                    <label for="sech2" class="choose__item--label">0.75</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="sech3" class="choose__item--radio">
+                                    <label for="sech3" class="choose__item--label">1.0</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="sech4" class="choose__item--radio">
+                                    <label for="sech4" class="choose__item--label">1.5</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="sech5" class="choose__item--radio">
+                                    <label for="sech5" class="choose__item--label">2.0</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="sech6" class="choose__item--radio">
+                                    <label for="sech6" class="choose__item--label">2.5</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="sech7" class="choose__item--radio">
+                                    <label for="sech7" class="choose__item--label">3</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="sech8" class="choose__item--radio">
+                                    <label for="sech8" class="choose__item--label">4</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="sech9" class="choose__item--radio">
+                                    <label for="sech9" class="choose__item--label">5</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="sech10" class="choose__item--radio">
+                                    <label for="sech10" class="choose__item--label">6</label>
+                                </div>
+                            </div>
+
+                            <div class="choose__all">
+                                Выбрать все
+                            </div>
+                        </div>
+
+                        <div class="select__box">
+                            <div class="select__title">
+                                Тип муфты:
+                            </div>
+
+                            <div class="selects__inner">
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="mufta1" class="choose__item--radio">
+                                    <label for="mufta1" class="choose__item--label">Концевая</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="mufta2" class="choose__item--radio">
+                                    <label for="mufta2" class="choose__item--label">Соединительная</label>
+                                </div>
+
+                                <div class="choose__item">
+                                    <input type="checkbox" name="cabel" id="mufta3" class="choose__item--radio">
+                                    <label for="mufta3" class="choose__item--label">Соединительная переходная</label>
+                                </div>
+                            </div>
+
+                            <div class="choose__all">
+                                Выбрать все
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reset__btns">
+                        <button class="btn_bordered select__btn">Подобрать</button>
+                        <button class="btn_bordered reset__btn">Сбросить</button>
+                    </div>
+                    
+                    <h2 class="title result__title">Результаты подбора</h2>
+
+                    <div class="table_prod">
+                        <div class="table_pre_header row pl-0 pr-0">
+                            <div class="col-lg-6 d-flex align-items-center">
+                                <div class="sort">
+                                    <p>Сортировать по:</p>
+                                    <a href="#">ПОПУЛЯРНОСТИ <i class="fa fa-sort-up"></i></a>
+                                    <a href="#">ЦЕНЕ <i class="fa fa-sort-up"></i></a>
+                                    <a href="#">НАЛИЧИЮ <i class="fa fa-sort-up"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 ml-auto">
+                                <div class="see_quantity">
+                                    <p>Покзывать по:</p>
+                                    <select name="num" id="num">
+                                        <option value="1">10</option>
+                                        <option value="2">20</option>
+                                        <option value="3">30</option>
+                                        <option value="4">40</option>
+                                    </select>
+                                    <ul class="nav nav-tabs">
+                                        <li>
+                                            <a data-toggle="tab" href="#table" class="views nav-link active"
+                                               role="tab" aria-controls="table" aria-selected="true">
+                                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <rect y="2" width="4" height="2" fill="#BDBDBD"/>
+                                                    <rect x="6" y="2" width="20" height="2" fill="#BDBDBD"/>
+                                                    <rect y="12" width="4" height="2" fill="#BDBDBD"/>
+                                                    <rect x="6" y="12" width="20" height="2" fill="#BDBDBD"/>
+                                                    <rect y="22" width="4" height="2" fill="#BDBDBD"/>
+                                                    <rect x="6" y="22" width="20" height="2" fill="#BDBDBD"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="tab" href="#big_list" class="views nav-link" role="tab"
+                                               aria-controls="big_list" aria-selected="true">
+                                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <rect y="1" width="26" height="4" fill="#BDBDBD"/>
+                                                    <rect y="21" width="26" height="4" fill="#BDBDBD"/>
+                                                    <rect y="11" width="26" height="4" fill="#BDBDBD"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="tab" href="#cards" class="views nav-link" role="tab"
+                                               aria-controls="cards" aria-selected="true">
+                                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="6" height="6" fill="#BDBDBD"/>
+                                                    <rect x="20" width="6" height="6" fill="#BDBDBD"/>
+                                                    <rect x="10" width="6" height="6" fill="#BDBDBD"/>
+                                                    <rect y="10" width="6" height="6" fill="#BDBDBD"/>
+                                                    <rect x="20" y="10" width="6" height="6" fill="#BDBDBD"/>
+                                                    <rect x="10" y="10" width="6" height="6" fill="#BDBDBD"/>
+                                                    <rect y="20" width="6" height="6" fill="#BDBDBD"/>
+                                                    <rect x="20" y="20" width="6" height="6" fill="#BDBDBD"/>
+                                                    <rect x="10" y="20" width="6" height="6" fill="#BDBDBD"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="table_container tab-pane fade show active" id="table">
+                                <div class="table_header row no-gutters">
+                                    <div class="col-lg-4">Наименование</div>
+                                    <div class="col-lg-2">Артикул</div>
+                                    <div class="col local">Локал. <br> склад</div>
+                                    <div class="col center">Центр. <br> склад</div>
+                                    <div class="col price">Цена</div>
+                                    <div class="col quant">Ед.</div>
+                                    <div class="col">Кол-во</div>
+                                </div>
+                                <div class="row list_view no-gutters">
+                                    <div class="col-lg-4 first_column">
+                                        <img src="img/little_image.png" alt="">
+                                        <p class="name">Авт. выкл. ВА47-29 1Р 1А 4,5кА х-ка В ИЭК</p>
+                                    </div>
+                                    <div class="col-lg-2 text-center">MVA20-1-001-B</div>
+                                    <div class="col local">4</div>
+                                    <div class="col center">4</div>
+                                    <div class="col price">
+                                        <p class="price">169.01 ₽</p>
+                                    </div>
+                                    <div class="col quant">
+                                        шт.
+                                    </div>
+                                    <div class="col">
+                                        <div class="actions">
+                                            <div class="quantity">
+                                                <input type="number" min="1" max="10" step="1" value="1">
+                                                <div class="quantity-nav">
+                                                    <div class="quantity-button quantity-down">-</div>
+                                                    <div class="quantity-button quantity-up">+</div>
+                                                </div>
+                                            </div>
+                                            <div class="actions_right">
+                                                <a href="#" class="to_cart"><i class="fa fa-shopping-cart"
+                                                                               aria-hidden="true"></i></a>
+                                                <a href="#" class="like"><i class="fa fa-heart"
+                                                                            aria-hidden="true"></i></a>
+                                                <a href="#" class="compare"><i class="fa fa-signal"
+                                                                               aria-hidden="true"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row list_view no-gutters">
+                                    <div class="col-lg-4 first_column">
+                                        <img src="img/little_image.png" alt="">
+                                        <p class="name">Авт. выкл. ВА47-29 1Р 1А 4,5кА х-ка В ИЭК</p>
+                                    </div>
+                                    <div class="col-lg-2 text-center">MVA20-1-001-B</div>
+                                    <div class="col local">4</div>
+                                    <div class="col center">4</div>
+                                    <div class="col price">
+                                        <p class="price">169.01 ₽</p>
+                                    </div>
+                                    <div class="col quant">
+                                        шт.
+                                    </div>
+                                    <div class="col">
+                                        <div class="actions">
+                                            <div class="quantity">
+                                                <input type="number" min="1" max="10" step="1" value="1">
+                                                <div class="quantity-nav">
+                                                    <div class="quantity-button quantity-down">-</div>
+                                                    <div class="quantity-button quantity-up">+</div>
+                                                </div>
+                                            </div>
+                                            <div class="actions_right">
+                                                <a href="#" class="to_cart"><i class="fa fa-shopping-cart"
+                                                                               aria-hidden="true"></i>
+                                                </a>
+                                                <a href="#" class="like"><i class="fa fa-heart"
+                                                                            aria-hidden="true"></i>
+                                                </a>
+                                                <a href="#" class="compare"><i class="fa fa-signal"
+                                                                               aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row list_view no-gutters">
+                                    <div class="col-lg-4 first_column">
+                                        <img src="img/little_image.png" alt="">
+                                        <p class="name">Авт. выкл. ВА47-29 1Р 1А 4,5кА х-ка В ИЭК</p>
+                                    </div>
+                                    <div class="col-lg-2 text-center">MVA20-1-001-B</div>
+                                    <div class="col local">4</div>
+                                    <div class="col center">4</div>
+                                    <div class="col price">
+                                        <p class="price">169.01 ₽</p>
+                                    </div>
+                                    <div class="col quant">
+                                        шт.
+                                    </div>
+                                    <div class="col">
+                                        <div class="actions">
+                                            <div class="quantity">
+                                                <input type="number" min="1" max="10" step="1" value="1">
+                                                <div class="quantity-nav">
+                                                    <div class="quantity-button quantity-down">-</div>
+                                                    <div class="quantity-button quantity-up">+</div>
+                                                </div>
+                                            </div>
+                                            <div class="actions_right">
+                                                <a href="#" class="to_cart"><i class="fa fa-shopping-cart"
+                                                                               aria-hidden="true"></i>
+                                                </a>
+                                                <a href="#" class="like"><i class="fa fa-heart"
+                                                                            aria-hidden="true"></i>
+                                                </a>
+                                                <a href="#" class="compare"><i class="fa fa-signal"
+                                                                               aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="big_list tab-pane fade" id="big_list">
+                                <div class="row ml-0 mr-0">
+                                    <div class="col-lg-6 d-flex left">
+                                        <img src="img/prod1.png" alt="">
+                                        <div class="info">
+                                            <p class="name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</p>
+                                            <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                            <p class="price">169.01 ₽</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 d-flex justify-content-end">
+                                        <div class="right_actions">
+                                            <div class="quantity_stock">
+                                                <p>Центр. склад: <span>10</span></p>
+                                                <p>Локал. склад: <span>8</span></p>
+                                            </div>
+                                            <div class="actions">
+                                                <div class="quantity">
+                                                    <input type="number" min="1" max="10" step="1" value="1">
+                                                    <div class="quantity-nav">
+                                                        <div class="quantity-button quantity-down">-</div>
+                                                        <div class="quantity-button quantity-up">+</div>
+                                                    </div>
+                                                </div>
+                                                <div class="actions_right">
+                                                    <a href="#" class="like"><i class="fa fa-heart"
+                                                                                aria-hidden="true"></i></a>
+                                                    <a href="#" class="compare"><i class="fa fa-signal"
+                                                                                   aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="by_row">
+                                                <a href="#" class="to_cart"><i class="fa fa-shopping-cart"
+                                                                               aria-hidden="true"></i>В корзину</a>
+                                                <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ml-0 mr-0">
+                                    <div class="col-lg-6 d-flex left">
+                                        <img src="img/prod1.png" alt="">
+                                        <div class="info">
+                                            <p class="name">Автоматический выключатель ВА 47-29 х-ка В ИЭК</p>
+                                            <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                            <p class="price">169.01 ₽</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 d-flex justify-content-end">
+                                        <div class="right_actions">
+                                            <div class="quantity_stock">
+                                                <p>Центр. склад: <span>10</span></p>
+                                                <p>Локал. склад: <span>8</span></p>
+                                            </div>
+                                            <div class="actions">
+                                                <div class="quantity">
+                                                    <input type="number" min="1" max="10" step="1" value="1">
+                                                    <div class="quantity-nav">
+                                                        <div class="quantity-button quantity-down">-</div>
+                                                        <div class="quantity-button quantity-up">+</div>
+                                                    </div>
+                                                </div>
+                                                <div class="actions_right">
+                                                    <a href="#" class="like"><i class="fa fa-heart"
+                                                                                aria-hidden="true"></i></a>
+                                                    <a href="#" class="compare"><i class="fa fa-signal"
+                                                                                   aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="by_row">
+                                                <a href="#" class="to_cart"><i class="fa fa-shopping-cart"
+                                                                               aria-hidden="true"></i>В корзину</a>
+                                                <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="cards">
+                                <div class="row ml-0 mr-0 ">
+                                    <div class="col-lg-3">
+                                        <div class="card">
+                                            <div class="image_holder">
+                                                <img src="img/prod2.png" alt="" class="image">
+                                            </div>
+                                            <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В
+                                                ИЭК</h3>
+                                            <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                            <p class="price">169.01 ₽</p>
+                                            <div class="quantity_stock">
+                                                <p>Центр. склад: <span>10</span></p>
+                                                <p>Локал. склад: <span>8</span></p>
+                                            </div>
+                                            <div class="actions">
+                                                <div class="quantity">
+                                                    <input type="number" min="1" max="10" step="1" value="1">
+                                                </div>
+                                                <div class="actions_right">
+                                                    <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                                    <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="by_row">
+                                                <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В
+                                                    корзину</a>
+                                                <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="card">
+                                            <div class="image_holder">
+                                                <img src="img/prod2.png" alt="" class="image">
+                                            </div>
+                                            <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В
+                                                ИЭК</h3>
+                                            <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                            <p class="price">169.01 ₽</p>
+                                            <div class="quantity_stock">
+                                                <p>Центр. склад: <span>10</span></p>
+                                                <p>Локал. склад: <span>8</span></p>
+                                            </div>
+                                            <div class="actions">
+                                                <div class="quantity">
+                                                    <input type="number" min="1" max="10" step="1" value="1">
+                                                </div>
+                                                <div class="actions_right">
+                                                    <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                                    <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="by_row">
+                                                <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В
+                                                    корзину</a>
+                                                <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="card">
+                                            <div class="image_holder">
+                                                <img src="img/prod2.png" alt="" class="image">
+                                            </div>
+                                            <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В
+                                                ИЭК</h3>
+                                            <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                            <p class="price">169.01 ₽</p>
+                                            <div class="quantity_stock">
+                                                <p>Центр. склад: <span>10</span></p>
+                                                <p>Локал. склад: <span>8</span></p>
+                                            </div>
+                                            <div class="actions">
+                                                <div class="quantity">
+                                                    <input type="number" min="1" max="10" step="1" value="1">
+                                                </div>
+                                                <div class="actions_right">
+                                                    <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                                    <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="by_row">
+                                                <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В
+                                                    корзину</a>
+                                                <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="card">
+                                            <div class="image_holder">
+                                                <img src="img/prod2.png" alt="" class="image">
+                                            </div>
+                                            <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В
+                                                ИЭК</h3>
+                                            <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                            <p class="price">169.01 ₽</p>
+                                            <div class="quantity_stock">
+                                                <p>Центр. склад: <span>10</span></p>
+                                                <p>Локал. склад: <span>8</span></p>
+                                            </div>
+                                            <div class="actions">
+                                                <div class="quantity">
+                                                    <input type="number" min="1" max="10" step="1" value="1">
+                                                </div>
+                                                <div class="actions_right">
+                                                    <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                                    <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="by_row">
+                                                <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В
+                                                    корзину</a>
+                                                <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="card">
+                                            <div class="image_holder">
+                                                <img src="img/prod2.png" alt="" class="image">
+                                            </div>
+                                            <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В
+                                                ИЭК</h3>
+                                            <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                            <p class="price">169.01 ₽</p>
+                                            <div class="quantity_stock">
+                                                <p>Центр. склад: <span>10</span></p>
+                                                <p>Локал. склад: <span>8</span></p>
+                                            </div>
+                                            <div class="actions">
+                                                <div class="quantity">
+                                                    <input type="number" min="1" max="10" step="1" value="1">
+                                                </div>
+                                                <div class="actions_right">
+                                                    <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                                    <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="by_row">
+                                                <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В
+                                                    корзину</a>
+                                                <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="card">
+                                            <div class="image_holder">
+                                                <img src="img/prod2.png" alt="" class="image">
+                                            </div>
+                                            <h3 class="product_name">Автоматический выключатель ВА 47-29 х-ка В
+                                                ИЭК</h3>
+                                            <article>Артикул:<span>MVA20-1-001-B</span></article>
+                                            <p class="price">169.01 ₽</p>
+                                            <div class="quantity_stock">
+                                                <p>Центр. склад: <span>10</span></p>
+                                                <p>Локал. склад: <span>8</span></p>
+                                            </div>
+                                            <div class="actions">
+                                                <div class="quantity">
+                                                    <input type="number" min="1" max="10" step="1" value="1">
+                                                </div>
+                                                <div class="actions_right">
+                                                    <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                                    <a href="#" class="compare"><i class="fa fa-signal"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="by_row">
+                                                <a href="#" class="to_cart"><i class="fa fa-shopping-cart"></i>В
+                                                    корзину</a>
+                                                <a href="#" class="by_one_click">Купить в 1 клик</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pages_actions ml-0 mr-0">
+                            <div class="col-lg-1">
+                                <a href="#" class="prev_link"><i class="fa fa-chevron-left"></i> Предыдущая</a>
+                            </div>
+                            <div class="col-lg-4 ml-auto mr-auto">
+                                <ul class="nav pagination">
+                                    <li><a class="active" href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">...</a></li>
+                                    <li><a href="#">10</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-1">
+                                <a href="#" class="next_link">Следующая<i class="fa fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+                
+                
+                    
+            </div>
+            <!--end of content center-->
+            <div class="col-lg-2 right_column">
+                <div class="subscribe_box">
+                    <p class="subscribe_title">Будьте в курсе наших скидок и акций!</p>
+                    <input type="email" class="email" placeholder="E-mail">
+                    <div class="check d-flex">
+                        <label class="container_label">
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Даю согласие на обработку персональных данных согласно политики конфиденциальности сайта</p>
+                    </div>
+                    <button class="subscribe">Подписаться</button>
+                </div>
+                <div class="news_box">
+                    <p class="news_title">Новости</p>
+                    <div class="news">
+                        <p class="date">23.03.2017</p>
+                        <a href="#" class="short_text">Концевые выключатели — новинка в ассортименте продукции IEK</a>
+                    </div>
+                    <div class="news">
+                        <p class="date">23.03.2017</p>
+                        <a href="#" class="short_text">Концевые выключатели — новинка в ассортименте продукции IEK</a>
+                    </div>
+                    <div class="news">
+                        <p class="date">23.03.2017</p>
+                        <a href="#" class="short_text">Концевые выключатели — новинка в ассортименте продукции IEK</a>
+                    </div>
+                    <div class="news">
+                        <p class="date">23.03.2017</p>
+                        <a href="#" class="short_text">Концевые выключатели — новинка в ассортименте продукции IEK</a>
+                    </div>
+                    <div class="news">
+                        <p class="date">23.03.2017</p>
+                        <a href="#" class="short_text">Концевые выключатели — новинка в ассортименте продукции IEK</a>
+                    </div>
+                    <a href="#" class="btn_bordered">Все новости</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of content-->
+
+<!--Footer-->
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <h3 class="footer_title">Контакты</h3>
+                <div class="footer_info">
+                    <a href="#"><i class="fa fa-map-marker-alt"></i>г. Москва, ул. Дорожная, д. 60, стр. 4</a>
+                    <a href="#"><i class="fa fa-envelope"></i>zakaz@grinenergosnab.ru</a>
+                    <a href="#"><i class="fa fa-phone"></i>+7 (495) 638-57-56</a>
+                    <a href="#" class="link">Схема проезда</a>
+                </div>
+            </div>
+            <div class="col-lg-2 ml-auto">
+                <h3 class="footer_title">Продукция</h3>
+                <ul class="small_menu">
+                    <li><a href="#">Кабель, провод</a></li>
+                    <li><a href="#">Электротехническая продукция</a></li>
+                    <li><a href="#">Кабеленесеущие системы</a></li>
+                    <li><a href="#">Светотехническая продукция</a></li>
+                    <li><a href="#">Электрощитовое оборудование</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <h3 class="footer_title">О компании</h3>
+                <ul class="big_menu">
+                    <li><a href="#">Технические каталоги</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Видео</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <h3 class="footer_title">Подбор муфт</h3>
+                <ul class="big_menu">
+                    <li><a href="#">Прайс-лист</a></li>
+                    <li><a href="#">Оплата и доставка</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="after_footer">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-lg-6"><p class="copyright">©«ГринЭнергоСнаб», 2009-2019 — электротехническая продукция.
+                    Все права защищены</p></div>
+                <div class="col-lg-1 ml-auto"><a href="#" class="map_site">Карта сайта</a></div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--end of footer-->
+
+
+<!--Scripts libs-->
+<script src="js/libs.min.js"></script>
+<!--Custom Scripts-->
+<script src="js/scripts.js"></script>
+<!--Awesome-->
+<script src="https://kit.fontawesome.com/684bd2fe9e.js"></script>
+</body>
+</html>
