@@ -1467,7 +1467,8 @@ header .cart_box .cart:hover {
     align-items: center;
     text-transform: uppercase;
     font-weight: 700;
-    margin-top: 16px
+    margin-top: 16px;
+    position: relative;
 }
 
 .menu_accordion .container_label {
@@ -3989,4 +3990,53 @@ header .cart_box .cart:hover {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.menu__header--hover{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    padding: 30px 40px;
+    background: #fff;
+    z-index: 999;
+    display: none;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 1285px;
+    box-shadow: 0 0 10px #d7d7d7;
+}
+
+.email__input{
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.menu__header--hover--item{
+    width: 25%;
+    color: #000;
+    margin-top: 25px;
+    padding: 0px 10px;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.menu__item--text{
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.menu__header--hover--item:nth-child(1),
+.menu__header--hover--item:nth-child(2),
+.menu__header--hover--item:nth-child(3),
+.menu__header--hover--item:nth-child(4){
+    margin-top: 0;
+}
+
+.menu__item--title{
+    margin-top: 10px;
 }
