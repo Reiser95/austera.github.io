@@ -21,20 +21,20 @@
 <section class="pre_header" id="pre_header">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
-            <div class="col-lg-8">
+            <div class="col-lg-10 col-md-7">
                 <ul class="nav main_menu justify-content-between">
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Технические каталоги</a></li>
-                    <li><a href="#">Статьи</a></li>
-                    <li><a href="#">Новости</a></li>
-                    <li><a href="#">Видео</a></li>
-                    <li><a href="#">Подбор муфт</a></li>
-                    <li><a href="#">Прайс-лист</a></li>
-                    <li><a href="#">Оплата и доставка</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#" class="fade320">О компании</a></li>
+                    <li><a href="#" class="fade320">Технические каталоги</a></li>
+                    <li><a href="#" class="fade320">Статьи</a></li>
+                    <li><a href="#" class="fade320">Новости</a></li>
+                    <li><a href="#" class="fade480">Видео</a></li>
+                    <li><a href="#" class="fade480">Подбор муфт</a></li>
+                    <li><a href="#" class="fade480">Прайс-лист</a></li>
+                    <li><a href="#" class="fade480">Оплата и доставка</a></li>
+                    <li><a href="#" class="fade480">Контакты</a></li>
                 </ul>
             </div>
-            <div class="col-lg-2 ml-auto">
+            <div class="col-lg-2 col-md-5">
                 <div class="actions_link d-flex">
                     <a href="#">Вход</a>
                     <a href="#">Регистрация</a>
@@ -47,28 +47,34 @@
 <!--Header-->
 <header>
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-2">
+        <div class="row align-items-center header__flexx">
+            <div class="col-lg-2 header__logo">
                 <a href="#" class="logo">
                     <img src="img/logo.png" alt="">
                 </a>
             </div>
-            <div class="col-lg-8 info_row d-flex flex-wrap ml-auto">
+            <div class="col-lg-8 coll col-md-6 info_row d-flex flex-wrap ml-auto">
+                
+                <div class="header__data">
+                    <a href="tel:+74956385766" class="phone"><i class="fa fa-phone"></i>+7 (495) 638-57-56</a>
 
-                <a href="tel:+74956385766" class="phone"><i class="fa fa-phone"></i>+7 (495) 638-57-56</a>
-                <p class="address">
-                    <i class="fa fa-map-marker-alt"></i><span>г. Москва, ул. Дорожная, д. 60, стр. 4</span>
-                </p>
-                <p class="email"><i class="fa fa-clock"></i>Режим работы: Пн – Пт, с 9:00 до 18:00</p>
-                <a href="#" class="send_message"><i class="fa fa-envelope"></i>Отправить заявку</a>
+                    <p class="address">
+                        <i class="fa fa-map-marker-alt"></i><span>г. Москва, ул. Дорожная, д. 60, стр. 4</span>
+                    </p>
+
+                    <p class="email"><i class="fa fa-clock"></i>Режим работы: Пн – Пт, с 9:00 до 18:00</p>
+                    <a href="#" class="send_message"><i class="fa fa-envelope"></i>Отправить заявку</a>
+                </div>
+
                 <div class="col-sm-4 mt-3 p-0 d-flex">
                     <a href="#" class="catalog_trigger"><img src="img/catalog.png" alt="">Каталог продукции</a>
                     <a href="#" class="mufta_trigger"><img src="img/myfta.png" alt="">Подбор муфт</a>
                 </div>
+
                 <div class="col-sm-8 mt-3">
-                    <div class="input_box ml-auto">
+                    <div class="input_box">
                         <i class="fa fa-search"></i>
-                        <input type="search" class="search" placeholder="Поиск по названию">
+                        <input type="search" class="search" placeholder="Поиск">
                         <i class="fa fa-caret-down"></i>
                         <div class="category">
                             <input type="text" placeholder="Все категории">
@@ -77,7 +83,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2 right_box">
+            <div class="col-lg-2 coll right_box">
                 <div class="cart_box">
                     <a href="#" class="cart"><i class="fa fa-shopping-cart"></i></a>
                     <div class="right_side">
@@ -91,6 +97,44 @@
                 </div>
             </div>
         </div>
+
+        <div class="mobile__seacrh">
+            <a href="#" class="catalog_trigger2"><img src="img/catalog.png" alt="">Каталог продукции</a>
+            <a href="#" class="mufta_trigger2"><img src="img/myfta.png" alt="">Подбор муфт</a>
+
+            <div class="input_box">
+                <i class="fa fa-search"></i>
+                <input type="search" class="search" placeholder="Поиск">
+                <i class="fa fa-caret-down"></i>
+                <div class="category">
+                    <input type="text" placeholder="Все категории">
+                    <i class="fa fa-caret-down"></i>
+                </div>
+            </div>
+
+            <p><i class="fa fa-heart"></i><a href="#">Избранное</a><span class="count">0</span></p>
+            <p><i class="fa fa-signal"><a href="#"></i>Сравнить</a><span class="count">0</span></p>
+        </div>
+
+        <div class="mob__menu">
+            <div class="mob__top--menu">
+                <img src="img/logo.png" alt="Лого" class="header__logo--mob">
+
+                <a href="tel:+74956385766" class="phone"><i class="fa fa-phone"></i>+7 (495) 638-57-56</a>
+            </div>
+
+            <div class="mob__bottom--menu">
+                <i class="fas fa-bars menu"></i>
+
+                <div class="catalog__title">
+                    Каталог продукции
+                </div>
+
+                <div class="search__mob">
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
 <!--End of header-->
@@ -98,24 +142,27 @@
 <!--Content-->
 <section class="content_section" id="content_section">
     <div class="container">
-        <div class="row">
+        <div class="row fised__top">
             <div class="col-lg-8 ml-auto mr-auto">
                 <ul class="nav bread_crumbs">
                     <li><a href="#">Главная</a></li>
                     <li>></li>
                     <li><a href="#">Статьи</a></li>
                     <li>></li>
-                    <li><a class="active" href="#">Выбор автоматического выключателя</a></li>
+                    <li><a href="#" class="active">Выбор автоматического выключателя</a></li>
                 </ul>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-2 left_column">
                 <div class="left_menu">
-                    <div class="menu_header">Разделы каталога</div>
+                    <div class="menu_header">
+                        Разделы каталога
+                    </div>
                     <ul class="side_menu">
                         <li><a href="#">Кабель, провод <i class="fa fa-angle-right"></i></a></li>
-                        <li><a href="#">Электротехническая продукция <i class="fa fa-angle-right"></i></a></li>
+                        <li><a href="#">Электротехническая продукция
+                         <i class="fa fa-angle-right"></i></a></li>
                         <li><a href="#">Кабеленесущие системы <i class="fa fa-angle-right"></i></a></li>
                         <li><a href="#">Светотехническая продукция <i class="fa fa-angle-right"></i></a></li>
                         <li><a href="#">Электрощитовое оборудование <i class="fa fa-angle-right"></i></a></li>
@@ -124,7 +171,10 @@
                     <img src="img/left_img2.png" alt="" class="left_banners">
                 </div>
             </div>
-            <div class="col-lg-8 content_center">
+
+            <!-- Правый сайд бар -->
+
+            <div class="col-lg-8 content_center article1__max">
                 <h1 class="title">Выбор автоматического выключателя</h1>
                 
                 <div class="article1__inner">
@@ -226,15 +276,122 @@
                         </div>
                     </div>
                 </div>
+
+
+                <div class="index__inner--bottom">
+                    <div class="index__box">
+                        <div class="index__sale--box">
+                            <h2 class="title">Будьте в курсе наших скидок и акций!</h2>
+
+                            <div class="input__inner">
+                                <input type="email" class="email__input index__email enter__email" placeholder="E-mail">
+
+                                <button class="autorization__button subsribee return__button">
+                                    Подписаться
+                                </button>
+                            </div>
+
+                            <div class="index__check">
+                                <input type="checkbox" id="bottom__succes">
+
+                                <label for="bottom__succes" class="label__bottom--succes">
+                                    Даю согласие на обработку персональных данных согласно политики конфиденциальности сайта
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div class="index__news--box">
+                            <h2 class="title">Новости</h2>
+
+                            <div class="index__news--blocks">
+                                <div class="index__news--block">
+                                    <div class="index__news--block--date">
+                                        23.03.2017
+                                    </div>
+
+                                    <div class="index__news--block--text">
+                                        Концевые выключатели — новинка в ассортименте продукции IEK
+                                    </div>
+                                </div>
+
+                                <div class="index__news--block">
+                                    <div class="index__news--block--date">
+                                        23.03.2017
+                                    </div>
+
+                                    <div class="index__news--block--text">
+                                        Концевые выключатели — новинка в ассортименте продукции IEK
+                                    </div>
+                                </div>
+
+                                <div class="index__news--block">
+                                    <div class="index__news--block--date">
+                                        23.03.2017
+                                    </div>
+
+                                    <div class="index__news--block--text">
+                                        Ассортимент «ГринЭнергоСнаб» пополнила новинка — автоматические выключатели...
+                                    </div>
+                                </div>
+
+                                <div class="index__news--block">
+                                    <div class="index__news--block--date">
+                                        23.03.2017
+                                    </div>
+
+                                    <div class="index__news--block--text">
+                                        Ассортимент «ГринЭнергоСнаб» пополнила новинка — автоматические выключатели...
+                                    </div>
+                                </div>
+
+                                <div class="index__news--block">
+                                    <div class="index__news--block--date">
+                                        23.03.2017
+                                    </div>
+
+                                    <div class="index__news--block--text">
+                                        Новые соединители и наконечники IEK
+                                    </div>
+                                </div>
+
+                                <div class="index__news--block">
+                                    <div class="index__news--block--date">
+                                        23.03.2017
+                                    </div>
+
+                                    <div class="index__news--block--text">
+                                        Концевые выключатели — новинка в ассортименте продукции IEK
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <button class="btn_bordered">
+                                Все новости
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="index__box index__box--img">
+                        <img src="img/left_img1.png" alt="Баннер">
+                        <img src="img/left_img2.png" alt="Баннер">
+                    </div>
+                </div>
                 
                 
                     
             </div>
+
+
+            
+
+
             <!--end of content center-->
             <div class="col-lg-2 right_column">
                 <div class="subscribe_box">
                     <p class="subscribe_title">Будьте в курсе наших скидок и акций!</p>
-                    <input type="email" class="email" placeholder="E-mail">
+                    <input type="email" class="email__input" placeholder="E-mail">
                     <div class="check d-flex">
                         <label class="container_label">
                             <input type="checkbox" checked="checked">
@@ -288,7 +445,7 @@
                     <a href="#" class="link">Схема проезда</a>
                 </div>
             </div>
-            <div class="col-lg-2 ml-auto">
+            <div class="col-lg-2 ml-auto mobile__fade">
                 <h3 class="footer_title">Продукция</h3>
                 <ul class="small_menu">
                     <li><a href="#">Кабель, провод</a></li>
@@ -298,7 +455,7 @@
                     <li><a href="#">Электрощитовое оборудование</a></li>
                 </ul>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 mobile__fade">
                 <h3 class="footer_title">О компании</h3>
                 <ul class="big_menu">
                     <li><a href="#">Технические каталоги</a></li>
@@ -307,7 +464,7 @@
                     <li><a href="#">Видео</a></li>
                 </ul>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 mobile__fade">
                 <h3 class="footer_title">Подбор муфт</h3>
                 <ul class="big_menu">
                     <li><a href="#">Прайс-лист</a></li>
@@ -322,7 +479,7 @@
             <div class="row align-items-center h-100">
                 <div class="col-lg-6"><p class="copyright">©«ГринЭнергоСнаб», 2009-2019 — электротехническая продукция.
                     Все права защищены</p></div>
-                <div class="col-lg-1 ml-auto"><a href="#" class="map_site">Карта сайта</a></div>
+                <div class="col-lg-1 col-md-12 ml-auto"><a href="#" class="map_site">Карта сайта</a></div>
             </div>
         </div>
     </div>

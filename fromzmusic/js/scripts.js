@@ -5,6 +5,37 @@ $(document).ready(function () {
         navText: [$('.prev'), $('.next')],
     });
 
+    /* Появление мобильного меню */ 
+
+    $(".mob__bottom--menu .fa-bars").on("click", function(){
+        $(".menu__click").removeClass("menu__transform");
+    });
+
+    $(".close__menu").on("click", function(){
+        $(".menu__click").addClass("menu__transform");
+    });
+
+
+    $(".catalog__item").on("click", function(){
+        $(".catalog__menu").removeClass("menu__transform");
+    });
+
+    $(".close__menu--catalog").on("click", function(){
+        $(".catalog__menu").addClass("menu__transform");
+    });
+
+    /* Появление поиска при клике на кнопку поиск в мобильной версии */ 
+
+    $(".search__mob .fa-search").on("click", function(){
+        $(".mob__bottom--menu").fadeOut(0);
+        $(".mobile__menu--search--input--inner").slideDown(200);
+    });
+
+    $(".content_section").on("click", function(){
+        $(".mobile__menu--search--input--inner").fadeOut(0);
+        $(".mob__bottom--menu").slideDown(200);
+    });
+
     /* Кнопка выбрать все */
 
     $(".choose__all").on("click", function(){

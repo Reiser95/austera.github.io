@@ -1416,6 +1416,10 @@ header .cart_box .cart:hover {
     text-align: left;
 }
 
+.accordion_link, .accordion_trigger{
+    outline: none;
+}
+
 .accordion_trigger i,
 .accordion_link i {
     transition: all .2s ease;
@@ -1540,7 +1544,7 @@ header .cart_box .cart:hover {
     border-radius: 2px;
     max-width: 400px;
     width: 100%;
-    height: 380px
+    height: auto;
 }
 
 .big_card .image_holder img {
@@ -1897,7 +1901,8 @@ header .cart_box .cart:hover {
 }
 
 .table_prod .table_container .list_view {
-    height: 80px;
+    height: auto;
+    padding: 10px;
     -ms-flex-align: center;
     align-items: center;
     border-top: 1px solid #d9d9d9
@@ -2502,7 +2507,7 @@ header .cart_box .cart:hover {
 }
 
 .characters_table tr {
-    height: 48px
+    padding: 10px;
 }
 
 .characters_table tr:nth-child(2n) {
@@ -3057,8 +3062,8 @@ header .cart_box .cart:hover {
 }
 
 .article1__inner--img{
-    width: 280px;
-    height: 273px;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .article1__box{
@@ -3097,8 +3102,8 @@ header .cart_box .cart:hover {
 }
 
 .article1__img{
-    width: 560px;
-    height: 380px;
+    width: 460px;
+    height: 300px;
 }
 
 .table_prod .pages_actions .col-lg-3 .return__link{
@@ -3776,14 +3781,17 @@ header .cart_box .cart:hover {
 
 .index__box{
     display: flex;
-    align-items: center;
     flex-direction: column;
-    padding: 0 15px 0 30px;
+    padding: 0 15px 0 0px;
     width: 100%;
 }
 
+.index__box:last-child{
+    width: auto;
+}
+
 .index__box:nth-child(2){
-    padding: 0 30px 0 15px;
+    padding: 0 0px 0 15px;
 }
 
 .index__inner--bottom{
@@ -3943,7 +3951,67 @@ header .cart_box .cart:hover {
     display: none;
     flex-direction: column;
     align-items: flex-start;
+    position: relative;
 }
+
+.menu__click, .catalog__menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background: #fff;
+    z-index: 1900;
+    padding: 10px;
+    transform: translateX(0%);
+    transition: .4s linear;
+}
+
+.catalog__acc{
+    margin-top: 15px;
+}
+
+.menu__transform{
+    transform: translateX(-100%);
+}
+
+.close__menu, .close__menu--catalog{
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.close__menu svg, .close__menu--catalog svg{
+    margin-right: 15px;
+}
+
+header{
+    position: relative;
+}
+
+.menu__click--item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    transition: .2s linear;
+    color: #000;
+}
+
+.menu__click--inner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 30px;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
 
 .header__logo--mob{
     width: 100px;
@@ -3968,8 +4036,13 @@ header .cart_box .cart:hover {
 .menu{
     cursor: pointer;
     font-size: 22px;
-    min-width: 50px;
     transition: .2s linear;
+}
+
+.fa-heart.mobile__menu--icon, .fa-shopping-cart.mobile__menu--icon,
+.fa-signal.mobile__menu--icon{
+    margin: 0;
+    color: #7ca92d;
 }
 
 .menu:hover{
@@ -3979,7 +4052,6 @@ header .cart_box .cart:hover {
 .catalog__title{
     font-size: 18px;
     font-weight: 500;
-    min-width: 200px;
 }
 
 .search__mob{
@@ -4007,18 +4079,18 @@ header .cart_box .cart:hover {
     transition: .3s linear;
 }
 
-.cabel__list{
+
+.side_menu{
     position: relative;
 }
 
-.cabel__list:hover .menu__header--hover{
+.side_menu:hover .menu__header--hover{
     display: flex;
 }
 
 .email__input{
-    padding: 10px 20px;
     width: 100%;
-    margin-top: 10px;
+    padding: 5px 10px;
 }
 
 .menu__header--hover--item{
@@ -4032,6 +4104,10 @@ header .cart_box .cart:hover {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+}
+
+.autorization__button.subsribee.return__button{
+    margin-right: 0;
 }
 
 .menu__item--text{
@@ -4049,3 +4125,137 @@ header .cart_box .cart:hover {
 .menu__item--title{
     margin-top: 10px;
 }
+
+.content_center--pad{
+    display: flex;
+    justify-content: center;
+}
+
+.info_tabs ul li a{
+    border-bottom: 2px solid #000;
+}
+.mobile__menu--search--input--inner{
+    width: 100%;
+    position: relative;
+    display: none;
+}
+
+.mobile__menu--search--input{
+    padding: 8px 15px 8px 40px;
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #D9D9D9;
+}
+
+.mobile__menu--search--input--inner .fa-search{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40%);
+    left: 15px;
+    font-size: 16px;
+}
+
+/*
+
+<div class="index__inner--bottom">
+    <div class="index__box">
+        <div class="index__sale--box">
+            <h2 class="title">Будьте в курсе наших скидок и акций!</h2>
+
+            <div class="input__inner">
+                <input type="email" class="email__input index__email enter__email" placeholder="E-mail">
+
+                <button class="autorization__button subsribee return__button">
+                    Подписаться
+                </button>
+            </div>
+
+            <div class="index__check">
+                <input type="checkbox" id="bottom__succes">
+
+                <label for="bottom__succes" class="label__bottom--succes">
+                    Даю согласие на обработку персональных данных согласно политики конфиденциальности сайта
+                </label>
+            </div>
+
+        </div>
+
+        <div class="index__news--box">
+            <h2 class="title">Новости</h2>
+
+            <div class="index__news--blocks">
+                <div class="index__news--block">
+                    <div class="index__news--block--date">
+                        23.03.2017
+                    </div>
+
+                    <div class="index__news--block--text">
+                        Концевые выключатели — новинка в ассортименте продукции IEK
+                    </div>
+                </div>
+
+                <div class="index__news--block">
+                    <div class="index__news--block--date">
+                        23.03.2017
+                    </div>
+
+                    <div class="index__news--block--text">
+                        Концевые выключатели — новинка в ассортименте продукции IEK
+                    </div>
+                </div>
+
+                <div class="index__news--block">
+                    <div class="index__news--block--date">
+                        23.03.2017
+                    </div>
+
+                    <div class="index__news--block--text">
+                        Ассортимент «ГринЭнергоСнаб» пополнила новинка — автоматические выключатели...
+                    </div>
+                </div>
+
+                <div class="index__news--block">
+                    <div class="index__news--block--date">
+                        23.03.2017
+                    </div>
+
+                    <div class="index__news--block--text">
+                        Ассортимент «ГринЭнергоСнаб» пополнила новинка — автоматические выключатели...
+                    </div>
+                </div>
+
+                <div class="index__news--block">
+                    <div class="index__news--block--date">
+                        23.03.2017
+                    </div>
+
+                    <div class="index__news--block--text">
+                        Новые соединители и наконечники IEK
+                    </div>
+                </div>
+
+                <div class="index__news--block">
+                    <div class="index__news--block--date">
+                        23.03.2017
+                    </div>
+
+                    <div class="index__news--block--text">
+                        Концевые выключатели — новинка в ассортименте продукции IEK
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="btn_bordered">
+                Все новости
+            </button>
+        </div>
+    </div>
+
+    <div class="index__box index__box--img">
+        <img src="img/left_img1.png" alt="Баннер">
+        <img src="img/left_img2.png" alt="Баннер">
+    </div>
+</div>
+
+*/

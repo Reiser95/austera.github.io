@@ -4,6 +4,21 @@
 	}
 }
 
+@media(max-width: 1880px){
+	.contact__box{
+		width: 100%;
+		align-items: center;
+	}
+
+	.contact__box iframe{
+		margin-top: 30px;
+	}
+
+	.video__inner{
+		justify-content: center;
+	}
+}
+
 @media (max-width: 1600px){
 	.left_column, .right_column{
 		display: none;
@@ -39,6 +54,33 @@
 
 	.send_message, .email{
 		margin-top: 10px;
+	}
+
+	/* О компании */
+
+	.content_center{
+		margin: 0 auto;
+	}
+
+	.article1__img{
+	    width: 360px;
+	    height: 230px;
+	}
+
+	.col-lg-8.about__max, .col-lg-8.article__max,
+	.col-lg-8.article1__max, .col-lg-8.cart__max,
+	.col-lg-8.catalog__info--max, .col-lg-8.notfound__max{
+		width: 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.col .actions{
+		justify-content: center;
+	}
+
+	.video__inner{
+		justify-content: space-between;
 	}
 
 }
@@ -86,6 +128,12 @@
 	.col-sm-12.pl-0.pr-0.d-flex.faworit_row{
 		display: none!important;
 	}
+
+	.register__tabs{
+		padding: 0px 20px;
+	}
+
+	
 }
 
 @media (max-width: 1280px){
@@ -119,6 +167,108 @@
 	.fade480{
 		display: none;
 	}
+
+	/* О компании */
+
+	.about__point--img{
+		width: 150px;
+	}
+
+	.about__inner{
+		padding: 10px 20px;
+	}
+
+	.info .list li{
+		font-size: 13px;
+	}
+
+	.article__inner{
+		padding: 15px;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.article__box--title{
+		margin-top: 15px;
+	}
+
+	.article1__img--box{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.article1__img{
+	    margin-top: 10px;
+	}
+
+	.title{
+		font-size: 27px;
+	}
+
+	.article1__box{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.article1__text--box{
+		margin: 15px 0px 0px 0px;
+	}
+
+	.article__inner--box{
+		margin-left: 0;
+	}
+
+	.video__inner{
+		justify-content: center;
+	}
+}
+
+@media (max-width: 1200px){
+	.cart__box--column--card, .row.list_view.no-gutters,
+	.col-lg-4.first_column,
+	.table_pre_header.row.pl-0.pr-0{
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.actions{
+		justify-content: center;
+	}
+
+	.cart__box--card--name, .cart__box--card--article,
+	.cart__box--price, .cart__box--much,
+	.cart__box--unit, .cart__box--prices,
+	.col-lg-4.first_column{
+		margin: 0;
+		width: 100%;
+		margin-top: 10px;
+	}
+
+	.col-lg-4.ml-auto, .col-lg-6.d-flex.align-items-center{
+		margin-left: 0!important;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin-top: 10px;
+	}
+
+	.cart__box--card--img--inner{
+		width: 100%;
+	}
+
+	.cart__box--column--views, .table_header{
+		display: none;
+	}
+
+	.cart__buttons{
+		width: 60%;
+	}
+
+	.email.enter__password.topp{
+		margin-top: 10px;
+	}
 }
 
 @media (max-width: 1024px){
@@ -149,6 +299,42 @@
 
 	.send_message, .email{
 		margin-top: 0px;
+	}
+
+	.table_prod .pages_actions .next_link,
+	.table_prod .pages_actions .prev_link{
+		display: none;
+	}
+
+	.cart__buttons{
+		width: 70%;
+	}
+
+	.region__delivery--img{
+		width: 250px;
+	}
+
+	.info_actions{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.info_actions .actions_link:nth-child(2){
+		margin-left: 0;
+	}
+
+	.big_card .image_holder{
+		max-width: 100%;
+	}
+
+	.actions_link:first-child{
+		margin-top: 10px;
+	}
+
+	.info_actions .by_row {
+	    width: 100%;
+	    justify-content: center;
 	}
 }
 
@@ -197,6 +383,131 @@
 
 	.fised__top{
 		margin-top: 170px;
+	}
+
+	.about__point--box{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.article1__img{
+	    width: 260px;
+	    height: 160px;
+	}
+
+	.nav.nav-tabs{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.nav.nav-tabs li{
+		border-bottom: 2px solid transparent;
+	}
+
+	.cart__btns{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.cart__buttons{
+		width: 100%;
+		margin-top: 20px;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.cart__continue{
+		margin-right: 0;
+	}
+
+	.oform__button{
+		margin-top: 10px;
+	}
+
+	.full__input, .name{
+		width: 100%;
+	}
+
+	.character img{
+		width: 300px;
+		margin-top: 10px;
+	}
+
+	.nothing_found img{
+		width: 200px;
+	}
+
+	.nothing_found .title_404{
+		font-size: 25px;
+	}
+
+	.nothing_found{
+		padding: 20px;
+	}
+
+	.table_prod .table_pre_header .see_quantity .nav-tabs li:first-child{
+		margin-left: 0;
+	}
+
+	.see_quantity{
+		flex-direction: column;
+	}
+
+	.nav.nav-tabs.sdd{
+		flex-direction: row;
+		margin-top: 10px;
+	}
+
+	.table_prod .table_pre_header .sort{
+		flex-direction: column;
+	}
+
+	.table_prod .table_pre_header .sort a{
+		margin-left: 0;
+		text-align: center;
+	}
+
+	.contact__admin--inner{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contact__admin--box:first-child{
+		margin: 0px 0px 30px 0;
+	}
+
+	.contact__box--img{
+		width: 300px;
+	}
+
+	.contact__table--inner{
+		word-break: break-all;
+	}
+	.topp{
+		width: 100%;
+	}
+
+	.enter__login--inner{
+		margin: 10px auto;
+	}
+
+	.enter__title{
+		text-align: center;
+	}
+
+	.return__password--btns{
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.enter__title{
+		font-size: 21px;
+	}
+
+	.return__button{
+		margin-top: 10px;
 	}
 }
 
@@ -269,6 +580,61 @@
 	.phone{
 		width: 58%;
 	}
+
+	ul{
+		padding: 0 0 0 10px;
+	}
+
+	.email__input {
+	    padding: 10px 20px;
+	    width: 100%;
+	    margin-top: 10px;
+	}
+
+	.cart__total{
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.cart__price--total{
+		margin-top: 10px;
+	}
+
+	.table_prod .table_container .quantity input {
+	    max-width: 100px;
+	    padding: 10px 25px;
+	}
+
+	.table_prod .table_container .quantity .quantity-button.quantity-up {
+	    right: -30px;
+	}
+
+	.cart__weight, .cart__price--total {
+		 width: 100%;
+		 display: flex;
+		 justify-content: center;
+	}
+
+	.info_tabs{
+		padding: 0;
+	}
+
+	.character img{
+		width: 200px;
+	}
+
+	.little_title{
+		font-size: 17px;
+	}
+
+	.padd__off{
+		display: none;
+	}
+
+	.contact__box--img{
+		width: 200px;
+	}
 }
 
 @media (max-width: 320px){
@@ -321,10 +687,6 @@
 
 	.footer .after_footer{
 		background: #e6e6e6;
-	}
-
-	.index__box {
-	    padding: 0 0px 0 10px;
 	}
 
 	.mobile__fade{
