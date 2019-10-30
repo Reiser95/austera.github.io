@@ -26,7 +26,7 @@ $(document).ready(function () {
 
     /* Появление поиска при клике на кнопку поиск в мобильной версии */ 
 
-    $(".search__mob .fa-search").on("click", function(){
+    $(".search__mob .fa-search").parent(".search__mob").on("click", function(){
         $(".mob__bottom--menu").fadeOut(0);
         $(".mobile__menu--search--input--inner").slideDown(200);
     });

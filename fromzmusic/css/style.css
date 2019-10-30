@@ -1166,7 +1166,7 @@ header .cart_box .cart:hover {
     padding: 20px;
     text-align: center;
     margin-top: 60px;
-    max-height: 400px;
+    max-height: auto;
     min-height: 400px;
     display: -ms-flexbox;
     display: flex;
@@ -1657,7 +1657,7 @@ header .cart_box .cart:hover {
     border-radius: 2px;
     background: #fff;
     margin-top: 20px;
-    padding: 40px
+    padding: 20px 0;
 }
 
 .table_prod .big_list .row.ml-0.mr-0,
@@ -2687,7 +2687,7 @@ header .cart_box .cart:hover {
 
 .tex__inner{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
@@ -3215,6 +3215,10 @@ header .cart_box .cart:hover {
     text-transform: uppercase;
 }
 
+.yur__input.register__input{
+    width: 48%;
+}
+
 .register__form{
     padding: 40px;
     display: flex;
@@ -3224,6 +3228,8 @@ header .cart_box .cart:hover {
 
 .register__form--box{
     width: 48%;
+    display: flex;
+    flex-direction: column;
 }
 
 .captcha{
@@ -3298,7 +3304,7 @@ header .cart_box .cart:hover {
 }
 
 .captcha__inner{
-    width: 100%;
+    width: 48%;
     display: flex;
     justify-content: flex-start;
     margin-left: 48px;
@@ -3341,7 +3347,7 @@ header .cart_box .cart:hover {
 }
 
 .oficce__content--box{
-    width: 50%;
+    width: 48%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -4153,6 +4159,10 @@ header{
     transform: translateY(-40%);
     left: 15px;
     font-size: 16px;
+}
+
+.col-lg-6.d-flex.left{
+    padding-left: 0;
 }
 
 /*
