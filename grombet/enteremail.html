@@ -61,52 +61,28 @@
 			
 			<div class="modal__autorization">
 				<div class="autorization__title">
-					Регистрация
-				</div>
-
-				<div class="autorization__icon--inner">
-					<div class="autorization__text">
-						Регистрация через
-					</div>
-
-					<div class="autorization__icons">
-						<div class="autorization__icon">
-							<a href="#"><img src="img/vk.png" alt="Вконтакте"></a>
-						</div>
-						<div class="autorization__icon">
-							<a href="#"><img src="img/fb.png" alt="Фейсбук"></a>
-						</div>
-						<div class="autorization__icon">
-							<a href="#"><img src="img/tg.png" alt="Телеграмм"></a>
-						</div>
-					</div>
+					возврат пароля
 				</div>
 				
 				<form action="#" class="form">
 					<div class="email__input">
-						<input type="text" class="input name" placeholder="Имя" required>
-						<i class="fas fa-user email__icon"></i>
-					</div>
-
-					<div class="email__input">
-						<input type="email" class="input email" placeholder="Email адрес" required>
+						<input type="email" class="input email" placeholder="Введите Email адрес" required>
 						<i class="fas fa-envelope email__icon"></i>
 					</div>
-					
-					<div class="password__input">
-						<input type="password" class="input password" placeholder="пароль" required>
-						<i class="fas fa-lock lock"></i>
-					</div>
 
-					<div class="password__input">
-						<input type="password" class="input password" placeholder="повторите пароль" required>
-						<i class="fas fa-lock lock"></i>
-					</div>
+					<input type="submit" class="return__password button" value="Восстановить пароль">
 
-					<div class="buttons__autorization">
-						<input type="submit" class="button autorization__button reg__button" value="Регистрация">
+					<div class="buttons__autorization buttons__return">
+						<input type="submit" class="button autorization__button" value="войти">
+
+						<a href="#" class="forget">забыли пароль?</a>
 					</div>
 				</form>
+
+				<div class="memorize">
+					<input type="checkbox" id="memorize__check" class="memorize__check">
+					<label class="memorize__text" for="memorize__check">запомнить меня</label>
+				</div>
 			</div>
 
 		</div>
