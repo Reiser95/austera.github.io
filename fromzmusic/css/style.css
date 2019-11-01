@@ -1952,7 +1952,7 @@ header .cart_box .cart:hover {
     text-align: center;
     border: 1px solid #bdbdbd;
     border-radius: 2px;
-    padding-left: 10px
+    padding-left: 0;
 }
 
 .table_prod .table_container .quantity .quantity-nav {
