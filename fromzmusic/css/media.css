@@ -281,6 +281,19 @@
 	.email.enter__password.topp{
 		margin-top: 10px;
 	}
+
+	.table_prod .table_container .first_column img{
+		margin-right: 0;
+	}
+
+	.list_view .col, .list_view .col-lg-2,
+	.list_view .col-lg-4{
+		width: 100%;
+	}
+
+	.table_prod .table_container .first_column{
+		padding-left: 0;
+	}
 }
 
 @media (max-width: 1024px){
@@ -396,6 +409,14 @@
 	}
 
 
+}
+
+@media(max-width: 992px){
+	.footer .container .row .col-lg-3,
+	.footer .container .row .col-lg-2{
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
 }
 
 @media (max-width: 768px){
@@ -729,15 +750,6 @@
 		margin-top: 10px;
 	}
 
-	.table_prod .table_container .quantity input {
-	    max-width: 100px;
-	    padding: 10px 25px;
-	}
-
-	.table_prod .table_container .quantity .quantity-button.quantity-up {
-	    right: -30px;
-	}
-
 	.cart__weight, .cart__price--total {
 		 width: 100%;
 		 display: flex;
@@ -762,6 +774,12 @@
 
 	.contact__box--img{
 		width: 200px;
+	}
+
+	.footer .container .row .col-lg-3,
+	.footer .container .row .col-lg-2{
+		flex: 0 0 100%;
+		max-width: 100%;
 	}
 }
 

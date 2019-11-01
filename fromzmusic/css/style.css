@@ -228,7 +228,7 @@ header .info_row p {
     color: #1a1a1a;
     font-weight: 400;
     display: block;
-    margin-left: auto
+    margin-left: 0;
 }
 
 header .info_row a {
@@ -1947,8 +1947,7 @@ header .cart_box .cart:hover {
 }
 
 .table_prod .table_container .quantity input {
-    max-width: 80px;
-    width: 100%;
+    width: 60px;
     height: 42px;
     text-align: center;
     border: 1px solid #bdbdbd;
@@ -2929,6 +2928,10 @@ header .cart_box .cart:hover {
     flex-direction: column;
     align-items: flex-start;
     margin-top: 50px;
+}
+
+.address{
+    width: 25%;
 }
 
 .contact__address{
