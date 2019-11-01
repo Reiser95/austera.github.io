@@ -838,7 +838,6 @@ header .cart_box .cart:hover {
     max-width: 280px;
     width: 100%;
     padding: 20px;
-    margin-left: auto;
     margin-right: auto
 }
 
@@ -3495,14 +3494,20 @@ header .cart_box .cart:hover {
     margin-top: 30px;
     display: flex;
     align-items: flex-start;
+    width: 100%;
 }
 
 .office__slider{
     width: 75%;
 }
 
+.office__slider2{
+    width: 100%;
+}
+
 .office__column--views{
     padding-left: 15px;
+    width: 25%;
 }
 
 .office__column, .office__column--views{
@@ -4166,6 +4171,10 @@ header{
 
 .col-lg-6.d-flex.left{
     padding-left: 0;
+}
+
+.office__column--view, .office__column--value{
+    height: auto;
 }
 
 /*

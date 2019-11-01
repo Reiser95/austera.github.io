@@ -95,6 +95,23 @@
 		width: 100%;
 	}
 
+	.office__column--views{
+		display: none;
+	}
+
+	.office__slider{
+		width: 100%;
+	}
+
+	.oficce__box--tovar--inner .row .col-lg-3{
+		display: none;
+	}
+
+	.oficce__box--tovar--inner .row .col-lg-9{
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
 }
 
 @media (max-width: 1440px){
@@ -837,5 +854,9 @@
 
 	.mobile__fade{
 		display: none;
+	}
+
+	.second_title{
+		font-size: 22px;
 	}
 }

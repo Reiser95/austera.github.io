@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+
+
     $('.slider_banner').owlCarousel({
         items: 1,
         nav: true,
@@ -169,28 +172,26 @@ $(document).ready(function () {
     /* Конец переключателей технического каталога */ 
 
     let brands = $('.brands_slider');
+
     let popular = $('.popular_slider');
+
     let newprod = $('.new_slider');
+
     let stockslider = $('.stock_slider');
+
     let officeslider = $(".office__slider");
+
+    let officeslider2 = $(".office__slider2");
+
     officeslider.owlCarousel({
         items: 3,
         nav: false,
         dots: false,
         responsive:{
-            1700:{
-                items:4
-            },
-            1601:{
+            1750:{
                 items:3
             },
-            1440:{
-                items:4
-            },
-            1280:{
-                items:4
-            },
-            1024:{
+            970:{
                 items:3
             },
             768:{
@@ -204,12 +205,36 @@ $(document).ready(function () {
             }
         }
     });
+
+    officeslider2.owlCarousel({
+        items: 3,
+        nav: false,
+        dots: false,
+        responsive:{
+            1600:{
+                items:3
+            },
+            970:{
+                items:3
+            },
+            768:{
+                items:2
+            },
+            420:{
+                items:1
+            },
+            0:{
+                items:1
+            }
+        }
+    });
+
     brands.owlCarousel({
         items: 4,
         nav: false,
         dots: false,
         responsive:{
-            1700:{
+            1600:{
                 items:4
             },
             1601:{
@@ -354,6 +379,13 @@ $(document).ready(function () {
     });
     $('.new .prev_arr').click(function () {
         officeslider.trigger('prev.owl.carousel');
+    });
+
+    $('.new .next_arr').click(function () {
+        officeslider2.trigger('next.owl.carousel');
+    });
+    $('.new .prev_arr').click(function () {
+        officeslider2.trigger('prev.owl.carousel');
     });
 
 
