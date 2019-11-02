@@ -112,6 +112,14 @@
 		max-width: 100%;
 	}
 
+	.content_section .content_center .card__center{
+	    margin-left: 0;
+	}
+
+	.office__column--view, .office__column--value{
+	    padding: 12px 20px 12px 0;
+	}
+
 }
 
 @media (max-width: 1440px){

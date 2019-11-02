@@ -838,7 +838,12 @@ header .cart_box .cart:hover {
     max-width: 280px;
     width: 100%;
     padding: 20px;
-    margin-right: auto
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content_section .content_center .card__center{
+    margin-left: 0;
 }
 
 .content_section .content_center .card .image_holder {
