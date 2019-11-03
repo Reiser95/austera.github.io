@@ -69,9 +69,15 @@ h1, h2, h3, h4, h5, h5, p{
 	outline: none;
 	border: none;
 	background: transparent;
-	transition: .2s linear;
+	display: inline-block;
 	cursor: pointer;
 	transition: .2s linear;
+}
+
+.input{
+	background: none;
+	outline: none;
+	border: none;
 }
 
 .blue{
@@ -85,6 +91,12 @@ h1, h2, h3, h4, h5, h5, p{
 
 .icon{
 	margin-right: .4rem;
+}
+
+.arrow{
+	transition: .4s linear;
+	width: 20px;
+	fill: $lightgreyC;
 }
 
 /* Active class */
@@ -114,6 +126,37 @@ h1, h2, h3, h4, h5, h5, p{
 	align-items: center;
 	justify-content: space-between;
 	padding: 1.5rem 0;
+}
+
+.header__top--left--inner{
+	display: flex;
+	align-items: center;
+}
+
+/*=== Выбор цветовой гаммы верхняя часть хедера ===*/
+
+.header__top--choose--color{
+	font-size: $bigF;
+	padding: 1.2rem 1.6rem;
+	background: $sectionB;
+	border-radius: $bordersmallO;
+	margin-right: 3rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	transition: .2s linear;
+} 
+
+.header__top--choose--color:hover{
+	background: darken($sectionB, 5);
+}
+
+.choose__color{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: $blueC;
+	margin-left: 1rem;
 }
 
 /*=== Описание верхняя часть хедера ===*/
@@ -264,11 +307,11 @@ h1, h2, h3, h4, h5, h5, p{
 	transition: transform .5s;
 	transform-origin: 0 0;
 	transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
-	transform: scaleX(0);
+	transform: scaleY(0);
 }
 
 .header__bottom--link:hover:before{
-	transform: scaleX(1);
+	transform: scaleY(1);
 }
 
 .header__bottom--link:last-child{
@@ -308,8 +351,9 @@ h1, h2, h3, h4, h5, h5, p{
 	border-radius: 0 1rem 1rem 0;
 	padding: 2rem 2.5rem;
 	display: inline-block;
-	max-width: 300px;
+	max-width: 350px;
 	width: 100%;
+	min-height: 700px;
 }
 
 .games__title, .chat__title{
@@ -319,28 +363,343 @@ h1, h2, h3, h4, h5, h5, p{
 	text-align: center;
 }
 
-.game__box{
-	margin-top: 5rem;
+.game__box--inner{
+	display: flex;
+	flex-direction: column;
 }
 
-/*=== Chat ===*/
+.game__box{
+	width: 100%;
+	margin-top: 3rem;
+	display: flex;
+	justify-content: center;
+	padding: 1rem 2rem;
+	background: $borderB;
+	border-radius: $borderO;
+	transition: .2s linear;
+}
 
-.chat{
+.game__box:hover{
+	background: $blueC;
+}
+
+/*=== Main ===*/ 
+
+.main{
+	padding: 0 5rem;
+	text-align: center;
+	width: 100%;
+	max-width: 1215px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*=== Main верхний текст ===*/ 
+
+.main__title{
+	margin-top: 2rem;
+}
+
+.main__subtitle{
+	margin-top: 3.5rem;
+	font-size: $titleF;
+	max-width: 620px;
+	line-height: 1.3;
+}
+
+.expcash{
+	font-family: $boldF;
+	padding-bottom: .1rem;
+	border-bottom: 1px dashed $whiteC;
+}
+
+.main__play{
+	margin-top: 5rem;
+	border-radius: $borderO;
+	border: 2px solid $blueC;
+	background: transparent;
+	padding: .8rem 4rem;
+	font-family: $semiboldF;
+	transition: .3s linear;
+}
+
+.main__play--button .main__play {
+    position: relative;
+    overflow: hidden;
+}
+
+.main__play--button .button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: $blueC;
+    height: 150px;
+    width: 270px;
+    border-radius: 50%;
+}
+
+.main__play--button .button:hover {
+    border: 2px solid transparent;
+}
+
+.main__play--button .button:nth-child(1):before {
+    top: 100%;
+    left: 100%;
+    transition: all .5s;
+}
+
+.main__play--button .button:nth-child(1):hover:before {
+    top: -40px;
+    left: -40px;
+}
+
+/*=== Контейнер любимых игр ===*/
+
+.main__like--games--inner{
+	margin-top: 4.5rem;
+	padding: 2.5rem;
 	background: $sectionB;
-	border-radius: 1rem 0 0 1rem;
-	padding: 2rem 2.5rem;
-	display: inline-block;
-	max-width: 300px;
+	width: 100%;
+	border-radius: $borderO;
+	position: relative;
+}
+
+.main__like--games--title{
+	font-size: $gamesF;
+}
+
+/*=== Слайдер любимых игр ===*/ 
+
+.main__like--games--slider{
+	margin-top: 3rem;
 	width: 100%;
 	position: relative;
 }
 
+.main__like--games--carousel{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 0 3.5rem;
+	max-width: 1040px;
+	margin: 0 auto;
+}
+
+/* Элемент слайдера */ 
+
+.main__like--games--item{
+	width: 300px;
+	height: 200px;
+	border-radius: $borderO;
+	border: 3px dashed $borderB;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: .2s linear;
+	position: relative;
+}
+
+.main__like--games--item:hover{
+	border: 3px dashed $blueC;
+}
+
+.main__like--games--item:hover .main__like--add--game{
+	background: $blueC;
+}
+
+.main__like--add--game{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: $borderB;
+	color: $sectiondarkB;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	transition: .2s linear;
+}
+
+.icon__add{
+	font-size: 3rem;
+}
+
+/* Стрелки слайдера */ 
+
+.main__arrow{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: $sectiondarkB;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 5;
+	transition: .2s linear;
+}
+
+.main__arrow:hover{
+	background: $yellowC;
+}
+
+.main__arrow--next{
+	right: -15px;
+}
+
+.main__arrow--prev{
+	left: -15px;
+}
+
+/*=== Стилизация окошек игр ===*/ 
+
+.game__inner--mask{
+	width: calc(100% + 6px);
+	height: calc(100% + 6px);
+	position: absolute;
+	top: -3px;
+	left: -3px;
+	background: $sectiondarkB;
+	border-radius: $borderO;
+	padding: 2.5rem;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-start;
+	border: 3px solid transparent;
+	transition: .2s linear;
+}
+
+.game__inner--mask:hover{
+	border: 3px solid $blueC;
+}
+
+/*=== Заголовок последних выйгрышей ===*/ 
+
+.main__last--wins--title{
+	font-size: $titleF;
+	margin-top: 7rem;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.last__wins--wave{
+	margin-top: .6rem;
+	fill: $blueC;
+}
+
+/*=== Контейнер последних выйгрышей ===*/ 
+
+.main__last--wins--inner{
+	padding: 2rem 7.5rem;
+	border-radius: $borderO;
+	margin-top: 2rem;
+	background: $sectiondarkB;
+	width: 100%;
+	height: 250px;
+	word-break: break-all;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.main__last--wins--views, .main__last--wins--item{
+	width: 100%;
+	background: $nickB;
+	padding: 1.5rem 3rem;
+	display: flex;
+	align-items: center;
+}
+
+.main__last--wins--item{
+	background: $sectionB;
+	padding: 2.5rem 3rem;
+	border-bottom: 3px solid $sendB;
+}
+
+.main__last--wins--item:last-child{
+	border-bottom: none;
+}
+
+.main__last--wins--view, .main__last--wins--value{
+	padding: 0px .5rem;
+}
+
+/* Ширина полей в последних выигрышах */ 
+
+.game__view{
+	width: 15%;
+}
+
+.user__view{
+	width: 20%;
+}
+
+.time__view{
+	width: 10%;
+}
+
+.forecast__view{
+	width: 20%;
+}
+
+.coef__view{
+	width: 15%;
+}
+
+.wins__view{
+	width: 20%;
+}
+
+
+
+/*=== Chat ===*/
+
+.chat__content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 1rem 0 0 1rem;
+	transition: .5s linear;
+}
+
+.chat{
+	background: $sectionB;
+	padding: 2rem 2.5rem;
+	border-radius: 1rem 0 0 0;
+	display: inline-block;
+	max-width: 350px;
+	width: 100%;
+	position: relative;
+	transition: .5s linear;
+}
+
+.chat__title{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.chat__title--icon{
+	width: 22px;
+	fill: $blueC;
+	margin-left: .5rem;
+}
+
 .chat__inner{
 	height: 650px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	margin-top: 2rem;
 }
 
 .chat__message{
-	margin-top: 3rem;
+	margin: 3rem 0;
 	padding: 0px 1.5rem;
 	width: 100%;
 	display: flex;
@@ -350,7 +709,8 @@ h1, h2, h3, h4, h5, h5, p{
 .chat__inner--text--inner{
 	display: flex;
 	flex-direction: column;
-	max-width: 180px;
+	max-width: 200px;
+	margin-right: 1rem;
 }
 
 .chat__inner--text--box{
@@ -373,11 +733,98 @@ h1, h2, h3, h4, h5, h5, p{
 	margin-top: .7rem;
 }
 
+/*=== Кнопка закрытия чата ===*/ 
 
+.chat__close--inner{
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	background: $sectiondarkB;
+	position: absolute;
+	top: 180px;
+	left: -27px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 0 10px $sectiondarkB;
+	cursor: pointer;
+	transition: .2s linear;
+}
 
+.chat__close--inner:hover{
+	background: darken($sectiondarkB, 5);
+}
 
+.chat__off{
+	transform: translateX(100%);
+}
 
+.chat__button--on{
+	position: fixed;
+	left: -55px;
+}
 
+.chat__close--icon--rotate{
+	transform: rotate(180deg);
+}
+
+/*=== Поле отправки ссообщения в чат ===*/ 
+
+.chat__send--inner{
+	border-radius: 0 0 0 1rem;
+	padding: 1rem 2rem;
+	background: $sectiondarkB;
+	width: 100%;
+}
+
+.chat__send--box{
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+.chat__send--buttons{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.chat__send--input{
+	padding: 1rem;
+	resize: none;
+	height: 100px;
+	width: 220px;
+	color: $whiteC;
+}
+
+.chat__send--button, .chat__send--smail{
+	width: 44px;
+	height: 44px;
+	border-radius: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: $sendB;
+	transition: .3s linear;
+}
+
+.chat__send--smail{
+	background: none;
+	border: 1px solid $sendB;
+	margin-top: 1rem;
+}
+
+.chat__send--button:hover, .chat__send--smail:hover{
+	opacity: .5;
+}
+
+.send__icon{
+	color: $blueC;
+}
+
+.smile__icon{
+	color: #F6D061;
+}
 
 
 
@@ -401,6 +848,24 @@ h1, h2, h3, h4, h5, h5, p{
 
 .footer__inner--link{
 	color: $lightgreyC;
+}
+
+.greenS:before{
+	content: "";
+	display: block;
+	background: green;
+}
+
+.redS:before{
+	content: "";
+	display: block;
+	background: red;
+}
+
+.yellowS:before{
+	content: "";
+	display: block;
+	background: yellow;
 }
 
 
