@@ -1,9 +1,18 @@
 $(document).ready(function(){
 
+	/* Проверяем наличие выбранной гаммы */ 
+
 	var html = document.querySelector("html");
+
+	let color = $(".choise__color--circle");
 
 	if(localStorage.getItem("gamma") != ""){
 		html.style.setProperty("--blueC", localStorage.getItem("gamma"));
+	}
+
+	if(localStorage.getItem("checkcolor")){
+		color.removeClass("choose__color--active");
+		$("#"+localStorage.getItem("checkcolor")+"").addClass("choose__color--active");
 	}
 
 	/*=== Переключение языков ===*/ 
@@ -73,8 +82,6 @@ $(document).ready(function(){
 
 	/*=== Переключение цветовой гаммы ===*/ 
 
-	let color = $(".choise__color--circle");
-
 	let chooseBtn = $(".choose__color--button");
 
 	/* При клике на цвет давать активный класс */ 
@@ -83,6 +90,8 @@ $(document).ready(function(){
 		if(!$(this).hasClass("choose__color--active")){
 			color.removeClass("choose__color--active");
 			$(this).addClass("choose__color--active");
+
+			localStorage.setItem("checkcolor", $(this).attr("id"));
 		}
 	});
 
@@ -91,13 +100,12 @@ $(document).ready(function(){
 	chooseBtn.on("click", function(){
 		var colorVar = $(".choose__color--active").css("color");
 		html.style.setProperty("--blueC", colorVar);
+
+		/* Сохраняем выбранный цвет гаммы в локалку */
+
 		localStorage.setItem("gamma", colorVar);
 
 	});
-
-	/* Сохраняем выбранный цвет гаммы в куки */
-
-	
 
 });
 
