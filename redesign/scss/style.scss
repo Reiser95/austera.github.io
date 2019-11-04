@@ -6,17 +6,65 @@
 
 /* ================= Base settings ================= */ 
 
-:root{
+html{
 	font-size: 10px;
+
+	/* Text color */ 
+
+	--whiteC: #fff;
+	--blackC: #000;
+	--blueC: #517ff1;
+	--bluedarkC: #2D67F7;
+	--lightgreyC: #5e697e;
+	--greyC: #606266;
+	--yellowC: #a19c5e;
+	--greenC: #5bb671;
+	--scrollC: #1d2129;
+	--nickiconC: #2d3340;
+	--textC: #4e5768;
+
+	/* Background color */ 
+
+	--sectionB: #22262f;
+	--section2B: #191C24;
+	--sectiondarkB: #20242d;
+	--sectiondark2B: #101215;
+	--borderB: #2f3642;
+	--sendB: #2a2e39;
+	--nickB: #252933;
+	--linkB: #272c36;
+
+	/* Font size */
+
+	--smallF: 1.2rem;
+	--nickF: 1.4rem;
+	--mediumF: 1.5rem;
+	--bigF: 1.6rem;
+	--playF: 1.8rem;
+	--gamesF: 2rem;
+	--titleF: 2.2rem;
+
+	/* Font family */
+
+	--lightF: MontserratLight;
+	--regularF: MontserratRegular;
+	--mediumF: MontserratMedium;
+	--semiboldF: MontserratSemibold;
+	--boldF: MontserratBold;
+
+	/* Other */
+
+	--borderO: 1rem;
+	--bordersmallO: .6rem;
 }
 
 body{
 	overflow-x: hidden;
-	font-family: $regularF;
+	font-family: var(--regularF);
 	margin: 0;
 	background: url("../img/home-bg.jpg");
 	font-size: 1.5rem;
-	color: $whiteC;
+	color: var(--whiteC);
 }
 
 *,
@@ -27,7 +75,7 @@ body{
 
 a{
 	text-decoration: none;
-	color: $whiteC;
+	color: var(--whiteC);
 }
 
 ul{
@@ -50,11 +98,11 @@ h1, h2, h3, h4, h5, h5, p{
 }
 
 ::-webkit-scrollbar-track{
-	background: $sendB;
+	background: var(--scrollC);
 }
 
 ::-webkit-scrollbar-thumb{
-	background: $scrollC;
+	background: var(--sendB);
 	border-radius: 1rem;
 }
 
@@ -68,6 +116,7 @@ h1, h2, h3, h4, h5, h5, p{
 .button{
 	outline: none;
 	border: none;
+	color: var(--whiteC);
 	background: transparent;
 	display: inline-block;
 	cursor: pointer;
@@ -81,12 +130,12 @@ h1, h2, h3, h4, h5, h5, p{
 }
 
 .blue{
-	color: $blueC;
+	color: var(--blueC);
 	transition: .2s linear;
 }
 
 .green{
-	color: $greenC;
+	color: var(--greenC);
 }
 
 .icon{
@@ -96,14 +145,18 @@ h1, h2, h3, h4, h5, h5, p{
 .arrow{
 	transition: .4s linear;
 	width: 20px;
-	fill: $lightgreyC;
+	fill: var(--lightgreyC);
 }
 
 /* Active class */
 
 .header__top--language--flag.active__flag{
-	background: darken($sectionB, 5);
-} 
+	background: var(--section2B);
+}
+
+.choose__color--active{
+	border: 5px solid var(--whiteC);
+}
 
 
 
@@ -136,10 +189,10 @@ h1, h2, h3, h4, h5, h5, p{
 /*=== Выбор цветовой гаммы верхняя часть хедера ===*/
 
 .header__top--choose--color{
-	font-size: $bigF;
+	font-size: var(--bigF);
 	padding: 1.2rem 1.6rem;
-	background: $sectionB;
-	border-radius: $bordersmallO;
+	background: var(--sectionB);
+	border-radius: var(--bordersmallO);
 	margin-right: 3rem;
 	cursor: pointer;
 	display: flex;
@@ -148,31 +201,31 @@ h1, h2, h3, h4, h5, h5, p{
 } 
 
 .header__top--choose--color:hover{
-	background: darken($sectionB, 5);
+	background: var(--section2B);
 }
 
 .choose__color{
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	background: $blueC;
+	background: var(--blueC);
 	margin-left: 1rem;
 }
 
 /*=== Описание верхняя часть хедера ===*/
 
 .header__top--description{
-	font-size: $bigF;
+	font-size: var(--bigF);
 	padding: 1.2rem 1.6rem;
-	background: $sectionB;
-	border-radius: $bordersmallO;
+	background: var(--sectionB);
+	border-radius: var(--bordersmallO);
 }
 
 /*=== Логотип верхняя часть хедера ===*/ 
 
 .site__logo{
-	font-size: $gamesF;
-	font-family: $boldF;
+	font-size: var(--gamesF);
+	font-family: var(--boldF);
 	display: flex;
 	align-items: center;
 	transition: .2s linear;
@@ -200,12 +253,12 @@ h1, h2, h3, h4, h5, h5, p{
 	cursor: pointer;
 	display: flex;
 	align-items: center;
-	background: $sectionB;
+	background: var(--sectionB);
 	transition: .3s linear;
 }
 
 .header__top--language--flag:hover{
-	background: darken($sectionB, 5);
+	background: var(--section2B);
 }
 
 .header__top--language--flag:first-child{
@@ -223,19 +276,19 @@ h1, h2, h3, h4, h5, h5, p{
 /* Профиль */ 
 
 .header__top--profile{
-	font-size: $nickF;
-	font-family: $semiboldF;
+	font-size: var(--nickF);
+	font-family: var(--semiboldF);
 	display: flex;
 	align-items: center;
-	border-radius: $borderO;
+	border-radius: var(--borderO);
 	padding: .8rem 1.5rem;
-	background: $sectionB;
+	background: var(--sectionB);
 	max-width: 240px;
 	transition: .2s linear;
 }
 
 .header__top--profile:hover{
-	background: darken($sectionB, 5);
+	background: var(--section2B);
 }
 
 .site__profile--img{
@@ -243,7 +296,7 @@ h1, h2, h3, h4, h5, h5, p{
 	overflow: hidden;
 	width: 35px;
 	height: 35px;
-	border-radius: $borderO;	
+	border-radius: var(--borderO);	
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -257,7 +310,7 @@ h1, h2, h3, h4, h5, h5, p{
 
 .header__bottom--inner{
 	width: 100%;
-	background: $sectionB;
+	background: var(--sectionB);
 }
 
 .header__bottom--content{
@@ -270,8 +323,8 @@ h1, h2, h3, h4, h5, h5, p{
 /*=== Страница нижняя часть хедера ===*/
 
 .header__bottom--page{
-	font-size: $gamesF;
-	font-family: $boldF;
+	font-size: var(--gamesF);
+	font-family: var(--boldF);
 } 
 
 /*=== Ссылки нижняя часть хедера ===*/
@@ -285,8 +338,8 @@ h1, h2, h3, h4, h5, h5, p{
 	padding: 1rem 1.3rem;
 	margin-right: 3rem;
 	display: inline-block;
-	background: $linkB;
-	font-size: $bigF;
+	background: var(--linkB);
+	font-size: var(--bigF);
 	display: flex;
 	align-items: center;
 	position: relative;
@@ -302,7 +355,7 @@ h1, h2, h3, h4, h5, h5, p{
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: $blueC;
+	background: var(--blueC);
 	z-index: -1;
 	transition: transform .5s;
 	transform-origin: 0 0;
@@ -326,9 +379,9 @@ h1, h2, h3, h4, h5, h5, p{
 }
 
 .balance__inner{
-	font-family: $semiboldF;
+	font-family: var(--semiboldF);
 	margin-right: 1.5rem;
-	font-size: $nickF;
+	font-size: var(--nickF);
 	max-width: 180px;
 	word-break: break-all;
 }
@@ -347,7 +400,7 @@ h1, h2, h3, h4, h5, h5, p{
 /*=== Games ===*/
 
 .games{
-	background: $sectionB;
+	background: var(--sectionB);
 	border-radius: 0 1rem 1rem 0;
 	padding: 2rem 2.5rem;
 	display: inline-block;
@@ -357,9 +410,9 @@ h1, h2, h3, h4, h5, h5, p{
 }
 
 .games__title, .chat__title{
-	font-size: $gamesF;
+	font-size: var(--gamesF);
 	padding-bottom: 1.3rem;
-	border-bottom: 1px dashed $lightgreyC;
+	border-bottom: 1px dashed var(--lightgreyC);
 	text-align: center;
 }
 
@@ -374,13 +427,13 @@ h1, h2, h3, h4, h5, h5, p{
 	display: flex;
 	justify-content: center;
 	padding: 1rem 2rem;
-	background: $borderB;
-	border-radius: $borderO;
+	background: var(--borderB);
+	border-radius: var(--borderO);
 	transition: .2s linear;
 }
 
 .game__box:hover{
-	background: $blueC;
+	background: var(--blueC);
 }
 
 /*=== Main ===*/ 
@@ -403,53 +456,53 @@ h1, h2, h3, h4, h5, h5, p{
 
 .main__subtitle{
 	margin-top: 3.5rem;
-	font-size: $titleF;
+	font-size: var(--titleF);
 	max-width: 620px;
 	line-height: 1.3;
 }
 
 .expcash{
-	font-family: $boldF;
+	font-family: var(--boldF);
 	padding-bottom: .1rem;
-	border-bottom: 1px dashed $whiteC;
+	border-bottom: 1px dashed var(--whiteC);
 }
 
 .main__play{
 	margin-top: 5rem;
-	border-radius: $borderO;
-	border: 2px solid $blueC;
+	border-radius: var(--borderO);
+	border: 2px solid var(--blueC);
 	background: transparent;
 	padding: .8rem 4rem;
-	font-family: $semiboldF;
+	font-family: var(--semiboldF);
 	transition: .3s linear;
 }
 
-.main__play--button .main__play {
+.main__play--button .main__play{
     position: relative;
     overflow: hidden;
 }
 
-.main__play--button .button:before {
+.main__play--button .main__play:before{
     content: "";
     position: absolute;
     z-index: -1;
-    background: $blueC;
+    background: var(--blueC);
     height: 150px;
     width: 270px;
     border-radius: 50%;
 }
 
-.main__play--button .button:hover {
+.main__play--button .main__play:hover{
     border: 2px solid transparent;
 }
 
-.main__play--button .button:nth-child(1):before {
+.main__play--button .main__play:nth-child(1):before{
     top: 100%;
     left: 100%;
     transition: all .5s;
 }
 
-.main__play--button .button:nth-child(1):hover:before {
+.main__play--button .main__play:nth-child(1):hover:before{
     top: -40px;
     left: -40px;
 }
@@ -459,14 +512,14 @@ h1, h2, h3, h4, h5, h5, p{
 .main__like--games--inner{
 	margin-top: 4.5rem;
 	padding: 2.5rem;
-	background: $sectionB;
+	background: var(--sectionB);
 	width: 100%;
-	border-radius: $borderO;
+	border-radius: var(--borderO);
 	position: relative;
 }
 
 .main__like--games--title{
-	font-size: $gamesF;
+	font-size: var(--gamesF);
 }
 
 /*=== Слайдер любимых игр ===*/ 
@@ -492,8 +545,8 @@ h1, h2, h3, h4, h5, h5, p{
 .main__like--games--item{
 	width: 300px;
 	height: 200px;
-	border-radius: $borderO;
-	border: 3px dashed $borderB;
+	border-radius: var(--borderO);
+	border: 3px dashed var(--borderB);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -503,19 +556,19 @@ h1, h2, h3, h4, h5, h5, p{
 }
 
 .main__like--games--item:hover{
-	border: 3px dashed $blueC;
+	border: 3px dashed var(--blueC);
 }
 
 .main__like--games--item:hover .main__like--add--game{
-	background: $blueC;
+	background: var(--blueC);
 }
 
 .main__like--add--game{
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
-	background: $borderB;
-	color: $sectiondarkB;
+	background: var(--borderB);
+	color: var(--sectiondarkB);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -533,7 +586,7 @@ h1, h2, h3, h4, h5, h5, p{
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	background: $sectiondarkB;
+	background: var(--sectiondarkB);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -546,7 +599,7 @@ h1, h2, h3, h4, h5, h5, p{
 }
 
 .main__arrow:hover{
-	background: $yellowC;
+	background: var(--yellowC);
 }
 
 .main__arrow--next{
@@ -565,8 +618,8 @@ h1, h2, h3, h4, h5, h5, p{
 	position: absolute;
 	top: -3px;
 	left: -3px;
-	background: $sectiondarkB;
-	border-radius: $borderO;
+	background: var(--sectiondarkB);
+	border-radius: var(--borderO);
 	padding: 2.5rem;
 	display: flex;
 	align-items: flex-end;
@@ -576,13 +629,13 @@ h1, h2, h3, h4, h5, h5, p{
 }
 
 .game__inner--mask:hover{
-	border: 3px solid $blueC;
+	border: 3px solid var(--blueC);
 }
 
 /*=== Заголовок последних выйгрышей ===*/ 
 
 .main__last--wins--title{
-	font-size: $titleF;
+	font-size: var(--titleF);
 	margin-top: 7rem;
 	display: flex;
 	align-items: center;
@@ -591,16 +644,16 @@ h1, h2, h3, h4, h5, h5, p{
 
 .last__wins--wave{
 	margin-top: .6rem;
-	fill: $blueC;
+	fill: var(--blueC);
 }
 
 /*=== Контейнер последних выйгрышей ===*/ 
 
 .main__last--wins--inner{
 	padding: 2rem 7.5rem;
-	border-radius: $borderO;
+	border-radius: var(--borderO);
 	margin-top: 2rem;
-	background: $sectiondarkB;
+	background: var(--sectiondarkB);
 	width: 100%;
 	height: 250px;
 	word-break: break-all;
@@ -610,16 +663,16 @@ h1, h2, h3, h4, h5, h5, p{
 
 .main__last--wins--views, .main__last--wins--item{
 	width: 100%;
-	background: $nickB;
+	background: var(--nickB);
 	padding: 1.5rem 3rem;
 	display: flex;
 	align-items: center;
 }
 
 .main__last--wins--item{
-	background: $sectionB;
+	background: var(--sectionB);
 	padding: 2.5rem 3rem;
-	border-bottom: 3px solid $sendB;
+	border-bottom: 3px solid var(--sendB);
 }
 
 .main__last--wins--item:last-child{
@@ -665,11 +718,11 @@ h1, h2, h3, h4, h5, h5, p{
 	flex-direction: column;
 	align-items: center;
 	border-radius: 1rem 0 0 1rem;
-	transition: .5s linear;
+	transition: .3s linear;
 }
 
 .chat{
-	background: $sectionB;
+	background: var(--sectionB);
 	padding: 2rem 2.5rem;
 	border-radius: 1rem 0 0 0;
 	display: inline-block;
@@ -687,7 +740,7 @@ h1, h2, h3, h4, h5, h5, p{
 
 .chat__title--icon{
 	width: 22px;
-	fill: $blueC;
+	fill: var(--blueC);
 	margin-left: .5rem;
 }
 
@@ -719,13 +772,13 @@ h1, h2, h3, h4, h5, h5, p{
 }
 
 .chat__inner--nick{
-	color: $greyC;
+	color: var(--greyC);
 	margin-right: 1.5rem;
 	word-break: break-all;
 }
 
 .chat__inner--time{
-	color: $greyC;
+	color: var(--greyC);
 }
 
 .chat__inner--text{
@@ -739,20 +792,20 @@ h1, h2, h3, h4, h5, h5, p{
 	width: 55px;
 	height: 55px;
 	border-radius: 50%;
-	background: $sectiondarkB;
+	background: var(--sectiondarkB);
 	position: absolute;
 	top: 180px;
 	left: -27px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 0 0 10px $sectiondarkB;
+	box-shadow: 0 0 10px var(--sectiondarkB);
 	cursor: pointer;
 	transition: .2s linear;
 }
 
 .chat__close--inner:hover{
-	background: darken($sectiondarkB, 5);
+	background: var(--sectiondark2B);
 }
 
 .chat__off{
@@ -773,7 +826,7 @@ h1, h2, h3, h4, h5, h5, p{
 .chat__send--inner{
 	border-radius: 0 0 0 1rem;
 	padding: 1rem 2rem;
-	background: $sectiondarkB;
+	background: var(--sectiondarkB);
 	width: 100%;
 }
 
@@ -794,7 +847,7 @@ h1, h2, h3, h4, h5, h5, p{
 	resize: none;
 	height: 100px;
 	width: 220px;
-	color: $whiteC;
+	color: var(--whiteC);
 }
 
 .chat__send--button, .chat__send--smail{
@@ -804,13 +857,13 @@ h1, h2, h3, h4, h5, h5, p{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: $sendB;
+	background: var(--sendB);
 	transition: .3s linear;
 }
 
 .chat__send--smail{
 	background: none;
-	border: 1px solid $sendB;
+	border: 1px solid var(--sendB);
 	margin-top: 1rem;
 }
 
@@ -819,7 +872,7 @@ h1, h2, h3, h4, h5, h5, p{
 }
 
 .send__icon{
-	color: $blueC;
+	color: var(--blueC);
 }
 
 .smile__icon{
@@ -834,7 +887,7 @@ h1, h2, h3, h4, h5, h5, p{
 
 .footer{
 	width: 100%;
-	background: $sectiondarkB;
+	background: var(--sectiondarkB);
 }
 
 .footer__inner{
@@ -847,7 +900,7 @@ h1, h2, h3, h4, h5, h5, p{
 /*=== Футерные ссылки ===*/
 
 .footer__inner--link{
-	color: $lightgreyC;
+	color: var(--lightgreyC);
 }
 
 .greenS:before{
@@ -870,13 +923,213 @@ h1, h2, h3, h4, h5, h5, p{
 
 
 
+/* ==================== Окно выбора цветовой гаммы =============== */
+
+.choose__color--inner{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 999;
+	padding: 5rem;
+}
+
+.choose__color--content{
+	max-width: 1570px;
+	max-height: 85vh;
+	height: 100%;
+	width: 100%;
+	border-radius: 3rem;
+	background: var(--sectionB);
+	box-shadow: 0 0 100px var(--blueC);
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	padding: 5rem;
+}
+
+.choose__color--cross{
+	font-size: 4rem;
+	cursor: pointer;
+	position: absolute;
+	top: 30px;
+	right: 40px;
+	color: var(--lightgreyC);
+}
+
+.choose__color--title{
+	font-size: 3.5rem;
+	padding-bottom: .4rem;
+	border-bottom: 2px dashed var(--lightgreyC);
+	font-family: var(--semiboldF);
+}
+
+.choose__color--box{
+	margin-top: 6rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.choose__color--text{
+	margin-top: 8rem;
+	font-size: var(--playF);
+	max-width: 630px;
+	text-align: center;
+	line-height: 1.3;
+}
+
+.choose__color-item{
+	width: 25%;
+	min-height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.choise__color--circle{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: white;
+	cursor: pointer;
+	position: relative;
+	transition: .2s linear;
+}
+
+.choise__color--check{
+	width: 30px;
+	height: 30px;
+	color: var(--blackC);
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	background: var(--whiteC);
+	border-radius: 50%;
+}
+
+.choose__color--active .choise__color--check{
+	display: flex;
+}
+
+/* Кнопка выбора палитры */ 
+
+.choose__color--button{
+	border: 2px solid var(--blueC);
+	padding: 1rem 2rem;
+	min-width: 240px;
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+}
+
+.choose__color--button:before{
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	background: var(--blueC);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transform: translateY(120%);
+	transition: .2s linear;
+}
+
+.choose__color--button:hover:before{
+	transform: translateY(0);
+}
+
+/*=== Цветовая гамма цвета ===*/ 
+
+.green__circle{
+	background: #45a345;
+	color: #45a345;
+}
+
+.red__circle{
+	background: red;
+	color: red;
+}
+
+.blue__circle{
+	background: #517ff1;
+	color: #517ff1;
+}
+
+.orange__circle{
+	background: orange;
+	color: orange;
+}
+
+.purple__circle{
+	background: purple;
+	color: purple;
+}
+
+.grey__circle{
+	background: grey;
+	color: grey;
+}
+
+.lightblue__circle{
+	background: #2ebaee;
+	color: #2ebaee;
+}
+
+.pink__circle{
+	background: #e232ba;
+	color: #e232ba;
+}
+
+.green__circle:hover{
+	background: darken(#45a345, 15);
+}
+
+.red__circle:hover{
+	background: darken(red, 15);
+}
+
+.blue__circle:hover{
+	background: var(--bluedarkC);
+}
+
+.orange__circle:hover{
+	background: darken(orange, 15);
+}
+
+.purple__circle:hover{
+	background: darken(purple, 6);
+}
+
+.grey__circle:hover{
+	background: darken(grey, 15);
+}
+
+.lightblue__circle:hover{
+	background: darken(#2ebaee, 15);
+}
+
+.pink__circle:hover{
+	background: darken(#e232ba, 15);
+}
+
 
 
 
 /* ==================== Preloader =============== */
 
 #preloader {
-  background: $sectionB;
+  background: var(--sectionB);
   position: fixed;
   top: 0;
   left: 0;
