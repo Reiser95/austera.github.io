@@ -72,6 +72,8 @@ $(document).ready(function(){
 	let colorClose = $(".choose__color--cross");
 
 	chooseColor.on("click", function(){
+		color.removeClass("choose__color--active");
+		$("#"+localStorage.getItem("checkcolor")+"").addClass("choose__color--active");
 		colorMask.fadeIn(300).css("display", "flex");
 	});
 
@@ -90,8 +92,6 @@ $(document).ready(function(){
 		if(!$(this).hasClass("choose__color--active")){
 			color.removeClass("choose__color--active");
 			$(this).addClass("choose__color--active");
-
-			localStorage.setItem("checkcolor", $(this).attr("id"));
 		}
 	});
 
@@ -104,6 +104,8 @@ $(document).ready(function(){
 		/* Сохраняем выбранный цвет гаммы в локалку */
 
 		localStorage.setItem("gamma", colorVar);
+
+		localStorage.setItem("checkcolor", $(".choose__color--active").attr("id"));
 
 	});
 
