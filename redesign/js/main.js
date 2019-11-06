@@ -6,6 +6,10 @@ $(document).ready(function(){
 
 	let color = $(".choise__color--circle");
 
+	let nameActiveGame = [];
+
+	var add;
+
 	if(localStorage.getItem("gamma") != ""){
 		html.style.setProperty("--blueC", localStorage.getItem("gamma"));
 	}
@@ -14,6 +18,22 @@ $(document).ready(function(){
 		color.removeClass("choose__color--active");
 		$("#"+localStorage.getItem("checkcolor")+"").addClass("choose__color--active");
 	}
+
+	if((localStorage.getItem("activegames"))){
+		var arr = (localStorage.getItem("activegames"));
+		
+		arr = arr.split(",");
+
+		for(let i of arr){
+			nameActiveGame.push(i);
+		}
+
+		for(let o of nameActiveGame){
+			$(".add__like--item:contains("+o+")").addClass("active__like--game");
+		}
+	}
+
+	
 
 	/*=== Переключение языков ===*/ 
 
@@ -107,6 +127,53 @@ $(document).ready(function(){
 
 		localStorage.setItem("checkcolor", $(".choose__color--active").attr("id"));
 
+	});
+
+	/*=== Добавление игры в избранную открытие/закрытие окна ===*/ 
+
+	let addGames = $(".add__like--games");
+	let addMask = $(".add__like--game");
+	let addCross = $(".add__like--cross");
+
+	addGames.on("click", function(){
+		addMask.fadeIn(300).css("display", "flex");
+	});
+
+	addCross.on("click", function(){
+		addMask.fadeOut(300);
+	});
+
+	/* Удаление и добавление игры в избранную в модальном окне */ 
+
+	let game = $(".add__like--item");
+
+	game.on("click", function(){
+		if($(this).hasClass("active__like--game")){
+			$(this).removeClass("active__like--game");
+			$(this).children(".add__like--plus").fadeIn(0);
+
+			add = $(this).children(".game__inner--mask").text().trim();
+
+			for(let s = 0; s<nameActiveGame.length; s++){
+				if(nameActiveGame[s] == add){
+					nameActiveGame.splice(s, 1);
+				}
+			}
+
+			/* Сохранение в локалку имя активной игры */
+
+			localStorage.setItem("activegames", nameActiveGame);
+		}
+		else{
+			$(this).children(".add__like--plus").fadeOut(0);
+			$(this).addClass("active__like--game");
+			add = $(this).children(".game__inner--mask").text().trim();
+			nameActiveGame.push(add);
+			
+			/* Сохранение в локалку имя активной игры */
+
+			localStorage.setItem("activegames", nameActiveGame);
+		}
 	});
 
 });
