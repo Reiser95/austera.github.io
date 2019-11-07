@@ -86,7 +86,7 @@ $(document).ready(function(){
 			/* Вывод в слайдер любимых игр */ 
 
 			gameSlider
-			.trigger('add.owl.carousel', ['<div class="main__like--games--item like__game"><a href="#" class="game__inner--mask">'+o+'</a><div class="edit__mask"><div class="edit__arrows"><i class="fas fa-chevron-circle-left edit__arrow edit__arrow--prev"></i><i class="fas fa-chevron-circle-right edit__arrow edit__arrow--next"></i></div></div></div>', -1])
+			.trigger('add.owl.carousel', ['<div class="main__like--games--item like__game"><a href="/'+o+'" class="game__inner--mask '+o+'">'+o+'</a><div class="edit__mask"><div class="edit__arrows"><i class="fas fa-chevron-circle-left edit__arrow edit__arrow--prev"></i><i class="fas fa-chevron-circle-right edit__arrow edit__arrow--next"></i></div></div></div>', -1])
 			.trigger('refresh.owl.carousel');
 		}
 	}
@@ -259,7 +259,7 @@ $(document).ready(function(){
 			/* Добавление в слайдер активного элемента */
 
 			gameSlider
-			.trigger('add.owl.carousel', ['<div class="main__like--games--item like__game"><a href="#" class="game__inner--mask">'+add+'</a><div class="edit__mask"><div class="edit__arrows"><i class="fas fa-chevron-circle-left edit__arrow edit__arrow--prev"></i><i class="fas fa-chevron-circle-right edit__arrow edit__arrow--next"></i></div></div></div>', -1])
+			.trigger('add.owl.carousel', ['<div class="main__like--games--item like__game"><a href="/'+add+'" class="game__inner--mask '+add+'">'+add+'</a><div class="edit__mask"><div class="edit__arrows"><i class="fas fa-chevron-circle-left edit__arrow edit__arrow--prev"></i><i class="fas fa-chevron-circle-right edit__arrow edit__arrow--next"></i></div></div></div>', -1])
 			.trigger('refresh.owl.carousel');
 		}
 	});
@@ -270,6 +270,7 @@ $(document).ready(function(){
 		if($(this).hasClass("edit")){
 			/* Даем класс что бы в последующем определить элемент */
 			$(this).removeClass("edit");
+			$(this).text("Редактировать");
 
 			/* Забираем класс активного редактирования,
 			   если класс drag есть */
@@ -278,6 +279,7 @@ $(document).ready(function(){
 		else{
 			/* Даем класс что бы в последующем определить элемент */ 
 			$(this).addClass("edit");
+			$(this).text("Готово");
 
 			/* Даем класс активного редактирования,
 			   если класса drag нет */
