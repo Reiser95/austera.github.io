@@ -10,4 +10,12 @@ $(document).ready(function(){
 		e.preventDefault();
 	});
 
+	$(".menu__icon").on("click", function(){
+		$(".mobile__menu").removeClass("transform__menu");
+	});
+
+	$(".mobile__menu--cross").on("click", function(){
+		$(".mobile__menu").addClass("transform__menu");
+	});
+
 });
