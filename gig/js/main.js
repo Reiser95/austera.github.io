@@ -18,4 +18,12 @@ $(document).ready(function(){
 		$(".mobile__menu").addClass("transform__menu");
 	});
 
+	$(".zakaz").on("click", function(){
+		$(".modal__anket--inner").fadeIn(300).css("display", "flex");
+	});
+
+	$(".modal__anket--cross").on("click", function(){
+		$(".modal__anket--inner").fadeOut(300);
+	});
+
 });

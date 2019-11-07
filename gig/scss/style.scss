@@ -289,12 +289,13 @@ h1, h2, h3, h4, h5, h5, p{
 	position: relative;
 }
 
-#form1, #form2{
+#form1, #form2, #form3{
 	display: none;
 }
 
 #form1:checked + .free__form1--label:after,
-#form2:checked + .free__form1--label:after{
+#form2:checked + .free__form1--label:after,
+#form3:checked + .free__form1--label:after{
 	opacity: 1;
 }
 
@@ -850,6 +851,68 @@ h1, h2, h3, h4, h5, h5, p{
 	transform: translateX(-100%);
 }
 
+/* Modal anket */
+
+.modal__anket--inner{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, .2);
+	padding: 1rem;
+}
+
+.modal__anket{
+	max-width: 610px;
+	width: 100%;
+	padding: 5rem 2rem;
+	background: #716B6B;
+	position: relative;
+}
+
+.modal__anket--title{
+	text-align: center;
+	color: var(--whiteC);
+	font-size: var(--fz24);
+	font-weight: bold;
+}
+
+.modal__anket--text{
+	text-align: center;
+	color: var(--whiteC);
+	font-size: var(--fz18);
+	margin-top: 1rem;
+}
+
+.modal__input--box{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 3rem;
+}
+
+.modal__label:before{
+	left: -25px;
+}
+
+.modal__label:after{
+	left: -22px;
+}
+
+.modal__anket--cross{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	font-size: 2rem;
+	color: var(--whiteC);
+}
+
 /*================ Адаптивность ================*/
 
 @media(max-width: 1200px){
@@ -981,13 +1044,18 @@ h1, h2, h3, h4, h5, h5, p{
 		width: 100%;
 	}
 
-	.footer__inner--contact{
-		display: none;
-	}
-
 	.footer__inner--text{
 		width: 100%;
 		text-align: center;
+	}
+
+	.footer__inner--contact, .footer__inner{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.white, .mail, .footer__inner--text{
+		margin-top: 1rem;
 	}
 
 	.menu__icon{
@@ -1019,10 +1087,16 @@ h1, h2, h3, h4, h5, h5, p{
 
 	.header__content--title{
 		font-size: 3.5rem;
+		text-align: center;
 	}
 
 	html{
 		--fz42: 2.8rem;
+	}
+
+	.header__content--button{
+		display: flex;
+		justify-content: center;
 	}
 }
 
