@@ -12,9 +12,6 @@
 }
 
 @media(max-width: 1670px){
-	.add__like--inner{
-		width: 80%;
-	}
 }
 
 @media(max-width: 1400px){
@@ -25,26 +22,18 @@
 	.chat__inner{
 		height: 550px;
 	}
-
-	.add__like--inner{
-		width: 90%;
-	}
 }
 
 @media(max-width: 1300px){
 	.container{
 		width: 1150px;
 	}
-
-	.add__like--inner{
-		width: 100%;
-	}
 }
 
 /* Высота */
 
 @media(max-height: 830px){
-	.main__like--games--item{
+	.add__like--item{
 		width: 250px;
 		height: 160px;
 	}
@@ -68,7 +57,7 @@
 }
 
 @media(max-height: 560px){
-	.main__like--games--item{
+	.add__like--item{
 		width: 220px;
 		height: 120px;
 	}
