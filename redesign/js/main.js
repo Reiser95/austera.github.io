@@ -23,17 +23,17 @@ $(document).ready(function(){
 	gameSlider.owlCarousel({
 		margin: 35,
 		responsiveClass:true,
-	    /* responsive:{
+	     responsive:{
 	        0:{
 	            items:1
 	        },
 	        768:{
 	            items:2
 	        },
-		    1200:{
+		    1745:{
 		        items:3,
 	        }
-		} */
+		} 
 	});
 
 	$('.main__arrow--next').click(function () {
@@ -91,7 +91,12 @@ $(document).ready(function(){
 		}
 	}
 
-	
+	/* Проверка зарегистрирован пользователь или нет */
+
+	if($(".chat__send--box").hasClass("noregister__chat")){
+		$(".chat__send--input").attr("placeholder", "В чат могут писать только авторизованные игроки");
+		$(".chat__send--input").attr("disabled", "");
+	}
 
 	/*=== Переключение языков ===*/ 
 
@@ -120,10 +125,21 @@ $(document).ready(function(){
 	let closeChat = $(".chat__close--inner");
 
 	closeChat.on("click", function(){
+		$(".main").toggleClass("full");
 		$(".chat__content").toggleClass("chat__off");
 		$(this).toggleClass("chat__button--on");
 		$(".chat__close--icon").toggleClass("chat__close--icon--rotate");
+		if($(window).width() >= 1746){
+			$(".games").toggleClass("games__fade");
+		}
 	});
+
+	if($(window).width() <= 1400){
+		$(".main").toggleClass("full");
+		$(".chat__content").toggleClass("chat__off");
+		closeChat.toggleClass("chat__button--on");
+		$(".chat__close--icon").toggleClass("chat__close--icon--rotate");
+	}
 
 	/*=== Цветовая гамма ===*/ 
 
@@ -144,7 +160,7 @@ $(document).ready(function(){
 
 	/*=== Переключение цветовой гаммы ===*/ 
 
-	let chooseBtn = $(".choose__color--button");
+	let chooseBtn = $(".choise__color--circle");
 
 	/* При клике на цвет давать активный класс */ 
 
@@ -187,6 +203,7 @@ $(document).ready(function(){
 			$(".main__like--games--item").unbind("touchstart mousedown");
 
 			$(".main__like--games--item").removeClass("active__edit");
+			$(edit).text("Редактировать");
 		}
 	});
 

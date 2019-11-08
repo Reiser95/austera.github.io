@@ -1,0 +1,40 @@
+@media(max-width: 1745px){
+	.games{
+		width: auto;
+		max-width: 169px;
+	}
+
+	.main__like--games--carousel{
+		max-width: 750px;
+	}
+}
+
+@media(max-width: 1670px){
+	.add__like--inner{
+		width: 80%;
+	}
+}
+
+@media(max-width: 1400px){
+	.main{
+		margin-right: 0;
+	}
+
+	.chat__inner{
+		height: 550px;
+	}
+
+	.add__like--inner{
+		width: 90%;
+	}
+}
+
+@media(max-width: 1300px){
+	.container{
+		width: 1150px;
+	}
+
+	.add__like--inner{
+		width: 100%;
+	}
+}

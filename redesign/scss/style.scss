@@ -216,6 +216,7 @@ h1, h2, h3, h4, h5, h5, p{
 	border-radius: 50%;
 	background: var(--blueC);
 	margin-left: 1rem;
+	transition: .2s linear;
 }
 
 /*=== Описание верхняя часть хедера ===*/
@@ -311,6 +312,48 @@ h1, h2, h3, h4, h5, h5, p{
 .user__img{
 	width: 100%;
 }
+
+/* Кнопки вход и регистрация */
+
+.noregister__button{
+	padding: 1rem 3rem;	
+	min-width: 100px;
+	border: 1px solid var(--blueC);
+	position: relative;
+	z-index: 2;
+}
+
+.enter__button{
+	margin-right: 2rem;
+}
+
+.noregister__button:before{
+	content: "";
+	display: block;
+	width: 0;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background: var(--blueC);
+	z-index: -1;
+	transition: .3s linear;
+}
+
+.enter__button:before{
+	right: 0;
+}
+
+.register__button:before{
+	left: 0;
+}
+
+
+.enter__button:hover:before,
+.register__button:hover:before{
+	width: 100%;
+}
+
+
 
 /*=== Нижняя часть хедера ===*/ 
 
@@ -413,6 +456,11 @@ h1, h2, h3, h4, h5, h5, p{
 	max-width: 350px;
 	width: 100%;
 	min-height: 700px;
+	transition: .3s linear;
+}
+
+.games__fade{
+	max-width: 200px;
 }
 
 .chat__top--inner{
@@ -461,10 +509,15 @@ h1, h2, h3, h4, h5, h5, p{
 	padding: 0 5rem;
 	text-align: center;
 	width: 100%;
-	max-width: 1215px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-right: 347px;
+	transition: .3s ease-in-out;
+}
+
+.main.full{
+	margin-right: 0;
 }
 
 /*=== Main верхний текст ===*/ 
@@ -570,6 +623,7 @@ h1, h2, h3, h4, h5, h5, p{
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+	margin: 0 1rem;
 	transition: .2s linear;
 	position: relative;
 }
@@ -764,6 +818,10 @@ h1, h2, h3, h4, h5, h5, p{
 	flex-direction: column;
 	align-items: center;
 	border-radius: 1rem 0 0 1rem;
+	position: absolute;
+	top: 210px;
+	right: 0;
+	z-index: 10;
 	transition: .3s linear;
 }
 
@@ -775,7 +833,7 @@ h1, h2, h3, h4, h5, h5, p{
 	max-width: 350px;
 	width: 100%;
 	position: relative;
-	transition: .5s linear;
+	box-shadow: -4px -3px 20px var(--section2B);
 }
 
 .chat__title{
@@ -791,6 +849,7 @@ h1, h2, h3, h4, h5, h5, p{
 	width: 22px;
 	fill: var(--blueC);
 	margin-left: .5rem;
+	transition: .2s linear;
 }
 
 .chat__inner{
@@ -835,6 +894,17 @@ h1, h2, h3, h4, h5, h5, p{
 	margin-top: .7rem;
 }
 
+.chat__online--inner{
+	padding: .6rem 2rem;
+	border-radius: var(--borderO);
+	background: var(--blueC);
+	font-family: var(--boldF);
+}
+
+.header__top--profile{
+	display: none;
+}
+
 /*=== Кнопка закрытия чата ===*/ 
 
 .chat__close--inner{
@@ -874,15 +944,16 @@ h1, h2, h3, h4, h5, h5, p{
 
 .chat__send--inner{
 	border-radius: 0 0 0 1rem;
-	padding: 1rem 2rem;
+	padding: 1.5rem 3rem;
 	background: var(--sectiondarkB);
 	width: 100%;
+	box-shadow: -4px 3px 20px var(--section2B);
 }
 
 .chat__send--box{
 	display: flex;
 	width: 100%;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .chat__send--buttons{
@@ -897,6 +968,8 @@ h1, h2, h3, h4, h5, h5, p{
 	height: 100px;
 	width: 220px;
 	color: var(--whiteC);
+	background: var(--sectionB);
+	border-radius: var(--borderO);
 }
 
 .chat__send--button, .chat__send--smail{
@@ -926,6 +999,14 @@ h1, h2, h3, h4, h5, h5, p{
 
 .smile__icon{
 	color: #F6D061;
+}
+
+.noregister__chat .chat__send--input::placeholder{
+	color: #de2d2d;
+}
+
+.noregister__chat .chat__send--buttons .button{
+	pointer-events: none;
 }
 
 
@@ -995,7 +1076,6 @@ h1, h2, h3, h4, h5, h5, p{
 	background: white;
 	cursor: pointer;
 	position: relative;
-	transition: .2s linear;
 }
 
 .choise__color--check{
@@ -1014,35 +1094,6 @@ h1, h2, h3, h4, h5, h5, p{
 
 .choose__color--active .choise__color--check{
 	display: flex;
-}
-
-/* Кнопка выбора палитры */ 
-
-.choose__color--button{
-	border: 2px solid var(--blueC);
-	padding: 1rem 2rem;
-	min-width: 240px;
-	position: relative;
-	z-index: 2;
-	overflow: hidden;
-}
-
-.choose__color--button:before{
-	content: "";
-	display: block;
-	height: 100%;
-	width: 100%;
-	background: var(--blueC);
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
-	transform: translateY(120%);
-	transition: .2s linear;
-}
-
-.choose__color--button:hover:before{
-	transform: translateY(0);
 }
 
 /*=== Цветовая гамма цвета ===*/ 
@@ -1318,6 +1369,7 @@ h1, h2, h3, h4, h5, h5, p{
 	align-items: center;
 	justify-content: space-between;
 	flex-direction: column;
+	transition: .2s linear;
 	padding: 5rem;
 }
 
