@@ -53,6 +53,30 @@ $(document).ready(function(){
 
 	var add;
 
+	/* Вывод игр с менюшка в окно любимые игры */
+
+	var gamesInner = [];
+
+	$(".game__box").each(function(i){
+		var name = $(this).text().trim();
+		var nameLower = name.toLowerCase();
+		$(this).attr("href", "/"+nameLower+"");
+
+		gamesInner.push(name);
+	});
+
+	localStorage.setItem("gamesinner", gamesInner);
+
+	/* Проходимся циклом и выводим игры в окно любимых игр */
+	if(localStorage.getItem("gamesinner")){
+		let arrInner = localStorage.getItem("gamesinner");
+		arrInner = arrInner.split(",");
+		for(let l of arrInner){
+			var lower = l.toLowerCase();
+			$(".add__like--inner").append('<div class="add__like--item--box"><div class="main__like--games--item add__like--item"><a href="#" class="game__inner--mask '+lower+'">'+l+'</a><div class="game__added--mask"><div class="game__added--text">добавлено</div></div><div class="add__like--check"><i class="fas fa-check"></i></div><div class="add__like--plus"><div class="add__like--plus--inner"><i class="fas fa-plus icon__add"></i></div></div></div></div>');
+		}
+	}
+
 	/* Проверяем если гамма не пустая,
 	   то менять цвет гаммы на выбранный */ 
 
@@ -81,12 +105,13 @@ $(document).ready(function(){
 		}
 
 		for(let o of nameActiveGame){
+			var lowerActive = o.toLowerCase();
 			$(".add__like--item:contains("+o+")").addClass("active__like--game");
 
-			/* Вывод в слайдер любимых игр */ 
+			/* Вывод в слайдер любимых игр */
 
 			gameSlider
-			.trigger('add.owl.carousel', ['<div class="main__like--games--item like__game"><a href="/'+o+'" class="game__inner--mask '+o+'">'+o+'</a><div class="edit__mask"><div class="edit__arrows"><i class="fas fa-chevron-circle-left edit__arrow edit__arrow--prev"></i><i class="fas fa-chevron-circle-right edit__arrow edit__arrow--next"></i></div></div></div>', -1])
+			.trigger('add.owl.carousel', ['<div class="main__like--games--item like__game"><a href="/'+lowerActive+'" class="game__inner--mask '+lowerActive+'">'+o+'</a><div class="edit__mask"><div class="edit__arrows"><i class="fas fa-chevron-circle-left edit__arrow edit__arrow--prev"></i><i class="fas fa-chevron-circle-right edit__arrow edit__arrow--next"></i></div></div></div>', -1])
 			.trigger('refresh.owl.carousel');
 		}
 	}
@@ -125,13 +150,13 @@ $(document).ready(function(){
 	let closeChat = $(".chat__close--inner");
 
 	closeChat.on("click", function(){
+		if($(window).width() >= 1746){
+			$(".games").toggleClass("games__fade");
+		}
 		$(".main").toggleClass("full");
 		$(".chat__content").toggleClass("chat__off");
 		$(this).toggleClass("chat__button--on");
 		$(".chat__close--icon").toggleClass("chat__close--icon--rotate");
-		if($(window).width() >= 1746){
-			$(".games").toggleClass("games__fade");
-		}
 	});
 
 	if($(window).width() <= 1400){
@@ -268,6 +293,8 @@ $(document).ready(function(){
 
 			add = $(this).children(".game__inner--mask").text().trim();
 			nameActiveGame.push(add);
+
+			var addLower = add.toLowerCase();
 			
 			/* Сохранение в локалку имя активных игр */
 
@@ -276,7 +303,7 @@ $(document).ready(function(){
 			/* Добавление в слайдер активного элемента */
 
 			gameSlider
-			.trigger('add.owl.carousel', ['<div class="main__like--games--item like__game"><a href="/'+add+'" class="game__inner--mask '+add+'">'+add+'</a><div class="edit__mask"><div class="edit__arrows"><i class="fas fa-chevron-circle-left edit__arrow edit__arrow--prev"></i><i class="fas fa-chevron-circle-right edit__arrow edit__arrow--next"></i></div></div></div>', -1])
+			.trigger('add.owl.carousel', ['<div class="main__like--games--item like__game"><a href="/'+addLower+'" class="game__inner--mask '+addLower+'">'+add+'</a><div class="edit__mask"><div class="edit__arrows"><i class="fas fa-chevron-circle-left edit__arrow edit__arrow--prev"></i><i class="fas fa-chevron-circle-right edit__arrow edit__arrow--next"></i></div></div></div>', -1])
 			.trigger('refresh.owl.carousel');
 		}
 	});
@@ -305,8 +332,6 @@ $(document).ready(function(){
 	});
 
 	/* Нажатие на стрелочки перемещения в редактировании */
-
-	console.log(nameActiveGame);
 
 	$(document).on("click", ".edit__arrow--next" ,function(){
 		var rightValue = $(this).parents(".edit__arrows").parents(".edit__mask").siblings(".game__inner--mask").text();

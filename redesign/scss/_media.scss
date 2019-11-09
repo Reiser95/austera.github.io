@@ -1,4 +1,4 @@
-/* Ширина */
+/*============== Ширина ==============*/
 
 @media(max-width: 1745px){
 	.games{
@@ -12,6 +12,9 @@
 }
 
 @media(max-width: 1670px){
+	.add__like--inner{
+		width: 80%;
+	}
 }
 
 @media(max-width: 1400px){
@@ -22,15 +25,33 @@
 	.chat__inner{
 		height: 550px;
 	}
+
+	.add__like--inner{
+		width: 90%;
+	}
 }
 
 @media(max-width: 1300px){
 	.container{
 		width: 1150px;
 	}
+
+	.add__like--inner{
+		width: 100%;
+	}
 }
 
-/* Высота */
+@media(max-width: 1200px){
+	.container{
+		width: 950px;
+	}
+
+	.header__top--description{
+		display: none;
+	}
+}
+
+/*============== Высота ==============*/
 
 @media(max-height: 830px){
 	.add__like--item{
@@ -54,6 +75,15 @@
 	.modal__content{
 		padding: 1.5rem;
 	}
+	.choose__color--box{
+		margin-top: 3rem;
+	}
+
+	.modal__cross{
+		top: 20px;
+		right: 20px;
+		font-size: 3rem;
+	}
 }
 
 @media(max-height: 560px){
@@ -68,5 +98,16 @@
 
 	.modal__title{
 		font-size: var(--gamesF);
+	}
+
+	.modal__cross{
+		font-size: 2.5rem;
+	}
+
+	.choose__color-item{
+		min-height: 120px;
+	}
+	.choose__color--box{
+		margin-top: 1rem;
 	}
 }

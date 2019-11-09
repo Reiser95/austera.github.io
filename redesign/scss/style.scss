@@ -460,7 +460,7 @@ h1, h2, h3, h4, h5, h5, p{
 }
 
 .games__fade{
-	max-width: 200px;
+	max-width: 169px;
 }
 
 .chat__top--inner{
@@ -493,9 +493,11 @@ h1, h2, h3, h4, h5, h5, p{
 	margin-top: 3rem;
 	display: flex;
 	justify-content: center;
-	padding: 1rem 2rem;
+	padding: 1rem;
 	background: var(--borderB);
 	border-radius: var(--borderO);
+	word-break: break-all;
+	text-align: center;
 	transition: .2s linear;
 }
 
@@ -764,14 +766,14 @@ h1, h2, h3, h4, h5, h5, p{
 .main__last--wins--views, .main__last--wins--item{
 	width: 100%;
 	background: var(--nickB);
-	padding: 1.5rem 3rem;
+	padding: 1.5rem 2rem;
 	display: flex;
 	align-items: center;
 }
 
 .main__last--wins--item{
 	background: var(--sectionB);
-	padding: 2.5rem 3rem;
+	padding: 2.5rem 2rem;
 	border-bottom: 3px solid var(--sendB);
 }
 
@@ -1009,6 +1011,10 @@ h1, h2, h3, h4, h5, h5, p{
 	pointer-events: none;
 }
 
+.button__dis{
+	pointer-events: none;
+}
+
 
 
 
@@ -1177,7 +1183,7 @@ h1, h2, h3, h4, h5, h5, p{
 	margin-top: 2rem;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 } 
 
