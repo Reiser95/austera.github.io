@@ -123,20 +123,6 @@ $(document).ready(function(){
 		$(".chat__send--input").attr("disabled", "");
 	}
 
-	/*=== Переключение языков ===*/ 
-
-	let flag = $(".header__top--language--flag");
-
-	flag.on("click", function(){
-		if($(this).hasClass("active__flag")){
-			return;
-		}
-		else{
-			flag.removeClass("active__flag");
-			$(this).addClass("active__flag");
-		}
-	});
-
 	/*=== Модальное окно соглашения ===*/
 
 	let agree = $(".user__agree");
@@ -225,10 +211,9 @@ $(document).ready(function(){
 		   то редактирование выключается */ 
 		if(edit.hasClass("edit")){
 			edit.removeClass("edit");
-			$(".main__like--games--item").unbind("touchstart mousedown");
 
 			$(".main__like--games--item").removeClass("active__edit");
-			$(edit).text("Редактировать");
+			$(edit).text("редактировать");
 		}
 	});
 
@@ -314,7 +299,7 @@ $(document).ready(function(){
 		if($(this).hasClass("edit")){
 			/* Даем класс что бы в последующем определить элемент */
 			$(this).removeClass("edit");
-			$(this).text("Редактировать");
+			$(this).text("редактировать");
 
 			/* Забираем класс активного редактирования,
 			   если класс drag есть */
@@ -323,7 +308,7 @@ $(document).ready(function(){
 		else{
 			/* Даем класс что бы в последующем определить элемент */ 
 			$(this).addClass("edit");
-			$(this).text("Готово");
+			$(this).text("готово");
 
 			/* Даем класс активного редактирования,
 			   если класса drag нет */
@@ -393,6 +378,13 @@ $(document).ready(function(){
 				break;
 			}
 		}
+	});
+
+	/* При нажатии ESC закрывается модальное окно */ 
+
+	$("body").on("keydown", function(e){
+		if(e.which == 27){
+			$(".modal").fadeOut(300);		}
 	});
 
 });

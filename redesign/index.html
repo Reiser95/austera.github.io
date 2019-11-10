@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
+  <!-- Мета теги -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Заголовок -->
   <title>ExpCash</title>
+
+  <!-- Стили -->
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="css/fontawesome/all.min.css">
   <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
+  
 </head>
 <body>
 
@@ -21,12 +28,12 @@
       <div class="header__top--inner">
       <div class="header__top--left--inner">
         <div class="header__top--choose--color">
-          цветовая гамма
+          <span class="en">цветовая гамма</span>
           <div class="choose__color"></div>
         </div>
 
         <div class="header__top--description">
-            сайт с <span class="blue">честными</span> играми
+            <span class="en">сайт с</span> <span class="blue en">честными</span> <span class="en">играми</span>
         </div>
       </div>
 
@@ -37,16 +44,14 @@
 
         <div class="header__top--profile--inner">
           <div class="header__top--language--inner">
-            <div class="header__top--language--flag active__flag">
+            <div id="ru" class="header__top--language--flag rus__language">
               <img src="img/russia.svg" alt="Россия" class="language__flag icon">
-
-              Ru
+              ru
             </div>
 
-            <div class="header__top--language--flag">
+            <div id="en" class="header__top--language--flag eng__language">
               <img src="img/united-states-of-america.svg" alt="Сша" class="language__flag icon">
-
-              En
+              en
             </div>
           </div>
 
@@ -59,8 +64,8 @@
           </a>
 
           <div class="noregister__buttons">
-            <button class="button noregister__button enter__button">вход</button>
-            <button class="button noregister__button register__button">регистрация</button>
+            <button class="button noregister__button enter__button en">вход</button>
+            <button class="button noregister__button register__button en">регистрация</button>
           </div>
         </div>
       </div>
@@ -69,24 +74,24 @@
     <div class="header__bottom--inner">
       <div class="container">
         <div class="header__bottom--content">
-          <div class="header__bottom--page">
+          <div class="header__bottom--page en">
             главная
           </div>
 
           <div class="header__bottom--links">
           <a href="#" class="header__bottom--link">
             <i class="fas fa-home icon"></i>
-            главная
+            <span class="en">главная</span>
           </a>
 
             <a href="#" class="header__bottom--link">
               <i class="fas fa-gamepad icon"></i>
-              игры
+              <span class="en">игры</span>
             </a>
 
             <a href="#" class="header__bottom--link">
               <i class="fas fa-history icon"></i>
-              история игр
+              <span class="en">история игр</span>
             </a>
 
             <a href="#" class="header__bottom--link">
@@ -96,16 +101,16 @@
 
             <a href="https://vk.com/expcash" class="header__bottom--link" target="_blank">
               <i class="fab fa-vk icon"></i>
-              группа vk
+              <span class="en">группа vk</span>
             </a>
           </div>
 
           <div class="header__bottom--payments">
             <div class="balance__inner">
-              баланс: <span class="blue">100000 exp</span>
+              <span class="en">баланс:</span> <span class="blue">100000 exp</span>
             </div>
 
-            <a href="#" class="header__bottom--link">
+            <a href="#" class="header__bottom--link en">
               кошелек
             </a>
           </div>
@@ -119,7 +124,7 @@
   <section class="content">
     <div class="games">
       <div class="games__title">
-        <span class="blue">игры</span> на сайте
+        <span class="blue en">игры</span> <span class="en">на сайте</span>
       </div>
 
       <div class="game__box--inner">
@@ -140,23 +145,23 @@
       <div class="main__title">
         <a href="#" class="site__logo">
           <i class="fas fa-coins blue icon"></i>
-          <span class="blue">Exp</span>cash - сайт с честными играми
+          <span class="blue">Exp</span><span class="en">cash - сайт с честными играми</span>
         </a>
       </div>
 
       <div class="main__subtitle">
-        Зарабатывайте на <span class="expcash"><span class="blue">Exp</span>cash</span> на самых честных играх, не упусти свой шанс на удачу!
+        <span class="en">зарабатывайте на</span> <span class="expcash"><span class="blue">Exp</span>cash</span> <span class="en">на самых честных играх, не упусти свой шанс на удачу!</span>
       </div>
 
       <div class="main__play--button">
         <a href="#" class="button main__play">
-          начать играть
+          <span class="en">начать играть</span>
         </a>
       </div>
 
       <div class="main__like--games--inner">
         <div class="main__like--games--title">
-          Ваши <span class="blue">любимые</span> игры
+          <span class="en">ваши</span> <span class="blue en">любимые</span> <span class="en">игры</span>
         </div>
 
         <div class="main__like--games--slider">
@@ -205,8 +210,8 @@
         </div>
 
         <div class="main__edit--game">
-          <button class="button main__button--edit">
-            Редактировать
+          <button class="button main__button--edit en">
+            редактировать
           </button>
         </div>
 
@@ -214,43 +219,43 @@
       </div>
 
       <div class="main__last--wins--title">
-        последние <span class="blue">выигрыши</span>
+        <span class="en">последние</span> <span class="blue en">выигрыши</span>
       </div>
 
       <div class="main__last--wins--inner">
         <div class="main__last--wins--views">
           <div class="main__last--wins--view game__view">
-            игра
+            <span class="en">игра</span>
           </div>
 
           <div class="main__last--wins--view user__view">
-            игрок
+            <span class="en">игрок</span>
           </div>
 
           <div class="main__last--wins--view time__view">
-            время
+            <span class="en">время</span>
           </div>
 
           <div class="main__last--wins--view forecast__view">
-            ставка
+            <span class="en">ставка</span>
           </div>
 
           <div class="main__last--wins--view coef__view">
-            коэфф
+            <span class="en">коэфф</span>
           </div>
 
           <div class="main__last--wins--view wins__view">
-            выигрыш
+            <span class="en">выигрыш</span>
           </div>
         </div>
 
         <div class="main__last--wins--item">
           <div class="main__last--wins--value game__view">
-            baccarat
+            <a href="#">baccarat</a>
           </div>
 
           <div class="main__last--wins--value user__view">
-            <span class="blue">Владимир</span> К.
+            <a href="#"><span class="blue">Владимир</span> К.</a>
           </div>
 
           <div class="main__last--wins--value time__view">
@@ -274,11 +279,11 @@
 
         <div class="main__last--wins--item">
           <div class="main__last--wins--value game__view">
-            double
+            <a href="#">expduel</a>
           </div>
 
           <div class="main__last--wins--value user__view">
-            <span class="blue">Владимир</span> К.
+            <a href="#"><span class="blue">Владимир</span> К.</a>
           </div>
 
           <div class="main__last--wins--value time__view">
@@ -302,11 +307,11 @@
 
         <div class="main__last--wins--item">
           <div class="main__last--wins--value game__view">
-            expbattler
+            <a href="#">expbattler</a>
           </div>
 
           <div class="main__last--wins--value user__view">
-            <span class="blue">Владимир</span> К.
+            <a href="#"><span class="blue">Владимир</span> К.</a>
           </div>
 
           <div class="main__last--wins--value time__view">
@@ -330,11 +335,11 @@
 
         <div class="main__last--wins--item">
           <div class="main__last--wins--value game__view">
-            expduel
+            <a href="#">expduel</a>
           </div>
 
           <div class="main__last--wins--value user__view">
-            <span class="blue">Владимир</span> К.
+            <a href="#"><span class="blue">Владимир</span> К.</a>
           </div>
 
           <div class="main__last--wins--value time__view">
@@ -358,11 +363,11 @@
 
         <div class="main__last--wins--item">
           <div class="main__last--wins--value game__view">
-            baccarat
+            <a href="#">baccarat</a>
           </div>
 
           <div class="main__last--wins--value user__view">
-            <span class="blue">Владимир</span> К.
+            <a href="#"><span class="blue">Владимир</span> К.</a>
           </div>
 
           <div class="main__last--wins--value time__view">
@@ -386,11 +391,11 @@
 
         <div class="main__last--wins--item">
           <div class="main__last--wins--value game__view">
-            baccarat
+            <a href="#">baccarat</a>
           </div>
 
           <div class="main__last--wins--value user__view">
-            <span class="blue">Владимир</span> К.
+            <a href="#"><span class="blue">Владимир</span> К.</a>
           </div>
 
           <div class="main__last--wins--value time__view">
@@ -421,11 +426,11 @@
         <div class="chat">
           <div class="chat__top--inner">
             <div class="chat__online--inner">
-              онлайн: <span class="online">100</span>
+              <span class="en">онлайн:</span> <span class="online">100</span>
             </div>
 
             <div class="chat__title">
-              чат онлайн
+              <span class="en">чат онлайн</span>
               <svg class="chat__title--icon" viewBox="-21 -47 682.66669 682" xmlns="http://www.w3.org/2000/svg"><path d="m552.011719-1.332031h-464.023438c-48.515625 0-87.988281 39.464843-87.988281 87.988281v283.972656c0 48.414063 39.300781 87.816406 87.675781 87.988282v128.863281l185.191407-128.863281h279.144531c48.515625 0 87.988281-39.472657 87.988281-87.988282v-283.972656c0-48.523438-39.472656-87.988281-87.988281-87.988281zm50.488281 371.960937c0 27.835938-22.648438 50.488282-50.488281 50.488282h-290.910157l-135.925781 94.585937v-94.585937h-37.1875c-27.839843 0-50.488281-22.652344-50.488281-50.488282v-283.972656c0-27.84375 22.648438-50.488281 50.488281-50.488281h464.023438c27.839843 0 50.488281 22.644531 50.488281 50.488281zm0 0"/><path d="m171.292969 131.171875h297.414062v37.5h-297.414062zm0 0"/><path d="m171.292969 211.171875h297.414062v37.5h-297.414062zm0 0"/><path d="m171.292969 291.171875h297.414062v37.5h-297.414062zm0 0"/></svg>
             </div>   
           </div>
@@ -455,13 +460,13 @@
 
             <div class="chat__message">
               <div class="site__profile--img">
-                <img src="img/user.png" alt="Аватарка" class="user__img">
+                <a href="#"><img src="img/user.png" alt="Аватарка" class="user__img"></a>
               </div>
 
               <div class="chat__inner--text--inner">
                 <div class="chat__inner--text--box">
                   <div class="chat__inner--nick">
-                    <span class="blue">Владимир</span> К.
+                    <a href="#"><span class="blue">Владимир</span> К.</a>
                   </div>
 
                   <div class="chat__inner--time">
@@ -470,7 +475,7 @@
                 </div>
 
                 <div class="chat__inner--text">
-                  У меня один раз было 100 или 150 попыток и толку не было
+                  У меня один раз было 100 или 140 попыток и толку не было
                 </div>
               </div>
             </div>
@@ -656,7 +661,7 @@
         </a>
 
         <a href="#" class="footer__inner--link user__agree">
-          соглашение
+          <span class="en">соглашение</span>
         </a>
 
         <a href="#" class="site__logo">
@@ -669,7 +674,7 @@
         </div>
 
         <div class="footer__inner--link">
-          All rights reserved
+          all rights reserved
         </div>
       </div>
     </div>
@@ -683,10 +688,10 @@
       </div>
 
       <div class="choose__color--title modal__title">
-        <span class="blue">Цветовая</span> гамма
+        <span class="blue en">цветовая</span> <span class="en">гамма</span>
       </div>
 
-      <div class="choose__color--box">
+      <div class="choose__color--box modal__box">
         <div class="choose__color-item">
           <div id="green" class="choise__color--circle green__circle">
             <div class="choise__color--check">
@@ -753,7 +758,7 @@
       </div>
 
       <div class="choose__color--text modal__text">
-        Если вам надоел облик <span class="expcash"><span class="blue">EXP</span>CASH</span> вы всегда можете обновить цветовую палитру сайта здесь. Выбирайте цвет на ваш вкус
+        <span class="en">если вам надоел облик</span> <span class="expcash"><span class="blue">EXP</span>CASH</span> <span class="en">вы всегда можете обновить цветовую палитру сайта здесь. Выбирайте цвет на ваш вкус</span>
       </div>
     </div>
   </div>
@@ -765,17 +770,17 @@
       </div>
 
       <div class="add__like--title modal__title">
-        <span class="blue">Любимые</span> игры
+        <span class="blue en">любимые</span> <span class="en">игры</span>
       </div>
 
-      <div class="add__like--inner">
+      <div class="add__like--inner modal__box">
 
 
 
       </div>
 
       <div class="add__like--text modal__text">
-        Здесь вы можете выбрать ваши любимые игры и не искать, а увидеть их сразу же на главной странице! Все просто, выбирайте игры и они окажутся у вас в удобном месте
+        <span class="en">здесь вы можете выбрать ваши любимые игры и не искать, а увидеть их сразу же на главной странице! Все просто, выбирайте игры и они окажутся у вас в удобном месте</span>
       </div>
     </div>
   </div>
@@ -784,6 +789,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="owl/owl.carousel.min.js"></script>
   <script src="js/libs.min.js"></script>
+  <script src="js/language.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
