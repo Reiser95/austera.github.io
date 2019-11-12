@@ -16,6 +16,15 @@ $(document).ready(function(){
 	    return this.pushStack( stack );
 	};
 
+	function rename(rus, english, clas){
+		if(eng == "false"){
+			$(clas).text(""+rus+"")
+		}
+		else{
+			$(clas).text(""+english+"");
+		}
+	}
+
 	/*=== Слайдеры ===*/
 
 	let gameSlider = $(".main__like--games--carousel");
@@ -119,7 +128,12 @@ $(document).ready(function(){
 	/* Проверка зарегистрирован пользователь или нет */
 
 	if($(".chat__send--box").hasClass("noregister__chat")){
-		$(".chat__send--input").attr("placeholder", "В чат могут писать только авторизованные игроки");
+		if(eng == "true"){
+			$(".chat__send--input").attr("placeholder", "only authorized players can write to the chat");
+		}
+		else{
+			$(".chat__send--input").attr("placeholder", "в чат могут писать только авторизованные игроки");
+		}
 		$(".chat__send--input").attr("disabled", "");
 	}
 
@@ -182,7 +196,7 @@ $(document).ready(function(){
 		}
 	});
 
-	/* При клике на "Выбрать", выбирать соответствующий цвет */ 
+	/* При клике на круг выбора цвета, выбирать соответствующий цвет */ 
 
 	chooseBtn.on("click", function(){
 		var colorVar = $(".choose__color--active").css("color");
@@ -213,7 +227,7 @@ $(document).ready(function(){
 			edit.removeClass("edit");
 
 			$(".main__like--games--item").removeClass("active__edit");
-			$(edit).text("редактировать");
+			rename("редактировать","edit", edit);
 		}
 	});
 
@@ -299,7 +313,7 @@ $(document).ready(function(){
 		if($(this).hasClass("edit")){
 			/* Даем класс что бы в последующем определить элемент */
 			$(this).removeClass("edit");
-			$(this).text("редактировать");
+			rename("редактировать","edit", this);
 
 			/* Забираем класс активного редактирования,
 			   если класс drag есть */
@@ -308,7 +322,7 @@ $(document).ready(function(){
 		else{
 			/* Даем класс что бы в последующем определить элемент */ 
 			$(this).addClass("edit");
-			$(this).text("готово");
+			rename("готово","complete", this);
 
 			/* Даем класс активного редактирования,
 			   если класса drag нет */

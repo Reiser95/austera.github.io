@@ -1,6 +1,22 @@
 var userLang = navigator.language || navigator.userLanguage;
+userLang = userLang.substr(0, 2);
 
-let word = {"home":"главная", "games":"игры",
+let eng;
+
+if(localStorage.getItem("lang") == null){
+	if(userLang == "ru"){
+		eng = false;
+	}
+	else{
+		eng = true;
+	}
+}
+else{
+	var langVar = localStorage.getItem("lang");
+	eng = langVar;
+}
+
+let wordMain = {"home":"главная", "games":"игры",
 "history games":"история игр", "group vk":"группа vk",
 "sign in":"вход","register":"регистрация",
 "payment":"кошелек", "balance:":"баланс:",
@@ -30,8 +46,8 @@ else{
 	$(".eng__language").addClass("active__flag");
 	$(".en").each(function(i){
 		var value = $(this).text().trim();
-		for(let r in word){
-			if(word[r] == value){
+		for(let r in wordMain){
+			if(wordMain[r] == value){
 				$(this).text(r + " ");
 			}
 		}
@@ -46,8 +62,8 @@ if(localStorage.getItem("language")){
 	if(lang == "en"){
 		$(".en").each(function(i){
 			var value = $(this).text().trim();
-			for(let r in word){
-				if(word[r] == value){
+			for(let r in wordMain){
+				if(wordMain[r] == value){
 					$(this).text(r + " ");
 				}
 			}
@@ -56,9 +72,9 @@ if(localStorage.getItem("language")){
 	else{
 		$(".en").each(function(i){
 			var value = $(this).text().trim();
-			for(let r in word){
+			for(let r in wordMain){
 				if(r == value){
-					$(this).text(word[r] + " ");
+					$(this).text(wordMain[r] + " ");
 				}
 			}
 		});
@@ -75,6 +91,15 @@ flag.on("click", function(){
 	}
 
 	let langClass = $(this).attr("id");
+
+	if(langClass == "ru"){
+		eng = false;
+	}
+	else{
+		eng = true;
+	}
+
+	localStorage.setItem("lang", eng);
 
 	localStorage.setItem("language", langClass);
 	location.reload();
