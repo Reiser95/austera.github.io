@@ -16,6 +16,13 @@ $(function(){
 
 
 jQuery(document).ready(function ($) {
+
+    $(window).resize(function(){
+      if($(window).width() >= 751){
+        $(".modal__mobile--slide").slideUp(0);
+      }
+    });
+
     if($('input[type=radio][name=payment]:checked').val() == 'PayKeeper'){
         $('input[type=checkbox][name=payment_bn]').attr('hidden', false);
         $('#payment_bh').css('display','block');

@@ -776,9 +776,6 @@ th {
 .table tr th{
     background-color: #ccc;
 }
-.table tr td:first-child{
-   white-space: nowrap;
-}
 .table tr td button{
    height: 28px;
    padding-bottom: 0; 
@@ -994,7 +991,7 @@ body {  height: 100%;   }
 }
 
 .menu__icon{
-  width: 40px;
+  width: 30px;
   height: auto;
   fill: #fff;
 }
@@ -1002,6 +999,7 @@ body {  height: 100%;   }
 .balance{
   color: #fff;
   text-decoration: none;
+  transition: .2s linear;
 }
 
 .balance:hover{
@@ -1016,10 +1014,10 @@ body {  height: 100%;   }
 
 .modal__mobile--slide{
   width: 100%;
-  height: calc(100% - 85px - 60px);
+  height: calc(100% - 85px - 50px);
   background: #555;
   position: fixed;
-  top: 60px;
+  top: 50px;
   left: 0;
   z-index: 50;
   display: none;
@@ -1046,8 +1044,76 @@ body {  height: 100%;   }
   color: #d7d7d7;
 }
 
+.table{
+  width: 720px;
+}
+
 .modal__mobile--slide--item:first-child{
   margin-top: 0;
+}
+
+.modal__mobile--item--continue{
+  font-size: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s linear;
+}
+
+.modal__mobile--item--continue:hover{
+  color: #d7d7d7;
+}
+
+.open__mobile{
+  width: 100%;
+  position: fixed;
+  bottom: 88px;
+  left: 0;
+  background: #36c6d3;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  display: none;
+}
+
+@media(max-width: 920px){
+  #menu_top .text ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #menu_top .text li{
+    margin: 10px 10px 0 0;
+  }
+
+  tbody .title{
+    display: none;
+  }
+
+  .views{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .table tr td, .table tr th{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .page{
+    padding: 15px;
+  }
+
+  .table{
+    width: 100%;
+  }
 }
 
 @media(max-width: 768px){
@@ -1057,6 +1123,16 @@ body {  height: 100%;   }
   #menu_top .text{
     display: none;
   }
+  .open{
+    display: none;
+  }
+  .open__mobile{
+    display: block;
+  }
+}
+
+@media(max-width: 510px){
+
 }
 
 @media(max-width: 480px){
@@ -1065,9 +1141,12 @@ body {  height: 100%;   }
     font-size: 20px;
   }
   .modal__mobile--slide{
-    height: calc(100% - 55px - 60px);
+    height: calc(100% - 55px - 50px);
   }
   .modal__menu--bottom{
     justify-content: space-between;
+  }
+  .open__mobile{
+    bottom: 68px;
   }
 }

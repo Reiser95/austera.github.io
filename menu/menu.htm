@@ -158,10 +158,10 @@
                 <button type="button" class="btn btn-success copy"><i class="fa fa-files-o" aria-hidden="true"></i>
                     Копировать</button>
                 <input type="text" value="#" onfocus="select()" style="position:absolute; left:-3000px">
-                <a href="#" target="_blank"><button type="button" class="btn btn-success"><i class="fa fa-external-link"
+                <a href="#" class="open" target="_blank"><button type="button" class="btn btn-success"><i class="fa fa-external-link"
                             aria-hidden="true"></i> Открыть</button></a>
             </div>
-            <table class="table" style="width:720px" cellspacing="0" cellpadding="10" border="1" align="center">
+            <table class="table" cellspacing="0" cellpadding="10" border="1" align="center">
                 <tbody>
                     <tr class="title">
                         <td align="center">
@@ -174,7 +174,7 @@
                         <td>АКТИВНО</td>
                         <td>АФИША</td>
                     </tr>
-                    <tr>
+                    <tr class="views">
                         <td>
                             09-11 дек 18:00<br>
                             Олег Торсунов "Жизнь в любви" (Нижний Новгород)
@@ -262,29 +262,35 @@
         <a href="#" class="modal__menu--bottom--item">
             <i class="fa fa-cog" aria-hidden="true"></i>
         </a>
-        <a href="#" class="modal__menu--bottom--item">
-            <i class="fa fa-sign-out" aria-hidden="true"></i>
+
+        <a href="#" class="modal__menu--bottom--item modal__mobile--item--continue">
+            ...
         </a>
+
+        <!-- Раскомментировать когда элементов 5 и меньше -->
+        <!-- <a href="#" class="modal__menu--bottom--item">
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+        </a> -->
     </div>
+
+    <a href="#" class="open__mobile">
+        Открыть
+    </a>
 
     <div class="modal__mobile--slide">
         <a href="https:///a/edit_event.php" class="modal__mobile--slide--item">
-            <i class="fa fa-plus-square" aria-hidden="true"></i>
             НОВОЕ СОБЫТИЕ</a>
         </a>
 
         <a href="https:///a/promocodes.php" class="modal__mobile--slide--item">
-            <i class="fa fa-envelope"aria-hidden="true"></i>
             ПРОМОКОДЫ
         </a>
 
         <a href="https:///a/events.php?param=closed" class="modal__mobile--slide--item">
-            <i class="fa fa-archive" aria-hidden="true"></i>
             АРХИВ СОБЫТИЙ
         </a>
 
         <a href="https:///a/poll.php" class="modal__mobile--slide--item">
-            <i class="fa fa-signal" aria-hidden="true"></i>
             ОПРОС
         </a>
     </div>
