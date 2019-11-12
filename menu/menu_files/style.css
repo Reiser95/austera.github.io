@@ -962,7 +962,7 @@ body {  height: 100%;   }
   display: none;
   align-items: center;
   justify-content: space-around;
-  z-index: 50;
+  z-index: 55;
 }
 
 .modal__menu--bottom--item{
