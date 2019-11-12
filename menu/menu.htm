@@ -29,7 +29,7 @@
 </head>
 
 <body>
-
+    <div id="point"></div>
     <div class="full-wrapper">
 
 
@@ -116,6 +116,9 @@
 
                     <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> ВЫХОД</a></li>
 
+                    <li><a href="#" class="open__popup">ОТКРЫТЬ</a></li>
+                    <li class="up"><a href="#">↑ ВВЕРХ</a></li>
+
                 </ul>
             </div>
         </div>
@@ -159,8 +162,6 @@
                 <button type="button" class="btn btn-success copy"><i class="fa fa-files-o" aria-hidden="true"></i>
                     Копировать</button>
                 <input type="text" value="#" onfocus="select()" style="position:absolute; left:-3000px">
-                <a href="#" class="open" target="_blank"><button type="button" class="btn btn-success"><i class="fa fa-external-link"
-                            aria-hidden="true"></i> Открыть</button></a>
             </div>
             <table class="table" cellspacing="0" cellpadding="10" border="1" align="center">
                 <tbody>
@@ -264,9 +265,9 @@
             <i class="fa fa-cog" aria-hidden="true"></i>
         </a>
 
-        <a href="#" class="modal__menu--bottom--item modal__mobile--item--continue">
+        <div class="modal__menu--bottom--item modal__mobile--item--continue">
             ...
-        </a>
+        </div>
 
         <!-- Раскомментировать когда элементов 5 и меньше -->
         <!-- <a href="#" class="modal__menu--bottom--item">
@@ -274,7 +275,11 @@
         </a> -->
     </div>
 
-    <a href="#" class="open__mobile">
+    <a href="#" class="open__mobile button__up">
+        Вверх
+    </a>
+
+    <a href="#" class="open__mobile open__popup">
         Открыть
     </a>
 
@@ -294,6 +299,132 @@
         <a href="https:///a/poll.php" class="modal__mobile--slide--item">
             ОПРОС
         </a>
+    </div>
+
+    <div class="popup_box1">
+        <style>
+            .popup_bg {
+                position: fixed;
+                z-index: 888888;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, .7);
+            }
+
+            .popup_box {
+                position: fixed;
+                z-index: 777777;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                display: none;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .popup_box:after {
+                display: inline-block;
+                height: 100%;
+                width: 0;
+                vertical-align: middle;
+                content: '';
+            }
+
+            .popup_win {
+                display: inline-block;
+                position: relative;
+                z-index: 999999;
+                vertical-align: middle;
+                width: 95%;
+                max-height: 95%;
+                overflow-x: auto;
+                overflow-y: none;
+                padding: 5px 15px 15px 15px;
+                border: #666 2px solid;
+                background-color: #fff;
+                text-align: left;
+            }
+
+            .popup_title {
+                display: block;
+                margin: -15px -15px 10px -15px;
+                padding: 10px;
+                color: #FFF;
+                background: #99cb13;
+            }
+
+            .popup_close {
+                float: right;
+                margin: 0;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 33px;
+            }
+        </style>
+        <div class="popup_bg1"></div>
+        <div class="popup_win1">
+            <a class="popup_close1" href="#">×</a>
+            <h1>Таблица с билетами</h1>
+
+            <table class="table" style="height:50px;" width="960" cellspacing="0" cellpadding="10"
+                border="1" align="center">
+                <tbody class="popup__table1">
+                    <tr class="title title1 popup__table--item">
+                        <th class="th">Секция
+                        </th>
+                        <th class="th" data-breakpoints="xs">Ряд
+                        </th>
+                        <th class="th" data-breakpoints="xs">Место</th>
+                        <th class="th" data-breakpoints="xs">Тип билета</th>
+                        <th class="th" data-breakpoints="xs">₽</th>
+                        <th class="th" data-breakpoints="xs"><i class="fa fa-user" aria-hidden="true"></i></th>
+                        <th class="th" data-breakpoints="xs" width="150"><i class="fa fa-phone" aria-hidden="true"></i>
+                        </th>
+                    </tr>
+                    <tr id="ticket_86734">
+                        <td class="th" align="center">Зал</td>
+                        <td class="th" align="center">-</td>
+                        <td class="th" align="center">-</td>
+                        <td class="th">просто билет</td>
+                        <td class="th" align="right">100</td>
+                        <td class="th">Оксана</td>
+                        <td class="th">+79527696786</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="status"></div>
+            <script>
+                function del_ticket(id) {
+                    if (confirm('Удалить билет?')) {
+                        $('#status').html('...');
+
+                        $.ajax({
+                            type: 'POST',
+                            url: '/a/load/del_ticket.php',
+                            data: 'ticket=' + id,
+                            cache: false,
+                            timeout: 60000,
+                            success: function (html) {
+                                $('#status').html(html);
+                            },
+                            error: function () {
+                                $('#status').html('');
+                                alert('Сервер не отвечает, попробуйте снова.');
+                            }
+                        });
+                    }
+                }
+            </script>
+        </div>
+    </div>
+
+    <div class="click__menu">
+        <a href="#" class="click__menu--item">Дополнительный 1</a>
+        <a href="#" class="click__menu--item">Дополнительный 2</a>
     </div>
 
     <!-- Yandex.Metrika counter <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter49249213 = new Ya.Metrika2({ id:49249213, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/49249213" style="position:absolute; left:-9999px;" alt="" /></div></noscript> /Yandex.Metrika counter -->
