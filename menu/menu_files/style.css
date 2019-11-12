@@ -1129,6 +1129,10 @@ body {  height: 100%;   }
   .open__mobile{
     display: block;
   }
+
+  .footer{
+    margin-bottom: 136px;
+  }
 }
 
 @media(max-width: 510px){
@@ -1148,5 +1152,9 @@ body {  height: 100%;   }
   }
   .open__mobile{
     bottom: 68px;
+  }
+
+  .footer{
+    margin-bottom: 116px;
   }
 }
