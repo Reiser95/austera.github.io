@@ -17,6 +17,20 @@ $(function(){
 
 jQuery(document).ready(function ($) {
 
+    $(window).on('scroll', function(event){
+        if($(window).width() > 751){
+          if($(window).scrollTop() > 60){
+            $(".up__home").fadeIn(100).css("display", "flex");
+          }
+          else{
+            $(".up__home").fadeOut(100);
+          }
+        }
+        else{
+          $(".up__home").fadeOut(0);
+        }
+    });
+
     $(window).resize(function(){
       if($(window).width() >= 751){
         $(".modal__mobile--slide").slideUp(0);
@@ -34,6 +48,11 @@ jQuery(document).ready(function ($) {
 
     $('.button__up').on('click', function(e){
       $('html,body').stop().animate({ scrollTop: $('#point').offset().top }, 500);
+      e.preventDefault();
+    });
+
+    $('.up__home').on('click', function(e){
+      $('html,body').stop().animate({ scrollTop: 0 }, 500);
       e.preventDefault();
     });
 
