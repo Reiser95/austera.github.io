@@ -18,17 +18,12 @@ $(function(){
 jQuery(document).ready(function ($) {
 
     $(window).on('scroll', function(event){
-        if($(window).width() > 751){
-          if($(window).scrollTop() > 60){
-            $(".up__home").fadeIn(100).css("display", "flex");
-          }
-          else{
-            $(".up__home").fadeOut(100);
-          }
-        }
-        else{
-          $(".up__home").fadeOut(0);
-        }
+      if($(window).scrollTop() > 60){
+        $(".up__home").fadeIn(100).css("display", "flex");
+      }
+      else{
+        $(".up__home").fadeOut(100);
+      }  
     });
 
     $(window).resize(function(){

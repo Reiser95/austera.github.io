@@ -1260,6 +1260,9 @@ body {  height: 100%;   }
   .open{
     display: none;
   }
+  .up__home{
+    bottom: 155px;
+  }
   .open__mobile, .button__up{
     display: block;
   }
