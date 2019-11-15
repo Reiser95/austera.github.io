@@ -1,22 +1,6 @@
-var userLang = navigator.language || navigator.userLanguage;
-userLang = userLang.substr(0, 2);
+// Перевод страницы Главная
 
-let eng;
-
-if(localStorage.getItem("lang") == null){
-	if(userLang == "ru"){
-		eng = false;
-	}
-	else{
-		eng = true;
-	}
-}
-else{
-	var langVar = localStorage.getItem("lang");
-	eng = langVar;
-}
-
-let wordMain = {"home":"главная", "games":"игры",
+let homeWord = {"home":"главная", "games":"игры",
 "history games":"история игр", "group vk":"группа vk",
 "sign in":"вход","register":"регистрация",
 "payment":"кошелек", "balance:":"баланс:",
@@ -36,71 +20,3 @@ let wordMain = {"home":"главная", "games":"игры",
 "your":"ваши", "favorite":"любимые", "edit":"редактировать","complete":"готово",
 "forecast":"ставка","time":"время","coefficient":"коэфф",
 "win":"выигрыш","last":"последние","wins":"выигрыши"};
-
-let flag = $(".header__top--language--flag");
-
-if(userLang == "ru"){
-	$(".rus__language").addClass("active__flag");
-}
-else{
-	$(".eng__language").addClass("active__flag");
-	$(".en").each(function(i){
-		var value = $(this).text().trim();
-		for(let r in wordMain){
-			if(wordMain[r] == value){
-				$(this).text(r + " ");
-			}
-		}
-	});
-}
-
-if(localStorage.getItem("language")){
-	var lang = localStorage.getItem("language");
-	flag.removeClass("active__flag");
-	$("#"+lang+"").addClass("active__flag");
-
-	if(lang == "en"){
-		$(".en").each(function(i){
-			var value = $(this).text().trim();
-			for(let r in wordMain){
-				if(wordMain[r] == value){
-					$(this).text(r + " ");
-				}
-			}
-		});
-	}
-	else{
-		$(".en").each(function(i){
-			var value = $(this).text().trim();
-			for(let r in wordMain){
-				if(r == value){
-					$(this).text(wordMain[r] + " ");
-				}
-			}
-		});
-	}
-}
-
-
-/*=== Переключение языков ===*/ 
-
-flag.on("click", function(){
-	if(!$(this).hasClass("active__flag")){
-		flag.removeClass("active__flag");
-		$(this).addClass("active__flag");
-	}
-
-	let langClass = $(this).attr("id");
-
-	if(langClass == "ru"){
-		eng = false;
-	}
-	else{
-		eng = true;
-	}
-
-	localStorage.setItem("lang", eng);
-
-	localStorage.setItem("language", langClass);
-	location.reload();
-});

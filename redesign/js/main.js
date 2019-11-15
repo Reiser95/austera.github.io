@@ -1,5 +1,87 @@
 $(document).ready(function(){
 
+	function translate(array){
+		if(localStorage.getItem("language")){
+			var lang = localStorage.getItem("language");
+			flag.removeClass("active__flag");
+			$("#"+lang+"").addClass("active__flag");
+
+			if(lang == "en"){
+				$(".en").each(function(i){
+					var value = $(this).text().trim();
+					for(let r in array){
+						if(array[r] == value){
+							$(this).text(r + " ");
+						}
+					}
+				});
+			}
+			else{
+				$(".en").each(function(i){
+					var value = $(this).text().trim();
+					for(let r in array){
+						if(r == value){
+							$(this).text(array[r] + " ");
+						}
+					}
+				});
+			}
+		}
+	}
+
+	function ifTranslate(){
+		if(userLang == "ru"){
+			$(".rus__language").addClass("active__flag");
+		}
+		else{
+			$(".eng__language").addClass("active__flag");
+			$(".en").each(function(i){
+				var value = $(this).text().trim();
+				for(let r in array){
+					if(array[r] == value){
+						$(this).text(r + " ");
+					}
+				}
+			});
+		}
+	}
+
+	function temp(){
+		if(eng == "false"){
+			pageTitle = url;
+			for(let pageVar in page){
+				if(pageTitle == pageVar){
+					pageTitle = page[pageVar];
+				}
+			}
+		}else{
+			pageTitle = url;
+		}
+	}
+
+	// Добавлять сюда перевод названия страницы, когда добавляете новую
+
+	let page = {"home":"главная", "games":"игры",
+	"payment":"кошелек"};
+
+	var userLang = navigator.language || navigator.userLanguage;
+	userLang = userLang.substr(0, 2);
+
+	let eng;
+
+	if(localStorage.getItem("lang") == null){
+		if(userLang == "ru"){
+			eng = false;
+		}
+		else{
+			eng = true;
+		}
+	}
+	else{
+		var langVar = localStorage.getItem("lang");
+		eng = langVar;
+	}
+
 	/* Функция смены объектов местами */
 
 	jQuery.fn.swap = function(b) {
@@ -16,6 +98,9 @@ $(document).ready(function(){
 	    return this.pushStack( stack );
 	};
 
+	/* Функция корректного отображения языков при клике на
+	   Редактировать/Готово */ 
+
 	function rename(rus, english, clas){
 		if(eng == "false"){
 			$(clas).text(""+rus+"")
@@ -24,6 +109,35 @@ $(document).ready(function(){
 			$(clas).text(""+english+"");
 		}
 	}
+
+	/* Получаем url строки, а именно саму страницу */
+	let url = window.location.href;
+	/* Обрезаем url и оставляем только название страницы */
+	url = url.split("/")[3];
+
+	let pageTitle;
+
+	if(url == ""){
+		url = "home";
+	}
+
+	if(localStorage.getItem("pagetext")){
+		var localPage = localStorage.getItem("pagetext");
+		if(localPage == url){
+			temp();
+		}
+		else{
+			pageTitle = url;
+		}
+	}
+	else{
+		temp();
+	}
+
+	$(".header__bottom--page").text(pageTitle);
+
+	localStorage.setItem("pagetext", url);
+
 
 	/*=== Слайдеры ===*/
 
@@ -398,7 +512,43 @@ $(document).ready(function(){
 
 	$("body").on("keydown", function(e){
 		if(e.which == 27){
-			$(".modal").fadeOut(300);		}
+			$(".modal").fadeOut(300);
+		}
+	});
+
+	/* Перебор слов на анлийский в массиве */ 
+
+	let flag = $(".header__top--language--flag");
+
+	ifTranslate(eval(url + "Word"));
+
+	translate(eval(url + "Word"));
+
+	// Вставляем название текущей страницы в шапку
+
+
+
+	/*=== Переключение языков ===*/ 
+
+	flag.on("click", function(){
+		if(!$(this).hasClass("active__flag")){
+			flag.removeClass("active__flag");
+			$(this).addClass("active__flag");
+		}
+
+		let langClass = $(this).attr("id");
+
+		if(langClass == "ru"){
+			eng = false;
+		}
+		else{
+			eng = true;
+		}
+
+		localStorage.setItem("lang", eng);
+
+		localStorage.setItem("language", langClass);
+		location.reload();
 	});
 
 });

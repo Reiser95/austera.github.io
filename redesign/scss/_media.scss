@@ -2,7 +2,7 @@
 
 @media(max-width: 1745px){
 	.games{
-		width: auto;
+		width: 100%;
 		max-width: 169px;
 	}
 
@@ -54,6 +54,10 @@
 /*============== Высота ==============*/
 
 @media(max-height: 830px){
+	.add__like--inner{
+		max-height: 360px;
+	}
+
 	.add__like--item{
 		width: 250px;
 		height: 160px;
@@ -87,6 +91,10 @@
 }
 
 @media(max-height: 560px){
+	.add__like--inner{
+		max-height: 280px;
+	}
+
 	.add__like--item{
 		width: 220px;
 		height: 120px;
@@ -109,5 +117,6 @@
 	}
 	.choose__color--box{
 		margin-top: 1rem;
+		max-height: 120px;
 	}
 }

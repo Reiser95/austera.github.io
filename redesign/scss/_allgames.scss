@@ -1,0 +1,43 @@
+.games{
+	background: var(--sectionB);
+	border-radius: 0 1rem 1rem 0;
+	padding: 2rem 2.5rem;
+	display: inline-block;
+	max-width: 350px;
+	width: 100%;
+	min-height: 700px;
+	transition: .3s linear;
+}
+
+.games__fade{
+	max-width: 169px;
+}
+
+.games__title{
+	font-size: var(--gamesF);
+	padding-bottom: 1.3rem;
+	border-bottom: 1px dashed var(--lightgreyC);
+	text-align: center;
+}
+
+.game__box--inner{
+	display: flex;
+	flex-direction: column;
+}
+
+.game__box{
+	width: 100%;
+	margin-top: 3rem;
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+	background: var(--borderB);
+	border-radius: var(--borderO);
+	word-break: break-all;
+	text-align: center;
+	transition: .2s linear;
+}
+
+.game__box:hover{
+	background: var(--blueC);
+}
