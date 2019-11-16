@@ -23,7 +23,7 @@
 	}
 
 	.chat__inner{
-		height: 550px;
+		height: 350px;
 	}
 
 	.add__like--inner{
@@ -362,6 +362,10 @@
 		font-size: 1.2rem;
 	}
 	
+	.chat__button--on{
+		right: 5px;
+		left: auto;
+	}
 }
 
 /*============== Высота ==============*/
@@ -407,10 +411,6 @@
 
 	.chat{
 		height: 75%;
-	}
-
-	.chat__inner{
-		height: 80%;
 	}
 
 	.chat__send--inner{
