@@ -231,6 +231,22 @@
 	margin-right: 0;
 }
 
+.mobile__payment{
+	display: none;
+}
+
+.menu__mobile--icon{
+	display: none;
+	color: var(--blueC);
+	font-size: 3rem;
+	cursor: pointer;
+	transition: .2s linear;
+}
+
+.menu__mobile--icon:hover{
+	opacity: .6;
+}
+
 /*=== Кошелек нижняя часть хедера ===*/ 
 
 .header__bottom--payments{

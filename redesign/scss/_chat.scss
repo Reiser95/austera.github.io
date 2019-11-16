@@ -111,7 +111,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 0 0 10px var(--sectiondarkB);
+	box-shadow: 0 0 10px var(--blueC);
 	cursor: pointer;
 	transition: .2s linear;
 }
@@ -121,12 +121,12 @@
 }
 
 .chat__off{
-	transform: translateX(100%);
+	transform: translateX(110%);
 }
 
 .chat__button--on{
 	position: fixed;
-	left: -55px;
+	left: -93px;
 }
 
 .chat__close--icon--rotate{

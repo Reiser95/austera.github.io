@@ -150,7 +150,7 @@ $(document).ready(function(){
 	        0:{
 	            items:1
 	        },
-	        768:{
+	        800:{
 	            items:2
 	        },
 		    1745:{
@@ -196,7 +196,7 @@ $(document).ready(function(){
 		arrInner = arrInner.split(",");
 		for(let l of arrInner){
 			var lower = l.toLowerCase();
-			$(".add__like--inner").append('<div class="add__like--item--box"><div class="main__like--games--item add__like--item"><a href="#" class="game__inner--mask '+lower+'">'+l+'</a><div class="game__added--mask"><div class="game__added--text">добавлено</div></div><div class="add__like--check"><i class="fas fa-check"></i></div><div class="add__like--plus"><div class="add__like--plus--inner"><i class="fas fa-plus icon__add"></i></div></div></div></div>');
+			$(".add__like--inner").append('<div class="add__like--item--box"><div class="main__like--games--item add__like--item"><a href="#" class="game__inner--mask '+lower+'">'+l+'</a><div class="game__added--mask"><div class="game__added--text en">добавлено</div></div><div class="add__like--check"><i class="fas fa-check"></i></div><div class="add__like--plus"><div class="add__like--plus--inner"><i class="fas fa-plus icon__add"></i></div></div></div></div>');
 		}
 	}
 
@@ -267,7 +267,9 @@ $(document).ready(function(){
 		if($(window).width() >= 1746){
 			$(".games").toggleClass("games__fade");
 		}
-		$(".main").toggleClass("full");
+		if($(window).width() > 1400){
+			$(".main").toggleClass("full");
+		}
 		$(".chat__content").toggleClass("chat__off");
 		$(this).toggleClass("chat__button--on");
 		$(".chat__close--icon").toggleClass("chat__close--icon--rotate");

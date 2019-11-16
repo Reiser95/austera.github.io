@@ -11,6 +11,10 @@
 	padding: 5rem;
 }
 
+.modal__box{
+	overflow-x: hidden;
+}
+
 .modal__content{
 	max-width: 1570px;
 	max-height: 85vh;
