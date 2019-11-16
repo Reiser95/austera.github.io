@@ -416,6 +416,14 @@
 	.chat__send--inner{
 		height: 25%;
 	}
+
+	.chat__close--inner{
+		top: 130px;
+	}
+
+	.chat__content{
+		top: 0px;
+	}
 }
 
 @media(max-height: 560px){
