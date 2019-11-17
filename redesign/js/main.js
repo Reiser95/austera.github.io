@@ -103,12 +103,11 @@ $(document).ready(function(){
 
 	function rename(rus, english, clas){
 		if(eng == "false"){
-			$(clas).text(""+rus+"")
+			$(clas).text(""+rus+"");
 		}
 		else{
 			$(clas).text(""+english+"");
 		}
-		alert(eng);
 	}
 
 	/* Получаем url строки, а именно саму страницу */
