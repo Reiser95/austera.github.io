@@ -82,8 +82,6 @@ $(document).ready(function(){
 		eng = langVar;
 	}
 
-	alert(userLang);
-
 	/* Функция смены объектов местами */
 
 	jQuery.fn.swap = function(b) {
@@ -110,6 +108,7 @@ $(document).ready(function(){
 		else{
 			$(clas).text(""+english+"");
 		}
+		alert(eng);
 	}
 
 	/* Получаем url строки, а именно саму страницу */
