@@ -82,6 +82,8 @@ $(document).ready(function(){
 		eng = langVar;
 	}
 
+	alert(userLang);
+
 	/* Функция смены объектов местами */
 
 	jQuery.fn.swap = function(b) {

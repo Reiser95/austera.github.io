@@ -201,7 +201,7 @@
 }
 
 .main__arrow:hover{
-	background: var(--yellowC);
+	background: var(--blueC);
 }
 
 .main__arrow--next{
@@ -226,18 +226,18 @@
 .main__button--edit:after{
 	content: "";
 	display: block;
-	width: 100%;
+	width: calc(100% + 2px);
 	height: 0;
 	background: var(--blueC);
 	position: absolute;
-	bottom: 0;
-	left: 0;
+	bottom: -1px;
+	left: -1px;
 	z-index: -1;
 	transition: .2s linear;
 }
 
 .main__button--edit:hover:after{
-	height: 100%;
+	height: calc(100% + 2px);
 }
 
 /*=== Заголовок последних выйгрышей ===*/ 

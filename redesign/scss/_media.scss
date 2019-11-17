@@ -176,6 +176,10 @@
 	.add__like--item--box:nth-child(2){
 		margin-top: 4rem;
 	}
+
+	.chat__close--inner{
+		cursor: default;
+	}
 }
 
 @media(max-width: 768px){
@@ -344,6 +348,7 @@
 
 	.chat__close--inner{
 		left: 6px;
+		position: fixed;
 	}
 
 	.chat__button--on{
