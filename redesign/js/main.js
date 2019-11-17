@@ -102,7 +102,6 @@ $(document).ready(function(){
 	   Редактировать/Готово */ 
 
 	function rename(rus, english, clas){
-		alert(eng);
 		if(eng == "false"){
 			$(clas).text(""+rus+"");
 		}
@@ -430,7 +429,13 @@ $(document).ready(function(){
 		if($(this).hasClass("edit")){
 			/* Даем класс что бы в последующем определить элемент */
 			$(this).removeClass("edit");
-			rename("редактировать","edit", this);
+			// rename("редактировать","edit", this);
+			if(eng == "false"){
+				$(this).text("редактировать");
+			}
+			else{
+				$(this).text("edit");
+			}
 
 			/* Забираем класс активного редактирования,
 			   если класс drag есть */
@@ -439,7 +444,14 @@ $(document).ready(function(){
 		else{
 			/* Даем класс что бы в последующем определить элемент */ 
 			$(this).addClass("edit");
-			rename("готово","complete", this);
+			// rename("готово","complete", this);
+
+			if(eng == "false"){
+				$(this).text("готово");
+			}
+			else{
+				$(this).text("complite");
+			}
 
 			/* Даем класс активного редактирования,
 			   если класса drag нет */
