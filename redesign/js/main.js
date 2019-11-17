@@ -59,6 +59,29 @@ $(document).ready(function(){
 		}
 	}
 
+	let flag = $(".header__top--language--flag");
+
+	flag.on("click", function(){
+		if(!$(this).hasClass("active__flag")){
+			flag.removeClass("active__flag");
+			$(this).addClass("active__flag");
+		}
+
+		let langClass = $(this).attr("id");
+
+		if(langClass == "ru"){
+			eng = false;
+		}
+		else{
+			eng = true;
+		}
+
+		localStorage.setItem("lang", eng);
+
+		localStorage.setItem("language", langClass);
+		location.reload();
+	});
+
 	// Добавлять сюда перевод названия страницы, когда добавляете новую
 
 	let page = {"home":"главная", "games":"игры",
@@ -68,6 +91,8 @@ $(document).ready(function(){
 	userLang = userLang.substr(0, 2);
 
 	let eng;
+
+	/*=== Переключение языков ===*/ 
 
 	if(localStorage.getItem("lang") == null){
 		if(userLang == "ru"){
@@ -429,13 +454,7 @@ $(document).ready(function(){
 		if($(this).hasClass("edit")){
 			/* Даем класс что бы в последующем определить элемент */
 			$(this).removeClass("edit");
-			// rename("редактировать","edit", this);
-			if(eng == "false"){
-				$(this).text("редактировать");
-			}
-			else{
-				$(this).text("edit");
-			}
+			rename("редактировать","edit", this);
 
 			/* Забираем класс активного редактирования,
 			   если класс drag есть */
@@ -444,14 +463,7 @@ $(document).ready(function(){
 		else{
 			/* Даем класс что бы в последующем определить элемент */ 
 			$(this).addClass("edit");
-			// rename("готово","complete", this);
-
-			if(eng == "false"){
-				$(this).text("готово");
-			}
-			else{
-				$(this).text("complite");
-			}
+			rename("готово","complete", this);
 
 			/* Даем класс активного редактирования,
 			   если класса drag нет */
@@ -533,38 +545,9 @@ $(document).ready(function(){
 
 	/* Перебор слов на анлийский в массиве */ 
 
-	let flag = $(".header__top--language--flag");
-
 	ifTranslate(eval(url + "Word"));
 
 	translate(eval(url + "Word"));
-
-	// Вставляем название текущей страницы в шапку
-
-
-
-	/*=== Переключение языков ===*/ 
-
-	flag.on("click", function(){
-		if(!$(this).hasClass("active__flag")){
-			flag.removeClass("active__flag");
-			$(this).addClass("active__flag");
-		}
-
-		let langClass = $(this).attr("id");
-
-		if(langClass == "ru"){
-			eng = false;
-		}
-		else{
-			eng = true;
-		}
-
-		localStorage.setItem("lang", eng);
-
-		localStorage.setItem("language", langClass);
-		location.reload();
-	});
 
 });
 
