@@ -102,13 +102,12 @@ $(document).ready(function(){
 	   Редактировать/Готово */ 
 
 	function rename(rus, english, clas){
+		alert(eng);
 		if(eng == "false"){
 			$(clas).text(""+rus+"");
-			alert("Сработал Русский");
 		}
 		else{
 			$(clas).text(""+english+"");
-			alert("Сработал Английский");
 		}
 	}
 
