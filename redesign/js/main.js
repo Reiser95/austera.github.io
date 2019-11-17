@@ -62,7 +62,7 @@ $(document).ready(function(){
 	// Добавлять сюда перевод названия страницы, когда добавляете новую
 
 	let page = {"home":"главная", "games":"игры",
-	"payment":"кошелек"};
+	"payment":"кошелек", "redesign":"редизайн"};
 
 	var userLang = navigator.language || navigator.userLanguage;
 	userLang = userLang.substr(0, 2);
