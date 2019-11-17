@@ -59,6 +59,18 @@ $(document).ready(function(){
 		}
 	}
 
+	// Добавлять сюда перевод названия страницы, когда добавляете новую
+
+	let page = {"home":"главная", "games":"игры",
+	"payment":"кошелек"};
+
+	var userLang = navigator.language || navigator.userLanguage;
+	userLang = userLang.substr(0, 2);
+
+	let eng;
+
+	/*=== Переключение языков ===*/ 
+
 	let flag = $(".header__top--language--flag");
 
 	flag.on("click", function(){
@@ -81,18 +93,6 @@ $(document).ready(function(){
 		localStorage.setItem("language", langClass);
 		location.reload();
 	});
-
-	// Добавлять сюда перевод названия страницы, когда добавляете новую
-
-	let page = {"home":"главная", "games":"игры",
-	"payment":"кошелек", "redesign":"редизайн"};
-
-	var userLang = navigator.language || navigator.userLanguage;
-	userLang = userLang.substr(0, 2);
-
-	let eng;
-
-	/*=== Переключение языков ===*/ 
 
 	if(localStorage.getItem("lang") == null){
 		if(userLang == "ru"){
@@ -126,8 +126,10 @@ $(document).ready(function(){
 	/* Функция корректного отображения языков при клике на
 	   Редактировать/Готово */ 
 
+	var buttonLang = localStorage.getItem("language");
+
 	function rename(rus, english, clas){
-		if(eng == "false"){
+		if(buttonLang == "ru"){
 			$(clas).text(""+rus+"");
 		}
 		else{
