@@ -1,5 +1,19 @@
 $(document).ready(function(){
 
+	/* Функция корректного отображения языков при клике на
+	   Редактировать/Готово */ 
+
+	var buttonLang = localStorage.getItem("language");
+
+	function rename(rus, english, clas){
+		if(buttonLang == "ru"){
+			$(clas).text(""+rus+"");
+		}
+		else{
+			$(clas).text(""+english+"");
+		}
+	}
+
 	function translate(array){
 		if(localStorage.getItem("language")){
 			var lang = localStorage.getItem("language");
@@ -122,20 +136,6 @@ $(document).ready(function(){
 	    stack[0] = a2;
 	    return this.pushStack( stack );
 	};
-
-	/* Функция корректного отображения языков при клике на
-	   Редактировать/Готово */ 
-
-	var buttonLang = localStorage.getItem("language");
-
-	function rename(rus, english, clas){
-		if(buttonLang == "ru"){
-			$(clas).text(""+rus+"");
-		}
-		else{
-			$(clas).text(""+english+"");
-		}
-	}
 
 	/* Получаем url строки, а именно саму страницу */
 	let url = window.location.href;
