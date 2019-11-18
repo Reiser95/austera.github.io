@@ -3,10 +3,8 @@ $(document).ready(function(){
 	/* Функция корректного отображения языков при клике на
 	   Редактировать/Готово */ 
 
-	var buttonLang = localStorage.getItem("language");
-
 	function rename(rus, english, clas){
-		if(buttonLang == "ru"){
+		if(eng == "false"){
 			$(clas).text(""+rus+"");
 		}
 		else{
@@ -18,7 +16,7 @@ $(document).ready(function(){
 		if(localStorage.getItem("language")){
 			var lang = localStorage.getItem("language");
 			flag.removeClass("active__flag");
-			$("#"+lang+"").addClass("active__flag");
+			$(".header__top--language--flag[data-lang="+lang+"]").addClass("active__flag");
 
 			if(lang == "en"){
 				$(".en").each(function(i){
@@ -88,12 +86,13 @@ $(document).ready(function(){
 	let flag = $(".header__top--language--flag");
 
 	flag.on("click", function(){
+		$(this).addClass("active__flag");
 		if(!$(this).hasClass("active__flag")){
 			flag.removeClass("active__flag");
 			$(this).addClass("active__flag");
 		}
 
-		let langClass = $(this).attr("id");
+		let langClass = $(this).attr("data-lang");
 
 		if(langClass == "ru"){
 			eng = false;
@@ -456,15 +455,7 @@ $(document).ready(function(){
 		if($(this).hasClass("edit")){
 			/* Даем класс что бы в последующем определить элемент */
 			$(this).removeClass("edit");
-			// rename("редактировать","edit", this);
-			let d = "Привет";
-			alert(d);
-			if(d == "Привет"){
-				$(this).text("редактировать");
-			}
-			else{
-				$(this).text("edit");
-			}
+			rename("редактировать","edit", this);
 
 			/* Забираем класс активного редактирования,
 			   если класс drag есть */
@@ -473,16 +464,7 @@ $(document).ready(function(){
 		else{
 			/* Даем класс что бы в последующем определить элемент */ 
 			$(this).addClass("edit");
-			// rename("готово","complete", this);
-
-			let d = "Привет";
-			alert(d);
-			if(d == "Привет"){
-				$(this).text("готово");
-			}
-			else{
-				$(this).text("complite");
-			}
+			rename("готово","complete", this);
 
 			/* Даем класс активного редактирования,
 			   если класса drag нет */
@@ -567,6 +549,43 @@ $(document).ready(function(){
 	ifTranslate(eval(url + "Word"));
 
 	translate(eval(url + "Word"));
+
+	/* Открытие бургер меню */
+
+	var menuMobile = $(".mobile__menu--inner");
+	var mob = false;
+
+	$(".menu__mobile--icon").on("click", function(){
+		menuMobile.toggleClass("mobile__on");
+		if(mob == "false"){
+			mob = true;
+		}
+		else{
+			mob = false;
+		}
+	});
+
+	$("body").on("click", function(e){
+		if(mob == "true"){
+			var target = $(e.target);
+			if (!menuMobile.find(target).length){
+				menuMobile.removeClass("mobile__on");
+			}
+		}
+	});
+
+	/* Закрыть меню если ширина больше 998px */
+
+	$(window).resize(function(){
+    	if($(window).width() > 991){
+    		menuMobile.removeClass("mobile__on");
+    	}
+    	if($(window).width() > 1393){
+    		$(".chat__content").removeClass("chat__off");
+    		$(".chat__close--inner").removeClass("chat__button--on");
+    		$(".main").removeClass("full");
+    	}
+	});
 
 });
 

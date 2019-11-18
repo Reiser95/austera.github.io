@@ -39,6 +39,29 @@
 	.add__like--inner{
 		width: 100%;
 	}
+
+	.header__bottom--links{
+		width: 100%;
+		order: 3;
+		margin-top: 2rem;
+		justify-content: space-between;
+	}
+
+	.header__bottom--content{
+		flex-wrap: wrap;
+	}
+
+	.payment{
+		display: none;
+	}
+
+	.balance__inner{
+		margin-right: 0;
+	}
+
+	.mobile__payment{
+		display: inline-block;
+	}
 }
 
 @media(max-width: 1200px){
@@ -62,31 +85,8 @@
 		width: 33.3%;
 	}
 
-	.header__bottom--links{
-		width: 100%;
-		order: 3;
-		margin-top: 2rem;
-		justify-content: space-between;
-	}
-
-	.header__bottom--content{
-		flex-wrap: wrap;
-	}
-
 	.main{
 		max-width: 83%;
-	}
-
-	.payment{
-		display: none;
-	}
-
-	.balance__inner{
-		margin-right: 0;
-	}
-
-	.mobile__payment{
-		display: inline-block;
 	}
 
 	.main__last--wins--inner{
@@ -177,8 +177,56 @@
 		margin-top: 4rem;
 	}
 
-	.chat__close--inner{
+	.site__logo{
+		order: 2;
+	}
+
+	.noregister__button{
+		padding: 1rem 2rem;	
+		min-width: 100px;
+	}
+
+	.balance__inner{
+		margin-top: 3rem;
+	}
+
+	.header__bottom--link{
+		margin: 1.5rem 0 0 0;
+		width: 100%;
+		text-align: center;
+		justify-content: center;
+	}
+
+	.header__bottom--page{
+		margin-top: 2.5rem;
+	}
+
+	.header__top--choose--color{
+		margin-right: 0;
+		padding: .5rem 1rem;
+	}
+
+	.header__top--language--inner{
+		margin-right: 0;
+		padding: .2rem .5rem;
+	}
+
+	.chat__close--inner, .menu__mobile--icon, .site__logo,
+	.button, .game__box, .game__inner--mask, .main__arrow,
+	.footer__inner--link, .main__like--games--item,
+	.header__bottom--link, .header__top--language--flag,
+	.header__top--choose--color, .choise__color--circle{
 		cursor: default;
+	}
+}
+
+@media(max-width: 870px){
+	.menu__mobile--bottom--inner{
+		flex-direction: column;
+	}
+
+	.header__top--choose--color{
+		margin-top: 2rem;
 	}
 }
 
@@ -211,6 +259,33 @@
 
 	.main__last--wins--title, .main__last--wins--inner{
 		display: none;
+	}
+
+	.noregister__buttons{
+		flex-direction: column;
+		align-items: center;
+		padding: 0px 2rem;
+	}
+
+	.noregister__button{
+		width: 100%;
+	}
+
+	.enter__button{
+		margin: 0 0 2rem 0;
+	}
+}
+
+@media(max-width: 575px){
+	.mobile__menu--inner{
+		max-width: 100%;
+		height: 100vh;
+		position: fixed;
+		overflow-y: auto;
+	}
+
+	.noregister__button{
+		width: auto;
 	}
 }
 
@@ -370,6 +445,10 @@
 	.chat__button--on{
 		right: 5px;
 		left: auto;
+	}
+
+	.footer{
+		margin-top: 4.5rem;
 	}
 }
 

@@ -69,14 +69,14 @@
                 
                 <!-- Русский -->
 
-                <div id="ru" class="header__top--language--flag rus__language">
+                <div data-lang="ru" class="header__top--language--flag rus__language">
                   <img src="img/russia.svg" alt="Россия" class="language__flag icon">
                   ru
                 </div>
 
                 <!-- Анлгийский -->
 
-                <div id="en" class="header__top--language--flag eng__language">
+                <div data-lang="en" class="header__top--language--flag eng__language">
                   <img src="img/united-states-of-america.svg" alt="Сша" class="language__flag icon">
                   en
                 </div>
@@ -157,8 +157,9 @@
                   <span class="en">группа vk</span>
                 </a>
 
-                <a href="/payment" class="header__bottom--link mobile__payment en">
-                  кошелек
+                <a href="/payment" class="header__bottom--link mobile__payment">
+                  <i class="fas fa-wallet icon"></i>
+                  <span class="en">кошелек</span>
                 </a>
 
               </div>
@@ -182,8 +183,9 @@
 
                 <!-- Ссылка кошелек -->
 
-                <a href="/payment" class="header__bottom--link payment en">
-                  кошелек
+                <a href="/payment" class="header__bottom--link payment">
+                  <i class="fas fa-wallet icon"></i>
+                  <span class="en">кошелек</span>
                 </a>
 
               </div>
@@ -1173,7 +1175,110 @@
 
       <!-- Конец кнопки свернуть чат -->
 
-      
+
+      <!-- Мобильное бургер меню -->
+
+      <div class="mobile__menu--inner">
+        <div class="mobile__menu--content">
+          
+          <div class="menu__mobile--top--inner">
+            <div class="menu__mobile--icon">
+              <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="noregister__buttons">
+              <button class="button noregister__button enter__button en">вход</button>
+              <button class="button noregister__button register__button en">регистрация</button>
+            </div>
+          </div>
+
+          <div class="balance__inner">
+              <span class="en">
+                  баланс:
+              </span> 
+              <span class="blue">
+                  <span class="balance">
+                      100000
+                  </span> 
+                  exp
+              </span>
+          </div>
+
+          <a href="/payment" class="header__bottom--link mobile__payment">
+            <i class="fas fa-wallet icon"></i>
+            <span class="en">кошелек</span>
+          </a>
+
+          <div class="header__bottom--page en">
+            главная
+          </div>
+
+          <a href="/" class="header__bottom--link">
+            <i class="fas fa-home icon"></i>
+            <span class="en">главная</span>
+          </a>
+
+          <!-- Ссылка на комнату всех игр -->
+
+          <a href="/games" class="header__bottom--link">
+            <i class="fas fa-gamepad icon"></i>
+            <span class="en">игры</span>
+          </a>
+
+          <!-- Кнопка открытия истории игр -->
+
+          <button class="button header__bottom--link">
+            <i class="fas fa-history icon"></i>
+            <span class="en">история игр</span>
+          </button>
+
+          <!-- Кнопка открытия FAQ -->
+
+          <button class="button header__bottom--link">
+            <i class="far fa-question-circle icon"></i>
+            FAQ
+          </button>
+
+          <!-- Ссылка группы в вк -->
+
+          <a href="https://vk.com/expcash" class="header__bottom--link" target="_blank">
+            <i class="fab fa-vk icon"></i>
+            <span class="en">группа vk</span>
+          </a>
+
+          <div class="menu__mobile--bottom--inner">
+            
+            <div class="header__top--language--inner">
+              
+              <!-- Русский -->
+
+              <div data-lang="ru" class="header__top--language--flag rus__language">
+                <img src="img/russia.svg" alt="Россия" class="language__flag icon">
+                ru
+              </div>
+
+              <!-- Анлгийский -->
+
+              <div data-lang="en" class="header__top--language--flag eng__language">
+                <img src="img/united-states-of-america.svg" alt="Сша" class="language__flag icon">
+                en
+              </div>
+
+            </div>
+
+            <div class="header__top--choose--color">
+              <span class="en">цветовая гамма</span>
+              <div class="choose__color"></div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Конец мобильного меню -->
+
+
       <!-- Скрипт jquery cdn -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
