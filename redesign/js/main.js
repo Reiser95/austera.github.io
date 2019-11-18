@@ -123,25 +123,9 @@ $(document).ready(function(){
 	/* Открытие бургер меню */
 
 	var menuMobile = $(".mobile__menu--inner");
-	var mob = false;
 
 	$(".menu__mobile--icon").on("click", function(){
 		menuMobile.toggleClass("mobile__on");
-		if(mob == "false"){
-			mob = true;
-		}
-		else{
-			mob = false;
-		}
-	});
-
-	$("body").on("click", function(e){
-		if(mob == "true"){
-			var target = $(e.target);
-			if (!menuMobile.find(target).length){
-				menuMobile.removeClass("mobile__on");
-			}
-		}
 	});
 
 	/* Функция смены объектов местами */
