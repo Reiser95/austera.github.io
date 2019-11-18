@@ -456,7 +456,15 @@ $(document).ready(function(){
 		if($(this).hasClass("edit")){
 			/* Даем класс что бы в последующем определить элемент */
 			$(this).removeClass("edit");
-			rename("редактировать","edit", this);
+			// rename("редактировать","edit", this);
+			let d = "Привет";
+			alert(d);
+			if(d == "Привет"){
+				$(this).text("редактировать");
+			}
+			else{
+				$(this).text("edit");
+			}
 
 			/* Забираем класс активного редактирования,
 			   если класс drag есть */
@@ -465,7 +473,16 @@ $(document).ready(function(){
 		else{
 			/* Даем класс что бы в последующем определить элемент */ 
 			$(this).addClass("edit");
-			rename("готово","complete", this);
+			// rename("готово","complete", this);
+
+			let d = "Привет";
+			alert(d);
+			if(d == "Привет"){
+				$(this).text("готово");
+			}
+			else{
+				$(this).text("complite");
+			}
 
 			/* Даем класс активного редактирования,
 			   если класса drag нет */
