@@ -288,24 +288,32 @@ $(document).ready(function(){
 	/*=== Скрытие чата ===*/ 
 
 	let closeChat = $(".chat__close--inner");
+	let chatIf = false;
 
 	closeChat.on("click", function(){
-		if($(window).width() >= 1746){
-			$(".games").toggleClass("games__fade");
+		if(chatIf == false){
+			$(".chat__content").addClass("chat__off");
+			$(".chat__close--inner").addClass("chat__button--on");
+			$(".chat__close--icon").addClass("chat__close--icon--rotate");
+			$(".games").addClass("games__fade");
+			$(".main").addClass("full");
+			chatIf = true;
 		}
-		if($(window).width() > 1400){
-			$(".main").toggleClass("full");
+		else{
+			$(".chat__content").removeClass("chat__off");
+			$(".chat__close--inner").removeClass("chat__button--on");
+			$(".chat__close--icon").removeClass("chat__close--icon--rotate");
+			$(".games").removeClass("games__fade");
+			$(".main").removeClass("full");
+			chatIf = false;
 		}
-		$(".chat__content").toggleClass("chat__off");
-		$(this).toggleClass("chat__button--on");
-		$(".chat__close--icon").toggleClass("chat__close--icon--rotate");
 	});
 
 	if($(window).width() <= 1400){
-		$(".main").toggleClass("full");
-		$(".chat__content").toggleClass("chat__off");
-		closeChat.toggleClass("chat__button--on");
-		$(".chat__close--icon").toggleClass("chat__close--icon--rotate");
+		$(".main").addClass("full");
+		$(".chat__content").addClass("chat__off");
+		closeChat.addClass("chat__button--on");
+		$(".chat__close--icon").addClass("chat__close--icon--rotate");
 	}
 
 	/*=== Цветовая гамма ===*/ 
@@ -580,10 +588,21 @@ $(document).ready(function(){
     	if($(window).width() > 991){
     		menuMobile.removeClass("mobile__on");
     	}
-    	if($(window).width() > 1393){
+    	if($(window).width() < 1395 && $(window).width() > 1385){
+    		$(".chat__content").addClass("chat__off");
+    		$(".chat__close--inner").addClass("chat__button--on");
+    		$(".chat__close--icon").addClass("chat__close--icon--rotate");
+    		$(".games").addClass("games__fade");
+    		$(".main").addClass("full");
+    		chatIf = true;
+    	}
+    	if($(window).width() > 1395 && $(window).width() < 1405){
     		$(".chat__content").removeClass("chat__off");
     		$(".chat__close--inner").removeClass("chat__button--on");
+    		$(".chat__close--icon").removeClass("chat__close--icon--rotate");
+    		$(".games").removeClass("games__fade");
     		$(".main").removeClass("full");
+    		chatIf = false;
     	}
 	});
 
