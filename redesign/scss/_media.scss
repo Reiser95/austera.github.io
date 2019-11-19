@@ -379,10 +379,6 @@
 		font-size: var(--playF);
 	}
 
-	.site__logo{
-		display: block;
-	}
-
 	.footer__logo{
 		display: flex;
 	}
@@ -462,6 +458,14 @@
 
 	.footer{
 		margin-top: 4.5rem;
+	}
+
+	.menu__mobile--chat, .site__logo{
+		display: block;
+	}
+
+	.chat__close--inner{
+		display: none;
 	}
 }
 

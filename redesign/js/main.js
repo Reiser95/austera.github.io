@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	let eng;
+
 	/* Функция корректного отображения языков при клике на
 	   Редактировать/Готово */ 
 
@@ -11,6 +13,8 @@ $(document).ready(function(){
 			$(clas).text(""+english+"");
 		}
 	}
+
+	/* Функция, которая переводит слова на кнопке Редактировать/Готово */ 
 
 	function translate(array){
 		if(localStorage.getItem("language")){
@@ -41,6 +45,8 @@ $(document).ready(function(){
 		}
 	}
 
+	/* Функция, которая выдает активный класс флажкам языков */ 
+
 	function ifTranslate(){
 		if(userLang == "ru"){
 			$(".rus__language").addClass("active__flag");
@@ -58,6 +64,9 @@ $(document).ready(function(){
 		}
 	}
 
+	/* Функция, которая автоматически проверяет ссылку браузера,
+	и вставляет название страницы динамически */ 
+
 	function temp(){
 		if(eng == "false"){
 			pageTitle = url;
@@ -74,12 +83,12 @@ $(document).ready(function(){
 	// Добавлять сюда перевод названия страницы, когда добавляете новую
 
 	let page = {"home":"главная", "games":"игры",
-	"payment":"кошелек"};
+	"payment":"кошелек", "setting":"настройки"};
+
+	/* Определение языка браузера пользователя */ 
 
 	var userLang = navigator.language || navigator.userLanguage;
 	userLang = userLang.substr(0, 2);
-
-	let eng;
 
 	/*=== Переключение языков ===*/ 
 
@@ -120,14 +129,6 @@ $(document).ready(function(){
 		eng = langVar;
 	}
 
-	/* Открытие бургер меню */
-
-	var menuMobile = $(".mobile__menu--inner");
-
-	$(".menu__mobile--icon").on("click", function(){
-		menuMobile.toggleClass("mobile__on");
-	});
-
 	/* Функция смены объектов местами */
 
 	jQuery.fn.swap = function(b) {
@@ -143,62 +144,6 @@ $(document).ready(function(){
 	    stack[0] = a2;
 	    return this.pushStack( stack );
 	};
-
-	/* Получаем url строки, а именно саму страницу */
-	let url = window.location.href;
-	/* Обрезаем url и оставляем только название страницы */
-	url = url.split("/")[3];
-
-	let pageTitle;
-
-	if(url == ""){
-		url = "home";
-	}
-
-	if(localStorage.getItem("pagetext")){
-		var localPage = localStorage.getItem("pagetext");
-		if(localPage == url){
-			temp();
-		}
-		else{
-			pageTitle = url;
-		}
-	}
-	else{
-		temp();
-	}
-
-	$(".header__bottom--page").text(pageTitle);
-
-	localStorage.setItem("pagetext", url);
-
-
-	/*=== Слайдеры ===*/
-
-	let gameSlider = $(".main__like--games--carousel");
-
-	gameSlider.owlCarousel({
-		margin: 35,
-		responsiveClass:true,
-	     responsive:{
-	        0:{
-	            items:1
-	        },
-	        800:{
-	            items:2
-	        },
-		    1745:{
-		        items:3,
-	        }
-		} 
-	});
-
-	$('.main__arrow--next').click(function () {
-	    gameSlider.trigger('next.owl.carousel');
-	});
-	$('.main__arrow--prev').click(function () {
-	    gameSlider.trigger('prev.owl.carousel');
-	});
 
 	/* Проверяем наличие выбранной гаммы */ 
 
@@ -274,7 +219,8 @@ $(document).ready(function(){
 	}
 
 	/* Проверка зарегистрирован пользователь или нет */
-
+	/* Если поле отправки ссобщения имеет класс не зарегестрирован,
+	то он отключается */ 
 	if($(".chat__send--box").hasClass("noregister__chat")){
 		if(eng == "true"){
 			$(".chat__send--input").attr("placeholder", "only authorized players can write to the chat");
@@ -290,7 +236,7 @@ $(document).ready(function(){
 	let agree = $(".user__agree");
 
 	agree.on("click", function(e){
-		e.preventDefault();
+		e.preventDefault(); //Удалить
 	});
 
 	/*=== Скрытие чата ===*/ 
@@ -301,18 +247,22 @@ $(document).ready(function(){
 	closeChat.on("click", function(){
 		if(chatIf == false){
 			$(".chat__content").addClass("chat__off");
-			$(".chat__close--inner").addClass("chat__button--on");
-			$(".chat__close--icon").addClass("chat__close--icon--rotate");
-			$(".games").addClass("games__fade");
-			$(".main").addClass("full");
-			chatIf = true;
+    		$(".chat__close--inner").addClass("chat__button--on");
+    		$(".chat__close--icon").addClass("chat__close--icon--rotate");
+    		if($(window).width() > 991){
+    			$(".games").addClass("games__fade");
+    			$(".main").addClass("full");
+    		}
+    		chatIf = true;
 		}
 		else{
 			$(".chat__content").removeClass("chat__off");
 			$(".chat__close--inner").removeClass("chat__button--on");
 			$(".chat__close--icon").removeClass("chat__close--icon--rotate");
-			$(".games").removeClass("games__fade");
-			$(".main").removeClass("full");
+			if($(window).width() > 991){
+    			$(".games").removeClass("games__fade");
+    			$(".main").removeClass("full");
+    		}
 			chatIf = false;
 		}
 	});
@@ -569,24 +519,24 @@ $(document).ready(function(){
 	/* Закрыть меню если ширина больше 998px */
 
 	$(window).resize(function(){
-    	if($(window).width() > 991){
-    		menuMobile.removeClass("mobile__on");
-    	}
-    	if($(window).width() < 1395 && $(window).width() > 1385){
-    		$(".chat__content").addClass("chat__off");
-    		$(".chat__close--inner").addClass("chat__button--on");
+	   	if($(window).width() > 991){
+	   		menuMobile.removeClass("mobile__on");
+	   	}
+	   	if($(window).width() < 1395 && $(window).width() > 1385){
+	    	$(".chat__content").addClass("chat__off");
+	        $(".chat__close--inner").addClass("chat__button--on");
     		$(".chat__close--icon").addClass("chat__close--icon--rotate");
-    		$(".games").addClass("games__fade");
-    		$(".main").addClass("full");
-    		chatIf = true;
-    	}
-    	if($(window).width() > 1395 && $(window).width() < 1405){
-    		$(".chat__content").removeClass("chat__off");
-    		$(".chat__close--inner").removeClass("chat__button--on");
-    		$(".chat__close--icon").removeClass("chat__close--icon--rotate");
-    		$(".games").removeClass("games__fade");
-    		$(".main").removeClass("full");
-    		chatIf = false;
+	   		$(".games").addClass("games__fade");
+	   		$(".main").addClass("full");
+	   		chatIf = true;
+	   	}
+	    if($(window).width() > 1395 && $(window).width() < 1405){
+	   		$(".chat__content").removeClass("chat__off");
+	   		$(".chat__close--inner").removeClass("chat__button--on");
+	   		$(".chat__close--icon").removeClass("chat__close--icon--rotate");
+	   		$(".games").removeClass("games__fade");
+	    	$(".main").removeClass("full");
+	    	chatIf = false;
     	}
 	});
 
