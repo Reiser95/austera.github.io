@@ -68,7 +68,7 @@ $(document).ready(function(){
 	и вставляет название страницы динамически */ 
 
 	function temp(){
-		if(eng == false){
+		if(eng == "false"){
 			pageTitle = url;
 			for(var pageVar in page){
 				if(pageTitle == pageVar){
@@ -89,35 +89,6 @@ $(document).ready(function(){
 
 	var userLang = navigator.language || navigator.userLanguage;
 	userLang = userLang.substr(0, 2);
-
-	/* Получаем url строки, а именно саму страницу */
-	let url = window.location.href;
-
-	/* Обрезаем url и оставляем только название страницы */
-	url = url.split("/")[3];
-
-	let pageTitle;
-
-	if(url == ""){
-		url = "home";
-	}
-
-	if(localStorage.getItem("pagetext")){
-		var localPage = localStorage.getItem("pagetext");
-		if(localPage == url){
-			temp();
-		}
-		else{
-			pageTitle = url;
-		}
-	}
-	else{
-		temp();
-	}
-
-	$(".header__bottom--page").text(pageTitle);
-
-	localStorage.setItem("pagetext", url);
 
 	/*=== Переключение языков ===*/ 
 
@@ -157,6 +128,35 @@ $(document).ready(function(){
 		var langVar = localStorage.getItem("lang");
 		eng = langVar;
 	}
+
+	/* Получаем url строки, а именно саму страницу */
+	let url = window.location.href;
+
+	/* Обрезаем url и оставляем только название страницы */
+	url = url.split("/")[3];
+
+	let pageTitle;
+
+	if(url == ""){
+		url = "home";
+	}
+
+	if(localStorage.getItem("pagetext")){
+		var localPage = localStorage.getItem("pagetext");
+		if(localPage == url){
+			temp();
+		}
+		else{
+			pageTitle = url;
+		}
+	}
+	else{
+		temp();
+	}
+
+	$(".header__bottom--page").text(pageTitle);
+
+	localStorage.setItem("pagetext", url);
 
 	/* Функция смены объектов местами */
 
