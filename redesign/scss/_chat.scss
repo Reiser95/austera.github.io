@@ -210,3 +210,24 @@
 .button__dis{
 	pointer-events: none;
 }
+
+.chat__mobile--cross{
+	display: none;
+	padding: .5rem;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.chat__cross{
+	padding: .5rem 1rem;
+	border: 1px solid var(--greyC);
+	border-radius: 1rem;
+	font-size: 2rem;
+	color: var(--blueC);
+	transition: .2s linear;
+}
+
+.chat__mobile--cross:hover .chat__cross{
+	opacity: .6;
+}

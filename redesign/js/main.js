@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	let eng;
+	var eng;
 
 	/* Функция корректного отображения языков при клике на
 	   Редактировать/Готово */ 
@@ -25,7 +25,7 @@ $(document).ready(function(){
 			if(lang == "en"){
 				$(".en").each(function(i){
 					var value = $(this).text().trim();
-					for(let r in array){
+					for(var r in array){
 						if(array[r] == value){
 							$(this).text(r + " ");
 						}
@@ -35,7 +35,7 @@ $(document).ready(function(){
 			else{
 				$(".en").each(function(i){
 					var value = $(this).text().trim();
-					for(let r in array){
+					for(var r in array){
 						if(r == value){
 							$(this).text(array[r] + " ");
 						}
@@ -55,7 +55,7 @@ $(document).ready(function(){
 			$(".eng__language").addClass("active__flag");
 			$(".en").each(function(i){
 				var value = $(this).text().trim();
-				for(let r in array){
+				for(var r in array){
 					if(array[r] == value){
 						$(this).text(r + " ");
 					}
@@ -70,7 +70,7 @@ $(document).ready(function(){
 	function temp(){
 		if(eng == "false"){
 			pageTitle = url;
-			for(let pageVar in page){
+			for(var pageVar in page){
 				if(pageTitle == pageVar){
 					pageTitle = page[pageVar];
 				}
@@ -82,7 +82,7 @@ $(document).ready(function(){
 
 	// Добавлять сюда перевод названия страницы, когда добавляете новую
 
-	let page = {"home":"главная", "games":"игры",
+	var page = {"home":"главная", "games":"игры",
 	"payment":"кошелек", "setting":"настройки"};
 
 	/* Определение языка браузера пользователя */ 
@@ -92,7 +92,7 @@ $(document).ready(function(){
 
 	/*=== Переключение языков ===*/ 
 
-	let flag = $(".header__top--language--flag");
+	var flag = $(".header__top--language--flag");
 
 	flag.on("click", function(){
 		$(this).addClass("active__flag");
@@ -101,7 +101,7 @@ $(document).ready(function(){
 			$(this).addClass("active__flag");
 		}
 
-		let langClass = $(this).attr("data-lang");
+		var langClass = $(this).attr("data-lang");
 
 		if(langClass == "ru"){
 			eng = false;
@@ -149,9 +149,9 @@ $(document).ready(function(){
 
 	var html = document.querySelector("html");
 
-	let color = $(".choise__color--circle");
+	var color = $(".choise__color--circle");
 
-	let nameActiveGame = [];
+	var nameActiveGame = [];
 
 	var add;
 
@@ -171,9 +171,9 @@ $(document).ready(function(){
 
 	/* Проходимся циклом и выводим игры в окно любимых игр */
 	if(localStorage.getItem("gamesinner")){
-		let arrInner = localStorage.getItem("gamesinner");
+		var arrInner = localStorage.getItem("gamesinner");
 		arrInner = arrInner.split(",");
-		for(let l of arrInner){
+		for(var l of arrInner){
 			var lower = l.toLowerCase();
 			$(".add__like--inner").append('<div class="add__like--item--box"><div class="main__like--games--item add__like--item"><a href="#" class="game__inner--mask '+lower+'">'+l+'</a><div class="game__added--mask"><div class="game__added--text en">добавлено</div></div><div class="add__like--check"><i class="fas fa-check"></i></div><div class="add__like--plus"><div class="add__like--plus--inner"><i class="fas fa-plus icon__add"></i></div></div></div></div>');
 		}
@@ -202,11 +202,11 @@ $(document).ready(function(){
 		
 		arr = arr.split(",");
 
-		for(let i of arr){
+		for(var i of arr){
 			nameActiveGame.push(i);
 		}
 
-		for(let o of nameActiveGame){
+		for(var o of nameActiveGame){
 			var lowerActive = o.toLowerCase();
 			$(".add__like--item:contains("+o+")").addClass("active__like--game");
 
@@ -233,52 +233,17 @@ $(document).ready(function(){
 
 	/*=== Модальное окно соглашения ===*/
 
-	let agree = $(".user__agree");
+	var agree = $(".user__agree");
 
 	agree.on("click", function(e){
 		e.preventDefault(); //Удалить
 	});
 
-	/*=== Скрытие чата ===*/ 
-
-	let closeChat = $(".chat__close--inner");
-	let chatIf = false;
-
-	closeChat.on("click", function(){
-		if(chatIf == false){
-			$(".chat__content").addClass("chat__off");
-    		$(".chat__close--inner").addClass("chat__button--on");
-    		$(".chat__close--icon").addClass("chat__close--icon--rotate");
-    		if($(window).width() > 991){
-    			$(".games").addClass("games__fade");
-    			$(".main").addClass("full");
-    		}
-    		chatIf = true;
-		}
-		else{
-			$(".chat__content").removeClass("chat__off");
-			$(".chat__close--inner").removeClass("chat__button--on");
-			$(".chat__close--icon").removeClass("chat__close--icon--rotate");
-			if($(window).width() > 991){
-    			$(".games").removeClass("games__fade");
-    			$(".main").removeClass("full");
-    		}
-			chatIf = false;
-		}
-	});
-
-	if($(window).width() <= 1400){
-		$(".main").addClass("full");
-		$(".chat__content").addClass("chat__off");
-		closeChat.addClass("chat__button--on");
-		$(".chat__close--icon").addClass("chat__close--icon--rotate");
-	}
-
 	/*=== Цветовая гамма ===*/ 
 
-	let chooseColor = $(".header__top--choose--color");
-	let colorMask = $(".choose__color--inner");
-	let colorClose = $(".choose__color--cross");
+	var chooseColor = $(".header__top--choose--color");
+	var colorMask = $(".choose__color--inner");
+	var colorClose = $(".choose__color--cross");
 
 	chooseColor.on("click", function(){
 		color.removeClass("choose__color--active");
@@ -293,7 +258,7 @@ $(document).ready(function(){
 
 	/*=== Переключение цветовой гаммы ===*/ 
 
-	let chooseBtn = $(".choise__color--circle");
+	var chooseBtn = $(".choise__color--circle");
 
 	/* При клике на цвет давать активный класс */ 
 
@@ -320,10 +285,10 @@ $(document).ready(function(){
 
 	/*=== Добавление игры в избранную открытие/закрытие окна ===*/ 
 
-	let addGames = $(".add__like--games");
-	let addMask = $(".add__like--game");
-	let addCross = $(".add__like--cross");
-	let edit = $(".main__button--edit");
+	var addGames = $(".add__like--games");
+	var addMask = $(".add__like--game");
+	var addCross = $(".add__like--cross");
+	var edit = $(".main__button--edit");
 
 	addGames.on("click", function(){
 		addMask.fadeIn(300).css("display", "flex");
@@ -345,7 +310,7 @@ $(document).ready(function(){
 
 	/* Удаление и добавление игры в избранную в модальном окне */ 
 
-	let game = $(".add__like--item");
+	var game = $(".add__like--item");
 
 	game.on("click", function(){
 		/* Проверяем активная ли игра на которую мы нажали,
@@ -360,19 +325,19 @@ $(document).ready(function(){
 
 			add = $(this).children(".game__inner--mask").text().trim();
 
-			for(let s = 0; s<nameActiveGame.length; s++){
+			for(var s = 0; s<nameActiveGame.length; s++){
 				if(nameActiveGame[s] == add){
 					/* Имя удаленного элемента */ 
 
-					let deleteName = nameActiveGame[s];
+					var devareName = nameActiveGame[s];
 
 					/* Удаление из активного элемента */
 
-					let value = -1;
+					var value = -1;
 					
 					$(".owl-item").each(function(i){
 						value ++;
-						if($(this).text() == deleteName){
+						if($(this).text() == devareName){
 							gameSlider
 							.trigger('remove.owl.carousel', [value])
 							.trigger('refresh.owl.carousel');
@@ -430,7 +395,7 @@ $(document).ready(function(){
 		else{
 			/* Даем класс что бы в последующем определить элемент */ 
 			$(this).addClass("edit");
-			rename("готово","complete", this);
+			rename("готово","compvare", this);
 
 			/* Даем класс активного редактирования,
 			   если класса drag нет */
@@ -443,7 +408,7 @@ $(document).ready(function(){
 	$(document).on("click", ".edit__arrow--next" ,function(){
 		var rightValue = $(this).parents(".edit__arrows").parents(".edit__mask").siblings(".game__inner--mask").text();
 		
-		for(let u = 0; u<nameActiveGame.length; u++){
+		for(var u = 0; u<nameActiveGame.length; u++){
 			if(nameActiveGame[u] == rightValue){
 
 				/* Временная переменная помогающая нам поменять
@@ -451,8 +416,8 @@ $(document).ready(function(){
 				var tem = nameActiveGame[u + 1];
 
 				/* Находим совпавший элемент и его соседа справа */ 
-				let leftSwap = $(".game__inner--mask:contains("+nameActiveGame[u]+")").parent(".like__game");
-				let rightSwap = $(".game__inner--mask:contains("+nameActiveGame[u + 1]+")").parent(".like__game");
+				var leftSwap = $(".game__inner--mask:contains("+nameActiveGame[u]+")").parent(".like__game");
+				var rightSwap = $(".game__inner--mask:contains("+nameActiveGame[u + 1]+")").parent(".like__game");
 
 				/* Меняем элементы местами */ 
 				leftSwap.swap(rightSwap);
@@ -474,7 +439,7 @@ $(document).ready(function(){
 	$(document).on("click", ".edit__arrow--prev" ,function(){
 		var leftValue = $(this).parents(".edit__arrows").parents(".edit__mask").siblings(".game__inner--mask").text();
 		
-		for(let w = 0; w<nameActiveGame.length; w++){
+		for(var w = 0; w<nameActiveGame.length; w++){
 			if(nameActiveGame[w] == leftValue){
 
 				/* Временная переменная помогающая нам поменять
@@ -482,8 +447,8 @@ $(document).ready(function(){
 				var ver = nameActiveGame[w - 1];
 
 				/* Находим совпавший элемент и его соседа слева */ 
-				let leftSwap2 = $(".game__inner--mask:contains("+nameActiveGame[w]+")").parent(".like__game");
-				let rightSwap2 = $(".game__inner--mask:contains("+nameActiveGame[w - 1]+")").parent(".like__game");
+				var leftSwap2 = $(".game__inner--mask:contains("+nameActiveGame[w]+")").parent(".like__game");
+				var rightSwap2 = $(".game__inner--mask:contains("+nameActiveGame[w - 1]+")").parent(".like__game");
 				
 				/* Меняем элементы местами */
 				rightSwap2.swap(leftSwap2);
@@ -516,27 +481,75 @@ $(document).ready(function(){
 
 	translate(eval(url + "Word"));
 
+	/*=== Скрытие чата ===*/ 
+
+	var closeChat = $(".mobile__off");
+	var chatIf;
+
+	if($(window).width() <= 1400){
+		chatIf = true;
+	}
+	else{
+		chatIf = false;
+	}
+
+	closeChat.on("click", function(){
+		if($(window).width() > 480){
+			if(chatIf == false){
+				$(".chat__content").addClass("chat__off");
+	    		$(".chat__close--inner").addClass("chat__button--on");
+	    		$(".chat__close--icon").addClass("chat__close--icon--rotate");
+	    		if($(window).width() > 991){
+	    			$(".games").addClass("games__fade");
+	    			$(".main").addClass("full");
+	    		}
+	    		chatIf = true;
+			}
+			else{
+				$(".chat__content").removeClass("chat__off");
+				$(".chat__close--inner").removeClass("chat__button--on");
+				$(".chat__close--icon").removeClass("chat__close--icon--rotate");
+				if($(window).width() > 991){
+	    			$(".games").removeClass("games__fade");
+	    			$(".main").removeClass("full");
+	    		}
+				chatIf = false;
+			}
+		}
+		else{
+			if(chatIf == false){
+				$(".chat__content").addClass("chat__off");
+	    		chatIf = true;
+			}
+			else{
+				$(".chat__content").removeClass("chat__off");
+				chatIf = false;
+			}
+		}
+	});
+
+	if($(window).width() <= 1400){
+		$(".main").addClass("full");
+		$(".chat__content").addClass("chat__off");
+		closeChat.addClass("chat__button--on");
+		$(".chat__close--icon").addClass("chat__close--icon--rotate");
+	}
+
 	/* Закрыть меню если ширина больше 998px */
 
 	$(window).resize(function(){
 	   	if($(window).width() > 991){
 	   		menuMobile.removeClass("mobile__on");
 	   	}
-	   	if($(window).width() < 1395 && $(window).width() > 1385){
-	    	$(".chat__content").addClass("chat__off");
-	        $(".chat__close--inner").addClass("chat__button--on");
-    		$(".chat__close--icon").addClass("chat__close--icon--rotate");
-	   		$(".games").addClass("games__fade");
-	   		$(".main").addClass("full");
-	   		chatIf = true;
-	   	}
-	    if($(window).width() > 1395 && $(window).width() < 1405){
-	   		$(".chat__content").removeClass("chat__off");
-	   		$(".chat__close--inner").removeClass("chat__button--on");
-	   		$(".chat__close--icon").removeClass("chat__close--icon--rotate");
-	   		$(".games").removeClass("games__fade");
-	    	$(".main").removeClass("full");
-	    	chatIf = false;
+	    if($(window).width() > 480){
+	   		if(chatIf == true){
+	   			closeChat.addClass("chat__button--on");
+	   			$(".chat__close--icon").addClass("chat__close--icon--rotate");
+	   		}
+	   		if(chatIf == false){
+	   			closeChat.removeClass("chat__button--on");
+	   			$(".chat__close--icon").removeClass("chat__close--icon--rotate");
+	   		}
     	}
 	});
 

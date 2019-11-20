@@ -403,6 +403,7 @@
 
 	.chat__inner{
 		height: 90%;
+		margin-top: 0;
 	}
 
 	.chat__send--inner{
@@ -466,6 +467,10 @@
 
 	.chat__close--inner{
 		display: none;
+	}
+
+	.chat__mobile--cross{
+		display: flex;
 	}
 }
 
