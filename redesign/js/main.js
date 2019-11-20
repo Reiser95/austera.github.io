@@ -68,7 +68,7 @@ $(document).ready(function(){
 	и вставляет название страницы динамически */ 
 
 	function temp(){
-		if(eng == "false"){
+		if(eng == false){
 			pageTitle = url;
 			for(var pageVar in page){
 				if(pageTitle == pageVar){
