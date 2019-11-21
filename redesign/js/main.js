@@ -579,7 +579,30 @@ $(document).ready(function(){
 	   			closeChat.removeClass("chat__button--on");
 	   			$(".chat__close--icon").removeClass("chat__close--icon--rotate");
 	   		}
+	   		$("body").removeClass("scroll");
     	}
+	});
+
+	/* Фиксированность боди при открытие модальных окон */ 
+
+	$(".fixadd").on("click", function(){
+		$("body").addClass("scroll");
+	});
+
+	$(".fixrem").on("click", function(){
+		$("body").removeClass("scroll");
+	});
+
+	$(".fixmobadd").on("click", function(){
+		if($(window).width() <= 480){
+			$("body").addClass("scroll");
+		}
+	});
+
+	$(".fixmobrem").on("click", function(){
+		if($(window).width() <= 480){
+			$("body").removeClass("scroll");
+		}
 	});
 
 });

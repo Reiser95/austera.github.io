@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h5, p{
 /* ================= Scroll ================= */
 
 ::-webkit-scrollbar{
-	width: 7px;
+	width: 0px;
 }
 
 ::-webkit-scrollbar-track{
@@ -96,4 +96,8 @@ h1, h2, h3, h4, h5, h5, p{
 ::-webkit-scrollbar-thumb{
 	background: var(--sendB);
 	border-radius: 1rem;
+}
+
+.scroll{
+	overflow: hidden;
 }
