@@ -131,6 +131,8 @@
 	background: var(--blueC);
 	margin-top: 2.5rem;
 	font-size: 1.8rem;
+	text-align: center;
+	word-break: break-all;
 }
 
 .modalw__button:hover{
@@ -138,9 +140,90 @@
 }
 
 .subbutton__links{
-	margin-top: 2rem;
+	margin: 2rem 0 0 0;
 	display: flex;
 	align-items: center;
 	width: 100%;
 	justify-content: space-around;
+}
+
+.button__vk{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	padding: 1rem 2rem;
+	border-radius: 1.5rem;
+	width: 70%;
+	background: #4973a5;
+	margin: 2rem 0;
+	font-size: 2rem;
+}
+
+.button__vk:hover{
+	background: darken(#4973a5, 10);
+}
+
+.enter__inputs{
+	width: 100%;
+	position: relative;
+}
+
+.enter__inputs:before{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: #2f3541;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: .6;
+}
+
+.fa-vk{
+	position: relative;
+	top: 2px;
+}
+
+#register__check{
+	display: none;
+}
+
+#register__check:checked + .modalw__label:after{
+	transform: scale(1);
+}
+
+.modalw__label{
+	position: relative;
+	cursor: pointer;
+	margin: 2rem 0 0 1.5rem;
+}
+
+.modalw__label:before{
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -35px;
+	width: 25px;
+	height: 25px;
+	background: #1c2028;
+	border: 1px solid transparent;
+	border-radius: .3rem;
+	transition: .2s linear;
+}
+
+.modalw__label:after{
+	content: "\f00c";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	position: absolute;
+	top: 2px;
+	left: -29px;
+	transform: scale(0);
+	transition: .2s linear;
+}
+
+.modalw__label:hover:before{
+	border: 1px solid var(--blueC);
 }

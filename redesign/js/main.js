@@ -2,7 +2,6 @@ $(document).ready(function(){
 
 	var eng;
 	var scroll = false;
-	var scrollMob = false;
 
 	/* Функция корректного отображения языков при клике на
 	   Редактировать/Готово */ 
@@ -513,7 +512,11 @@ $(document).ready(function(){
 
 	$("body").on("keydown", function(e){
 		if(e.which == 27){
-			$(".modal").fadeOut(300);
+			if(scroll == true){
+				$(".modal").fadeOut(300);
+				$(".modalw").fadeOut(300);
+				$("body").removeClass("scroll");
+			}
 		}
 	});
 
@@ -619,12 +622,37 @@ $(document).ready(function(){
 	/* Вход модальное окно */
 
 	$(".enter__button").on("click", function(){
+		$(".modalw").fadeOut(300);
 		$(".enter__modal").fadeIn(300);
 		$(".mobile__menu--inner").removeClass("mobile__on");
 	});
 
 	$(".enter__cross").on("click", function(){
 		$(".enter__modal").fadeOut(300);
+	});
+
+	/* Регистрация модальное окно */
+
+	$(".register__button").on("click", function(){
+		$(".modalw").fadeOut(300);
+		$(".register__modal").fadeIn(300);
+		$(".mobile__menu--inner").removeClass("mobile__on");
+	});
+
+	$(".register__cross").on("click", function(){
+		$(".register__modal").fadeOut(300);
+	});
+
+	/* Восстановление модальное окно */
+
+	$(".return__button").on("click", function(){
+		$(".modalw").fadeOut(300);
+		$(".return__modal").fadeIn(300);
+		$(".mobile__menu--inner").removeClass("mobile__on");
+	});
+
+	$(".return__cross").on("click", function(){
+		$(".return__modal").fadeOut(300);
 	});
 
 	/* Закрытие окна оповещения */

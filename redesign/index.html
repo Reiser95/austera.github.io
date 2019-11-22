@@ -97,7 +97,7 @@
 
               <div class="noregister__buttons">
                 <button class="button noregister__button enter__button en fixadd">вход</button>
-                <button class="button noregister__button register__button en">регистрация</button>
+                <button class="button noregister__button register__button en fixadd">регистрация</button>
               </div>
             </div>
             
@@ -170,10 +170,12 @@
 
               </div>
 
-              <div class="header__bottom--payments">
+              <!-- <div class="header__bottom--payments">
+
+                КОГДА НЕ ЗАРЕГИСТРИРОВАН ОФФАЕМ
                 
-                <!-- Отображение баланса пользователя -->
-                <!-- За баланс отвечает класс balance(Для Левы) -->
+                Отображение баланса пользователя
+                За баланс отвечает класс balance(Для Левы) 
 
                 <div class="balance__inner">
                     <span class="en">
@@ -187,14 +189,14 @@
                     </span>
                 </div>
 
-                <!-- Ссылка кошелек -->
+                 Ссылка кошелек
 
                 <a href="/payment" class="header__bottom--link payment">
                   <i class="fas fa-wallet icon"></i>
                   <span class="en">кошелек</span>
                 </a>
 
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -1203,7 +1205,9 @@
             </div>
           </div>
 
-          <div class="balance__inner">
+          <!-- Только когда зарегистрирован -->
+
+          <!-- <div class="balance__inner">
               <span class="en">
                   баланс:
               </span> 
@@ -1218,7 +1222,7 @@
           <a href="/payment" class="header__bottom--link mobile__payment">
             <i class="fas fa-wallet icon"></i>
             <span class="en">кошелек</span>
-          </a>
+          </a> -->
 
           <div class="header__bottom--page en">
             главная
@@ -1304,18 +1308,25 @@
               авторизация
             </div>
 
-            <input type="text" class="input modalw__input" placeholder="введите логин">
+            <button class="button button__vk">
+              <i class="fab fa-vk icon"></i>
+              <span class="en">войти через вк</span>
+            </button>
 
-            <input type="password" class="input modalw__input" placeholder="введите пароль">
+            <div class="enter__inputs">
+              <input type="text" class="input modalw__input" placeholder="введите логин">
+
+              <input type="password" class="input modalw__input" placeholder="введите пароль">
+            </div>
 
             <button class="button modalw__button en">войти</button>
 
             <div class="subbutton__links">
-              <button class="button subbutton__link en">
+              <button class="button subbutton__link en register__button">
                 создать аккаунт?
               </button>
 
-              <button class="button subbutton__link en">
+              <button class="button subbutton__link en return__button">
                 забыли пароль?
               </button>
             </div>
@@ -1324,6 +1335,77 @@
       </div>
 
       <!-- Конец модального окна вход -->
+
+
+      <!-- Модальное окно регистрация -->
+
+      <div class="modalw register__modal">
+        <div class="modalw__inner">
+          <div class="modalw__content">
+            <div class="modalw__cross register__cross fixrem">
+              <i class="fas fa-times"></i>
+            </div>
+
+            <div class="modalw__title en">
+              регистрация
+            </div>
+
+            <input type="text" class="input modalw__input" placeholder="придумайте логин">
+
+            <input type="password" class="input modalw__input" placeholder="придумайте пароль">
+
+            <input type="password" class="input modalw__input" placeholder="подтвердите пароль">
+
+            <input type="checkbox" class="modalw__checkbox" id="register__check">
+            <label for="register__check" class="modalw__label en">
+              я принимаю условия и правила сайта
+            </label>
+
+            <button class="button modalw__button en">зарегистрироваться</button>
+
+            <div class="subbutton__links">
+              <button class="button subbutton__link en enter__button">
+                уже есть аккаунт?
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Конец модального окна регистрация -->
+
+
+      <!-- Модальное окно восстановления -->
+
+      <div class="modalw return__modal">
+        <div class="modalw__inner">
+          <div class="modalw__content">
+            <div class="modalw__cross return__cross fixrem">
+              <i class="fas fa-times"></i>
+            </div>
+
+            <div class="modalw__title en">
+              восстановить пароль
+            </div>
+
+            <input type="text" class="input modalw__input" placeholder="введите свой email">
+
+            <button class="button modalw__button en">восстановить</button>
+
+            <div class="subbutton__links">
+              <button class="button subbutton__link en register__button">
+                создать аккаунт?
+              </button>
+
+              <button class="button subbutton__link en enter__button">
+                вспомнили пароль?
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Конец модального окна восстановления -->
 
 
       <!-- Уведомления -->

@@ -215,7 +215,8 @@
 	.button, .game__box, .game__inner--mask, .main__arrow,
 	.footer__inner--link, .main__like--games--item,
 	.header__bottom--link, .header__top--language--flag,
-	.header__top--choose--color, .choise__color--circle{
+	.header__top--choose--color, .choise__color--circle,
+	.modalw__label{
 		cursor: default;
 	}
 }
@@ -303,6 +304,27 @@
 
 	.modalw__inner{
 		max-width: 380px;
+	}
+
+	.button__vk{
+		width: 100%;
+	}
+
+	.modalw__button{
+		max-width: 100%;
+	}
+
+	.modalw__label{
+		max-width: 180px;
+		margin-left: 3.5rem;
+	}
+
+	.subbutton__links{
+		flex-direction: column;
+	}
+
+	.subbutton__link{
+		margin-top: 1rem;
 	}
 }
 
@@ -547,7 +569,19 @@
 	}
 
 	.subbutton__link{
-		margin-top: 1rem;
+		margin: 1rem 0 0 0;
+	}
+
+	.button__vk{
+		font-size: var(--playF);
+	}
+
+	.fa-vk{
+		top: 0px;
+	}
+
+	.modalw__button{
+		font-size: 1.6rem;
 	}
 }
 
