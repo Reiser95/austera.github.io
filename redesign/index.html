@@ -87,26 +87,26 @@
                 
                 <!-- Аватарка пользователя, пример ниже -->
 
-                <!-- <span class="site__profile--img">
+                <span class="site__profile--img">
                   <img src="img/user.png" alt="Аватарка" class="user__img">
-                </span> -->
+                </span>
                 
                 <!-- Ник пользователя -->
                 <!-- northtan -->
               </a>
 
               <div class="noregister__buttons">
-                <button class="button noregister__button enter__button en">вход</button>
+                <button class="button noregister__button enter__button en fixadd">вход</button>
                 <button class="button noregister__button register__button en">регистрация</button>
               </div>
             </div>
             
             <div class="menu__mobile--tools">
-              <div class="menu__mobile--icon fixmobadd">
+              <div class="menu__mobile--icon">
                 <i class="fas fa-bars"></i>
               </div>
 
-              <div class="menu__mobile--chat mobile__off fixmobadd">
+              <div class="menu__mobile--chat mobile__off">
                 <i class="fas fa-comments"></i>
               </div>
             </div>
@@ -652,7 +652,7 @@
 
               </div>
 
-              <div class="chat__mobile--cross mobile__off fixmobrem">
+              <div class="chat__mobile--cross mobile__off">
                 <span class="chat__cross">
                   <i class="fas fa-times"></i>
                 </span>
@@ -1193,12 +1193,12 @@
         <div class="mobile__menu--content">
           
           <div class="menu__mobile--top--inner">
-            <div class="menu__mobile--icon fixmobrem">
+            <div class="menu__mobile--icon">
               <i class="fas fa-bars"></i>
             </div>
 
             <div class="noregister__buttons">
-              <button class="button noregister__button enter__button en">вход</button>
+              <button class="button noregister__button enter__button en fixadd">вход</button>
               <button class="button noregister__button register__button en">регистрация</button>
             </div>
           </div>
@@ -1293,15 +1293,152 @@
 
       <!-- Модальное окно вход -->
 
-      <div class="modalw">
+      <div class="modalw enter__modal">
         <div class="modalw__inner">
           <div class="modalw__content">
-            
+            <div class="modalw__cross enter__cross fixrem">
+              <i class="fas fa-times"></i>
+            </div>
+
+            <div class="modalw__title en">
+              авторизация
+            </div>
+
+            <input type="text" class="input modalw__input" placeholder="введите логин">
+
+            <input type="password" class="input modalw__input" placeholder="введите пароль">
+
+            <button class="button modalw__button en">войти</button>
+
+            <div class="subbutton__links">
+              <button class="button subbutton__link en">
+                создать аккаунт?
+              </button>
+
+              <button class="button subbutton__link en">
+                забыли пароль?
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Конец модального окна вход -->
+
+
+      <!-- Уведомления -->
+      
+      <div class="notify">
+        <div class="notify__inner">
+
+          <!-- Пример оповещения -->
+
+          <div class="notify__content">
+
+            <!-- Крестик закрытия оповещение -->
+            <div class="notify__cross">
+              <i class="fas fa-times"></i>
+            </div>
+
+            <!-- Иконка оповещения -->
+            <div class="notify__icon--inner info">
+              <i class="fas fa-exclamation"></i>
+            </div>
+
+            <!-- Весь текст в оповещении -->
+            <div class="notify__text--inner">
+              <!-- Заголовок оповещения -->
+              <div class="notify__title">
+                Информация
+              </div>
+              
+              <!-- Текст оповещения -->
+              <div class="notify__text">
+                Что бы получить бонус, перейдите в раздел "Бонусы"
+              </div>
+            </div>
+
+            <!-- Прогресс выключения оповещения -->
+            <div class="notify__progress"></div>
+
+          </div>
+
+          <!-- Конец примера оповещения -->
+
+          <!-- Успех -->
+
+          <div class="notify__content">
+            
+            <div class="notify__cross">
+              <i class="fas fa-times"></i>
+            </div>
+
+            <div class="notify__icon--inner succes">
+              <i class="fas fa-check"></i>
+            </div>
+
+            <div class="notify__text--inner">
+              <div class="notify__title">
+                Успешно!
+              </div>
+
+              <div class="notify__text">
+                Баланс пополнен
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Ошибка -->
+
+          <div class="notify__content">
+            
+            <div class="notify__cross">
+              <i class="fas fa-times"></i>
+            </div>
+
+            <div class="notify__icon--inner error">
+              <i class="fas fa-times"></i>
+            </div>
+
+            <div class="notify__text--inner">
+              <div class="notify__title">
+                Ошибка
+              </div>
+
+              <div class="notify__text">
+                Баланс не пополнен
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Предупреждение -->
+
+          <div class="notify__content">
+            
+            <div class="notify__cross">
+              <i class="fas fa-times"></i>
+            </div>
+
+            <div class="notify__icon--inner warn">
+              <i class="fas fa-question"></i>
+            </div>
+
+            <div class="notify__text--inner">
+              <div class="notify__title">
+                Внимание!
+              </div>
+
+              <div class="notify__text">
+                В целях безопасности поменяйте пароль на более сложный
+              </div>
+            </div>
+
+          </div>
+      </div>
+
+      <!-- Конец уведомлений -->
 
 
 

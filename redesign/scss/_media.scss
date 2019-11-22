@@ -274,9 +274,43 @@
 	.menu__mobile--top--inner{
 		flex-direction: column;
 	}
+
+	.notify{
+		width: 300px;
+	}
+
+	.notify__content{
+		padding: 1rem 2rem;
+	}
+
+	.notify__progress{
+		height: 3px;
+	}
+
+	.notify__icon--inner{
+		width: 35px;
+		height: 35px;
+		font-size: 1.6rem;
+	}
+
+	.notify__text--inner{
+		max-width: 210px;
+	}
+
+	.notify__title{
+		padding-right: 2rem;
+	}
+
+	.modalw__inner{
+		max-width: 380px;
+	}
 }
 
-@media(max-width: 575px){
+@media(max-width: 480px){
+	.container{
+		width: 290px;
+	}
+
 	.mobile__menu--inner{
 		max-width: 100%;
 		height: 100vh;
@@ -295,12 +329,6 @@
 
 	.enter__button{
 		margin: 0 2rem 0 0;
-	}
-}
-
-@media(max-width: 480px){
-	.container{
-		width: 290px;
 	}
 
 	.main__like--games--item{
@@ -472,6 +500,54 @@
 
 	.chat__top--inner{
 		height: 12%;
+	}
+
+	.notify{
+		width: 250px;
+	}
+
+	.notify__content{
+		padding: 1rem;
+	}
+
+	.notify__icon--inner{
+		width: 30px;
+		height: 30px;
+		font-size: 1.4rem;
+	}
+
+	.notify__text--inner{
+		max-width: 190px;
+	}
+
+	.notify__title{
+		padding-right: 2rem;
+	}
+
+	.modalw__inner{
+		max-width: 280px;
+	}
+
+	.modalw__content{
+		padding: 1.5rem 2.5rem;
+	}
+
+	.modalw__button{
+		max-width: 100%;
+		padding: 1rem 2rem;
+	}
+
+	.modalw__title{
+		font-size: 2.5rem;
+		padding: 0px 2rem;
+	}
+
+	.subbutton__links{
+		flex-direction: column;
+	}
+
+	.subbutton__link{
+		margin-top: 1rem;
 	}
 }
 

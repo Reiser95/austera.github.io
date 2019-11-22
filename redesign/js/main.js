@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
 	var eng;
+	var scroll = false;
+	var scrollMob = false;
 
 	/* Функция корректного отображения языков при клике на
 	   Редактировать/Готово */ 
@@ -259,6 +261,14 @@ $(document).ready(function(){
 		}
 		$(".chat__send--input").attr("disabled", "");
 	}
+	else{
+		if(eng == "true"){
+			$(".chat__send--input").attr("placeholder", "enter a massage");
+		}
+		else{
+			$(".chat__send--input").attr("placeholder", "введите сообщение");
+		}
+	}
 
 	/*=== Модальное окно соглашения ===*/
 
@@ -278,6 +288,9 @@ $(document).ready(function(){
 		color.removeClass("choose__color--active");
 		$("#"+localStorage.getItem("checkcolor")+"").addClass("choose__color--active");
 		colorMask.fadeIn(300).css("display", "flex");
+		if($(window).width() <= 480){
+			$(".mobile__menu--inner").removeClass("mobile__on");
+		}
 	});
 
 	colorClose.on("click", function(){
@@ -424,7 +437,7 @@ $(document).ready(function(){
 		else{
 			/* Даем класс что бы в последующем определить элемент */ 
 			$(this).addClass("edit");
-			rename("готово","compvare", this);
+			rename("готово","complete", this);
 
 			/* Даем класс активного редактирования,
 			   если класса drag нет */
@@ -564,11 +577,32 @@ $(document).ready(function(){
 		$(".chat__close--icon").addClass("chat__close--icon--rotate");
 	}
 
+	/* Фиксированность боди при открытие модальных окон */ 
+
+	$(".fixadd").on("click", function(){
+		$("body").addClass("scroll");
+		scroll = true;
+	});
+
+	$(".fixrem").on("click", function(){
+		$("body").removeClass("scroll");
+		scroll = false;
+	});
+
 	/* Закрыть меню если ширина больше 998px */
 
 	$(window).resize(function(){
 	   	if($(window).width() > 991){
 	   		menuMobile.removeClass("mobile__on");
+
+	   		if(chatIf == false){
+	   			$(".games").removeClass("games__fade");
+	   			$(".main").removeClass("full");
+	   		}
+	   		if(chatIf == true){
+	   			$(".games").addClass("games__fade");
+	   			$(".main").addClass("full");
+	   		}
 	   	}
 	    if($(window).width() > 480){
 	   		if(chatIf == true){
@@ -579,32 +613,25 @@ $(document).ready(function(){
 	   			closeChat.removeClass("chat__button--on");
 	   			$(".chat__close--icon").removeClass("chat__close--icon--rotate");
 	   		}
-	   		$("body").removeClass("scroll");
     	}
 	});
 
-	/* Фиксированность боди при открытие модальных окон */ 
+	/* Вход модальное окно */
 
-	$(".fixadd").on("click", function(){
-		$("body").addClass("scroll");
+	$(".enter__button").on("click", function(){
+		$(".enter__modal").fadeIn(300);
+		$(".mobile__menu--inner").removeClass("mobile__on");
 	});
 
-	$(".fixrem").on("click", function(){
-		$("body").removeClass("scroll");
+	$(".enter__cross").on("click", function(){
+		$(".enter__modal").fadeOut(300);
 	});
 
-	$(".fixmobadd").on("click", function(){
-		if($(window).width() <= 480){
-			$("body").addClass("scroll");
-		}
-	});
+	/* Закрытие окна оповещения */
 
-	$(".fixmobrem").on("click", function(){
-		if($(window).width() <= 480){
-			$("body").removeClass("scroll");
-		}
+	$(".notify__cross").on("click", function(){
+		$(this).parent(".notify__content").fadeOut(300);
 	});
-
 });
 
 /*=== Прелоадер ===*/ 

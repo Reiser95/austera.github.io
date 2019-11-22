@@ -73,7 +73,7 @@
 }
 
 .modalw__inner{
-	max-width: 350px;
+	max-width: 500px;
 	min-height: calc(100% - 3.5rem);
 	margin: 1.75rem auto;
 	display: flex;
@@ -82,6 +82,65 @@
 }
 
 .modalw__content{
+	position: relative;
 	width: 100%;
-	display: block;
+	padding: 2rem 5rem;
+	background: var(--sectionB);
+	border-radius: var(--borderO);
+	box-shadow: 0 0 30px var(--blueC);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	min-height: 400px;
+}
+
+.modalw__cross{
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	right: 13px;
+	font-size: 2rem;
+	color: var(--whiteC);
+}
+
+.modalw__title{
+	font-size: 3rem;
+	text-align: center;
+	font-weight: 900;
+}
+
+.modalw__input{
+	color: var(--whiteC);
+	padding: 1.5rem 2rem;
+	margin-top: 2.5rem;
+	width: 100%;
+	background: var(--sectiondarkB);
+	border-radius: var(--borderO);
+	border: 1px solid var(--blueC);
+}
+
+.modalw__input::placeholder{
+	color: var(--whiteC);
+}
+
+.modalw__button{
+	padding: 1.3rem 2rem;
+	max-width: 70%;
+	width: 100%;
+	border-radius: 2rem;
+	background: var(--blueC);
+	margin-top: 2.5rem;
+	font-size: 1.8rem;
+}
+
+.modalw__button:hover{
+	opacity: .6;
+}
+
+.subbutton__links{
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: space-around;
 }
