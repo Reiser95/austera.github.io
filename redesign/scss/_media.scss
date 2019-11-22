@@ -162,7 +162,7 @@
 	}
 
 	.content{
-		padding-top: 1rem;
+		padding-top: 6.5rem;
 	}
 
 	.chat__content{
@@ -209,6 +209,13 @@
 	.header__top--language--inner{
 		margin-right: 0;
 		padding: .2rem .5rem;
+	}
+
+	.header{
+		width: 100%;
+		z-index: 100;
+		position: fixed;
+		background: var(--sectionB);
 	}
 
 	.chat__close--inner, .menu__mobile--icon, .site__logo,
@@ -358,7 +365,7 @@
 	}
 
 	.content{
-		padding: 0;
+		padding: 6.5rem 0 0 0;
 	}
 
 	.footer__inner--link{
