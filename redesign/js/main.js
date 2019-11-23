@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
 	var eng;
-	var scroll = false;
 
 	/* Функция корректного отображения языков при клике на
 	   Редактировать/Готово */ 
@@ -541,56 +540,44 @@ $(document).ready(function(){
 	closeChat.on("click", function(){
 		if($(window).width() > 480){
 			if(chatIf == false){
-				$(".chat__content").addClass("chat__off");
+				$(".main__chat--content").addClass("chat__off");
 	    		$(".chat__close--inner").addClass("chat__button--on");
 	    		$(".chat__close--icon").addClass("chat__close--icon--rotate");
 	    		if($(window).width() > 991){
-	    			$(".games").addClass("games__fade");
-	    			$(".main").addClass("full");
+	    			$(".main__games--content").addClass("games__fade");
+	    			$(".main__content--content").addClass("full");
 	    		}
 	    		chatIf = true;
 			}
 			else{
-				$(".chat__content").removeClass("chat__off");
+				$(".main__chat--content").removeClass("chat__off");
 				$(".chat__close--inner").removeClass("chat__button--on");
 				$(".chat__close--icon").removeClass("chat__close--icon--rotate");
 				if($(window).width() > 991){
-	    			$(".games").removeClass("games__fade");
-	    			$(".main").removeClass("full");
+	    			$(".main__games--content").removeClass("games__fade");
+	    			$(".main__content--content").removeClass("full");
 	    		}
 				chatIf = false;
 			}
 		}
 		else{
 			if(chatIf == false){
-				$(".chat__content").addClass("chat__off");
+				$(".main__chat--content").addClass("chat__off");
 	    		chatIf = true;
 			}
 			else{
-				$(".chat__content").removeClass("chat__off");
+				$(".main__chat--content").removeClass("chat__off");
 				chatIf = false;
 			}
 		}
 	});
 
 	if($(window).width() <= 1400){
-		$(".main").addClass("full");
-		$(".chat__content").addClass("chat__off");
+		$(".main__content--content").addClass("full");
+		$(".main__chat--content").addClass("chat__off");
 		closeChat.addClass("chat__button--on");
 		$(".chat__close--icon").addClass("chat__close--icon--rotate");
 	}
-
-	/* Фиксированность боди при открытие модальных окон */ 
-
-	$(".fixadd").on("click", function(){
-		$("body").addClass("scroll");
-		scroll = true;
-	});
-
-	$(".fixrem").on("click", function(){
-		$("body").removeClass("scroll");
-		scroll = false;
-	});
 
 	/* Закрыть меню если ширина больше 998px */
 
@@ -599,12 +586,12 @@ $(document).ready(function(){
 	   		menuMobile.removeClass("mobile__on");
 
 	   		if(chatIf == false){
-	   			$(".games").removeClass("games__fade");
-	   			$(".main").removeClass("full");
+	   			$(".main__games--content").removeClass("games__fade");
+	   			$(".main__content--content").removeClass("full");
 	   		}
 	   		if(chatIf == true){
-	   			$(".games").addClass("games__fade");
-	   			$(".main").addClass("full");
+	   			$(".main__games--content").addClass("games__fade");
+	   			$(".main__content--content").addClass("full");
 	   		}
 	   	}
 	    if($(window).width() > 480){
@@ -622,37 +609,37 @@ $(document).ready(function(){
 	/* Вход модальное окно */
 
 	$(".enter__button").on("click", function(){
-		$(".modalw").fadeOut(300);
-		$(".enter__modal").fadeIn(300);
+		$(".modalw").fadeOut(0);
+		$(".enter__modal").fadeIn(0);
 		$(".mobile__menu--inner").removeClass("mobile__on");
 	});
 
 	$(".enter__cross").on("click", function(){
-		$(".enter__modal").fadeOut(300);
+		$(".enter__modal").fadeOut(0);
 	});
 
 	/* Регистрация модальное окно */
 
 	$(".register__button").on("click", function(){
-		$(".modalw").fadeOut(300);
-		$(".register__modal").fadeIn(300);
+		$(".modalw").fadeOut(0);
+		$(".register__modal").fadeIn(0);
 		$(".mobile__menu--inner").removeClass("mobile__on");
 	});
 
 	$(".register__cross").on("click", function(){
-		$(".register__modal").fadeOut(300);
+		$(".register__modal").fadeOut(0);
 	});
 
 	/* Восстановление модальное окно */
 
 	$(".return__button").on("click", function(){
-		$(".modalw").fadeOut(300);
-		$(".return__modal").fadeIn(300);
+		$(".modalw").fadeOut(0);
+		$(".return__modal").fadeIn(0);
 		$(".mobile__menu--inner").removeClass("mobile__on");
 	});
 
 	$(".return__cross").on("click", function(){
-		$(".return__modal").fadeOut(300);
+		$(".return__modal").fadeOut(0);
 	});
 
 	/* Закрытие окна оповещения */

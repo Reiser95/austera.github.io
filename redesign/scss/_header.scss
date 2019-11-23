@@ -5,7 +5,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 1.5rem 0;
+	padding: 1.5rem;
 }
 
 .header__top--left--inner{
@@ -236,7 +236,7 @@
 }
 
 .menu__mobile--icon{
-	display: none;
+	display: flex;
 	color: var(--blueC);
 	font-size: 3rem;
 	cursor: pointer;

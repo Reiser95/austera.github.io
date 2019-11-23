@@ -83,6 +83,16 @@
 	color: #e232ba;
 }
 
+.darkorange__circle{
+	background: #18c881;
+	color: #18c881;
+}
+
+.lightgrey__color{
+	background: #5b879c;
+	color: #5b879c;
+}
+
 .green__circle:hover{
 	background: darken(#45a345, 15);
 }
@@ -113,4 +123,12 @@
 
 .pink__circle:hover{
 	background: darken(#e232ba, 15);
+}
+
+.darkorange__circle:hover{
+	background: darken(#18c881, 10);
+}
+
+.lightgrey__color:hover{
+	background: darken(#5b879c, 10);
 }

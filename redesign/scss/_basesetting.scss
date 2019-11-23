@@ -56,10 +56,10 @@ html{
 }
 
 body{
-	overflow-x: hidden;
+	overflow: hidden;
 	font-family: var(--regularF);
 	background: url("../img/home-bg.jpg");
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	color: var(--whiteC);
 }
 
@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h5, p{
 /* ================= Scroll ================= */
 
 ::-webkit-scrollbar{
-	width: 0px;
+	width: 5px;
 }
 
 ::-webkit-scrollbar-track{
@@ -100,8 +100,4 @@ h1, h2, h3, h4, h5, h5, p{
 ::-webkit-scrollbar-thumb{
 	background: var(--sendB);
 	border-radius: 1rem;
-}
-
-.scroll{
-	overflow: hidden;
 }

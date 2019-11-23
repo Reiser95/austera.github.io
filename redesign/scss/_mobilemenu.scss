@@ -9,7 +9,7 @@
 	left: 0;
 	background: var(--menuB);
 	padding: 1.65rem 3rem 2.65rem;
-	transform: translateX(-100%);
+	transform: translateX(-110%);
 	box-shadow: 4px 4px 20px var(--menuB);
 	transition: .3s linear;
 }
@@ -46,7 +46,7 @@
 }
 
 .menu__mobile--tools{
-	display: flex;
+	display: none;
 	align-items: center;
 }
 

@@ -1,16 +1,11 @@
 .games{
 	background: var(--sectionB);
-	border-radius: 0 1rem 1rem 0;
-	padding: 2rem 2.5rem;
+	padding: 2rem 1.5rem;
 	display: inline-block;
 	max-width: 350px;
 	width: 100%;
-	min-height: 700px;
+	height: 100vh;
 	transition: .3s linear;
-}
-
-.games__fade{
-	max-width: 169px;
 }
 
 .games__title{
@@ -21,15 +16,18 @@
 }
 
 .game__box--inner{
+	height: calc(100% - 4rem);
+	overflow-y: auto;
 	display: flex;
 	flex-direction: column;
+	padding: 2rem 1.5rem;
+	margin: 1rem 0;
 }
 
 .game__box{
 	width: 100%;
 	margin-top: 3rem;
-	display: flex;
-	justify-content: center;
+	display: block;
 	padding: 1rem;
 	background: var(--borderB);
 	border-radius: var(--borderO);
@@ -40,4 +38,8 @@
 
 .game__box:hover{
 	background: var(--blueC);
+}
+
+.game__box:first-child{
+	margin-top: 0;
 }

@@ -1,13 +1,18 @@
 /*============== Ширина ==============*/
 
 @media(max-width: 1745px){
-	.games{
+	.main__games--content{
 		width: 100%;
 		max-width: 169px;
 	}
 
 	.main__like--games--carousel{
 		max-width: 750px;
+	}
+
+	.main__chat--content{
+		position: absolute;
+		z-index: 10;
 	}
 }
 
@@ -20,10 +25,6 @@
 @media(max-width: 1400px){
 	.main{
 		margin-right: 0;
-	}
-
-	.chat__inner{
-		height: 350px;
 	}
 
 	.add__like--inner{
@@ -40,11 +41,23 @@
 		width: 100%;
 	}
 
+	.header__bottom--content{
+		padding: 2.5rem;
+	}
+
+	.header__top--choose--color, .header__top--language--inner{
+		margin-right: 1.5rem;
+	}
+
 	.header__bottom--links{
 		width: 100%;
 		order: 3;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.header__bottom--link{
 		margin-top: 2rem;
-		justify-content: space-between;
 	}
 
 	.header__bottom--content{
@@ -62,15 +75,15 @@
 	.mobile__payment{
 		display: inline-block;
 	}
+
+	.header__top--description{
+		display: none;
+	}
 }
 
 @media(max-width: 1200px){
 	.container{
 		width: 950px;
-	}
-
-	.header__top--description{
-		display: none;
 	}
 
 	.add__like--item--box{
@@ -104,10 +117,6 @@
 		display: none;
 	}
 
-	.menu__mobile--icon{
-		display: flex;
-	}
-
 	.content{
 		flex-direction: column;
 	}
@@ -117,12 +126,8 @@
 		max-width: 100%;
 	}
 
-	.games{
-		width: 100%;
-		max-width: 100%;
-		min-height: auto;
-		margin-top: 3rem;
-		border-radius: var(--borderO);
+	.main__games--content{
+		display: none;
 	}
 
 	.content{
@@ -218,6 +223,10 @@
 	.header__top--choose--color, .choise__color--circle,
 	.modalw__label{
 		cursor: default;
+	}
+
+	.menu__mobile--tools{
+		display: flex;
 	}
 }
 
@@ -438,14 +447,8 @@
 	}
 
 	.chat{
-		height: 85%;
 		max-width: 100%;
 		border-radius: 0;
-	}
-
-	.chat__inner{
-		height: 75%;
-		margin-top: 0;
 	}
 
 	.chat__send--inner{
@@ -503,7 +506,7 @@
 		margin-top: 4.5rem;
 	}
 
-	.menu__mobile--chat, .site__logo{
+	.site__logo{
 		display: block;
 	}
 
@@ -517,11 +520,6 @@
 
 	.chat__mobile--cross{
 		display: flex;
-		height: 13%;
-	}
-
-	.chat__top--inner{
-		height: 12%;
 	}
 
 	.notify{
@@ -583,6 +581,22 @@
 	.modalw__button{
 		font-size: 1.6rem;
 	}
+
+	.menu__mobile--chat{
+		display: flex;
+	}
+
+	.main__chat--content{
+		max-width: 100%;
+	}
+
+	.chat__inner{
+		height: calc(100% - 8rem);
+	}
+
+	.chat__content{
+		max-width: 100%;
+	}
 }
 
 /*============== Высота ==============*/
@@ -603,10 +617,6 @@
 		max-height: 100%;
 	}
 
-	.chat{
-		height: 80%;
-	}
-
 	.chat__send--inner{
 		height: 20%;
 	}
@@ -624,10 +634,6 @@
 		top: 20px;
 		right: 20px;
 		font-size: 3rem;
-	}
-
-	.chat{
-		height: 75%;
 	}
 
 	.chat__send--inner{

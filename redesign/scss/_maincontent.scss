@@ -44,6 +44,7 @@
 	font-size: var(--titleF);
 	max-width: 620px;
 	line-height: 1.3;
+	text-align: center;
 }
 
 .main__play--button .main__play{
@@ -89,16 +90,16 @@
 /*=== Контейнер любимых игр ===*/
 
 .main__like--games--inner{
-	margin-top: 4.5rem;
+	margin: 4.5rem 0 0 0;
 	padding: 2.5rem;
 	background: var(--sectionB);
 	width: 100%;
-	border-radius: var(--borderO);
 	position: relative;
 }
 
 .main__like--games--title{
 	font-size: var(--gamesF);
+	text-align: center;
 }
 
 /*=== Слайдер любимых игр ===*/ 
@@ -214,6 +215,11 @@
 
 /* Кнопка редактировать под слайдером */
 
+.main__edit--game{
+	display: flex;
+	justify-content: center;
+}
+
 .main__button--edit{
 	padding: 1.2rem 2rem;
 	min-width: 200px;
@@ -242,10 +248,15 @@
 
 /*=== Заголовок последних выйгрышей ===*/ 
 
-.main__last--wins--title{
+.main__last--wins--title--box{
 	font-size: var(--titleF);
 	margin-top: 7rem;
 	padding-bottom: .5rem;
+	display: flex;
+	justify-content: center;
+}
+
+.main__last--wins--title{
 	border-bottom: 2px dashed var(--whiteC);
 }
 
@@ -253,14 +264,16 @@
 
 .main__last--wins--inner{
 	padding: 2rem 7.5rem;
-	border-radius: var(--borderO);
 	margin-top: 2rem;
 	background: var(--sectiondarkB);
 	width: 100%;
-	height: 250px;
 	word-break: break-word;
+}
+
+.main__last--wins--box{
 	overflow-x: hidden;
 	overflow-y: auto;
+	height: 350px;
 }
 
 .main__last--wins--views, .main__last--wins--item{
@@ -309,4 +322,41 @@
 
 .wins__view{
 	width: 20%;
+}
+
+
+/* NEW */
+
+.main__content{
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.main__games--content, .main__chat--content{
+	overflow: hidden;
+	width: 100%;
+	max-width: 300px;
+	flex-shrink: 0;
+	transition: .3s linear;
+}
+
+.main__chat--content{
+	max-width: 340px;
+	height: 100vh;
+	right: 0;
+	top: 0;
+}
+
+.main__content--content{
+	width: 100%;
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: auto;
+	transition: .2s linear;
+}
+
+.games__fade{
+	max-width: 169px;
 }
