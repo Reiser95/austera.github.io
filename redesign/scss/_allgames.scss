@@ -15,7 +15,7 @@
 	text-align: center;
 }
 
-.game__box--inner{
+.game__box--inner, .game__box--inner--mobile{
 	height: calc(100% - 4rem);
 	overflow-y: auto;
 	display: flex;

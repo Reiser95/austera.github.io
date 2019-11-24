@@ -198,12 +198,14 @@ $(document).ready(function(){
 
 	localStorage.setItem("gamesinner", gamesInner);
 
-	/* Проходимся циклом и выводим игры в окно любимых игр */
+	/* Проходимся циклом и выводим игры в окно любимых игр и в мобильное
+	окно всех игр */
 	if(localStorage.getItem("gamesinner")){
 		var arrInner = localStorage.getItem("gamesinner");
 		arrInner = arrInner.split(",");
 		for(var l of arrInner){
 			var lower = l.toLowerCase();
+			$(".game__box--inner--mobile").append('<a href="'+lower+'" class="game__box--mobile">'+l+'</a>');
 			$(".add__like--inner").append('<div class="add__like--item--box"><div class="main__like--games--item add__like--item"><a href="#" class="game__inner--mask '+lower+'"><span class="games__mask--text--inner">'+l+'</span></a><div class="game__added--mask"><div class="game__added--text en">добавлено</div></div><div class="add__like--check"><i class="fas fa-check"></i></div><div class="add__like--plus"><div class="add__like--plus--inner"><i class="fas fa-plus icon__add"></i></div></div></div></div>');
 		}
 	}
