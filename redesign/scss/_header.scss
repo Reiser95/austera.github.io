@@ -174,10 +174,11 @@
 }
 
 .header__bottom--content{
-	padding: 2.5rem 4rem;
+	padding: 2.5rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 /*=== Страница нижняя часть хедера ===*/
