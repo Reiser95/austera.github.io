@@ -204,7 +204,7 @@ $(document).ready(function(){
 		arrInner = arrInner.split(",");
 		for(var l of arrInner){
 			var lower = l.toLowerCase();
-			$(".add__like--inner").append('<div class="add__like--item--box"><div class="main__like--games--item add__like--item"><a href="#" class="game__inner--mask '+lower+'">'+l+'</a><div class="game__added--mask"><div class="game__added--text en">добавлено</div></div><div class="add__like--check"><i class="fas fa-check"></i></div><div class="add__like--plus"><div class="add__like--plus--inner"><i class="fas fa-plus icon__add"></i></div></div></div></div>');
+			$(".add__like--inner").append('<div class="add__like--item--box"><div class="main__like--games--item add__like--item"><a href="#" class="game__inner--mask '+lower+'"><span class="games__mask--text--inner">'+l+'</span></a><div class="game__added--mask"><div class="game__added--text en">добавлено</div></div><div class="add__like--check"><i class="fas fa-check"></i></div><div class="add__like--plus"><div class="add__like--plus--inner"><i class="fas fa-plus icon__add"></i></div></div></div></div>');
 		}
 	}
 
@@ -242,7 +242,7 @@ $(document).ready(function(){
 			/* Вывод в слайдер любимых игр */
 
 			gameSlider
-			.trigger('add.owl.carousel', ['<div class="main__like--games--item like__game"><a href="/'+lowerActive+'" class="game__inner--mask '+lowerActive+'">'+o+'</a><div class="edit__mask"><div class="edit__arrows"><i class="fas fa-chevron-circle-left edit__arrow edit__arrow--prev"></i><i class="fas fa-chevron-circle-right edit__arrow edit__arrow--next"></i></div></div></div>', -1])
+			.trigger('add.owl.carousel', ['<div class="main__like--games--item like__game"><a href="/'+lowerActive+'" class="game__inner--mask '+lowerActive+'"><span class="games__mask--text--inner">'+o+'</span></a><div class="edit__mask"><div class="edit__arrows"><i class="fas fa-chevron-circle-left edit__arrow edit__arrow--prev"></i><i class="fas fa-chevron-circle-right edit__arrow edit__arrow--next"></i></div></div></div>', -1])
 			.trigger('refresh.owl.carousel');
 		}
 	}
@@ -415,7 +415,7 @@ $(document).ready(function(){
 			/* Добавление в слайдер активного элемента */
 
 			gameSlider
-			.trigger('add.owl.carousel', ['<div class="main__like--games--item like__game"><a href="/'+addLower+'" class="game__inner--mask '+addLower+'">'+add+'</a><div class="edit__mask"><div class="edit__arrows"><i class="fas fa-chevron-circle-left edit__arrow edit__arrow--prev"></i><i class="fas fa-chevron-circle-right edit__arrow edit__arrow--next"></i></div></div></div>', -1])
+			.trigger('add.owl.carousel', ['<div class="main__like--games--item like__game"><a href="/'+addLower+'" class="game__inner--mask '+addLower+'"><span class="games__mask--text--inner">'+add+'</span></a><div class="edit__mask"><div class="edit__arrows"><i class="fas fa-chevron-circle-left edit__arrow edit__arrow--prev"></i><i class="fas fa-chevron-circle-right edit__arrow edit__arrow--next"></i></div></div></div>', -1])
 			.trigger('refresh.owl.carousel');
 		}
 	});

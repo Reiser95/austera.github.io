@@ -1,4 +1,4 @@
-.games{
+.games, .games__mobile{
 	background: var(--sectionB);
 	padding: 2rem 1.5rem;
 	display: inline-block;
@@ -24,7 +24,7 @@
 	margin: 1rem 0;
 }
 
-.game__box{
+.game__box, .game__box--mobile{
 	width: 100%;
 	margin-top: 3rem;
 	display: block;
@@ -36,10 +36,17 @@
 	transition: .2s linear;
 }
 
-.game__box:hover{
+.game__box:hover, .game__box--mobile:hover{
 	background: var(--blueC);
 }
 
-.game__box:first-child{
+.game__box:first-child, .game__box--mobile:first-child{
 	margin-top: 0;
+}
+
+.games__mobile{
+	display: none;
+	flex-direction: column;
+	margin-top: 3rem;
+	max-width: 100%;
 }

@@ -237,15 +237,17 @@
 		z-index: 100;
 	}
 
-	.footer{
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-	}
-
 	.main__title--inner{
 		margin-top: 7rem;
+	}
+
+	.games__mobile{
+		display: flex;
+		height: auto;
+	}
+
+	.game__box:nth-child(2){
+		margin-top: 0;
 	}
 }
 

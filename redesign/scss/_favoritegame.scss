@@ -36,7 +36,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	border-radius: var(--borderO);
+	border-radius: .7rem;
 }
 
 .active__like--game .add__like--check{
@@ -98,6 +98,11 @@
 	display: none;
 }
 
+.games__mask--text--inner{
+	padding: 1rem;
+	background: rgba(0, 0, 0, .4);
+}
+
 .owl-dots{
 	display: none;
 }
@@ -105,4 +110,14 @@
 .owl-carousel.owl-drag .owl-item{
 	display: flex;
 	justify-content: center;
+}
+
+.expbattler{
+	background: url("../img/wheel.png") center no-repeat;
+	background-size: cover;
+}
+
+.expduel{
+	background: url("../img/tower.png") center no-repeat;
+	background-size: cover;
 }
