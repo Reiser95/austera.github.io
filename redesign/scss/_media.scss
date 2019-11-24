@@ -113,7 +113,7 @@
 	}
 
 	.header__top--left--inner, .header__top--profile--inner,
-	.header__bottom--content, .main__title--inner{
+	.header__bottom--content{
 		display: none;
 	}
 
@@ -227,6 +227,25 @@
 
 	.menu__mobile--tools{
 		display: flex;
+	}
+
+	.header__top--inner{
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: var(--sectiondarkB);
+		z-index: 100;
+	}
+
+	.footer{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	.main__title--inner{
+		margin-top: 7rem;
 	}
 }
 

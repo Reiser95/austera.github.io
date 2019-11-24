@@ -26,6 +26,7 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	padding: 0px 2rem;
 }
 
 .main__title--inner--mob{
@@ -268,6 +269,7 @@
 	background: var(--sectiondarkB);
 	width: 100%;
 	word-break: break-word;
+	text-align: center;
 }
 
 .main__last--wins--box{
