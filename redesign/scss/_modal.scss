@@ -91,7 +91,6 @@
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	min-height: 400px;
 }
 
 .modalw__cross{
@@ -203,13 +202,14 @@
 .modalw__label:before{
 	content: "";
 	position: absolute;
-	top: -2px;
+	top: -3px;
 	left: -35px;
 	width: 25px;
 	height: 25px;
 	background: #1c2028;
 	border: 1px solid transparent;
 	border-radius: .3rem;
+	border: 1px solid var(--blueC);
 	transition: .2s linear;
 }
 
@@ -222,8 +222,4 @@
 	left: -29px;
 	transform: scale(0);
 	transition: .2s linear;
-}
-
-.modalw__label:hover:before{
-	border: 1px solid var(--blueC);
 }

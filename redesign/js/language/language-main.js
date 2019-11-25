@@ -27,7 +27,8 @@ let homeWord = {"home":"главная", "games":"игры",
 "register account":"зарегистрироваться",
 "i accept the terms and rule of the site":"я принимаю условия и правила сайта",
 "i am remember password":"вспомнили пароль?",
-"return password":"восстановить пароль", "return":"восстановить"};
+"return password":"восстановить пароль", "return":"восстановить",
+"coeff":"коэфф", "result":"исход", "time":"время"};
 
 let redesignWord = {"home":"главная", "games":"игры",
 "history games":"история игр", "group vk":"группа vk",
@@ -50,4 +51,11 @@ let redesignWord = {"home":"главная", "games":"игры",
 "forecast":"ставка","time":"время","coefficient":"коэфф",
 "win":"выигрыш","last":"последние","wins":"выигрыши", "added":"добавлено",
 "autorization":"авторизация", "create account?":"создать аккаунт?",
-"return password?":"забыли пароль?", "enter":"войти"};
+"return password?":"забыли пароль?", "enter":"войти", 
+"enter vk":"войти через вк", "register":"регистрация",
+"already have an account?":"уже есть аккаунт?",
+"register account":"зарегистрироваться",
+"i accept the terms and rule of the site":"я принимаю условия и правила сайта",
+"i am remember password":"вспомнили пароль?",
+"return password":"восстановить пароль", "return":"восстановить", "баланс пополнен":"balance is replenished",
+"успешно!":"succes!", "coefficient":"коэффициент", "result":"исход"};

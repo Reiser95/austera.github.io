@@ -188,7 +188,7 @@
 
                     <!-- Кнопка открытия истории игр -->
 
-                    <button class="button header__bottom--link">
+                    <button class="button header__bottom--link history__link">
                       <i class="fas fa-history icon"></i>
                       <span class="en">история игр</span>
                     </button>
@@ -224,7 +224,7 @@
                         </span> 
                         <span class="blue">
                             <span class="balance">
-                                100000
+                              100000
                             </span> 
                             exp
                         </span>
@@ -660,6 +660,11 @@
               <!-- Верхняя часть чата(Показ сообщений) -->
 
               <div class="chat">
+                
+                <div class="chat__scroll--bottom">
+                  <i class="fas fa-arrow-down"></i>
+                </div>
+
                 <div class="chat__top--inner">
                   
                   <!-- Показ онлайна сайта -->
@@ -1240,7 +1245,7 @@
 
           <!-- Кнопка открытия истории игр -->
 
-          <button class="button header__bottom--link">
+          <button class="button header__bottom--link history__link">
             <i class="fas fa-history icon"></i>
             <span class="en">история игр</span>
           </button>
@@ -1312,9 +1317,9 @@
             </button>
 
             <div class="enter__inputs">
-              <input type="text" class="input modalw__input" placeholder="введите логин">
+              <input type="text" data-en="login" class="input modalw__input" placeholder="введите логин">
 
-              <input type="password" class="input modalw__input" placeholder="введите пароль">
+              <input type="password" data-en="password" class="input modalw__input" placeholder="введите пароль">
             </div>
 
             <button class="button modalw__button en">войти</button>
@@ -1348,11 +1353,11 @@
               регистрация
             </div>
 
-            <input type="text" class="input modalw__input" placeholder="придумайте логин">
+            <input type="text" data-en="login" class="input modalw__input" placeholder="придумайте логин">
 
-            <input type="password" class="input modalw__input" placeholder="придумайте пароль">
+            <input type="password" data-en="password" class="input modalw__input" placeholder="придумайте пароль">
 
-            <input type="password" class="input modalw__input" placeholder="подтвердите пароль">
+            <input type="password" data-en="confirm password" class="input modalw__input" placeholder="подтвердите пароль">
 
             <input type="checkbox" class="modalw__checkbox" id="register__check">
             <label for="register__check" class="modalw__label en">
@@ -1386,7 +1391,7 @@
               восстановить пароль
             </div>
 
-            <input type="text" class="input modalw__input" placeholder="введите свой email">
+            <input type="text" data-en="your email" class="input modalw__input" placeholder="введите свой email">
 
             <button class="button modalw__button en">восстановить</button>
 
@@ -1404,6 +1409,130 @@
       </div>
 
       <!-- Конец модального окна восстановления -->
+
+
+
+      <!-- Модальное окно истории игр -->
+
+      <div class="modalw history__modal">
+        <div class="modalw__inner">
+          <div class="modalw__content history__content">
+            <div class="modalw__cross history__cross">
+              <i class="fas fa-times"></i>
+            </div>
+
+            <div class="modalw__title en">
+              история игр
+            </div>
+
+            <div class="history__games--inner">
+              <!-- Вставятся динамически -->
+            </div>
+
+            <div class="history__games--result--inner">
+              <div class="history__games--result">
+
+                <div class="history__games--result--views">
+                  <div class="history__games--result--views--text en">
+                    ставка
+                  </div>
+
+                  <div class="history__games--result--views--text blue en">
+                    коэфф
+                  </div>
+
+                  <div class="history__games--result--views--text blue en">
+                    время
+                  </div>
+
+                  <div class="history__games--result--views--text en">
+                    исход
+                  </div>
+                </div>
+
+                <!-- Пример ставки -->
+
+                <div class="history__games--result--item">
+
+                  <div class="histori__games--mobile en">
+                    ставка
+                  </div>
+
+                  <div class="history__games--result--item--text en">
+                    100 exp
+                  </div>
+
+                  <div class="histori__games--mobile en">
+                    коэфф
+                  </div>
+
+                  <div class="history__games--result--item--text en">
+                    1.5x
+                  </div>
+
+                  <div class="histori__games--mobile en">
+                    время
+                  </div>
+
+                  <div class="history__games--result--item--text en">
+                    21:15
+                  </div>
+
+                  <div class="histori__games--mobile en">
+                    исход
+                  </div>
+
+                  <div class="history__games--result--item--text en win">
+                    150 exp
+                  </div>
+                </div>
+
+                <!-- Конец примера ставки -->
+
+                <div class="history__games--result--item">
+
+                  <div class="histori__games--mobile en">
+                    ставка
+                  </div>
+
+                  <div class="history__games--result--item--text en">
+                    100 exp
+                  </div>
+
+                  <div class="histori__games--mobile en">
+                    коэфф
+                  </div>
+
+                  <div class="history__games--result--item--text en">
+                    1.5x
+                  </div>
+
+                  <div class="histori__games--mobile en">
+                    время
+                  </div>
+
+                  <div class="history__games--result--item--text en">
+                    21:15
+                  </div>
+
+                  <div class="histori__games--mobile en">
+                    исход
+                  </div>
+
+                  <div class="history__games--result--item--text en lose">
+                    0 exp
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Конец модального окна истории игр -->
+
+
 
 
       <!-- Уведомления -->
@@ -1428,12 +1557,12 @@
             <!-- Весь текст в оповещении -->
             <div class="notify__text--inner">
               <!-- Заголовок оповещения -->
-              <div class="notify__title">
+              <div class="notify__title en">
                 Информация
               </div>
               
               <!-- Текст оповещения -->
-              <div class="notify__text">
+              <div class="notify__text en">
                 Что бы получить бонус, перейдите в раздел "Бонусы"
               </div>
             </div>
@@ -1458,11 +1587,11 @@
             </div>
 
             <div class="notify__text--inner">
-              <div class="notify__title">
+              <div class="notify__title en">
                 Успешно!
               </div>
 
-              <div class="notify__text">
+              <div class="notify__text en">
                 Баланс пополнен
               </div>
             </div>
@@ -1482,11 +1611,11 @@
             </div>
 
             <div class="notify__text--inner">
-              <div class="notify__title">
+              <div class="notify__title en">
                 Ошибка
               </div>
 
-              <div class="notify__text">
+              <div class="notify__text en">
                 Баланс не пополнен
               </div>
             </div>
@@ -1506,11 +1635,11 @@
             </div>
 
             <div class="notify__text--inner">
-              <div class="notify__title">
+              <div class="notify__title en">
                 Внимание!
               </div>
 
-              <div class="notify__text">
+              <div class="notify__text en">
                 В целях безопасности поменяйте пароль на более сложный
               </div>
             </div>
@@ -1538,5 +1667,6 @@
       <script src="js/main.js"></script>
       <script src="js/menumobile.js"></script>
       <script src="js/slider-main.js"></script>
+      <script src="js/jquery.spincrement.min.js"></script>
     </body>
 </html>

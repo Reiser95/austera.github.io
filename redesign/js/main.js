@@ -64,6 +64,18 @@ $(document).ready(function(){
 		}
 	}
 
+	/* Функции включения и выключения модальных окон */
+
+	function modalIn(mod){
+		$(".modalw").fadeOut(0);
+		$("."+mod+"").fadeIn(0);
+		$(".mobile__menu--inner").removeClass("mobile__on");
+	}
+
+	function modalOut(cross){
+		$("."+cross+"").fadeOut(0);
+	} 
+
 	/* Функция, которая автоматически проверяет ссылку браузера,
 	и вставляет название страницы динамически */ 
 
@@ -137,7 +149,7 @@ $(document).ready(function(){
 
 	let pageTitle;
 
-	if(url == ""){
+	if(url == "" || url == "#"){
 		url = "home";
 	}
 
@@ -205,6 +217,7 @@ $(document).ready(function(){
 		arrInner = arrInner.split(",");
 		for(var l of arrInner){
 			var lower = l.toLowerCase();
+			$(".history__games--inner").append('<button class="button history__games--link '+lower+'__history">'+l+'</button>');
 			$(".game__box--inner--mobile").append('<a href="'+lower+'" class="game__box--mobile">'+l+'</a>');
 			$(".add__like--inner").append('<div class="add__like--item--box"><div class="main__like--games--item add__like--item"><a href="#" class="game__inner--mask '+lower+'"><span class="games__mask--text--inner">'+l+'</span></a><div class="game__added--mask"><div class="game__added--text en">добавлено</div></div><div class="add__like--check"><i class="fas fa-check"></i></div><div class="add__like--plus"><div class="add__like--plus--inner"><i class="fas fa-plus icon__add"></i></div></div></div></div>');
 		}
@@ -513,11 +526,8 @@ $(document).ready(function(){
 
 	$("body").on("keydown", function(e){
 		if(e.which == 27){
-			if(scroll == true){
-				$(".modal").fadeOut(300);
-				$(".modalw").fadeOut(300);
-				$("body").removeClass("scroll");
-			}
+			$(".modal").fadeOut(0);
+			$(".modalw").fadeOut(0);
 		}
 	});
 
@@ -611,43 +621,72 @@ $(document).ready(function(){
 	/* Вход модальное окно */
 
 	$(".enter__button").on("click", function(){
-		$(".modalw").fadeOut(0);
-		$(".enter__modal").fadeIn(0);
-		$(".mobile__menu--inner").removeClass("mobile__on");
+		modalIn("enter__modal");
 	});
 
 	$(".enter__cross").on("click", function(){
-		$(".enter__modal").fadeOut(0);
+		modalOut("enter__modal");
 	});
 
 	/* Регистрация модальное окно */
 
 	$(".register__button").on("click", function(){
-		$(".modalw").fadeOut(0);
-		$(".register__modal").fadeIn(0);
-		$(".mobile__menu--inner").removeClass("mobile__on");
+		modalIn("register__modal");
 	});
 
 	$(".register__cross").on("click", function(){
-		$(".register__modal").fadeOut(0);
+		modalOut("register__modal");
 	});
 
 	/* Восстановление модальное окно */
 
 	$(".return__button").on("click", function(){
-		$(".modalw").fadeOut(0);
-		$(".return__modal").fadeIn(0);
-		$(".mobile__menu--inner").removeClass("mobile__on");
+		modalIn("return__modal");
 	});
 
 	$(".return__cross").on("click", function(){
-		$(".return__modal").fadeOut(0);
+		modalOut("return__modal");
+	});
+
+	/* История игр модальное окно */
+
+	$(".history__link").on("click", function(){
+		modalIn("history__modal");
+	});
+
+	$(".history__cross").on("click", function(){
+		modalOut("history__modal");
 	});
 
 	/* Закрытие окна оповещения */
 
 	$(".notify__cross").on("click", function(){
 		$(this).parent(".notify__content").fadeOut(300);
+	});
+
+	/* Анимация подсчета числа баланса */
+
+	$(".balance").spincrement({
+		duration: 500,
+		thousandSeparator: ""
+	});
+
+	/* Замена языка в инпутах */
+
+	if(eng == "true"){
+		$(".modalw__input").each(function(i){
+			var inputEn = $(this).attr("data-en");
+			$(this).attr("placeholder", inputEn);
+		});
+	}
+
+	/* Выдаем активный класс в истории игр */ 
+
+	$(".expbattler__history").addClass("history__active--link");
+
+	$(".history__games--link").on("click", function(){
+		$(".history__games--link").removeClass("history__active--link");
+		$(this).addClass("history__active--link");
 	});
 });
 

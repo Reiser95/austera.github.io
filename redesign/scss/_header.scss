@@ -186,6 +186,7 @@
 .header__bottom--page{
 	font-size: var(--gamesF);
 	font-family: var(--boldF);
+	margin-right: 1rem;
 } 
 
 /*=== Ссылки нижняя часть хедера ===*/
@@ -263,4 +264,5 @@
 	max-width: 180px;
 	text-align: center;
 	word-break: break-all;
+	min-width: 170px;
 }

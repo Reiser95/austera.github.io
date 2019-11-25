@@ -232,3 +232,41 @@
 .chat__mobile--cross:hover .chat__cross{
 	opacity: .6;
 }
+
+/* Скролл вниз у чата */
+
+.chat__scroll--bottom{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 40px;
+	right: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--sectionB);
+	box-shadow: 0 0 15px var(--blueC);
+	font-size: 1.3rem;
+	cursor: pointer;
+	transition: .2s linear;
+}
+
+.chat__scroll--bottom:before{
+	content: "99+";
+	width: 25px;
+	height: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: var(--blueC);
+	position: absolute;
+	right: -10px;
+	top: -10px;
+	font-size: 1rem;
+}
+
+.chat__scroll--bottom:hover{
+	background: var(--sectiondark2B);
+}

@@ -71,6 +71,14 @@
 	border: 5px solid var(--whiteC);
 }
 
+.win{
+	color: green;
+}
+
+.lose{
+	color: red;
+}
+
 /* Классы мини-игр */
 /* К классу game__inner--mask прописываем
    класс игры и задаем нужный фон */ 

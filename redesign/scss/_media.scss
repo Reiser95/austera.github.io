@@ -1,4 +1,11 @@
 /*============== Ширина ==============*/
+@media(max-width: 1800px){
+	.main__chat--content{
+		position: absolute;
+		z-index: 10;
+	}
+}
+
 
 @media(max-width: 1745px){
 	.main__games--content{
@@ -8,11 +15,6 @@
 
 	.main__like--games--carousel{
 		max-width: 750px;
-	}
-
-	.main__chat--content{
-		position: absolute;
-		z-index: 10;
 	}
 }
 
@@ -249,6 +251,15 @@
 	.game__box--mobile:nth-child(2){
 		margin-top: 0;
 	}
+
+	.history__content{
+		min-width: 550px;
+		max-width: 550px;
+	}
+
+	.history__content{
+		padding: 2rem;
+	}
 }
 
 @media(max-width: 870px){
@@ -355,6 +366,44 @@
 
 	.subbutton__link{
 		margin-top: 1rem;
+	}
+}
+
+@media(max-width: 610px){
+	.history__content{
+		min-width: 250px;
+		max-width: 300px;
+	}
+
+	.history__content{
+		padding: 2rem 1rem;
+	}
+
+	.histori__games--mobile{
+		display: block;
+		padding: 1rem;
+		background: var(--blueC);
+		width: 100%;
+		text-align: center;
+	}
+
+	.history__games--result--item{
+		flex-direction: column;
+		border: 1px solid var(--blueC);
+		margin-top: 1.5rem;
+		padding: 0;
+	}
+
+	.history__games--result--views{
+		display: none;
+	}
+
+	.history__games--result--item--text{
+		width: 100%;
+	}
+
+	.history__games--result--inner{
+		height: 370px;
 	}
 }
 
@@ -687,5 +736,11 @@
 	.choose__color--box{
 		margin-top: 1rem;
 		max-height: 120px;
+	}
+}
+
+@media(max-height: 290px){
+	.chat__scroll--bottom{
+		display: none;
 	}
 }
