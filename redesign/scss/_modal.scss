@@ -106,6 +106,9 @@
 	font-size: 3rem;
 	text-align: center;
 	font-weight: 900;
+	margin: 0px 2rem;
+	padding-bottom: .5rem;
+	border-bottom: 1px dashed var(--whiteC);
 }
 
 .modalw__input{
@@ -285,4 +288,45 @@
 
 .faq__arrow--transform{
 	transform: rotate(180deg);
+}
+
+/* Соглашение */
+
+.agree__warning--title{
+	font-size: var(--playF);
+	color: #ce1e1e;
+	font-weight: 900;
+	text-align: center;
+	margin-top: 3.5rem;
+	text-transform: uppercase;
+}
+
+.agree__inner--content{
+	max-height: 500px;
+	overflow-y: auto;
+	margin-top: 10rem;
+	padding: 0px 1rem;
+}
+
+.agree__inner--box--title{
+	padding: 0 2rem 1rem 2rem;
+	width: 100%;
+	margin-top: 2rem;
+	text-align: center;
+	font-size: 2.5rem;
+	color: var(--blueC);
+	text-transform: uppercase;
+	font-weight: 900;
+	border-bottom: 2px solid var(--blueC);
+}
+
+.agree__inner--box--text{
+	margin-top: 1.5rem;
+	color: var(--whiteC);
+	font-size: var(--playF);
+	padding: 0px 1.5rem;
+}
+
+.agree__inner--box--title:first-child{
+	margin-top: 0;
 }

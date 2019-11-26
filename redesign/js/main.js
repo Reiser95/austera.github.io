@@ -6,7 +6,7 @@ $(document).ready(function(){
 	   Редактировать/Готово */ 
 
 	function rename(rus, english, clas){
-		if(eng == "false"){
+		if(eng == false){
 			$(clas).text(""+rus+"");
 		}
 		else{
@@ -128,12 +128,14 @@ $(document).ready(function(){
 		location.reload();
 	});
 
-	if(localStorage.getItem("lang") == null){
+	if(localStorage.getItem("lang") == ""){
 		if(userLang == "ru"){
 			eng = false;
+			localStorage.setItem("lang", eng);
 		}
 		else{
 			eng = true;
+			localStorage.setItem("lang", eng);
 		}
 	}
 	else{
@@ -666,6 +668,16 @@ $(document).ready(function(){
 
 	$(".faq__cross").on("click", function(){
 		modalOut("faq__modal");
+	});
+
+	/* Соглашение модальное окно */
+
+	$(".user__agree").on("click", function(){
+		modalIn("agree__modal");
+	});
+
+	$(".agree__cross").on("click", function(){
+		modalOut("agree__modal");
 	});
 
 	/* Закрытие окна оповещения */

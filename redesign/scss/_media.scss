@@ -110,7 +110,7 @@
 }
 
 @media(max-width: 1100px){
-	.faq__content{
+	.faq__content, .agree__content{
 		min-width: 550px;
 		max-width: 600px;
 		padding: 2rem;
@@ -231,7 +231,7 @@
 	.footer__inner--link, .main__like--games--item,
 	.header__bottom--link, .header__top--language--flag,
 	.header__top--choose--color, .choise__color--circle,
-	.modalw__label{
+	.modalw__label, .faq__inner--box, .chat__scroll--bottom{
 		cursor: default;
 	}
 
@@ -418,10 +418,19 @@
 		height: 330px;
 	}
 
-	.faq__content{
+	.faq__content, .agree__content{
 		min-width: 250px;
 		max-width: 300px;
 		padding: 1rem;
+	}
+
+	.agree__warning--title, .agree__inner--box--title{
+		font-size: 1.5rem;
+	}
+
+	.agree__inner--box--text{
+		padding: 0;
+		font-size: 1.4rem;
 	}
 
 	.faq__inner--box{
@@ -430,7 +439,7 @@
 
 	.faq__inner--title{
 		padding: 0px 1.5rem;
-		font-size: 1.5rem;
+		font-size: 1.6rem;
 	}
 
 	.faq__inner--arrow{
@@ -442,7 +451,7 @@
 
 	.faq__inner--answer{
 		padding: 0;
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 	}
 }
 
@@ -667,7 +676,6 @@
 
 	.modalw__title{
 		font-size: 2.5rem;
-		padding: 0px 2rem;
 	}
 
 	.subbutton__links{
@@ -704,6 +712,10 @@
 
 	.chat__content{
 		max-width: 100%;
+	}
+
+	.agree__content{
+		padding: 1rem;
 	}
 }
 

@@ -34,7 +34,10 @@ let homeWord = {"home":"главная", "games":"игры",
 "минимальная сумма вывода: 150exp, мы сделали именно такую сумму на данный момент, во избежание перегрузок системы обработки платежей",
 "my conclusion is rejected, what to do?":"мой вывод отклонен, что делать?",
 "most likely you made a mistake when you entered your wallet/Bank card number, try again, if the problem is not solved, then write to us by mail or to the group in the vk":
-"скорее всего вы допустили ошибку когда вводили ваш номер кошелька/банквоской карты, повторите попытку снова, если проблема не решилась, то напишите нам на почту или в группу в вк"};
+"скорее всего вы допустили ошибку когда вводили ваш номер кошелька/банквоской карты, повторите попытку снова, если проблема не решилась, то напишите нам на почту или в группу в вк",
+"attention! if you do not agree with the terms of this user agreement, do not log in to the site expcash.info and do not use the services of this site":
+"внимание! если вы не согласны с условиями настоящего пользовательского соглашения, не авторизуйтесь на сайте expcash.info и не используйте сервисы данного сайта",
+"1. terms and definitions":"1. термины и определения"};
 
 let redesignWord = {"home":"главная", "games":"игры",
 "history games":"история игр", "group vk":"группа vk",
