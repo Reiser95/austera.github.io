@@ -658,6 +658,16 @@ $(document).ready(function(){
 		modalOut("history__modal");
 	});
 
+	/* FAQ модальное окно */
+
+	$(".faq__link").on("click", function(){
+		modalIn("faq__modal");
+	});
+
+	$(".faq__cross").on("click", function(){
+		modalOut("faq__modal");
+	});
+
 	/* Закрытие окна оповещения */
 
 	$(".notify__cross").on("click", function(){
@@ -687,6 +697,24 @@ $(document).ready(function(){
 	$(".history__games--link").on("click", function(){
 		$(".history__games--link").removeClass("history__active--link");
 		$(this).addClass("history__active--link");
+	});
+
+	/* Отображение ответа после клика на вопрос FAQ */
+
+	$(".faq__inner--box").on("click", function(){
+
+		if(!$(this).children(".faq__inner--arrow").hasClass("faq__arrow--transform")){
+			$(".faq__inner--arrow").removeClass("faq__arrow--transform");
+			$(".faq__inner--answer").slideUp(100);
+
+			$(this).children(".faq__inner--arrow").addClass("faq__arrow--transform");
+			$(this).children(".faq__inner--answer").slideDown(100);
+		}
+		else{
+			$(this).children(".faq__inner--arrow").removeClass("faq__arrow--transform");
+			$(this).children(".faq__inner--answer").slideUp(100);
+		}
+		
 	});
 });
 

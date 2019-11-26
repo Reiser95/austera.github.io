@@ -83,10 +83,10 @@
 }
 
 .history__games--result--inner{
-	padding: 2rem;
+	padding: 0 2rem 2rem 2rem;
 	margin-top: 1rem;
 	overflow-y: auto;
-	height: 600px;
+	max-height: 525px;
 	width: 100%;
 }
 
@@ -130,6 +130,11 @@
 .history__content{
 	min-width: 800px;
 	max-width: 850px;
+}
+
+.faq__content{
+	min-width: 1000px;
+	max-width: 1050px;
 }
 
 .histori__games--mobile{

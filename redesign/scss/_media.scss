@@ -109,6 +109,14 @@
 	}
 }
 
+@media(max-width: 1100px){
+	.faq__content{
+		min-width: 550px;
+		max-width: 600px;
+		padding: 2rem;
+	}
+}
+
 @media(max-width: 998px){
 	.container{
 		width: 728px;
@@ -390,8 +398,12 @@
 	.history__games--result--item{
 		flex-direction: column;
 		border: 1px solid var(--blueC);
-		margin-top: 1.5rem;
+		margin-top: 4rem;
 		padding: 0;
+	}
+
+	.history__games--result--item:nth-child(2){
+		margin-top: 1rem;
 	}
 
 	.history__games--result--views{
@@ -403,7 +415,34 @@
 	}
 
 	.history__games--result--inner{
-		height: 370px;
+		height: 330px;
+	}
+
+	.faq__content{
+		min-width: 250px;
+		max-width: 300px;
+		padding: 1rem;
+	}
+
+	.faq__inner--box{
+		padding: 1.5rem;
+	}
+
+	.faq__inner--title{
+		padding: 0px 1.5rem;
+		font-size: 1.5rem;
+	}
+
+	.faq__inner--arrow{
+		position: absolute;
+		top: 13px;
+		right: 10px;
+		transition: .1s linear;
+	}
+
+	.faq__inner--answer{
+		padding: 0;
+		font-size: 1.2rem;
 	}
 }
 

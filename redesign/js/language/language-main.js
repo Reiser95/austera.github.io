@@ -28,7 +28,13 @@ let homeWord = {"home":"главная", "games":"игры",
 "i accept the terms and rule of the site":"я принимаю условия и правила сайта",
 "i am remember password":"вспомнили пароль?",
 "return password":"восстановить пароль", "return":"восстановить",
-"coeff":"коэфф", "result":"исход", "time":"время"};
+"coeff":"коэфф", "result":"исход", "time":"время",
+"what is the minimum withdrawal amount?":"какая минимальная сумма вывода?",
+"minimum withdrawal amount: 150exp, we have made exactly this amount at the moment, in order to avoid overloads of the payment processing system":
+"минимальная сумма вывода: 150exp, мы сделали именно такую сумму на данный момент, во избежание перегрузок системы обработки платежей",
+"my conclusion is rejected, what to do?":"мой вывод отклонен, что делать?",
+"most likely you made a mistake when you entered your wallet/Bank card number, try again, if the problem is not solved, then write to us by mail or to the group in the vk":
+"скорее всего вы допустили ошибку когда вводили ваш номер кошелька/банквоской карты, повторите попытку снова, если проблема не решилась, то напишите нам на почту или в группу в вк"};
 
 let redesignWord = {"home":"главная", "games":"игры",
 "history games":"история игр", "group vk":"группа vk",
@@ -51,11 +57,12 @@ let redesignWord = {"home":"главная", "games":"игры",
 "forecast":"ставка","time":"время","coefficient":"коэфф",
 "win":"выигрыш","last":"последние","wins":"выигрыши", "added":"добавлено",
 "autorization":"авторизация", "create account?":"создать аккаунт?",
-"return password?":"забыли пароль?", "enter":"войти", 
+"return password?":"забыли пароль?", "enter":"войти",
 "enter vk":"войти через вк", "register":"регистрация",
 "already have an account?":"уже есть аккаунт?",
 "register account":"зарегистрироваться",
 "i accept the terms and rule of the site":"я принимаю условия и правила сайта",
 "i am remember password":"вспомнили пароль?",
-"return password":"восстановить пароль", "return":"восстановить", "баланс пополнен":"balance is replenished",
-"успешно!":"succes!", "coefficient":"коэффициент", "result":"исход"};
+"return password":"восстановить пароль", "return":"восстановить",
+"coeff":"коэфф", "result":"исход", "time":"время",
+"what is the minimum withdrawal amount?":"какая минимальная сумма вывода?"};
