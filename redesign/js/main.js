@@ -6,7 +6,7 @@ $(document).ready(function(){
 	   Редактировать/Готово */ 
 
 	function rename(rus, english, clas){
-		if(eng == false){
+		if(eng == "false" || eng == false){
 			$(clas).text(""+rus+"");
 		}
 		else{
