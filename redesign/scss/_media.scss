@@ -419,13 +419,13 @@
 	}
 
 	.faq__content, .agree__content{
-		min-width: 250px;
-		max-width: 300px;
+		min-width: 80vw;
+		max-width: 90vw;
 		padding: 1rem;
 	}
 
 	.agree__warning--title, .agree__inner--box--title{
-		font-size: 1.5rem;
+		font-size: 1.3rem;
 	}
 
 	.agree__inner--box--text{
@@ -666,7 +666,11 @@
 	}
 
 	.modalw__content{
-		padding: 1.5rem 2.5rem;
+		padding: 1.5rem;
+	}
+
+	.faq__content, .agree__content{
+		padding: 1rem .7rem;
 	}
 
 	.modalw__button{

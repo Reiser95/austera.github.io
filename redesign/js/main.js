@@ -6,7 +6,9 @@ $(document).ready(function(){
 	   Редактировать/Готово */ 
 
 	function rename(rus, english, clas){
-		if(eng == "false" || eng == false){
+		var editLang = localStorage.getItem("language");
+
+		if(editLang == "ru"){
 			$(clas).text(""+rus+"");
 		}
 		else{
@@ -14,9 +16,10 @@ $(document).ready(function(){
 		}
 	}
 
+
 	/* Функция, которая переводит слова на кнопке Редактировать/Готово */ 
 
-	function translate(array){
+	function translate(arr){
 		if(localStorage.getItem("language")){
 			var lang = localStorage.getItem("language");
 			flag.removeClass("active__flag");
@@ -25,8 +28,8 @@ $(document).ready(function(){
 			if(lang == "en"){
 				$(".en").each(function(i){
 					var value = $(this).text().trim();
-					for(var r in array){
-						if(array[r] == value){
+					for(var r in arr){
+						if(arr[r] == value){
 							$(this).text(r + " ");
 						}
 					}
@@ -35,9 +38,9 @@ $(document).ready(function(){
 			else{
 				$(".en").each(function(i){
 					var value = $(this).text().trim();
-					for(var r in array){
+					for(var r in arr){
 						if(r == value){
-							$(this).text(array[r] + " ");
+							$(this).text(arr[r] + " ");
 						}
 					}
 				});
@@ -47,7 +50,7 @@ $(document).ready(function(){
 
 	/* Функция, которая выдает активный класс флажкам языков */ 
 
-	function ifTranslate(){
+	function ifTranslate(arra){
 		if(userLang == "ru"){
 			$(".rus__language").addClass("active__flag");
 		}
@@ -55,8 +58,8 @@ $(document).ready(function(){
 			$(".eng__language").addClass("active__flag");
 			$(".en").each(function(i){
 				var value = $(this).text().trim();
-				for(var r in array){
-					if(array[r] == value){
+				for(var r in arra){
+					if(arra[r] == value){
 						$(this).text(r + " ");
 					}
 				}
@@ -66,11 +69,15 @@ $(document).ready(function(){
 
 	/* Функции включения и выключения модальных окон */
 
+	/* Появление */ 
+
 	function modalIn(mod){
 		$(".modalw").fadeOut(0);
 		$("."+mod+"").fadeIn(0);
 		$(".mobile__menu--inner").removeClass("mobile__on");
 	}
+
+	/* Исчезание */ 
 
 	function modalOut(cross){
 		$("."+cross+"").fadeOut(0);
@@ -80,7 +87,7 @@ $(document).ready(function(){
 	и вставляет название страницы динамически */ 
 
 	function temp(){
-		if(eng == "false"){
+		if(!eng){
 			pageTitle = url;
 			for(var pageVar in page){
 				if(pageTitle == pageVar){
@@ -101,6 +108,21 @@ $(document).ready(function(){
 
 	var userLang = navigator.language || navigator.userLanguage;
 	userLang = userLang.substr(0, 2);
+
+	if(localStorage.getItem("language") == ""){
+		localStorage.setItem("language", userLang);
+	}
+
+	if(localStorage.getItem("lang") == ""){
+		if(userLang == "ru"){
+			eng = false;
+			localStorage.setItem("lang", eng);
+		}
+		else{
+			eng = true;
+			localStorage.setItem("lang", eng);
+		}
+	}
 
 	/*=== Переключение языков ===*/ 
 
@@ -124,6 +146,7 @@ $(document).ready(function(){
 
 		localStorage.setItem("lang", eng);
 
+		localStorage.removeItem("language");
 		localStorage.setItem("language", langClass);
 		location.reload();
 	});
@@ -138,10 +161,12 @@ $(document).ready(function(){
 			localStorage.setItem("lang", eng);
 		}
 	}
-	else{
+	else{		
 		var langVar = localStorage.getItem("lang");
 		eng = langVar;
 	}
+
+
 
 	/* Получаем url строки, а именно саму страницу */
 	let url = window.location.href;
@@ -264,11 +289,20 @@ $(document).ready(function(){
 		}
 	}
 
+	/* Перебор слов на анлийский в массиве */ 
+
+	ifTranslate(eval(url + "Word"));
+
+	translate(eval(url + "Word"));
+
 	/* Проверка зарегистрирован пользователь или нет */
 	/* Если поле отправки ссобщения имеет класс не зарегестрирован,
 	то он отключается */ 
+
+	var inputChatLang = localStorage.getItem("language");
+
 	if($(".chat__send--box").hasClass("noregister__chat")){
-		if(eng == "true"){
+		if(inputChatLang == "en"){
 			$(".chat__send--input").attr("placeholder", "only authorized players can write to the chat");
 		}
 		else{
@@ -277,7 +311,7 @@ $(document).ready(function(){
 		$(".chat__send--input").attr("disabled", "");
 	}
 	else{
-		if(eng == "true"){
+		if(inputChatLang == "en"){
 			$(".chat__send--input").attr("placeholder", "enter a massage");
 		}
 		else{
@@ -533,12 +567,6 @@ $(document).ready(function(){
 		}
 	});
 
-	/* Перебор слов на анлийский в массиве */ 
-
-	ifTranslate(eval(url + "Word"));
-
-	translate(eval(url + "Word"));
-
 	/*=== Скрытие чата ===*/ 
 
 	var closeChat = $(".mobile__off");
@@ -553,7 +581,7 @@ $(document).ready(function(){
 
 	closeChat.on("click", function(){
 		if($(window).width() > 480){
-			if(chatIf == false){
+			if(!chatIf){
 				$(".main__chat--content").addClass("chat__off");
 	    		$(".chat__close--inner").addClass("chat__button--on");
 	    		$(".chat__close--icon").addClass("chat__close--icon--rotate");
@@ -575,7 +603,7 @@ $(document).ready(function(){
 			}
 		}
 		else{
-			if(chatIf == false){
+			if(!chatIf){
 				$(".main__chat--content").addClass("chat__off");
 	    		chatIf = true;
 			}
@@ -695,7 +723,7 @@ $(document).ready(function(){
 
 	/* Замена языка в инпутах */
 
-	if(eng == "true"){
+	if(localStorage.getItem("language") == "en"){
 		$(".modalw__input").each(function(i){
 			var inputEn = $(this).attr("data-en");
 			$(this).attr("placeholder", inputEn);
