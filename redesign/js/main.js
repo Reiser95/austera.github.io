@@ -867,11 +867,9 @@ $(document).ready(function(){
 	});
 
 	$(window).resize(function(){
-		if($(window).width() <= 610){
-			$draggable.draggabilly("setPosition", 0, 0);
-			allfor.removeClass("active__forecast");
-			$(".expbattle__button--drag").removeClass("active__button--bet");
-		}
+		$draggable.draggabilly("setPosition", 0, 0);
+		allfor.removeClass("active__forecast");
+		$(".expbattle__button--drag").removeClass("active__button--bet");
 	});
 
 	/* Кнопки выбора ставки */
