@@ -37,7 +37,9 @@ let homeWord = {"home":"главная", "games":"игры",
 "скорее всего вы допустили ошибку когда вводили ваш номер кошелька/банквоской карты, повторите попытку снова, если проблема не решилась, то напишите нам на почту или в группу в вк",
 "attention! if you do not agree with the terms of this user agreement, do not log in to the site expcash.info and do not use the services of this site":
 "внимание! если вы не согласны с условиями настоящего пользовательского соглашения, не авторизуйтесь на сайте expcash.info и не используйте сервисы данного сайта",
-"1. terms and definitions":"1. термины и определения"};
+"1. terms and definitions":"1. термины и определения", "team red":"команда красных",
+"team blue":"команда синих", "make a bet":"сделать ставку", "put on blue":"поставить на синий",
+"put on red":"поставить на красный"};
 
 let redesignWord = {"home":"главная", "games":"игры",
 "history games":"история игр", "group vk":"группа vk",

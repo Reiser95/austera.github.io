@@ -87,7 +87,7 @@ $(document).ready(function(){
 	и вставляет название страницы динамически */ 
 
 	function temp(){
-		if(!eng){
+		if(!localStorage.getItem("lang")){
 			pageTitle = url;
 			for(var pageVar in page){
 				if(pageTitle == pageVar){
@@ -124,16 +124,32 @@ $(document).ready(function(){
 		}
 	}
 
+	if(localStorage.getItem("gamma") == ""){
+		var gammaReload = "rgb(81, 127, 241)";
+		localStorage.setItem("gamma", gammaReload);
+	}
+
+	if(localStorage.getItem("checkcolor") == ""){
+		localStorage.setItem("checkcolor", "blue");
+	}
+
 	/*=== Переключение языков ===*/ 
 
 	var flag = $(".header__top--language--flag");
 
 	flag.on("click", function(){
+
+		/* Выдаем активный класс флажку языка */ 
+
 		$(this).addClass("active__flag");
 		if(!$(this).hasClass("active__flag")){
 			flag.removeClass("active__flag");
 			$(this).addClass("active__flag");
 		}
+
+		/* В переменную берем дата атрибут флажка en/ru 
+		   взависимости от выбора даем либо true либо false 
+		   переменной eng */ 
 
 		var langClass = $(this).attr("data-lang");
 
@@ -144,12 +160,17 @@ $(document).ready(function(){
 			eng = true;
 		}
 
+		/* Обновляем переменную eng в локалке */ 
 		localStorage.setItem("lang", eng);
 
-		localStorage.removeItem("language");
+		/* В локалку отправляем значение фалага en/ru */ 
 		localStorage.setItem("language", langClass);
+		/* Обновляем страницу */ 
 		location.reload();
 	});
+
+	/* Проверяем, если файлы локального хранилища не найдены,
+	то в переменную записываем значение после определения страницы */ 
 
 	if(localStorage.getItem("lang") == ""){
 		if(userLang == "ru"){
@@ -180,6 +201,8 @@ $(document).ready(function(){
 		url = "home";
 	}
 
+
+	/* В хедере выводим название страницы динамически */ 
 	if(localStorage.getItem("pagetext")){
 		var localPage = localStorage.getItem("pagetext");
 		if(localPage == url){
@@ -195,6 +218,7 @@ $(document).ready(function(){
 
 	$(".header__bottom--page").text(pageTitle);
 
+	/* Сохраняем в локалку название страницы */ 
 	localStorage.setItem("pagetext", url);
 
 	/* Функция смены объектов местами */
@@ -318,14 +342,6 @@ $(document).ready(function(){
 			$(".chat__send--input").attr("placeholder", "введите сообщение");
 		}
 	}
-
-	/*=== Модальное окно соглашения ===*/
-
-	var agree = $(".user__agree");
-
-	agree.on("click", function(e){
-		e.preventDefault(); //Удалить
-	});
 
 	/*=== Цветовая гамма ===*/ 
 
@@ -564,6 +580,8 @@ $(document).ready(function(){
 		if(e.which == 27){
 			$(".modal").fadeOut(0);
 			$(".modalw").fadeOut(0);
+			$(".faq__inner--arrow").removeClass("faq__arrow--transform");
+			$(".faq__inner--answer").slideUp(100);
 		}
 	});
 
@@ -696,6 +714,8 @@ $(document).ready(function(){
 
 	$(".faq__cross").on("click", function(){
 		modalOut("faq__modal");
+		$(".faq__inner--arrow").removeClass("faq__arrow--transform");
+		$(".faq__inner--answer").slideUp(100);
 	});
 
 	/* Соглашение модальное окно */
@@ -755,7 +775,143 @@ $(document).ready(function(){
 			$(this).children(".faq__inner--answer").slideUp(100);
 		}
 		
+	});	
+
+	/* Драг ставки */ 
+
+	var $draggable = $(".expbattle__button--drag").draggabilly({
+		containment: ".expbattler__button--forecast",
+		axis: 'x'
 	});
+
+	var bluefor = $(".expbattler__forecast--text--blue");
+	var redfor = $(".expbattler__forecast--text--red");
+	var allfor = $(".expbattler__forecast--text--color");
+	var foreX;
+	var redanim;
+	var p = $draggable.first();;
+	var position;
+	var totalPos;
+
+	$draggable.on( 'dragMove', function(){
+		position = p.position();
+		totalPos = 0 - position.left;
+
+		if($(window).width() > 610){
+			if(position.left <= 10){
+				redfor.removeClass("active__forecast");
+				bluefor.addClass("active__forecast");
+				$(".expbattle__button--drag").addClass("active__button--bet");
+			}
+
+			else if(position.left >= 190){
+				bluefor.removeClass("active__forecast");
+				redfor.addClass("active__forecast");
+				$(".expbattle__button--drag").addClass("active__button--bet");
+			}
+
+			else{
+				allfor.removeClass("active__forecast");
+				$(".expbattle__button--drag").removeClass("active__button--bet");
+			}
+		}
+		else if($(window).width() <= 610){
+			if(position.left <= 10){
+				redfor.removeClass("active__forecast");
+				bluefor.addClass("active__forecast");
+				$(".expbattle__button--drag").addClass("active__button--bet");
+			}
+
+			else if(position.left >= 90){
+				bluefor.removeClass("active__forecast");
+				redfor.addClass("active__forecast");
+				$(".expbattle__button--drag").addClass("active__button--bet");
+			}
+
+			else{
+				allfor.removeClass("active__forecast");
+				$(".expbattle__button--drag").removeClass("active__button--bet");
+			}
+		}
+
+	});
+
+	/* Функции при нажатии на текст ставка на красное/синее */ 
+
+	bluefor.on("click", function(){
+		position = p.position();
+		totalPos = 0 - position.left;
+
+		if(!$($draggable).is(':animated')){
+			redfor.removeClass("active__forecast");
+			bluefor.addClass("active__forecast");
+			$draggable.animate({ "left": "+="+totalPos+"px" }, 200 );
+		}
+
+	});
+
+	redfor.on("click", function(){
+		position = p.position();
+		totalPos = 200 - position.left;
+
+		if(!$($draggable).is(':animated')){
+			bluefor.removeClass("active__forecast");
+			redfor.addClass("active__forecast");
+			$draggable.animate({ "left": "+="+totalPos+"px" }, 200 );
+		}
+	});
+
+	/* Кнопки выбора ставки */
+
+	/* Кнопки ставки */ 
+
+	var forecast = $(".expbattler__forecast--button--number");
+
+	forecast.on("click", function(){
+
+		var forecastInput = parseInt($(".expbattler__forecast--input").val());
+
+		if(isNaN(forecastInput)){
+			var forecastVal = parseInt($(this).text().replace(/[^0-9]/gim, ""));
+			$(".expbattler__forecast--input").val(forecastVal);
+		}
+
+		else{
+			var forecastVal = parseInt($(this).text().replace(/[^0-9]/gim, ""));	
+			forecastInput = forecastInput + forecastVal;
+			$(".expbattler__forecast--input").val(forecastInput);	
+		}
+	});
+
+	/* Кнопка del */ 
+
+	$(".forecast__del").on("click", function(){
+		$(".expbattler__forecast--input").val("");
+	});
+
+	/* Кнопка х2 */ 
+
+	$(".forecast__2x").on("click", function(){
+		var forecastIn = parseInt($(".expbattler__forecast--input").val());
+		var forecastX = forecastIn * 2;
+		$(".expbattler__forecast--input").val(forecastX);
+	});
+
+	/* Кнопка 1/2 */ 
+
+	$(".forecast__half").on("click", function(){
+		var forecastInp = parseInt($(".expbattler__forecast--input").val());
+		var forecastHalf = forecastInp / 2;
+		$(".expbattler__forecast--input").val(forecastHalf);
+	});
+
+	/* Кнопка max */ 
+
+	$(".forecast__max").on("click", function(){
+		var balance = parseInt($(".balance").text().replace(/[^0-9]/gim, ""));
+		$(".expbattler__forecast--input").val(balance);
+	});
+
 });
 
 /*=== Прелоадер ===*/ 
@@ -763,3 +919,14 @@ $(document).ready(function(){
 $(window).on("load",function (){
   $("#preloader").fadeOut(500);
 });
+
+// Снег
+
+window.onload = function() {
+
+  snowStorm.snowColor = "#fff"; // Цвет снежинок
+  snowStorm.flakesMaxActive = 20; // Максимальное количество видимых снежинок
+  snowStorm.followMouse = false; // true - гоняться за курсором, false - нет
+  snowStorm.snowCharacter = "&bull;, *"; // Вид снежинки
+
+};

@@ -114,10 +114,12 @@
 	justify-content: center;
 	box-shadow: 0 0 10px var(--blueC);
 	cursor: pointer;
+	opacity: .5;
 	transition: .2s linear;
 }
 
 .chat__close--inner:hover{
+	opacity: 1;
 	background: var(--sectiondark2B);
 }
 

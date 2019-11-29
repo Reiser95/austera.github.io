@@ -199,6 +199,7 @@
 	top: 50%;
 	transform: translateY(-50%);
 	z-index: 5;
+	box-shadow: 0 0 10px var(--blueC);
 	transition: .2s linear;
 }
 

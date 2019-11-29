@@ -23,6 +23,10 @@
 	opacity: 0;
 }
 
+.input::placeholder{
+	color: var(--whiteC);
+}
+
 .blue{
 	color: var(--blueC);
 	transition: .2s linear;
@@ -77,6 +81,16 @@
 
 .lose{
 	color: red;
+}
+
+/* Классы команд */
+
+.red__team{
+	color: crimson;
+}
+
+.blue__team{
+	color: #517ff1;
 }
 
 /* Классы мини-игр */

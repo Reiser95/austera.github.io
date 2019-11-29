@@ -12,7 +12,6 @@
 
       <!-- Стили -->
       <link rel="stylesheet" href="css/style.min.css">
-      <link rel="stylesheet" href="css/expbattler.min.css">
       <link rel="stylesheet" href="css/fontawesome/all.min.css">
       <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
 
@@ -27,7 +26,7 @@
       <meta name="theme-color" content="#cf7373">
       
     </head>
-    <body class="darkBg">
+    <body>
       
       <!-- Прелоадер -->
 
@@ -62,7 +61,7 @@
               <!-- Пример добавления игры на сайт -->
               <!-- АНКОРНЫЕ ССЫЛКИ НЕ МЕНЯТЬ! Они вставляются динамически -->
 
-              <a href="#" class="game__box snoww">
+              <a href="#" class="game__box">
                 ExpBattler
               </a>
 
@@ -222,8 +221,28 @@
             <!-- Конец нижней части хедера -->
           </header>
 
-          
-          
+          <div class="main__title--inner">
+            <div class="main__title">
+              <a href="/" class="site__logo">
+                <i class="fas fa-coins blue icon"></i>
+                <span class="blue">Exp</span><span class="en">cash - сайт с честными играми</span>
+              </a>
+            </div>
+
+            <!-- Подзаголовок главной  страницы -->
+
+            <div class="main__subtitle">
+              <span class="en">зарабатывайте на</span> <span class="expcash"><span class="blue">Exp</span>cash</span> <span class="en">на самых честных играх, не упусти свой шанс на удачу!</span>
+            </div>
+
+            <!-- Кнопка начать играть -->
+
+            <div class="main__play--button">
+              <a href="/games" class="button main__play">
+                <span class="en">начать играть</span>
+              </a>
+            </div>
+          </div>
 
           
           <!-- Мобильное окно все игры -->
@@ -239,184 +258,98 @@
             <!-- Контейнер всех игр на сайте -->
 
             <div class="game__box--inner--mobile">
-              <!-- Динамически заполняется -->
+
             </div>
 
           </div>
 
           <!-- Конец мобильного окна всех игр -->
 
-          <!-- Expbattler игра -->
 
-          <div class="expbattler__title">
-            <div class="blue">
-              <i class="far fa-dot-circle"></i>
-              Exp
+          <div class="main__like--games--inner">
+            
+            <!-- Заголовок любимых игр -->
+
+            <div class="main__like--games--title">
+              <span class="en">ваши</span> <span class="blue en">любимые</span> <span class="en">игры</span>
             </div>
-            Battler
-          </div>
 
-          <div class="expbattler__inner">
-            <div class="expbattler__blue--team expbattler__team">
-              <div class="expbattler__team--title blue__team en">
-                команда синих
+            <div class="main__like--games--slider">
+
+              <!-- Кнопка назад слайдера любимых игр -->
+
+              <div class="main__arrow--prev main__arrow">
+                <svg class="arrow main__like--slider--arrow--prev--icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve">
+                <g>
+                  <path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+                    c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"/></g>
+                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
               </div>
 
+              <!-- Конец кнопки назад слайдера любимых игр -->
 
-              <div class="expbattler__forecast--inner">
-                
-                <div class="expbattler__scroll--forecast">
-                  
-                  <!-- Пример 1 ставки синей команды -->
 
-                  <div class="expbattler__gamer--forecast--blue expbattler__forecast">
+              <!-- Карусель любимых игр -->
 
-                    <!-- Аватарка игрока, который делает ставку -->
-                    <div class="expbattler__forecast--img">
-                      <a href="#"><img src="img/user.png" alt="игрок" class="forecast__img"></a>
+              <div class="main__like--games--carousel owl-carousel">
+
+                <!-- Пример отображения в любимых играх -->
+
+                <!-- <div class="main__like--games--item like__game">
+                  <a href="#" class="game__inner--mask">
+                    baccarat
+                  </a>
+
+                  <div class="edit__mask">
+                    <div class="edit__arrows">
+                      <i class="fas fa-chevron-circle-left edit__arrow edit__arrow--prev"></i>
+                      <i class="fas fa-chevron-circle-right edit__arrow edit__arrow--next"></i>
                     </div>
-                    
-                    <!-- Оболочка ника и суммы ставки игрока -->
-                    <div class="expbattler__forecast--money--inner">
-                      
-                      <!-- Ник игрока -->
-                      <div class="forecast__nick--inner">
-                        <i class="far fa-dot-circle blue__team"></i>
-                        - <span class="nick">Владимир.В</span>
-                      </div> 
-
-                      <!-- Сумма ставки игрока -->
-                      <div class="forecast__money">
-                        <span class="en">ставка</span> <span class="money__value">50</span> exp
-                      </div>
-
-                    </div>
-
                   </div>
+                </div> -->
 
-                  <!-- Конец примера 1 ставки синей команды -->
+                <!-- Конец примера игры -->
 
+                <!-- Кнопка добавить игру "+" -->
+                <!-- Игры добавляются перед кнопкой добавить игра динамически!
+                     Выше только пример -->
+
+                <div class="main__like--games--item add__like--games">
+                  <div class="main__like--add--game">
+                    <i class="fas fa-plus icon__add"></i>
+                  </div>
                 </div>
 
               </div>
-            </div>
-
-            <div class="expbattler__wheel--center">
-              <img src="img/circle.png" alt="колесо" class="circle__battle">
-
-              <input type="number" class="input expbattler__forecast--input modalw__input" data-en="enter sum bet" placeholder="введите сумму ставки">
-
-              <div class="expbattler__forecast--button--inner">
                 
-                <button class="button expbattler__forecast--button expbattler__forecast--button--number">
-                  +1
-                </button>
+              <!-- Конец карусели любимых игр -->
 
-                <button class="button expbattler__forecast--button expbattler__forecast--button--number">
-                  +5
-                </button>
 
-                <button class="button expbattler__forecast--button expbattler__forecast--button--number">
-                  +10
-                </button>
+              <!-- Кнопка вперед слайдера любимых игр -->
 
-                <button class="button expbattler__forecast--button expbattler__forecast--button--number">
-                  +50
-                </button>
-
-                <button class="button expbattler__forecast--button forecast__del">
-                  del
-                </button>
-
-                <button class="button expbattler__forecast--button forecast__2x">
-                  x2
-                </button>
-
-                <button class="button expbattler__forecast--button forecast__half">
-                  1/2
-                </button>
-
-                <button class="button expbattler__forecast--button forecast__max">
-                  max
-                </button>
-
+              <div class="main__arrow--next main__arrow">
+                <svg class="arrow main__like--slider--arrow--next--icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve">
+                <g>
+                  <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+                    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z
+                    "/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
               </div>
 
-              <div class="expbattler__button--forecast">
-                <button class="button expbattle__button--drag">
-
-                  <span class="bet__icon bet__icon--left">
-                    <i class="fas fa-angle-double-left"></i>
-                  </span>
-
-                  <span class="en">сделать ставку</span>
-
-                  <span class="bet__icon bet__icon--right">
-                    <i class="fas fa-angle-double-right"></i>
-                  </span>
-
-                </button>
-              </div>
-
-              <div class="expbattler__forecast--text">
-                <button class="button expbattler__forecast--text--blue  expbattler__forecast--text--color en">
-                  поставить на синий
-                </button>
-
-                <button class="button expbattler__forecast--text--red expbattler__forecast--text--color en">
-                  поставить на красный
-                </button>
-              </div>
+              <!-- Конец кнопки вперед слайдера любимых игр -->
 
             </div>
 
-            <div class="expbattler__red--team expbattler__team">
-              <div class="expbattler__team--title red__team en">
-                команда красных
-              </div>
+            <!-- Кнопка редактировать местоположения любимых игр -->
 
-
-              <div class="expbattler__forecast--inner">
-                
-                <div class="expbattler__scroll--forecast">
-                  
-                  <!-- Пример 1 ставки красной команды -->
-
-                  <div class="expbattler__gamer--forecast--red expbattler__forecast">
-                    
-                    <!-- Оболочка ника и суммы ставки игрока -->
-                    <div class="expbattler__forecast--money--inner">
-                      
-                      <!-- Ник игрока -->
-                      <div class="forecast__nick--inner">
-                        <span class="nick">Владимир.В</span> -
-                        <i class="far fa-dot-circle red__team"></i>
-                      </div> 
-
-                      <!-- Сумма ставки игрока -->
-                      <div class="forecast__money">
-                        <span class="en">ставка</span> <span class="money__value">50</span> exp
-                      </div>
-
-                    </div>
-
-                    <!-- Аватарка игрока, который делает ставку -->
-                    <div class="expbattler__forecast--img">
-                      <a href="#"><img src="img/user.png" alt="игрок" class="forecast__img"></a>
-                    </div>
-
-                  </div>
-
-                  <!-- Конец примера 1 ставки красной команды -->
-
-                </div>
-
-              </div>
-
+            <div class="main__edit--game">
+              <button class="button main__button--edit en">
+                редактировать
+              </button>
             </div>
+
           </div>
-
-          <!-- Конец игры Expbattler -->
 
           <div class="main__last--wins--title--box">
             <div class="main__last--wins--title">
@@ -1189,6 +1122,38 @@
       <!-- Конец цветовой гаммы, модального окна -->
 
 
+      <!-- Добавление в любимые игры, модальное окно -->
+
+      <div class="add__like--game modal">
+        <div class="add__like__content modal__content">
+          
+          <!-- Крестик выключения окна любимых игр, модальное окно -->
+
+          <div class="add__like--cross modal__cross">
+            <i class="fas fa-times"></i>
+          </div>
+
+          <!-- Заголовок любимых игр, модальное окно -->
+
+          <div class="add__like--title modal__title">
+            <span class="blue en">любимые</span> <span class="en">игры</span>
+          </div>
+
+          <!-- Окно отображения игр на сайте, модальное окно -->
+
+          <div class="add__like--inner modal__box">
+            <!-- Вставляется динамически -->
+          </div>
+
+          <!-- Текст под отображением игр на сайте, модальное окно -->
+
+          <div class="add__like--text modal__text">
+            <span class="en">здесь вы можете выбрать ваши любимые игры и не искать, а увидеть их сразу же на главной странице! Все просто, выбирайте игры и они окажутся у вас в удобном месте</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Конец добавления в любимые игры, модального окна -->
 
       <!-- Кнопка свернуть чат -->
 
@@ -1370,6 +1335,8 @@
             <input type="password" data-en="password" class="input modalw__input" placeholder="придумайте пароль">
 
             <input type="password" data-en="confirm password" class="input modalw__input" placeholder="подтвердите пароль">
+
+            <input type="email" data-en="email" class="input modalw__input" placeholder="электронная почта">
 
             <input type="checkbox" class="modalw__checkbox" id="register__check">
             <label for="register__check" class="modalw__label en">
@@ -1788,8 +1755,5 @@
       <script src="js/menumobile.js"></script>
       <script src="js/slider-main.js"></script>
       <script src="js/jquery.spincrement.min.js"></script>
-      <script src="js/draggabilly.pkgd.min.js"></script>
-      <script src="js/snowstorm-min.js"></script>
-
     </body>
 </html>
