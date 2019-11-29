@@ -245,7 +245,8 @@
 	.footer__inner--link, .main__like--games--item,
 	.header__bottom--link, .header__top--language--flag,
 	.header__top--choose--color, .choise__color--circle,
-	.modalw__label, .faq__inner--box, .chat__scroll--bottom{
+	.modalw__label, .faq__inner--box, .chat__scroll--bottom,
+	.expbattler__button--forecast .expbattle__button--drag.active__button--bet{
 		cursor: default;
 	}
 
@@ -412,10 +413,15 @@
 		border-right: 0;
 	}
 
-	.expbattler__scroll--forecast{
+	.expbattler__forecast--inner .expbattler__scroll--forecast{
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+		overflow-y: auto;
+	}
+
+	.expbattler__team .expbattler__forecast--inner{
+		overflow-y: scroll;
 	}
 
 	.expbattler__forecast{
@@ -428,6 +434,23 @@
 		border-left: 0;
 		border-right: 0;
 		margin: 0;
+	}
+
+	.expbattler__forecast--money--inner{
+		order: 2;
+	}
+
+	.dot__icon{
+		margin-right: .5rem;
+	}
+
+	.forecast__nick--inner{
+		display: flex;
+		align-items: center;
+	}
+
+	.nick{
+		order: 2;
 	}
 }
 

@@ -852,12 +852,25 @@ $(document).ready(function(){
 
 	redfor.on("click", function(){
 		position = p.position();
-		totalPos = 200 - position.left;
+		if($(window).width() <= 610){
+			totalPos = 100 - position.left;
+		}
+		else{
+			totalPos = 200 - position.left;
+		}
 
 		if(!$($draggable).is(':animated')){
 			bluefor.removeClass("active__forecast");
 			redfor.addClass("active__forecast");
 			$draggable.animate({ "left": "+="+totalPos+"px" }, 200 );
+		}
+	});
+
+	$(window).resize(function(){
+		if($(window).width() <= 610){
+			$draggable.draggabilly("setPosition", 0, 0);
+			allfor.removeClass("active__forecast");
+			$(".expbattle__button--drag").removeClass("active__button--bet");
 		}
 	});
 
