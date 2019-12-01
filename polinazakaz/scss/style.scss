@@ -408,12 +408,16 @@ h1, h2, h3, h4, h5, h5, p{
 	box-shadow: 0 0 20px #d7d7d7;
 }
 
-.cart__inner{
+.cart__inner, .transport__inner{
 	max-width: 960px;
 }
 
 .thanks__inner{
 	max-width: 760px;
+}
+
+.cards__inner, .cards__modal--box{
+	max-width: 1200px;
 }
 
 .modal__cross{
@@ -615,6 +619,198 @@ h1, h2, h3, h4, h5, h5, p{
 	color: darken(crimson, 10);
 }
 
+/* Модальное окно транспортной компании */
+
+.transport__box{
+	display: flex;
+	align-items: center;
+}
+
+.transport__item--choose{
+	background: #f24841;
+	color: #fff;
+	font-size: 2rem;
+	font-family: GraphikMedium;
+	padding: 1.5rem 4rem;
+	min-width: 200px;
+}
+
+.transport__name{
+	margin-left: 1.5rem;
+	font-size: 2rem;
+	font-family: GraphikMedium;
+}
+
+.transport__active{
+	background: #29b776;
+}
+
+.transport__active:hover{
+	background: darken(#29b776, 5);
+}
+
+.transport__img{
+	padding: 1rem .5rem;
+}
+
+.transopt__user--box{
+	margin-left: 1.5rem;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.transopt__user--name{
+	font-size: 1.6rem;
+	font-family: GraphikMedium;
+}
+
+.transopt__user--input{
+	margin-top: 1rem;
+	width: 100%;
+	max-width: 410px;
+	padding: 1rem;
+	border: .5px solid #eee;
+	font-size: 1.6rem;
+	font-family: GraphikMedium;
+	color: #959595;
+}
+
+.oplata__inner{
+	margin-top: 3rem;
+	width: 100%;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.transport__continue{
+	margin-right: 3rem;
+	font-size: 2rem;
+	font-family: GraphikMedium;
+	color: #29b776;
+}
+
+.transport__continue:hover{
+	background: transparent;
+	color: darken(#29b776, 10);
+}
+
+.transport__oplata--button{
+	background: #29b776;
+	padding: 1.5rem 4rem;
+	color: #fff;
+	font-size: 2rem;
+	font-family: GraphikMedium;
+}
+
+.transport__oplata--button:hover{
+	background: darken(#29b776, 5);
+}
+
+.cards__inner{
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.cards__tovar--item{
+	width: 50%;
+	flex-shrink: 0;
+	margin-right: 3rem;
+}
+
+.card__img{
+	max-width: 300px;
+}
+
+.cards__info{
+	width: 50%;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	margin-top: 4rem;
+}
+
+.cards__info--item{
+	width: 100%;
+	border-bottom: 1px solid #eee;
+	padding: 1.5rem 0;
+	font-size: 2rem;
+}
+
+.cards__delivery--inner{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 2rem;
+}
+
+.cards__delivery--item{
+	width: 100%;
+	padding: 1.2rem;
+	border: 1px solid #eee;
+	background: #fbfbfb;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.cards__delivery--item--value, .cards__delivery--item--text{
+	color: #29b776;
+	font-family: GraphikMedium;
+	font-size: 2rem;
+}
+
+.cards__delivery--item--text{
+	color: #000;
+}
+
+.grey{
+	color: #7c7c7c;
+}
+
+.cards__choose--company{
+	width: 100%;
+	margin-top: 1.5rem;
+	color: red;
+	text-decoration: underline;
+	font-size: 1.7rem;
+	font-family: GraphikMedium;
+}
+
+.cards__choose--company:hover{
+	background: transparent;
+	color: darken(red, 10);
+}
+
+.cards__zakaz--inner{
+	padding: 1.5rem;
+	border: 1px solid #eee;
+	margin-top: 2rem;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.cards__zakaz--text{
+	font-size: 2rem;
+	font-family: GraphikMedium;
+}
+
+.card__buy--button{
+	color: #fff;
+	font-size: 1.7rem;
+	display: flex;
+	align-items: center;
+}
+
+.icon{
+	margin-left: .5rem;
+}
 
 /* Адаптивность */
 
@@ -625,6 +821,28 @@ h1, h2, h3, h4, h5, h5, p{
 
 	.content__tovar--item{
 		width: 30%;
+	}
+
+	.cards__inner{
+		max-width: 968px;
+	}
+
+	.cards__tovar--item{
+		width: 50%;
+	}
+
+	.cards__inner{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.content__tovar--item.cards__tovar--item{
+		margin-right: 0;
+		width: 100%;
+	}
+
+	.cards__info{
+		width: 100%;
 	}
 }
 
@@ -679,6 +897,23 @@ h1, h2, h3, h4, h5, h5, p{
 
 	.cart__input{
 		font-size: 1.4rem;
+	}
+
+	.transport__item--choose{
+		margin-top: 2rem;
+	}
+
+	.cart__title{
+		font-size: 2.4rem;
+	}
+
+	.transport__oplata--button{
+		padding: 1rem;
+		font-size: 1.7rem;
+	}
+
+	.transport__continue{
+		font-size: 1.7rem;
 	}
 }
 
@@ -756,6 +991,46 @@ h1, h2, h3, h4, h5, h5, p{
 	}
 
 	.delivery__value--inner{
+		margin-top: 1rem;
+	}
+
+	.oplata__inner{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.transport__oplata--button{
+		margin-top: 2rem;
+	}
+
+	.transport__continue{
+		margin-right: 0;
+	}
+
+	.transport__box{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.transopt__user--name{
+		text-align: center;
+		margin-top: 1rem;
+	}
+
+	.transopt__user--box, .transport__name{
+		margin-left: 0;
+	}
+
+	.transport__name{
+		margin-top: 1rem;
+	}
+
+	.cards__zakaz--inner{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.card__buy--button{
 		margin-top: 1rem;
 	}
 }

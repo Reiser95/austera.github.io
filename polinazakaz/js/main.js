@@ -33,12 +33,12 @@ $(document).ready(function(){
 		}
 	});
 
-	var numberDelete = $(".cart__item--inner").children(".cart__item").length;
+	var numberDelete = $(".cart__item--inner").children(".cart__item--del").length;
 
 	/* Удаление элемента с корзины */
 
 	$(".cart__item--delete").on("click", function(){
-		$(this).parent(".cart__item").fadeOut(0);
+		$(this).parent(".cart__item--del").fadeOut(0);
 		numberDelete--;
 		if(numberDelete == 0){
 			$(".cart__item--inner").append('<div class="cart__empty">Корзина пуста</div>');
@@ -68,6 +68,55 @@ $(document).ready(function(){
 	$(".cart__cross").on("click", function(){
 		$("body").removeClass("body");
 		$(".cart__modal").fadeOut(100);
+	});
+
+
+	/* Модальное окно транспортной компании */
+
+	$(".delivery__value--edit").on("click", function(){
+		$(".modal").fadeOut(100);
+
+		$("body").addClass("body");
+		$(".transport__modal").fadeIn(100);
+	});
+
+	$(".transport__cross").on("click", function(){
+		$("body").removeClass("body");
+		$(".transport__modal").fadeOut(100);
+	});
+
+
+	$(".transport__item--choose").on("click", function(){
+		if($(this).hasClass("transport__active")){
+			$(".transport__item--choose").removeClass("transport__active");
+			$(".transport__item--choose").text("Выбрать");
+			$(".oplata__inner").slideUp(100);
+		}
+		else{
+			$(".transport__item--choose").removeClass("transport__active");
+			$(".transport__item--choose").text("Выбрать");
+			$(this).addClass("transport__active");
+			$(this).text("Выбрано");
+			$(".oplata__inner").slideDown(100).css("display", "flex");
+		}
+	});
+
+
+	/* Модальное окно карточки товара */
+
+	$(".tovar__link").on("click", function(e){
+		e.preventDefault();
+
+		$(".modal").fadeOut(100);
+
+		$("body").addClass("body");
+		$(".cards__modal").fadeIn(100);
+	});
+
+
+	$(".cards__cross").on("click", function(){
+		$("body").removeClass("body");
+		$(".cards__modal").fadeOut(100);
 	});
 
 });
