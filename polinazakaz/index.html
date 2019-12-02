@@ -84,6 +84,8 @@
                     </div>
                 </div>
 
+                <div id="point"></div>
+
 
                 <div class="content__tovar--inner">
                     <div class="content__tovar--item">
@@ -92,7 +94,7 @@
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
+                                <div class="bag__width--value wb">
                                     40см.
                                 </div>
                             </div>
@@ -100,7 +102,7 @@
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
+                                <div class="bag__width--value wl">
                                     36см.
                                 </div>
                             </div>
@@ -108,14 +110,14 @@
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
+                                <div class="bag__width--value wlb">
                                     20см.
                                 </div>
                             </div>
                         </div>
 
                         <!-- Картинка сумки -->
-                        <div class="tovar__bags--img--inner">
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка клетчатая 40*36*20 см.">
                             <div class="tovar__bags--img--box">
                                 <img src="img/tovar1.png" alt="картинка товара" class="tovar__bags--img">
                             </div>
@@ -128,19 +130,19 @@
                         <!-- Информация о сумке -->
                         <div class="tovar__bags--info">
                             <div class="tovar__bags--info--text">
-                                <span class="medium">
+                                <span class="medium art">
                                     Арт. 101
                                 </span>
-                                - сумка клетчатая
+                                <span class="name__bag">- сумка клетчатая</span>
                             </div>
                             <div class="tovar__bags--info--text">
                                 <span class="medium">
                                     Размер
                                 </span>
-                                - 40*36*20 см.
+                                <span class="size">- 40*36*20 см.</span>
                             </div>
                             <div class="tovar__bags--info--text">
-                                <span class="medium">
+                                <span class="medium price">
                                     55 руб.
                                 </span>
                                 - штука
@@ -149,7 +151,7 @@
                                 <span class="medium">
                                     1 коробка
                                 </span>
-                                - 144шт.
+                                <span class="number__bag">- 144шт.</span>
                             </div>
                         </div>
 
@@ -188,30 +190,224 @@
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
-                                    40см.
+                                <div class="bag__width--value wb">
+                                    46см.
                                 </div>
                             </div>
 
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
-                                    36см.
+                                <div class="bag__width--value wl">
+                                    41см.
                                 </div>
                             </div>
 
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
+                                <div class="bag__width--value wlb">
                                     20см.
                                 </div>
                             </div>
                         </div>
 
                         <!-- Картинка сумки -->
-                        <div class="tovar__bags--img--inner">
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка клетчатая 46*41*20 см.">
+                            <div class="tovar__bags--img--box">
+                                <img src="img/tovar1.png" alt="картинка товара" class="tovar__bags--img">
+                            </div>
+
+                            <div class="tovar__bags--free">
+                                Бесплатная доставка
+                            </div>
+                        </div>
+
+                        <!-- Информация о сумке -->
+                        <div class="tovar__bags--info">
+                            <div class="tovar__bags--info--text">
+                                <span class="medium art">
+                                    Арт. 102
+                                </span>
+                                <span class="name__bag">- сумка клетчатая</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    Размер
+                                </span>
+                                <span class="size">- 46*41*20 см.</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium price">
+                                    65 руб.
+                                </span>
+                                - штука
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    1 коробка
+                                </span>
+                                <span class="number__bag">- 120шт.</span>
+                            </div>
+                        </div>
+
+                        <!-- Выбор кол-ва сумок и корзина -->
+                        <div class="tovar__bags--buy">
+                            <div class="tovar__bags--buy--text">
+                                Коробок
+                            </div>
+
+                            
+                            <div class="tovar__bags--buy--value--inner">
+                                <i class="fas fa-chevron-up tovar__bags--buy--value--arrow value__arrow--up"></i>
+                                <div class="bags__value--inner">
+                                    <span class="value__bags">0</span> шт.
+                                </div>
+                                <i class="fas fa-chevron-down tovar__bags--buy--value--arrow value__arrow--down"></i>
+                            </div>
+
+
+                            <button class="button tovar__bags--buy--button">
+                                <svg class="cart__icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+                                <g><path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+                                        c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+                                        C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+                                        H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+                                        c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="content__tovar--item">
+                        <!-- Ширина сумки -->
+                        <div class="tovar__bags--width">
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wb">
+                                    53см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wl">
+                                    48см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wlb">
+                                    29см.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Картинка сумки -->
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка клетчатая 53*48*29 см.">
+                            <div class="tovar__bags--img--box">
+                                <img src="img/tovar1.png" alt="картинка товара" class="tovar__bags--img">
+                            </div>
+
+                            <div class="tovar__bags--free">
+                                Бесплатная доставка
+                            </div>
+                        </div>
+
+                        <!-- Информация о сумке -->
+                        <div class="tovar__bags--info">
+                            <div class="tovar__bags--info--text">
+                                <span class="medium art">
+                                    Арт. 103
+                                </span>
+                                <span class="name__bag">- сумка клетчатая</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    Размер
+                                </span>
+                                <span class="size">- 53*48*29 см.</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium price">
+                                    80 руб.
+                                </span>
+                                - штука
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    1 коробка
+                                </span>
+                                <span class="number__bag">- 96шт.</span>
+                            </div>
+                        </div>
+
+                        <!-- Выбор кол-ва сумок и корзина -->
+                        <div class="tovar__bags--buy">
+                            <div class="tovar__bags--buy--text">
+                                Коробок
+                            </div>
+
+                            
+                            <div class="tovar__bags--buy--value--inner">
+                                <i class="fas fa-chevron-up tovar__bags--buy--value--arrow value__arrow--up"></i>
+                                <div class="bags__value--inner">
+                                    <span class="value__bags">0</span> шт.
+                                </div>
+                                <i class="fas fa-chevron-down tovar__bags--buy--value--arrow value__arrow--down"></i>
+                            </div>
+
+
+                            <button class="button tovar__bags--buy--button">
+                                <svg class="cart__icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+                                <g><path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+                                        c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+                                        C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+                                        H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+                                        c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="content__tovar--item">
+                        <!-- Ширина сумки -->
+                        <div class="tovar__bags--width">
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wb">
+                                    64см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wl">
+                                    51см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wlb">
+                                    32см.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Картинка сумки -->
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка клетчатая 64*51*32 см.">
                             <div class="tovar__bags--img--box">
                                 <img src="img/tovar2.png" alt="картинка товара" class="tovar__bags--img">
                             </div>
@@ -224,20 +420,20 @@
                         <!-- Информация о сумке -->
                         <div class="tovar__bags--info">
                             <div class="tovar__bags--info--text">
-                                <span class="medium">
-                                    Арт. 101
+                                <span class="medium art">
+                                    Арт. 104
                                 </span>
-                                - сумка клетчатая
+                                <span class="name__bag">- сумка клетчатая</span>
                             </div>
                             <div class="tovar__bags--info--text">
                                 <span class="medium">
                                     Размер
                                 </span>
-                                - 40*36*20 см.
+                                <span class="size">- 64*51*32 см.</span>
                             </div>
                             <div class="tovar__bags--info--text">
-                                <span class="medium">
-                                    55 руб.
+                                <span class="medium price">
+                                    90 руб.
                                 </span>
                                 - штука
                             </div>
@@ -245,7 +441,7 @@
                                 <span class="medium">
                                     1 коробка
                                 </span>
-                                - 144шт.
+                                <span class="number__bag">- 96шт.</span>
                             </div>
                         </div>
 
@@ -284,7 +480,201 @@
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
+                                <div class="bag__width--value wb">
+                                    73см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wl">
+                                    57см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wlb">
+                                    37см.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Картинка сумки -->
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка клетчатая 73*57*37 см.">
+                            <div class="tovar__bags--img--box">
+                                <img src="img/tovar2.png" alt="картинка товара" class="tovar__bags--img">
+                            </div>
+
+                            <div class="tovar__bags--free">
+                                Бесплатная доставка
+                            </div>
+                        </div>
+
+                        <!-- Информация о сумке -->
+                        <div class="tovar__bags--info">
+                            <div class="tovar__bags--info--text">
+                                <span class="medium art">
+                                    Арт. 105
+                                </span>
+                                <span class="name__bag">- сумка клетчатая</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    Размер
+                                </span>
+                                <span class="size">- 73*57*37 см.</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium price">
+                                    100 руб.
+                                </span>
+                                - штука
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    1 коробка
+                                </span>
+                                <span class="number__bag">- 96шт.</span>
+                            </div>
+                        </div>
+
+                        <!-- Выбор кол-ва сумок и корзина -->
+                        <div class="tovar__bags--buy">
+                            <div class="tovar__bags--buy--text">
+                                Коробок
+                            </div>
+
+                            
+                            <div class="tovar__bags--buy--value--inner">
+                                <i class="fas fa-chevron-up tovar__bags--buy--value--arrow value__arrow--up"></i>
+                                <div class="bags__value--inner">
+                                    <span class="value__bags">0</span> шт.
+                                </div>
+                                <i class="fas fa-chevron-down tovar__bags--buy--value--arrow value__arrow--down"></i>
+                            </div>
+
+
+                            <button class="button tovar__bags--buy--button">
+                                <svg class="cart__icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+                                <g><path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+                                        c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+                                        C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+                                        H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+                                        c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="content__tovar--item">
+                        <!-- Ширина сумки -->
+                        <div class="tovar__bags--width">
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wb">
+                                    83см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wl">
+                                    58см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wlb">
+                                    41см.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Картинка сумки -->
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка клетчатая 83*58*41 см.">
+                            <div class="tovar__bags--img--box">
+                                <img src="img/tovar2.png" alt="картинка товара" class="tovar__bags--img">
+                            </div>
+
+                            <div class="tovar__bags--free">
+                                Бесплатная доставка
+                            </div>
+                        </div>
+
+                        <!-- Информация о сумке -->
+                        <div class="tovar__bags--info">
+                            <div class="tovar__bags--info--text">
+                                <span class="medium art">
+                                    Арт. 106
+                                </span>
+                                <span class="name__bag">- сумка клетчатая</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    Размер
+                                </span>
+                                <span class="size">- 83*58*41 см.</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium price">
+                                    120 руб.
+                                </span>
+                                - штука
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    1 коробка
+                                </span>
+                                <span class="number__bag">- 72шт.</span>
+                            </div>
+                        </div>
+
+                        <!-- Выбор кол-ва сумок и корзина -->
+                        <div class="tovar__bags--buy">
+                            <div class="tovar__bags--buy--text">
+                                Коробок
+                            </div>
+
+                            
+                            <div class="tovar__bags--buy--value--inner">
+                                <i class="fas fa-chevron-up tovar__bags--buy--value--arrow value__arrow--up"></i>
+                                <div class="bags__value--inner">
+                                    <span class="value__bags">0</span> шт.
+                                </div>
+                                <i class="fas fa-chevron-down tovar__bags--buy--value--arrow value__arrow--down"></i>
+                            </div>
+
+
+                            <button class="button tovar__bags--buy--button">
+                                <svg class="cart__icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+                                <g><path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+                                        c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+                                        C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+                                        H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+                                        c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="content__tovar--item">
+                        <!-- Ширина сумки -->
+                        <div class="tovar__bags--width">
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wb">
                                     40см.
                                 </div>
                             </div>
@@ -292,7 +682,7 @@
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
+                                <div class="bag__width--value wl">
                                     36см.
                                 </div>
                             </div>
@@ -300,14 +690,14 @@
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
+                                <div class="bag__width--value wlb">
                                     20см.
                                 </div>
                             </div>
                         </div>
 
                         <!-- Картинка сумки -->
-                        <div class="tovar__bags--img--inner">
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка кожа 40*36*20 см.">
                             <div class="tovar__bags--img--box">
                                 <img src="img/tovar3.png" alt="картинка товара" class="tovar__bags--img">
                             </div>
@@ -320,20 +710,20 @@
                         <!-- Информация о сумке -->
                         <div class="tovar__bags--info">
                             <div class="tovar__bags--info--text">
-                                <span class="medium">
-                                    Арт. 101
+                                <span class="medium art">
+                                    Арт. 301
                                 </span>
-                                - сумка клетчатая
+                                <span class="name__bag">- кожа</span>
                             </div>
                             <div class="tovar__bags--info--text">
                                 <span class="medium">
                                     Размер
                                 </span>
-                                - 40*36*20 см.
+                                <span class="size">- 40*36*20 см.</span>
                             </div>
                             <div class="tovar__bags--info--text">
-                                <span class="medium">
-                                    55 руб.
+                                <span class="medium price">
+                                    75 руб.
                                 </span>
                                 - штука
                             </div>
@@ -341,7 +731,7 @@
                                 <span class="medium">
                                     1 коробка
                                 </span>
-                                - 144шт.
+                                <span class="number__bag">- 144шт.</span>
                             </div>
                         </div>
 
@@ -380,7 +770,297 @@
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
+                                <div class="bag__width--value wb">
+                                    46см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wl">
+                                    41см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wlb">
+                                    20см.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Картинка сумки -->
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка кожа 46*41*20 см.">
+                            <div class="tovar__bags--img--box">
+                                <img src="img/tovar3.png" alt="картинка товара" class="tovar__bags--img">
+                            </div>
+
+                            <div class="tovar__bags--free">
+                                Бесплатная доставка
+                            </div>
+                        </div>
+
+                        <!-- Информация о сумке -->
+                        <div class="tovar__bags--info">
+                            <div class="tovar__bags--info--text">
+                                <span class="medium art">
+                                    Арт. 302
+                                </span>
+                                <span class="name__bag">- кожа</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    Размер
+                                </span>
+                                <span class="size">- 46*41*20 см.</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium price">
+                                    90 руб.
+                                </span>
+                                - штука
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    1 коробка
+                                </span>
+                                <span class="number__bag">- 120шт.</span>
+                            </div>
+                        </div>
+
+                        <!-- Выбор кол-ва сумок и корзина -->
+                        <div class="tovar__bags--buy">
+                            <div class="tovar__bags--buy--text">
+                                Коробок
+                            </div>
+
+                            
+                            <div class="tovar__bags--buy--value--inner">
+                                <i class="fas fa-chevron-up tovar__bags--buy--value--arrow value__arrow--up"></i>
+                                <div class="bags__value--inner">
+                                    <span class="value__bags">0</span> шт.
+                                </div>
+                                <i class="fas fa-chevron-down tovar__bags--buy--value--arrow value__arrow--down"></i>
+                            </div>
+
+
+                            <button class="button tovar__bags--buy--button">
+                                <svg class="cart__icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+                                <g><path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+                                        c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+                                        C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+                                        H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+                                        c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="content__tovar--item">
+                        <!-- Ширина сумки -->
+                        <div class="tovar__bags--width">
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wb">
+                                    53см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wl">
+                                    48см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wlb">
+                                    29см.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Картинка сумки -->
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка кожа 53*48*29 см.">
+                            <div class="tovar__bags--img--box">
+                                <img src="img/tovar3.png" alt="картинка товара" class="tovar__bags--img">
+                            </div>
+
+                            <div class="tovar__bags--free">
+                                Бесплатная доставка
+                            </div>
+                        </div>
+
+                        <!-- Информация о сумке -->
+                        <div class="tovar__bags--info">
+                            <div class="tovar__bags--info--text">
+                                <span class="medium art">
+                                    Арт. 303
+                                </span>
+                                <span class="name__bag">- кожа</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    Размер
+                                </span>
+                                <span class="size">- 53*48*29 см.</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium price">
+                                    100 руб.
+                                </span>
+                                - штука
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    1 коробка
+                                </span>
+                                <span class="number__bag">- 96шт.</span>
+                            </div>
+                        </div>
+
+                        <!-- Выбор кол-ва сумок и корзина -->
+                        <div class="tovar__bags--buy">
+                            <div class="tovar__bags--buy--text">
+                                Коробок
+                            </div>
+
+                            
+                            <div class="tovar__bags--buy--value--inner">
+                                <i class="fas fa-chevron-up tovar__bags--buy--value--arrow value__arrow--up"></i>
+                                <div class="bags__value--inner">
+                                    <span class="value__bags">0</span> шт.
+                                </div>
+                                <i class="fas fa-chevron-down tovar__bags--buy--value--arrow value__arrow--down"></i>
+                            </div>
+
+
+                            <button class="button tovar__bags--buy--button">
+                                <svg class="cart__icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+                                <g><path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+                                        c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+                                        C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+                                        H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+                                        c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="content__tovar--item">
+                        <!-- Ширина сумки -->
+                        <div class="tovar__bags--width">
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wb">
+                                    64см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wl">
+                                    51см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wlb">
+                                    32см.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Картинка сумки -->
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка кожа 64*51*32 см.">
+                            <div class="tovar__bags--img--box">
+                                <img src="img/tovar3.png" alt="картинка товара" class="tovar__bags--img">
+                            </div>
+
+                            <div class="tovar__bags--free">
+                                Бесплатная доставка
+                            </div>
+                        </div>
+
+                        <!-- Информация о сумке -->
+                        <div class="tovar__bags--info">
+                            <div class="tovar__bags--info--text">
+                                <span class="medium art">
+                                    Арт. 304
+                                </span>
+                                <span class="name__bag">- кожа</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    Размер
+                                </span>
+                                <span class="size">- 64*51*32 см.</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium price">
+                                    120 руб.
+                                </span>
+                                - штука
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    1 коробка
+                                </span>
+                                <span class="number__bag">- 96шт.</span>
+                            </div>
+                        </div>
+
+                        <!-- Выбор кол-ва сумок и корзина -->
+                        <div class="tovar__bags--buy">
+                            <div class="tovar__bags--buy--text">
+                                Коробок
+                            </div>
+
+                            
+                            <div class="tovar__bags--buy--value--inner">
+                                <i class="fas fa-chevron-up tovar__bags--buy--value--arrow value__arrow--up"></i>
+                                <div class="bags__value--inner">
+                                    <span class="value__bags">0</span> шт.
+                                </div>
+                                <i class="fas fa-chevron-down tovar__bags--buy--value--arrow value__arrow--down"></i>
+                            </div>
+
+
+                            <button class="button tovar__bags--buy--button">
+                                <svg class="cart__icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+                                <g><path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+                                        c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+                                        C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+                                        H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+                                        c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="content__tovar--item">
+                        <!-- Ширина сумки -->
+                        <div class="tovar__bags--width">
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wb">
                                     40см.
                                 </div>
                             </div>
@@ -388,7 +1068,7 @@
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
+                                <div class="bag__width--value wl">
                                     36см.
                                 </div>
                             </div>
@@ -396,14 +1076,14 @@
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
+                                <div class="bag__width--value wlb">
                                     20см.
                                 </div>
                             </div>
                         </div>
 
                         <!-- Картинка сумки -->
-                        <div class="tovar__bags--img--inner">
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка темная клетка 40*36*20 см.">
                             <div class="tovar__bags--img--box">
                                 <img src="img/tovar4.png" alt="картинка товара" class="tovar__bags--img">
                             </div>
@@ -416,20 +1096,20 @@
                         <!-- Информация о сумке -->
                         <div class="tovar__bags--info">
                             <div class="tovar__bags--info--text">
-                                <span class="medium">
-                                    Арт. 101
+                                <span class="medium art">
+                                    Арт. 2101
                                 </span>
-                                - сумка клетчатая
+                                <span class="name__bag">- темная клетка</span>
                             </div>
                             <div class="tovar__bags--info--text">
                                 <span class="medium">
                                     Размер
                                 </span>
-                                - 40*36*20 см.
+                                <span class="size">- 40*36*20 см.</span>
                             </div>
                             <div class="tovar__bags--info--text">
-                                <span class="medium">
-                                    55 руб.
+                                <span class="medium price">
+                                    75 руб.
                                 </span>
                                 - штука
                             </div>
@@ -437,7 +1117,7 @@
                                 <span class="medium">
                                     1 коробка
                                 </span>
-                                - 144шт.
+                                <span class="number__bag">- 144шт.</span>
                             </div>
                         </div>
 
@@ -476,7 +1156,202 @@
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
+                                <div class="bag__width--value wb">
+                                    46см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wl">
+                                    41см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wlb">
+                                    20см.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Картинка сумки -->
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка темная клетка 46*41*20 см.">
+                            <div class="tovar__bags--img--box">
+                                <img src="img/tovar4.png" alt="картинка товара" class="tovar__bags--img">
+                            </div>
+
+                            <div class="tovar__bags--free">
+                                Бесплатная доставка
+                            </div>
+                        </div>
+
+                        <!-- Информация о сумке -->
+                        <div class="tovar__bags--info">
+                            <div class="tovar__bags--info--text">
+                                <span class="medium art">
+                                    Арт. 2102
+                                </span>
+                                <span class="name__bag">- темная клетка</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    Размер
+                                </span>
+                                <span class="size">- 46*41*20 см.</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium price">
+                                    90 руб.
+                                </span>
+                                - штука
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    1 коробка
+                                </span>
+                                <span class="number__bag">- 120шт.</span>
+                            </div>
+                        </div>
+
+                        <!-- Выбор кол-ва сумок и корзина -->
+                        <div class="tovar__bags--buy">
+                            <div class="tovar__bags--buy--text">
+                                Коробок
+                            </div>
+
+                            
+                            <div class="tovar__bags--buy--value--inner">
+                                <i class="fas fa-chevron-up tovar__bags--buy--value--arrow value__arrow--up"></i>
+                                <div class="bags__value--inner">
+                                    <span class="value__bags">0</span> шт.
+                                </div>
+                                <i class="fas fa-chevron-down tovar__bags--buy--value--arrow value__arrow--down"></i>
+                            </div>
+
+
+                            <button class="button tovar__bags--buy--button">
+                                <svg class="cart__icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+                                <g><path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+                                        c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+                                        C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+                                        H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+                                        c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="content__tovar--item">
+                        <!-- Ширина сумки -->
+                        <div class="tovar__bags--width">
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wb">
+                                    53см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wl">
+                                    48см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wlb">
+                                    29см.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Картинка сумки -->
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка темная клетка 53*48*29 см.">
+                            <div class="tovar__bags--img--box">
+                                <img src="img/tovar4.png" alt="картинка товара" class="tovar__bags--img">
+                            </div>
+
+                            <div class="tovar__bags--free">
+                                Бесплатная доставка
+                            </div>
+                        </div>
+
+                        <!-- Информация о сумке -->
+                        <div class="tovar__bags--info">
+                            <div class="tovar__bags--info--text">
+                                <span class="medium art">
+                                    Арт. 2103
+                                </span>
+                                <span class="name__bag">- темная клетка</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    Размер
+                                </span>
+                                <span class="size">- 53*48*29 см.</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium price">
+                                    100 руб.
+                                </span>
+                                - штука
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    1 коробка
+                                </span>
+                                <span class="number__bag">- 96шт.</span>
+                            </div>
+                        </div>
+
+                        <!-- Выбор кол-ва сумок и корзина -->
+                        <div class="tovar__bags--buy">
+                            <div class="tovar__bags--buy--text">
+                                Коробок
+                            </div>
+
+                            
+                            <div class="tovar__bags--buy--value--inner">
+                                <i class="fas fa-chevron-up tovar__bags--buy--value--arrow value__arrow--up"></i>
+                                <div class="bags__value--inner">
+                                    <span class="value__bags">0</span> шт.
+                                </div>
+                                <i class="fas fa-chevron-down tovar__bags--buy--value--arrow value__arrow--down"></i>
+                            </div>
+
+
+                            <button class="button tovar__bags--buy--button">
+                                <svg class="cart__icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+                                <g><path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+                                        c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+                                        C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+                                        H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+                                        c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="content__tovar--item">
+                        <!-- Ширина сумки -->
+                        <div class="tovar__bags--width">
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wb">
                                     40см.
                                 </div>
                             </div>
@@ -484,7 +1359,7 @@
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
+                                <div class="bag__width--value wl">
                                     36см.
                                 </div>
                             </div>
@@ -492,14 +1367,14 @@
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
+                                <div class="bag__width--value wlb">
                                     20см.
                                 </div>
                             </div>
                         </div>
 
                         <!-- Картинка сумки -->
-                        <div class="tovar__bags--img--inner">
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка бежевая клетка 40*36*20 см.">
                             <div class="tovar__bags--img--box">
                                 <img src="img/tovar5.png" alt="картинка товара" class="tovar__bags--img">
                             </div>
@@ -512,20 +1387,20 @@
                         <!-- Информация о сумке -->
                         <div class="tovar__bags--info">
                             <div class="tovar__bags--info--text">
-                                <span class="medium">
-                                    Арт. 101
+                                <span class="medium art">
+                                    Арт. 3201
                                 </span>
-                                - сумка клетчатая
+                                <span class="name__bag">- темная клетка</span>
                             </div>
                             <div class="tovar__bags--info--text">
                                 <span class="medium">
                                     Размер
                                 </span>
-                                - 40*36*20 см.
+                                <span class="size">- 40*36*20 см.</span>
                             </div>
                             <div class="tovar__bags--info--text">
-                                <span class="medium">
-                                    55 руб.
+                                <span class="medium price">
+                                    75 руб.
                                 </span>
                                 - штука
                             </div>
@@ -533,7 +1408,7 @@
                                 <span class="medium">
                                     1 коробка
                                 </span>
-                                - 144шт.
+                                <span class="number__bag">- 144шт.</span>
                             </div>
                         </div>
 
@@ -572,32 +1447,32 @@
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
-                                    40см.
+                                <div class="bag__width--value wb">
+                                    46см.
                                 </div>
                             </div>
 
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
-                                    36см.
+                                <div class="bag__width--value wl">
+                                    41см.
                                 </div>
                             </div>
 
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
+                                <div class="bag__width--value wlb">
                                     20см.
                                 </div>
                             </div>
                         </div>
 
                         <!-- Картинка сумки -->
-                        <div class="tovar__bags--img--inner">
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка бежевая клетка 46*41*20 см.">
                             <div class="tovar__bags--img--box">
-                                <img src="img/tovar6.png" alt="картинка товара" class="tovar__bags--img">
+                                <img src="img/tovar5.png" alt="картинка товара" class="tovar__bags--img">
                             </div>
 
                             <div class="tovar__bags--free">
@@ -608,20 +1483,20 @@
                         <!-- Информация о сумке -->
                         <div class="tovar__bags--info">
                             <div class="tovar__bags--info--text">
-                                <span class="medium">
-                                    Арт. 101
+                                <span class="medium art">
+                                    Арт. 3202
                                 </span>
-                                - сумка клетчатая
+                                <span class="name__bag">- бежевая клетка</span>
                             </div>
                             <div class="tovar__bags--info--text">
                                 <span class="medium">
                                     Размер
                                 </span>
-                                - 40*36*20 см.
+                                <span class="size">- 46*41*20 см.</span>
                             </div>
                             <div class="tovar__bags--info--text">
-                                <span class="medium">
-                                    55 руб.
+                                <span class="medium price">
+                                    90 руб.
                                 </span>
                                 - штука
                             </div>
@@ -629,7 +1504,7 @@
                                 <span class="medium">
                                     1 коробка
                                 </span>
-                                - 144шт.
+                                <span class="number__bag">- 120шт.</span>
                             </div>
                         </div>
 
@@ -668,7 +1543,105 @@
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
+                                <div class="bag__width--value wb">
+                                    53см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wl">
+                                    48см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wlb">
+                                    29см.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Картинка сумки -->
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка бежевая клетка 53*48*29 см.">
+                            <div class="tovar__bags--img--box">
+                                <img src="img/tovar5.png" alt="картинка товара" class="tovar__bags--img">
+                            </div>
+
+                            <div class="tovar__bags--free">
+                                Бесплатная доставка
+                            </div>
+                        </div>
+
+                        <!-- Информация о сумке -->
+                        <div class="tovar__bags--info">
+                            <div class="tovar__bags--info--text">
+                                <span class="medium art">
+                                    Арт. 3203
+                                </span>
+                                <span class="name__bag">- бежевая клетка</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    Размер
+                                </span>
+                                <span class="size">- 53*48*29 см.</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium price">
+                                    100 руб.
+                                </span>
+                                - штука
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    1 коробка
+                                </span>
+                                <span class="number__bag">- 96шт.</span>
+                            </div>
+                        </div>
+
+                        <!-- Выбор кол-ва сумок и корзина -->
+                        <div class="tovar__bags--buy">
+                            <div class="tovar__bags--buy--text">
+                                Коробок
+                            </div>
+
+                            
+                            <div class="tovar__bags--buy--value--inner">
+                                <i class="fas fa-chevron-up tovar__bags--buy--value--arrow value__arrow--up"></i>
+                                <div class="bags__value--inner">
+                                    <span class="value__bags">0</span> шт.
+                                </div>
+                                <i class="fas fa-chevron-down tovar__bags--buy--value--arrow value__arrow--down"></i>
+                            </div>
+
+
+                            <button class="button tovar__bags--buy--button">
+                                <svg class="cart__icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+                                <g><path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+                                        c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+                                        C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+                                        H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+                                        c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="content__tovar--item">
+                        <!-- Ширина сумки -->
+                        <div class="tovar__bags--width">
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wb">
                                     40см.
                                 </div>
                             </div>
@@ -676,7 +1649,7 @@
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
+                                <div class="bag__width--value wl">
                                     36см.
                                 </div>
                             </div>
@@ -684,14 +1657,14 @@
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
+                                <div class="bag__width--value wlb">
                                     20см.
                                 </div>
                             </div>
                         </div>
 
                         <!-- Картинка сумки -->
-                        <div class="tovar__bags--img--inner">
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка клетка кофейная 40*36*20 см.">
                             <div class="tovar__bags--img--box">
                                 <img src="img/tovar6.png" alt="картинка товара" class="tovar__bags--img">
                             </div>
@@ -704,20 +1677,20 @@
                         <!-- Информация о сумке -->
                         <div class="tovar__bags--info">
                             <div class="tovar__bags--info--text">
-                                <span class="medium">
-                                    Арт. 101
+                                <span class="medium art">
+                                    Арт. 2001
                                 </span>
-                                - сумка клетчатая
+                                <span class="name__bag">- клетка кофейная</span>
                             </div>
                             <div class="tovar__bags--info--text">
                                 <span class="medium">
                                     Размер
                                 </span>
-                                - 40*36*20 см.
+                                <span class="size">- 40*36*20 см.</span>
                             </div>
                             <div class="tovar__bags--info--text">
-                                <span class="medium">
-                                    55 руб.
+                                <span class="medium price">
+                                    75 руб.
                                 </span>
                                 - штука
                             </div>
@@ -725,7 +1698,7 @@
                                 <span class="medium">
                                     1 коробка
                                 </span>
-                                - 144шт.
+                                <span class="number__bag">- 144шт.</span>
                             </div>
                         </div>
 
@@ -764,30 +1737,30 @@
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
-                                    40см.
+                                <div class="bag__width--value wb">
+                                    46см.
                                 </div>
                             </div>
 
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
-                                    36см.
+                                <div class="bag__width--value wl">
+                                    41см.
                                 </div>
                             </div>
 
                             <div class="tovar__bag--width">
                                 <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
 
-                                <div class="bag__width--value">
+                                <div class="bag__width--value wlb">
                                     20см.
                                 </div>
                             </div>
                         </div>
 
                         <!-- Картинка сумки -->
-                        <div class="tovar__bags--img--inner">
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка клетка кофейная 46*41*20 см.">
                             <div class="tovar__bags--img--box">
                                 <img src="img/tovar6.png" alt="картинка товара" class="tovar__bags--img">
                             </div>
@@ -800,20 +1773,20 @@
                         <!-- Информация о сумке -->
                         <div class="tovar__bags--info">
                             <div class="tovar__bags--info--text">
-                                <span class="medium">
-                                    Арт. 101
+                                <span class="medium art">
+                                    Арт. 2002
                                 </span>
-                                - сумка клетчатая
+                                <span class="name__bag">- клетка кофейная</span>
                             </div>
                             <div class="tovar__bags--info--text">
                                 <span class="medium">
                                     Размер
                                 </span>
-                                - 40*36*20 см.
+                                <span class="size">- 46*41*20 см.</span>
                             </div>
                             <div class="tovar__bags--info--text">
-                                <span class="medium">
-                                    55 руб.
+                                <span class="medium price">
+                                    90 руб.
                                 </span>
                                 - штука
                             </div>
@@ -821,7 +1794,199 @@
                                 <span class="medium">
                                     1 коробка
                                 </span>
-                                - 144шт.
+                                <span class="number__bag">- 120шт.</span>
+                            </div>
+                        </div>
+
+                        <!-- Выбор кол-ва сумок и корзина -->
+                        <div class="tovar__bags--buy">
+                            <div class="tovar__bags--buy--text">
+                                Коробок
+                            </div>
+
+                            
+                            <div class="tovar__bags--buy--value--inner">
+                                <i class="fas fa-chevron-up tovar__bags--buy--value--arrow value__arrow--up"></i>
+                                <div class="bags__value--inner">
+                                    <span class="value__bags">0</span> шт.
+                                </div>
+                                <i class="fas fa-chevron-down tovar__bags--buy--value--arrow value__arrow--down"></i>
+                            </div>
+
+
+                            <button class="button tovar__bags--buy--button">
+                                <svg class="cart__icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+                                <g><path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+                                        c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+                                        C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+                                        H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+                                        c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="content__tovar--item">
+                        <!-- Ширина сумки -->
+                        <div class="tovar__bags--width">
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wb">
+                                    53см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wl">
+                                    48см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wlb">
+                                    29см.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Картинка сумки -->
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка клетка кофейная 53*48*29 см.">
+                            <div class="tovar__bags--img--box">
+                                <img src="img/tovar6.png" alt="картинка товара" class="tovar__bags--img">
+                            </div>
+
+                            <div class="tovar__bags--free">
+                                Бесплатная доставка
+                            </div>
+                        </div>
+
+                        <!-- Информация о сумке -->
+                        <div class="tovar__bags--info">
+                            <div class="tovar__bags--info--text">
+                                <span class="medium art">
+                                    Арт. 2003
+                                </span>
+                                <span class="name__bag">- клетка кофейная</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    Размер
+                                </span>
+                                <span class="size">- 53*48*29 см.</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium price">
+                                    100 руб.
+                                </span>
+                                - штука
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    1 коробка
+                                </span>
+                                <span class="number__bag">- 96шт.</span>
+                            </div>
+                        </div>
+
+                        <!-- Выбор кол-ва сумок и корзина -->
+                        <div class="tovar__bags--buy">
+                            <div class="tovar__bags--buy--text">
+                                Коробок
+                            </div>
+
+                            
+                            <div class="tovar__bags--buy--value--inner">
+                                <i class="fas fa-chevron-up tovar__bags--buy--value--arrow value__arrow--up"></i>
+                                <div class="bags__value--inner">
+                                    <span class="value__bags">0</span> шт.
+                                </div>
+                                <i class="fas fa-chevron-down tovar__bags--buy--value--arrow value__arrow--down"></i>
+                            </div>
+
+
+                            <button class="button tovar__bags--buy--button">
+                                <svg class="cart__icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+                                <g><path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+                                        c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+                                        C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+                                        H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+                                        c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="content__tovar--item">
+                        <!-- Ширина сумки -->
+                        <div class="tovar__bags--width">
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wb">
+                                    64см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wl">
+                                    51см.
+                                </div>
+                            </div>
+
+                            <div class="tovar__bag--width">
+                                <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
+
+                                <div class="bag__width--value wlb">
+                                    32см.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Картинка сумки -->
+                        <div class="tovar__bags--img--inner card__open" data-title="Сумка клетка кофейная 64*51*32 см.">
+                            <div class="tovar__bags--img--box">
+                                <img src="img/tovar6.png" alt="картинка товара" class="tovar__bags--img">
+                            </div>
+
+                            <div class="tovar__bags--free">
+                                Бесплатная доставка
+                            </div>
+                        </div>
+
+                        <!-- Информация о сумке -->
+                        <div class="tovar__bags--info">
+                            <div class="tovar__bags--info--text">
+                                <span class="medium art">
+                                    Арт. 2004
+                                </span>
+                                <span class="name__bag">- клетка кофейная</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    Размер
+                                </span>
+                                <span class="size">- 64*51*32 см.</span>
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium price">
+                                    120 руб.
+                                </span>
+                                - штука
+                            </div>
+                            <div class="tovar__bags--info--text">
+                                <span class="medium">
+                                    1 коробка
+                                </span>
+                                <span class="number__bag">- 96шт.</span>
                             </div>
                         </div>
 
@@ -1144,8 +2309,8 @@
                         <i class="fas fa-times"></i>
                     </div>
                     
-                    <div class="cart__title">
-                        Сумка хозяйственная SHER клетка кофейная 40*36*20 см
+                    <div class="cart__title card__title">
+                        
                     </div>
                     
                     <div class="cards__inner">
@@ -1156,24 +2321,24 @@
                                 <div class="tovar__bag--width">
                                     <img src="img/cards-bag1.png" alt="ширина сумки" class="bag__width--img">
 
-                                    <div class="bag__width--value">
-                                        40см.
+                                    <div class="bag__width--value wbm">
+                                        
                                     </div>
                                 </div>
 
                                 <div class="tovar__bag--width">
                                     <img src="img/cards-bag2.png" alt="ширина сумки" class="bag__width--img">
 
-                                    <div class="bag__width--value">
-                                        36см.
+                                    <div class="bag__width--value wlm">
+                                        
                                     </div>
                                 </div>
 
                                 <div class="tovar__bag--width">
                                     <img src="img/cards-bag3.png" alt="ширина сумки" class="bag__width--img">
 
-                                    <div class="bag__width--value">
-                                        20см.
+                                    <div class="bag__width--value wlbm">
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1181,26 +2346,26 @@
                             <!-- Картинка сумки -->
                             <div class="tovar__bags--img--inner">
                                 <div class="tovar__bags--img--box card__img">
-                                    <img src="img/tovar5.png" alt="картинка товара" class="tovar__bags--img">
+                                    <img alt="картинка товара" class="tovar__bags--img tovar__img--modal">
                                 </div>
                             </div>
                         </div>
 
                         <div class="cards__info">
                             <div class="cards__info--item">
-                                <span class="medium">Арт. 2001</span> - клетка кофейная
+                                <span class="medium art__modal"></span> <span class="modal__namebag"></span>
                             </div>
 
                             <div class="cards__info--item">
-                                <span class="medium">Размер</span> - 40*36*20 см.
+                                <span class="medium">Размер</span> <span class="size__modal"></span>
                             </div>
 
                             <div class="cards__info--item">
-                                <span class="medium">1 шт.</span> - 75 руб.
+                                <span class="medium">1 шт.</span> - <span class="price__modal"></span>
                             </div>
 
                             <div class="cards__info--item">
-                                <span class="medium">1 коробка.</span> - 144шт.
+                                <span class="medium">1 коробка.</span> <span class="numberbag__modal"></span>
                             </div>
 
                             <div class="cards__delivery--inner">
