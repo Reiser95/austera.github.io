@@ -15,7 +15,7 @@ $(document).ready(function(){
 			.addClass(car5).removeClass(car6);
 		}
 
-		$(this).attr("disabled", "disabled");
+		$(".main__carousel--arrow").attr("disabled", "disabled");
 
 		var m = number;
 		var n = 0;
@@ -68,7 +68,7 @@ $(document).ready(function(){
 			.addClass(car5).removeClass(car6);
 		}
 
-		$(this).attr("disabled", "disabled");
+		$(".main__carousel--arrow").attr("disabled", "disabled");
 
 		var m = number;
 		var n = 0;
@@ -140,6 +140,26 @@ $(document).ready(function(){
 		setTimeout(fadeIn, 200);
 
 
+	});
+
+
+	$(".main__bar--progress").on("click", function(){
+		$(this).next().toggleClass("active");
+	});
+
+
+	$(".main__mobile--carousel--inner").owlCarousel({
+		items: 1,
+    	loop: true,
+    	center: true
+	});
+
+
+	$('.main__carousel--arrow--right').click(function () {
+	    $(".main__mobile--carousel--inner").trigger('next.owl.carousel');
+	});
+	$('.main__carousel--arrow--left').click(function () {
+	    $(".main__mobile--carousel--inner").trigger('prev.owl.carousel');
 	});
 
 });

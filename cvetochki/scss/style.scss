@@ -49,6 +49,7 @@ ul{
 
 .main{
 	width: 100%;
+	height: 636px;
 	background: url("../img/main-bg.jpg") center no-repeat;
 	background-size: cover;
 	padding: 2rem 0 4rem 0;
@@ -144,6 +145,41 @@ ul{
 	color: #000;
 }
 
+// Элемент аккардион
+
+.main__bar--progress{
+	position: relative;
+	padding-left: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.main__bar--progress:before{
+	content: "\f0dd";
+	display: block;
+	font-weight: 700;
+	position: absolute;
+	left: 0;
+	top: -1px;
+	font-family: "Font Awesome 5 Free";
+}
+
+.main__bar--progress--inner{
+	display: none;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-left: 2rem;
+}
+
+.main__bar--progress--inner.active{
+	display: flex;
+}
+
+.main__bar--progress--point{
+	margin-top: .5rem;
+}
+
 /* Контент главной */ 
 
 .main__content--nav{
@@ -181,6 +217,10 @@ ul{
 
 .main__content--nav--cart--phone--link{
 	color: rgba(255, 255, 255, .9);
+}
+
+.main__content--mobile--search--inner{
+	display: none;
 }
 
 .main__content--nav--cart--phone--time{
@@ -262,6 +302,10 @@ ul{
 	height: 214px;
 }
 
+.main__content--mobile--menu--icon{
+	display: none;
+}
+
 .main__carousel--item{
 	width: 120px;
 	height: auto;
@@ -275,6 +319,10 @@ ul{
 }
 
 // Элементы карусели
+
+.main__mobile--carousel{
+	display: none;
+}
 
 .main__carousel--item-0{
 	top: 290px;
@@ -630,8 +678,92 @@ ul{
 	opacity: .7;
 }
 
+// Текст главной
 
+.main__content--title--inner{
+	position: absolute;
+	left: 0;
+	z-index: 5;
+	top: 300px;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+}
 
+.main__content--title--price{
+	font-size: 3rem;
+	color: #00755A;
+	font-weight: 500;
+}
+
+.main__content--title--title{
+	font-size: 3.6rem;
+	color: #000;
+	font-weight: 700;
+	margin-top: 2.3rem;
+}
+
+.main__content--title--text{
+	font-size: 1.4rem;
+	margin-top: 1.5rem;
+	color: rgba(0, 0, 0, .6);
+}
+
+.main__content--title--button{
+	color: #00755A;
+	font-size: 1.6rem;
+	margin-top: 2rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.main__content--title--icon{
+	margin-left: 1rem;
+	transition: .2s linear;
+}
+
+.main__content--title--button:hover .main__content--title--icon{
+	margin-left: 2rem;
+}
+
+// Мобильное меню
+
+.main__mobile--carousel--inner{
+	position: relative;
+}
+
+.main__mobile--item{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main__mobile--item--img--inner{
+	max-width: 200px;
+	height: auto;
+}
+
+.main__mobile--item--img{
+	width: 100%;
+	height: auto;
+}
+
+.owl-dots{
+	display: none;
+}
+
+.main__content--mobile--logo--inner{
+	max-width: 70px;
+	height: auto;
+}
+
+.main__content--mobile--logo{
+	width: 100%;
+	height: auto;
+}
 
 
 
@@ -651,4 +783,288 @@ ul{
 	top: 0;
 	left: 0;
 	display: none;
+}
+
+
+
+// Адаптив/Мобильность
+
+@media(max-width: 1450px){
+	.container{
+		max-width: 1160px;
+	}
+
+	.white-2{
+		bottom: -64px;
+		transform: rotate(24deg);
+	}
+
+	.white{
+		bottom: -228px;
+		transform: rotate(9deg);
+	}
+
+	.main__content{
+		width: 96%;
+	}
+
+	.main{
+		height: 740px;
+	}
+
+	.main__carousel{
+		right: 51px;
+	}
+
+	.main__carousel--arrow--left,
+	.main__carousel--arrow--right{
+		bottom: -65px;
+	}
+
+	.main__carousel--item-0{
+		top: 325px;
+	}
+}
+
+@media(max-width: 1200px){
+	.container{
+		max-width: 960px;
+	}
+
+	.main__carousel{
+		display: none;
+	}
+
+	.main{
+		height: auto;
+	}
+
+	.main__content--title--inner{
+		top: 60px;
+		right: 0;
+		left: auto;
+	}
+
+	.main__content--title--price{
+		font-size: 2.7rem;
+		position: absolute;
+		top: 55px;
+		right: 0;
+	}
+
+	.main__content--title--title{
+		font-size: 3.2rem;
+		margin-top: 1.3rem;
+	}
+
+	.main__content--title--text{
+		font-size: 1.4rem;
+	}
+
+	.main__bar--views{
+		margin-top: 2rem;
+	}
+
+	.main__bar--views--items{
+		margin-top: 1.2rem;
+	}
+
+	.main__mobile--carousel{
+		display: block;
+		margin-top: 290px;
+		position: relative;
+		top: 30px;
+	}
+
+	.circle__carousel{
+		position: absolute;
+		width: 240px;
+		height: 240px;
+		border-radius: 50%;
+		border: 1px solid #80BAAD;
+		top: -20px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.circle__carousel-2{
+		position: absolute;
+		width: 190px;
+		height: 190px;
+		border-radius: 50%;
+		border: 1px solid #80BAAD;
+		top: 5px;
+		left: 50%;
+		opacity: .3;
+		transform: translateX(-50%);
+	}
+
+	.main__content{
+		width: 72%;
+	}
+
+	.main__content--title--inner{
+		align-items: center;
+	}
+
+	.main__carousel--arrow--left, .main__carousel--arrow--right{
+		bottom: 174px;
+	}
+
+	.main__carousel--item--text--inner{
+		position: static;
+	}
+
+	.main__carousel--item--text--inner{
+		align-items: center;
+	}
+}
+
+@media(max-width: 998px){
+	.container{
+		max-width: 740px;
+	}
+
+
+}
+
+@media(max-width: 768px){
+	.container{
+		max-width: 460px;
+	}
+
+	.main__bar{
+		display: none;
+	}
+
+	.main__content{
+		width: 100%;
+	}
+
+	.main__content--nav--cart--phone--time{
+		display: none;
+	}
+
+	.main__content--nav--box div{
+		margin-right: 2rem;
+		font-size: 1.4rem;
+	}
+
+	.main{
+		background-position: -630px;
+	}
+
+	.main__content--title--inner{
+		right: auto;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+	}
+
+	.main__content--title--title{
+		text-align: center;
+	}
+
+	.main__content--title--price{
+		font-size: 1.8rem;
+		top: 63px;
+		right: 80px;
+	}
+
+	.main__content--title--text{
+		text-align: center;
+	}
+
+	.main__mobile--carousel{
+		margin-top: 230px;
+	}
+
+	.main__carousel--text--box{
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	.main__carousel--item--text--inner{
+		margin-top: 75px;
+	}
+
+	.main__carousel--arrow--left, .main__carousel--arrow--right{
+		bottom: 248px;
+	}
+
+	.main__carousel--arrow--left{
+		left: 50px;
+	}
+
+	.main__carousel--arrow--right{
+		right: 50px;
+	}
+
+	.main__content--mobile--menu--icon{
+		display: block;
+		color: #fff;
+		font-size: 2rem;
+	}
+
+	.main__content--nav--cart--icon--inner,
+	.main__content--nav--favorite--icon--inner{
+		display: none;
+	}
+
+	.main__content--mobile--search--inner{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 2rem;
+	}
+
+	.main__content--title--inner{
+		top: 127px;
+	}
+
+	.mobile__cart{
+		display: block;
+	}
+
+	.main__bar--search{
+		margin-top: 0;
+	}
+}
+
+@media(max-width: 480px){
+	.container{
+		max-width: 300px;
+	}
+
+	.main__carousel--arrow--left{
+		left: 0px;
+	}
+
+	.main__carousel--arrow--right{
+		right: 0px;
+	}
+
+	.circle__carousel{
+		width: 220px;
+		height: 220px;
+		top: -10px;
+	}
+
+	.main__content--title--price{
+		right: 0;
+	}
+
+	.main__bar--search--input{
+		width: 120px;
+	}
+
+	.main__content--nav--cart--phone{
+		margin-right: 1rem;
+		font-size: 1.3rem;
+	}
+
+	.main__content--nav--box div{
+		margin-right: 1rem;
+		font-size: 1.3rem;
+	}
 }

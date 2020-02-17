@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="stylesheet" href="css/Pe-icon-7-stroke.css">
 	<link rel="stylesheet" href="css/fontawesome/all.min.css">
+	<link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
 
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
@@ -31,10 +32,10 @@
 <body>
 	
 	
-	<div class="main">
+	<header class="main">
 		<div class="container">
 			<div class="main__inner">
-				<div class="main__bar">
+			<div class="main__bar">
 					<div class="main__bar--logo">
 						<a href="#">
 							<img src="img/logo.png" alt="Логотип" class="main__bar--logo--img">
@@ -48,40 +49,55 @@
 
 					<div class="main__bar--views">
 						<div class="main__bar--views--items">
-							Акции февраля
+							Акции дня
+						</div>
+						<div class="main__bar--views--items">
+							Популярные букеты
+						</div>
+						<div class="main__bar--views--items">
+							Европейские букеты
+						</div>
+						<div class="main__bar--views--items">
+							Цветы в коробке
+						</div>
+						<div class="main__bar--views--items">
+							Цветы в корзине
+						</div>
+						<div class="main__bar--views--items main__bar--views--items--active">
+							Моно букеты
 						</div>
 						<div class="main__bar--views--items">
 							Цветы для мамы
 						</div>
 						<div class="main__bar--views--items">
-							Доставка в течении 1 часа
+							Букеты из роз
 						</div>
 						<div class="main__bar--views--items">
-							Розы
+							VIP букеты
 						</div>
 						<div class="main__bar--views--items">
-							Vip-букеты
+							Свадебная флористика
 						</div>
-						<div class="main__bar--views--items main__bar--views--items--active">
-							Подарки на день рождения
+						<div class="main__bar--views--items main__bar--progress">
+							Поводы
 						</div>
-						<div class="main__bar--views--items">
-							Живые бабочки
-						</div>
-						<div class="main__bar--views--items">
-							Композиции из шаров
-						</div>
-						<div class="main__bar--views--items">
-							Сладости для радости
-						</div>
-						<div class="main__bar--views--items">
-							Новинки месяца
-						</div>
-						<div class="main__bar--views--items">
-							Подарочные наборы
-						</div>
-						<div class="main__bar--views--items">
-							Корзинки
+						
+						<div class="main__bar--progress--inner">
+							<div class="main__bar--progress--point">
+								Бизнес-букет
+							</div>
+							<div class="main__bar--progress--point">
+								День рождения 
+							</div>
+							<div class="main__bar--progress--point">
+								Поздравляю
+							</div>
+							<div class="main__bar--progress--point">
+								Прости
+							</div>
+							<div class="main__bar--progress--point">
+								Спасибо
+							</div>
 						</div>
 					</div>
 				</div>
@@ -112,9 +128,39 @@
 								<div class="main__content--nav--cart--icon--inner">
 									<img src="img/cart.png" alt="Корзина" class="main__content--nav--cart--icon">
 								</div>
+
+								<i class="fas fa-bars main__content--mobile--menu--icon"></i>
 							</div>
 						</div>
 					</div>
+
+
+					<div class="main__content--mobile--search--inner">
+						<div class="main__content--mobile--logo--inner">
+							<a href="/">
+								<img src="img/logo.png" alt="логотип" class="main__content--mobile--logo">
+							</a>
+						</div>
+
+
+						<div class="main__bar--search">
+							<input type="text" class="input main__bar--search--input">
+							<i class="pe-7s-search main__bar--search--icon"></i>
+						</div>
+
+
+						<div class="main__content--nav--cart--inner">
+							<div class="main__content--nav--favorite--icon--inner mobile__cart">
+								<img src="img/favorite.png" alt="Избранные" class="main__content--nav--favorite--icon">
+							</div>
+
+							<div class="main__content--nav--cart--icon--inner mobile__cart">
+								<img src="img/cart.png" alt="Корзина" class="main__content--nav--cart--icon">
+							</div>
+						</div>
+
+					</div>
+
 
 
 					<div class="main__carousel">
@@ -146,24 +192,6 @@
 
 						<div class="main__carousel--item main__carousel--item-5 carousel__5">
 							<img src="img/item-2.png" alt="цветы" data-view="Тест5" data-price="5" data-name="Тест5" class="main__carousel--item--img">
-						</div>
-
-						<!-- Дополнительные -->
-
-						<div class="main__carousel--item main__carousel--item--null carousel__6">
-							<img src="img/item-3.png" alt="цветы" data-view="ТестНулл" data-price="1010" data-name="ТестНулл" class="main__carousel--item--img">
-						</div>
-
-						<div class="main__carousel--item main__carousel--item--null carousel__7">
-							<img src="img/item-2.png" alt="цветы" data-view="ТестНулл" data-price="1010" data-name="ТестНулл" class="main__carousel--item--img">
-						</div>
-
-						<div class="main__carousel--item main__carousel--item--null carousel__8">
-							<img src="img/item-1.png" alt="цветы" data-view="ТестНулл" data-price="1010" data-name="ТестНулл" class="main__carousel--item--img">
-						</div>
-
-						<div class="main__carousel--item main__carousel--item--null carousel__9">
-							<img src="img/item-4.png" alt="цветы" data-view="ТестНулл" data-price="1010" data-name="ТестНулл" class="main__carousel--item--img">
 						</div>
 
 						<!-- Главный элемент -->
@@ -206,10 +234,135 @@
 						<div class="white"></div>
 						<div class="white-2"></div>
 					</div>
+
+
+					<!-- Карусель мобильная -->
+
+					<div class="main__mobile--carousel">
+
+						<div class="circle__carousel"></div>
+						<div class="circle__carousel-2"></div>
+						
+
+						<div class="main__mobile--carousel--inner owl-carousel">
+							<div class="main__mobile--item">
+								<div class="main__mobile--item--img--inner">
+									<img src="img/item-1.png" alt="цветы" class="main__mobile--item--img">
+								</div>
+
+								<div class="main__carousel--item--text--inner">
+									<div class="main__carousel--text--view">
+										Подарки на день рождения
+									</div>
+
+									<div class="main__carousel--text--name">
+										Розы в горшочке
+									</div>
+
+									<div class="main__carousel--text--box">
+										<div class="main__carousel--text--price">
+											200Р
+										</div>
+
+										<button class="button main__carousel--text--buy--button">
+											Купить
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="main__mobile--item">
+								<div class="main__mobile--item--img--inner">
+									<img src="img/item-3.png" alt="цветы" class="main__mobile--item--img">
+								</div>
+
+								<div class="main__carousel--item--text--inner">
+									<div class="main__carousel--text--view">
+										Подарки на день рождения
+									</div>
+
+									<div class="main__carousel--text--name">
+										Розы в горшочке
+									</div>
+
+									<div class="main__carousel--text--box">
+										<div class="main__carousel--text--price">
+											200Р
+										</div>
+
+										<button class="button main__carousel--text--buy--button">
+											Купить
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="main__mobile--item">
+								<div class="main__mobile--item--img--inner">
+									<img src="img/item-2.png" alt="цветы" class="main__mobile--item--img">
+								</div>
+
+								<div class="main__carousel--item--text--inner">
+									<div class="main__carousel--text--view">
+										Подарки на день рождения
+									</div>
+
+									<div class="main__carousel--text--name">
+										Розы в горшочке
+									</div>
+
+									<div class="main__carousel--text--box">
+										<div class="main__carousel--text--price">
+											200Р
+										</div>
+
+										<button class="button main__carousel--text--buy--button">
+											Купить
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="button main__carousel--arrow main__carousel--arrow--left">
+							<i class="fas fa-chevron-left main__carousel--arrow--icon"></i>
+						</button>
+
+						<button class="button main__carousel--arrow main__carousel--arrow--right">
+							<i class="fas fa-chevron-right main__carousel--arrow--icon"></i>
+						</button>
+					</div>
+
+
+
+
+					<!-- Текст доставки -->
+
+					<div class="main__content--title--inner">
+						<div class="main__content--title--price">
+							от 49Р
+						</div>
+
+						<div class="main__content--title--title">
+							Цветы с Доставкой<br>
+							в Минске
+						</div>
+
+						<div class="main__content--title--text">
+							Второй букет в подарок<br>
+							Доставка 0 руб
+						</div>
+
+						<div class="main__content--title--button">
+							Заказать
+							<i class="fas fa-long-arrow-alt-right main__content--title--icon"></i>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>
-	</div>
+	</header>	
 
 
 
@@ -220,5 +373,6 @@
 	
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="owl/owl.carousel.min.js"></script>
 </body>
 </html>
