@@ -175,6 +175,10 @@ $(document).ready(function(){
 	$(".mobile__menu--cross").on("click", function(){
 		$(".mobile__menu").removeClass("mobile__menu--active");
 		$(".grey").removeClass("grey__active");
+
+		$(".mobile__menu--items").each(function(i){
+			$(this).removeClass("visited");
+		});
 	});
 
 });
