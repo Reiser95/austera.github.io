@@ -181,4 +181,16 @@ $(document).ready(function(){
 		});
 	});
 
+	$(document).mouseup(function(e) {
+	    var $target = $(e.target);
+	    if ($target.closest(".mobile__menu").length === 0) {
+	        $(".mobile__menu").removeClass("mobile__menu--active");
+	        $(".grey").removeClass("grey__active");
+
+	        $(".mobile__menu--items").each(function(i){
+	        	$(this).removeClass("visited");
+	        });
+	    }
+	});
+
 });

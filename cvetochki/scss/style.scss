@@ -786,7 +786,7 @@ ul{
 	z-index: 10;
 	display: block;
 	transform: translateX(-100%);
-	transition: .4s ease-in-out;
+	transition: .5s cubic-bezier(.83,.01,.29,.99);
 }
 
 
@@ -858,7 +858,7 @@ ul{
 	overflow-y: auto;
 	z-index: 15;
 	border-radius: 0 1rem 1rem 0;
-	transition: .4s ease-in-out;
+	transition: .5s cubic-bezier(.83,.01,.29,.99);
 }
 
 .mobile__menu--cross{
@@ -1141,7 +1141,7 @@ ul{
 	}
 
 	.mobile__menu--items{
-		transition: .4s linear;
+		transition: .4s ease-in-out;
 		transition-delay: .4s;
 		transform: translateX(-180%);
 	}
