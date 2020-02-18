@@ -174,6 +174,7 @@ ul{
 
 .main__bar--progress--inner.active{
 	display: flex;
+	flex-shrink: 0;
 }
 
 .main__bar--progress--point{
@@ -782,7 +783,91 @@ ul{
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 10;
 	display: none;
+}
+
+
+// Спасибо за заказ
+
+.thankyou{
+	width: 100%;
+	padding: 4rem 2rem;
+	height: 100vh;
+	background: url("../img/thankyou-bg.png") center no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.thankyou__inner{
+	width: 100%;
+	max-width: 630px;
+	height: 440px;
+	background: #fff;
+	border-radius: 1rem;
+	padding: 9rem 3rem 2rem 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.thankyou__link{
+	text-decoration: underline;
+	font-size: 1.2rem;
+}
+
+.thankyou__title{
+	text-align: center;
+	font-size: 6.5rem;
+	color: #00755A;
+	font-weight: 700;
+	line-height: .9;
+}
+
+.thankyou__subtitle{
+	margin-top: 4rem;
+	text-align: center;
+	font-size: 1.5rem;
+	color: rgba(0,0,0, .7);
+}
+
+.main.thankyou__main{
+	display: none;
+}
+
+// Мобильное меню
+
+.mobile__menu{
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #fff;
+	padding: 3rem;
+	display: none;
+	flex-direction: column;
+	align-items: flex-start;
+	height: 400px;
+	max-width: 300px;
+	width: 100%;
+	overflow-y: auto;
+	z-index: 15;
+	border-radius: 0 0 1rem 0;
+}
+
+.grey.grey__active{
+	display: block;
+}
+
+.mobile__menu--cross{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 2rem;
+	color: rgba(0,0,0,.4);
+
 }
 
 
@@ -867,6 +952,7 @@ ul{
 
 	.main__bar--views--items{
 		margin-top: 1.2rem;
+		flex-shrink: 0;
 	}
 
 	.main__mobile--carousel{
@@ -1000,7 +1086,7 @@ ul{
 		right: 50px;
 	}
 
-	.main__content--mobile--menu--icon{
+	.fas.main__content--mobile--menu--icon{
 		display: block;
 		color: #fff;
 		font-size: 2rem;
@@ -1028,6 +1114,28 @@ ul{
 
 	.main__bar--search{
 		margin-top: 0;
+	}
+
+	// Спасибо за заказ
+
+	.thankyou__inner{
+		width: 100%;
+		max-width: 430px;
+		height: 340px;
+		padding: 6rem 2rem 2rem 2rem;
+	}
+
+	.thankyou__title{
+		text-align: center;
+		font-size: 4rem;
+	}
+
+	.thankyou__subtitle{
+		margin-top: 2rem;
+	}
+
+	.mobile__menu{
+		display: flex;
 	}
 }
 
@@ -1066,5 +1174,29 @@ ul{
 	.main__content--nav--box div{
 		margin-right: 1rem;
 		font-size: 1.3rem;
+	}
+
+	// Спасибо за заказ
+
+	.thankyou{
+		display: none;
+	}
+
+	.main.thankyou__main{
+		display: block;
+	}
+
+	.main__mobile--carousel.thankyou__mobile{
+		margin-top: 170px;
+	}
+
+	.main.thankyou__main{
+		background-position: -390px;
+	}
+
+	.mobile__menu{
+		padding: 2rem;
+		max-width: 100%;
+		border-radius: 0;
 	}
 }
