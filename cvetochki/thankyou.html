@@ -51,6 +51,7 @@
 	</div>
 
 
+	
 	<header class="main thankyou__main">
 		<div class="container">
 			<div class="main__inner">
@@ -67,9 +68,90 @@
 								<a href="tel:+375296966596" class="main__content--nav--cart--phone--link">
 									+375 (29) 6966596
 								</a>
+
+								<div class="main__content--nav--cart--phone--time">
+									Время работы: с 7 до 24
+								</div>
 							</div>
 
 							<div class="main__content--nav--cart--inner">
+
+								<!-- Модальное окно Корзины -->
+								<div class="modal__cart">
+									<div class="modal__cart--text--inner">
+										<div class="modal__cart--name">
+											Корзина
+										</div>
+
+										<div class="modal__cart--clear cart__clear">
+											Очистить
+										</div>
+									</div>
+
+									
+									<div class="modal__cart--items--inner">
+										
+
+
+										
+									</div>
+
+									<input type="text" placeholder="Ваш телефон*" class="input modal__cart--phone--input">
+
+									<div class="modal__cart--total--inner">
+										<div class="modal__cart--total--text">
+											Итог:
+										</div>
+
+										<div class="modal__cart--total--value">
+											0Р
+										</div>
+									</div>
+
+									<button class="button modal__cart--zakaz--button">
+										Главная
+									</button>
+
+
+								</div>
+
+
+								<!-- Модальное окно Избранных товаров -->
+								<div class="modal__fav">
+									<div class="modal__cart--text--inner">
+										<div class="modal__cart--name">
+											Избранное
+										</div>
+
+										<div class="modal__cart--clear fav__clear">
+											Очистить
+										</div>
+									</div>
+
+
+									<div class="modal__fav--inner">
+										
+
+
+									</div>
+
+
+								</div>
+
+
+
+								<div class="main__content--nav--favorite--icon--inner carts__icon">
+									<img src="img/favorite.png" alt="Избранные" class="main__content--nav--favorite--icon">
+
+									<div class="favorite__val">0</div>
+								</div>
+
+								<div class="main__content--nav--cart--icon--inner carts__icon">
+									<img src="img/cart.png" alt="Корзина" class="main__content--nav--cart--icon">
+
+									<div class="cart__val">0</div>
+								</div>
+
 								<i class="fas fa-bars main__content--mobile--menu--icon"></i>
 							</div>
 						</div>
@@ -93,10 +175,14 @@
 						<div class="main__content--nav--cart--inner">
 							<div class="main__content--nav--favorite--icon--inner mobile__cart">
 								<img src="img/favorite.png" alt="Избранные" class="main__content--nav--favorite--icon">
+
+								<div class="favorite__val">0</div>
 							</div>
 
 							<div class="main__content--nav--cart--icon--inner mobile__cart">
 								<img src="img/cart.png" alt="Корзина" class="main__content--nav--cart--icon">
+
+								<div class="cart__val">0</div>
 							</div>
 						</div>
 
@@ -106,17 +192,16 @@
 					<!-- Карусель мобильная -->
 
 					<div class="main__mobile--carousel thankyou__mobile">
-
-						<div class="circle__carousel"></div>
-						<div class="circle__carousel-2"></div>
 						
 
-						<div class="main__mobile--carousel--inner">
+						<div class="main__mobile--carousel--iner carousel__inner">
 							<div class="main__mobile--item">
 								<div class="main__mobile--item--img--inner">
 									<img src="img/item-1.png" alt="цветы" class="main__mobile--item--img">
 								</div>
-							</div>							
+							</div>
+
+							
 						</div>
 					</div>
 
@@ -126,25 +211,33 @@
 					<!-- Текст доставки -->
 
 					<div class="main__content--title--inner">
+						<div class="main__content--title--price">
+							от 49Р
+						</div>
 
 						<div class="main__content--title--title">
-							Спасибо за заявку!
+							Цветы с Доставкой<br>
+							в Минске
 						</div>
 
 						<div class="main__content--title--text">
-							Наш менеджер танцует от счастья, сейчас он успокоится и обязательно Вам перезвонит.
+							Второй букет в подарок<br>
+							Доставка 0 руб
 						</div>
 
-						<a href="/" class="main__content--title--button">
-							Главная
+						<div class="main__content--title--button">
+							Заказать
 							<i class="fas fa-long-arrow-alt-right main__content--title--icon"></i>
-						</a>
+						</div>
 					</div>
 
 				</div>
 			</div>
 		</div>
 	</header>
+
+
+	
 
 	<div class="mobile__menu">
 		<i class="fas fa-times mobile__menu--cross"></i>

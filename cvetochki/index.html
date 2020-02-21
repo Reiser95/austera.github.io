@@ -121,12 +121,81 @@
 							</div>
 
 							<div class="main__content--nav--cart--inner">
-								<div class="main__content--nav--favorite--icon--inner">
-									<img src="img/favorite.png" alt="Избранные" class="main__content--nav--favorite--icon">
+
+								<!-- Модальное окно Корзины -->
+								<div class="modal__cart">
+									<div class="modal__cart--text--inner">
+										<div class="modal__cart--name">
+											Корзина
+										</div>
+
+										<div class="modal__cart--clear cart__clear">
+											Очистить
+										</div>
+									</div>
+
+									
+									<div class="modal__cart--items--inner">
+										
+
+
+										
+									</div>
+
+									<input type="text" placeholder="Ваш телефон*" class="input modal__cart--phone--input">
+
+									<div class="modal__cart--total--inner">
+										<div class="modal__cart--total--text">
+											Итог:
+										</div>
+
+										<div class="modal__cart--total--value">
+											0Р
+										</div>
+									</div>
+
+									<button class="button modal__cart--zakaz--button">
+										Заказать
+									</button>
+
+
 								</div>
 
-								<div class="main__content--nav--cart--icon--inner">
+
+								<!-- Модальное окно Избранных товаров -->
+								<div class="modal__fav">
+									<div class="modal__cart--text--inner">
+										<div class="modal__cart--name">
+											Избранное
+										</div>
+
+										<div class="modal__cart--clear fav__clear">
+											Очистить
+										</div>
+									</div>
+
+
+									<div class="modal__fav--inner">
+										
+
+
+									</div>
+
+
+								</div>
+
+
+
+								<div class="main__content--nav--favorite--icon--inner carts__icon">
+									<img src="img/favorite.png" alt="Избранные" class="main__content--nav--favorite--icon">
+
+									<div class="favorite__val">0</div>
+								</div>
+
+								<div class="main__content--nav--cart--icon--inner carts__icon">
 									<img src="img/cart.png" alt="Корзина" class="main__content--nav--cart--icon">
+
+									<div class="cart__val">0</div>
 								</div>
 
 								<i class="fas fa-bars main__content--mobile--menu--icon"></i>
@@ -152,10 +221,14 @@
 						<div class="main__content--nav--cart--inner">
 							<div class="main__content--nav--favorite--icon--inner mobile__cart">
 								<img src="img/favorite.png" alt="Избранные" class="main__content--nav--favorite--icon">
+
+								<div class="favorite__val">0</div>
 							</div>
 
 							<div class="main__content--nav--cart--icon--inner mobile__cart">
 								<img src="img/cart.png" alt="Корзина" class="main__content--nav--cart--icon">
+
+								<div class="cart__val">0</div>
 							</div>
 						</div>
 
@@ -385,115 +458,179 @@
 				</div>
 
 				<div class="popular__card--inner">
-					<div class="popular__card">
-						<div class="popular__card--img--inner">
-							<img src="img/item-1.png" alt="фото карточки" class="popular__card--img">
+					<div class="categories__card">
+						<div class="categories__card--img--inner">
+							<img src="img/cat2.png" alt="цветы" class="categories__card--img">
 						</div>
 
-						<div class="popular__card--title">
-							Акции февраля
-						</div>
+						<div class="categories__card--name--inner">
+							<div class="categories__card--name">
+								Букет розовых роз
+							</div>
 
-						<div class="popular__card--price">
-							200Р
-						</div>
+							<div class="categories__card--number">
+								(29 шт)
+							</div>
 
-						<div class="popular__card--button--inner">
-							<button class="button popular__card--button--buy">
-								Купить
-							</button>
+							<div class="categories__price--inner">
+								<div class="categories__price--delete">
+									750 Р за шт
+								</div>
 
-							<button class="button popular__button popular__card--button--cart">
-								<img src="img/cart-card.png" alt="корзина" class="popular__card--cart--icon">
-							</button>
+								<div class="categories__price--text">
+									123Р
+								</div>
 
-							<button class="button popular__button popular__card--button--favorite">
-								<img src="img/favorite-card.png" alt="избранные" class="popular__card--cart--icon">
-							</button>
-						</div>
-					</div>
+								<div class="categories__price--sale">
+									-35%
+								</div>
+							</div>
 
-					<div class="popular__card">
-						<div class="popular__card--img--inner">
-							<img src="img/item-2.png" alt="фото карточки" class="popular__card--img">
-						</div>
+							<div class="categories__card--button--inner">
+								<button class="button popular__card--button--buy">
+									Купить
+								</button>
 
-						<div class="popular__card--title">
-							Акции февраля
-						</div>
+								<button class="button popular__button popular__card--button--cart">
+									<img src="img/cart-card.png" alt="корзина" class="popular__card--cart--icon">
+								</button>
 
-						<div class="popular__card--price">
-							200Р
-						</div>
-
-						<div class="popular__card--button--inner">
-							<button class="button popular__card--button--buy">
-								Купить
-							</button>
-
-							<button class="button popular__button popular__card--button--cart">
-								<img src="img/cart-card.png" alt="корзина" class="popular__card--cart--icon">
-							</button>
-
-							<button class="button popular__button popular__card--button--favorite">
-								<img src="img/favorite-card.png" alt="избранные" class="popular__card--cart--icon">
-							</button>
+								<button class="button popular__button popular__card--button--favorite">
+									<img src="img/favorite-card.png" alt="избранные" class="popular__card--cart--icon">
+								</button>
+							</div>
 						</div>
 					</div>
 
-					<div class="popular__card">
-						<div class="popular__card--img--inner">
-							<img src="img/item-3.png" alt="фото карточки" class="popular__card--img">
+					<div class="categories__card">
+						<div class="categories__card--img--inner">
+							<img src="img/cat2.png" alt="цветы" class="categories__card--img">
 						</div>
 
-						<div class="popular__card--title">
-							Акции февраля
-						</div>
+						<div class="categories__card--name--inner">
+							<div class="categories__card--name">
+								Букет розовых роз
+							</div>
 
-						<div class="popular__card--price">
-							200Р
-						</div>
+							<div class="categories__card--number">
+								(29 шт)
+							</div>
 
-						<div class="popular__card--button--inner">
-							<button class="button popular__card--button--buy">
-								Купить
-							</button>
+							<div class="categories__price--inner">
+								<div class="categories__price--delete">
+									222 Р за шт
+								</div>
 
-							<button class="button popular__button popular__card--button--cart">
-								<img src="img/cart-card.png" alt="корзина" class="popular__card--cart--icon">
-							</button>
+								<div class="categories__price--text">
+									555Р
+								</div>
 
-							<button class="button popular__button popular__card--button--favorite">
-								<img src="img/favorite-card.png" alt="избранные" class="popular__card--cart--icon">
-							</button>
+								<div class="categories__price--sale">
+									-35%
+								</div>
+							</div>
+
+							<div class="categories__card--button--inner">
+								<button class="button popular__card--button--buy">
+									Купить
+								</button>
+
+								<button class="button popular__button popular__card--button--cart">
+									<img src="img/cart-card.png" alt="корзина" class="popular__card--cart--icon">
+								</button>
+
+								<button class="button popular__button popular__card--button--favorite">
+									<img src="img/favorite-card.png" alt="избранные" class="popular__card--cart--icon">
+								</button>
+							</div>
 						</div>
 					</div>
 
-					<div class="popular__card">
-						<div class="popular__card--img--inner">
-							<img src="img/item-4.png" alt="фото карточки" class="popular__card--img">
+					<div class="categories__card">
+						<div class="categories__card--img--inner">
+							<img src="img/cat2.png" alt="цветы" class="categories__card--img">
 						</div>
 
-						<div class="popular__card--title">
-							Акции февраля
+						<div class="categories__card--name--inner">
+							<div class="categories__card--name">
+								Букет розовых роз
+							</div>
+
+							<div class="categories__card--number">
+								(29 шт)
+							</div>
+
+							<div class="categories__price--inner">
+								<div class="categories__price--delete">
+									750 Р за шт
+								</div>
+
+								<div class="categories__price--text">
+									321Р
+								</div>
+
+								<div class="categories__price--sale">
+									-35%
+								</div>
+							</div>
+
+							<div class="categories__card--button--inner">
+								<button class="button popular__card--button--buy">
+									Купить
+								</button>
+
+								<button class="button popular__button popular__card--button--cart">
+									<img src="img/cart-card.png" alt="корзина" class="popular__card--cart--icon">
+								</button>
+
+								<button class="button popular__button popular__card--button--favorite">
+									<img src="img/favorite-card.png" alt="избранные" class="popular__card--cart--icon">
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="categories__card">
+						<div class="categories__card--img--inner">
+							<img src="img/cat2.png" alt="цветы" class="categories__card--img">
 						</div>
 
-						<div class="popular__card--price">
-							200Р
-						</div>
+						<div class="categories__card--name--inner">
+							<div class="categories__card--name">
+								Букет розовых роз
+							</div>
 
-						<div class="popular__card--button--inner">
-							<button class="button popular__card--button--buy">
-								Купить
-							</button>
+							<div class="categories__card--number">
+								(29 шт)
+							</div>
 
-							<button class="button popular__button popular__card--button--cart">
-								<img src="img/cart-card.png" alt="корзина" class="popular__card--cart--icon">
-							</button>
+							<div class="categories__price--inner">
+								<div class="categories__price--delete">
+									
+								</div>
 
-							<button class="button popular__button popular__card--button--favorite">
-								<img src="img/favorite-card.png" alt="избранные" class="popular__card--cart--icon">
-							</button>
+								<div class="categories__price--text">
+									277Р
+								</div>
+
+								<div class="categories__price--sale">
+									
+								</div>
+							</div>
+
+							<div class="categories__card--button--inner">
+								<button class="button popular__card--button--buy">
+									Купить
+								</button>
+
+								<button class="button popular__button popular__card--button--cart">
+									<img src="img/cart-card.png" alt="корзина" class="popular__card--cart--icon">
+								</button>
+
+								<button class="button popular__button popular__card--button--favorite">
+									<img src="img/favorite-card.png" alt="избранные" class="popular__card--cart--icon">
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -713,6 +850,14 @@
 
 
 	<div class="grey">
+		
+	</div>
+
+	<div class="grey__cart">
+		
+	</div>
+
+	<div class="grey__fav">
 		
 	</div>
 
