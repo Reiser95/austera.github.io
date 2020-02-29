@@ -84,74 +84,226 @@
 			</div>
 		</div>
 	</section>
+	
 
 	<div class="breadcrops">
 		<div class="container">
 			<div class="breadcrops__inner">
 				<a href="#" class="breadcrops__item">Главная</a>
 				<i class="fas fa-chevron-right breadcrops__item--icon"></i>
-				<a href="#" class="breadcrops__item breadcrops__active">О нас</a>
+				<a href="#" class="breadcrops__item">Миски</a>
+				<i class="fas fa-chevron-right breadcrops__item--icon"></i>
+				<a href="#" class="breadcrops__item">Корзина</a>
+				<i class="fas fa-chevron-right breadcrops__item--icon"></i>
+				<a href="#" class="breadcrops__item breadcrops__active">Оформить заказ</a>
 			</div>
 		</div>
 	</div>
 
 
-	<div class="about">
+
+	<section class="zakaz">
 		<div class="container">
-			<div class="about__inner">
-				<div class="about__ava--inner">
-					<div class="about__ava--img--inner">
-						<img src="img/about-ava.png" alt="аватарка" class="about__ava--img">
+			<div class="zakaz__inner">
+				<div class="zakaz__item--data">
+					<div class="zakaz__data--input--inner">
+						<div class="zakaz__data--title">
+							Ваш телефон:
+						</div>
+
+						<input type="text" class="input zakaz__input--phone">
+
+						<div class="zakaz__error">
+							поле не заполнено
+						</div>
 					</div>
+
+					<div class="zakaz__data--input--inner">
+						<div class="zakaz__data--title">
+							Населенный пункт:
+						</div>
+
+						<input type="text" class="input zakaz__input--address">
+
+						<div class="zakaz__error">
+							поле не заполнено
+						</div>
+					</div>
+
+					<input type="radio" class="radio" name="delivery" id="samo">
+
+					<label for="samo" class="zakaz__label">
+						<span class="zakaz__label--title">
+							Самовывоз
+						</span>
+
+						<span class="zakaz__label--text">
+							Московская область, г. Балашиха,
+							Объездное шоссе, владение 8, строение 3
+						</span>
+					</label>
+
+					<input type="radio" class="radio" name="delivery" id="kur">
+
+					<label for="kur" class="zakaz__label">
+						<span class="zakaz__label--title">
+							Курьером
+						</span>
+
+						<span class="zakaz__label--text">
+							доставка куртером по Москве (не более 25 км от МКАД).
+						</span>
+					</label>
+
+					<div class="zakaz__data--input--inner">
+						<div class="zakaz__data--title">
+							Комментарий к заказу:
+						</div>
+
+						<textarea class="input zakaz__input--area"></textarea>
+					</div>
+
+
+					<div class="zakaz__data--input--inner">
+						<div class="zakaz__data--title">
+							Ваше ФИО:
+						</div>
+
+						<input type="text" class="input zakaz__input--name">
+
+						<div class="zakaz__error">
+							поле не заполнено
+						</div>
+					</div>
+
+					<div class="zakaz__data--input--inner">
+						<div class="zakaz__data--title">
+							Ваш email:
+						</div>
+
+						<input type="text" class="input zakaz__input--email">
+
+						<div class="zakaz__error">
+							поле не заполнено
+						</div>
+					</div>
+
+					
+					<div class="zakaz__title">
+						Способ оплаты:
+					</div>
+
+					<input type="radio" class="radio" name="pay" id="card">
+
+					<label for="card" class="zakaz__label">
+						<span class="zakaz__label--title">
+							С банковской карты
+						</span>
+
+						<span class="zakaz__label--text">
+							Visa, Mastercart, Maestro
+						</span>
+					</label>
+
+					<input type="radio" class="radio" name="pay" id="nal">
+
+					<label for="nal" class="zakaz__label">
+						<span class="zakaz__label--title">
+							Наличными
+						</span>
+					</label>
+
+					<input type="radio" class="radio" name="pay" id="alfa">
+
+					<label for="alfa" class="zakaz__label">
+						<span class="zakaz__label--title">
+							Через Альфа-Клик
+						</span>
+					</label>
+					<input type="radio" class="radio" name="pay" id="yandex">
+
+					<label for="yandex" class="zakaz__label">
+						<span class="zakaz__label--title">
+							Через Яндекс деньги
+						</span>
+					</label>
+
+
+					<button class="button zakaz__confirm--button">
+						Подтвердить заказ
+					</button>
+
+
+
 				</div>
 
-				<div class="about__text--inner">
-					<div class="about__text--container">
-						<div class="about__text--box">
-							Привет! Меня зовут Вика. По профессии я байер, более 10 лет занимаюсь закупкой модной одежды для крупных интернет-магазинов. Мне нравится, когда в человеке и его окружении всё красиво и гармонично – мысли, поступки, внешность, одежда. А также я не представляю свою жизнь без домашних животных.
+				<div class="zakaz__item--tovar">
+					
+					<div class="zakaz__tovar--item">
+						<div class="zakaz__tovar--img--inner">
+							<img src="img/carousel-item.png" alt="заказ" class="zakaz__tovar--img">
 						</div>
 
-						<div class="about__text--box">
-							Идея создания проекта Bedfor возникла с того, что я решила сделать подарок своему любимому псу Плюшу, и купить ему удобную лежанку. В розничных и интернет-магазинах выбор был очень ограничен - одноразовые лежанки, набитые поролоном либо обрезками ткани, которые теряют форму после первой же стирки. Меня не устраивало такое качество, да и моё чувство прекрасного протестовало против приобретения подобных товаров) Так ко мне пришла мысль создать качественный и красивый продукт для питомцев и их хозяев.
+						<div class="zakaz__tovar--text--inner">
+							<div class="zakaz__tovar--title">
+								Подставка с мисками ASIA FUSION M
+							</div>
+
+							<div class="zakaz__tovar--point">
+								размер: средний 
+							</div>
+							<div class="zakaz__tovar--point">
+								цвет: натуральный
+							</div>
+
+							<div class="zakaz__tovar--price">
+								9980 рублей
+							</div>
+						</div>
+					</div>
+
+					<div class="zakaz__tovar--item">
+						<div class="zakaz__tovar--img--inner">
+							<img src="img/carousel-item.png" alt="заказ" class="zakaz__tovar--img">
+						</div>
+
+						<div class="zakaz__tovar--text--inner">
+							<div class="zakaz__tovar--title">
+								Подставка с мисками ASIA FUSION M
+							</div>
+
+							<div class="zakaz__tovar--point">
+								размер: средний 
+							</div>
+							<div class="zakaz__tovar--point">
+								цвет: натуральный
+							</div>
+
+							<div class="zakaz__tovar--price">
+								9980 рублей
+							</div>
+						</div>
+					</div>
+
+					<div class="zakaz__tovar--fullprice--inner">
+						<div class="zakaz__tovar--fullprice--point">
+							сумма по товарам: 9980 руб
+						</div>
+
+						<div class="zakaz__tovar--fullprice--point">
+							сумма по доставке: 0 руб
 						</div>
 					</div>
 
 
-					<div class="about__img--inner">
-						<div class="about__img--box">
-							<img src="img/about1.png" alt="картинки" class="about__img">
-						</div>
-
-						<div class="about__img--box">
-							<img src="img/about2.png" alt="картинки" class="about__img">
-						</div>
+					<div class="zakaz__tovar--totalsum">
+						Итого: 39 920‬ руб
 					</div>
 
-
-					<div class="about__text--container">
-						<div class="about__text--box">
-							В 2017 было запущено производство удобных лежанок со съемными чехлами из прочной мебельной ткани. Обладатели новых кроваток и их хозяева по достоинству оценили результаты моего творчества. Вдохновляющие отзывы клиентов замотивировали на расширение ассортимента.
-						</div>
-
-						<div class="about__text--box">
-							Вскоре под знамёнами Bedfor’a собралась дружная команда единомышленников. В 2018 году мы открыли собственную столярную мастерскую для создания мисок с подставками из натурального дерева. В мисках также отразилось наше стремление делать новаторский продукт из лучших материалов. Вы не увидите у нас стандартных скучных подставок из фанеры или сосны. Внешний вид каждой модели неординарен. Для создания подставок мы используем натуральный бук, покрываем его влагоустойчивым итальянским маслом для дерева – мы не идём на компромиссы в вопросах качества.
-						</div>
-					</div>
-
-
-					<div class="about__text--container">
-						<div class="about__text--box">
-							Сейчас Bedfor не только коммерческий проект, одна из его целей - помогать бездомным хвостикам либо животным, нуждающимся в медицинской помощи. Часть средств с продаж переводится приютам либо волонтерам, помогающим четверолапам найти любящих хозяев.
-						</div>
-
-						<div class="about__text--box">
-							Я с уверенностью могу сказать, что продукция Bedfor– это удачное сочетание высокого качества, уникального дизайна и удобства для Ваших питомцев. А Bedfor как проект в целом объединяет людей, любящих животных и красоту во всех её проявлениях.
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 
 
 

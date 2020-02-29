@@ -22,6 +22,28 @@ $(document).ready(function(){
 	    }
 	});
 
+	// Нажатие на +/- в корзине
+	$(".cart__number--minus").on("click", function(){
+		var a = $(this).siblings(".cart__number--text").text();
+		a = parseInt(a);
+
+		if(a > 1){
+			a--;
+			$(this).siblings(".cart__number--text").text(a);
+		}
+	});
+
+
+	$(".cart__number--plus").on("click", function(){
+		var a = $(this).siblings(".cart__number--text").text();
+		a = parseInt(a);
+
+		if(a < 50){
+			a++;
+			$(this).siblings(".cart__number--text").text(a);
+		}
+	});
+
 
 	// Карусельки
 

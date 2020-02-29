@@ -37,6 +37,10 @@ ul{
 .input{
 	outline: none;
 	border: none;
+	background: #F2F2F2;
+	width: 100%;
+	padding: 1.5rem 2rem;
+	margin-top: .5rem;
 }
 
 .container{
@@ -296,6 +300,28 @@ ul{
 	align-items: flex-start;
 }
 
+.content__inner{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.content__main--img--inner{
+	width: 100%;
+	height: auto;
+	margin-top: 3rem;
+}
+
+.content__main--img{
+	width: 100%;
+	height: auto;
+}
+
+.content__main--img--inner:first-child{
+	margin-top: 0;
+}
+
 .content__title{
 	color: rgba(0, 0, 0, 0.7);
 	font-size: 3.2rem;
@@ -501,8 +527,7 @@ ul{
 .tovar__value--price{
 	font-weight: 600;
 	color: #E4B12C;
-	font-size: 4.1rem;
-	margin-top: 1rem;
+	font-size: 3.5rem;
 }
 
 .tovar__value--point--inner{
@@ -573,6 +598,12 @@ ul{
 	background: #000;
 }
 
+.tovar__value--cart--box{
+	display: flex;
+	align-items: center;
+	margin-top: 4rem;
+}
+
 .tovar__lightbrown--bg{
 	background: #D5A280;
 }
@@ -605,7 +636,7 @@ ul{
 	font-weight: 800;
 	padding: 1.8rem 4.6rem;
 	background: #FF9900;
-	margin-top: 5rem;
+	margin-right: 2rem;
 }
 
 // Карусель товара
@@ -780,6 +811,403 @@ ul{
 .about__img{
 	width: 100%;
 	height: auto;
+}
+
+// Доставка
+
+.delivery{
+	padding: 3rem 0;
+}
+
+.delivery__inner{
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+}
+
+.delivery__text--inner{
+	width: 55%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-left: 2rem;
+}
+
+.delivery__title{
+	color: rgba(0, 0, 0, 0.78);
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 2.1rem;
+	margin-top: 4rem;
+}
+
+.delivery__title:first-child{
+	margin-top: 0;
+}
+
+.delivery__text{
+	margin-top: 1rem;
+	color: #A8A8A8;
+	font-size: 600px;
+	font-size: 1.6rem;
+	padding-left: 3rem;
+}
+
+.delivery__img--inner{
+	width: 45%;
+	height: auto;
+}
+
+.delivery__img{
+	width: 100%;
+	height: auto;
+	opacity: .4;
+}
+
+// Корзина
+
+.cart{
+	padding: 3rem 0;
+}
+
+.cart__inner{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.cart__item{
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 3rem 0;
+	border-bottom: 1px solid #000;
+	flex-wrap: wrap;
+}
+
+.cart__item--img--inner{
+	width: 190px;
+	height: auto;
+	margin-right: 5.5rem;
+}
+
+.cart__item--img{
+	width: 100%;
+	height: auto;
+}
+
+.cart__view{
+	font-size: 1.6rem;
+	color: #000;
+}
+
+.cart__item--name--inner, .cart__item--price--inner,
+.cart__item--totalprice--inner, .cart__item--delete--inner{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-top: 1rem;
+}
+
+.cart__item--name--inner{
+	width: 100%;
+	max-width: 270px;
+	margin-right: 1rem;
+}
+
+.cart__item--price--inner{
+	width: 100%;
+	max-width: 190px;
+	margin-right: 1rem;
+}
+
+.cart__item--totalprice--inner{
+	width: 100%;
+	max-width: 170px;
+	margin-right: 1rem;
+}
+
+.cart__name--title{
+	margin-top: 2rem;
+	font-weight: 800;
+	color: #545454;
+	font-size: 1.8rem;
+}
+
+.cart__name--point{
+	color: #9E9E9E;
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+
+.cart__price{
+	margin-top: 2rem;
+	font-weight: 700;
+	color: #545454;
+	font-size: 1.8rem;
+}
+
+.cart__totalprice{
+	margin-top: 4rem;
+	font-weight: 700;
+	color: #545454;
+	font-size: 2.1rem;
+}
+
+.cart__delete{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 35px;
+	height: 35px;
+	background: #F44336;
+	border-radius: 5px;
+	margin-top: 2rem;
+	cursor: pointer;
+}
+
+.cart__delete--icon, .cart__plus--icon, .cart__minus--icon{
+	color: #fff;
+	font-size: 2rem;
+}
+
+.cart__number--inner{
+	display: flex;
+	margin-top: 2rem;
+}
+
+.cart__number--inc{
+	width: 45px;
+	height: 45px;
+	background: #595959;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.cart__number--text{
+	width: 95px;
+	background: #F5F5F5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cart__totalsum--inner{
+	margin-top: 5rem;
+	font-size: 2.4rem;
+	font-weight: 600;
+}
+
+.cart__totalsum--text{
+	color: #B0B0B0;
+}
+
+.cart__button{
+	margin-top: 3rem;
+	padding: 1.8rem 8rem;
+	background: #FF9900;
+	font-size: 2.4rem;
+	font-weight: 600;
+	color: #fff;
+}
+
+// Оформление заказа
+
+.radio{
+	display: none;
+}
+
+.zakaz{
+	padding: 3rem 0;
+}
+
+.zakaz__inner{
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+}
+
+.zakaz__item--data{
+	width: 45%;
+	max-width: 480px;
+	margin: 0 auto;
+	padding: 0 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.zakaz__item--tovar{
+	width: 55%;
+	padding: 0 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.zakaz__data--input--inner{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-top: 3rem;
+	width: 100%;
+	max-width: 480px;
+}
+
+.zakaz__data--input--inner:first-child{
+	margin-top: 0;
+}
+
+.zakaz__error{
+	width: 100%;
+	text-align: right;
+	margin-top: .5rem;
+	font-size: 1.4rem;
+	font-weight: 600;
+	color: #F86363;
+}
+
+.zakaz__data--title{
+	color: rgba(0, 0, 0, 0.78);
+	font-size: 1.9rem;
+	font-weight: 800;
+}
+
+.zakaz__label{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-top: 3rem;
+	position: relative;
+	padding-left: 4rem;
+	width: 100%;
+}
+
+.zakaz__label:before{
+	content: "";
+	display: block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #CCCCCC;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.radio:checked + .zakaz__label:before{
+	background: #FF9900;
+}
+
+.zakaz__label--title{
+	color: #393939;
+	font-size: 1.9rem;
+	font-weight: 700;
+}
+
+.zakaz__label:first-child{
+	margin-top: 0;
+}
+
+.zakaz__label--text{
+	margin-top: .5rem;
+	font-size: 1.7rem;
+	color: #AFAFAF;
+	font-weight: 600;
+}
+
+.zakaz__input--area{
+	resize: none;
+	height: 160px;
+}
+
+.zakaz__title{
+	width: 100%;
+	text-align: left;
+	margin-top: 3rem;
+	color: rgba(0, 0, 0, 0.78);
+	font-size: 1.9rem;
+	font-weight: 800;
+}
+
+.zakaz__confirm--button{
+	margin-top: 7rem;
+	padding: 1.8rem 8rem;
+	color: #fff;
+	background: #FF9900;
+	font-weight: 800;
+	font-size: 2.4rem;
+}
+
+.zakaz__tovar--item{
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding: 2rem 0;
+	border-bottom: 1px solid #C7C7C7;
+}
+
+.zakaz__tovar--img--inner{
+	width: 160px;
+	height: auto;
+	margin-left: 4rem;
+}
+
+.zakaz__tovar--img{
+	width: 100%;
+	height: auto;
+}
+
+.zakaz__tovar--text--inner{
+	width: 100%;
+	max-width: 270px;
+	margin-left: 6rem;
+}
+
+.zakaz__tovar--title{
+	font-size: 1.8rem;
+	color: #545454;
+	font-weight: 800;
+}
+
+.zakaz__tovar--point{
+	color: #9E9E9E;
+	font-size: 1.4rem;
+	font-weight: 600;
+	margin-top: .5rem;
+}
+
+.zakaz__tovar--price{
+	color: #545454;
+	font-size: 2.2rem;
+	margin-top: 1rem;
+	font-weight: 600;
+}
+
+.zakaz__tovar--fullprice--inner{
+	width: 100%;
+	padding: 2rem 0;
+	border-bottom: 1px solid #c7c7c7;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.zakaz__tovar--fullprice--inner{
+	color: #545454;
+	margin-top: .3rem;
+	font-weight: 600;
+}
+
+.zakaz__tovar--totalsum{
+	color: #545454;
+	font-weight: 700;
+	margin-top: 2rem;
 }
 
 
@@ -1081,6 +1509,12 @@ ul{
 	.about__text--inner{
 		width: 85%;
 	}
+
+	.tovar__value--button--addcart{
+		font-size: 2.3rem;
+		padding: 1.5rem 4rem;
+		margin-right: 1rem;
+	}
 }
 
 @media(max-width: 1200px){
@@ -1157,6 +1591,56 @@ ul{
 
 	.about__img--inner{
 		padding: 2rem 0;
+	}
+
+	// Доставка
+
+	.delivery__inner{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.delivery__img--inner{
+		order: 2;
+		width: 100%;
+		margin-top: 3rem;
+	}
+
+	.delivery__text--inner{
+		width: 100%;
+		padding-left: 0;
+	}
+
+	.delivery{
+		padding: 3rem 0 0 0;
+	}
+
+	.tovar__value--cart--box{
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	.tovar__value--price{
+		margin-top: 2rem;
+		font-size: 3rem;
+	}
+
+	.tovar__value--button--addcart{
+		margin-right: 0;
+	}
+
+	.tovar__value--button--addcart{
+		font-size: 2rem;
+		padding: 1.2rem 3rem;
+	}
+
+	// Оформление заказа
+
+	.zakaz__confirm--button{
+		margin-top: 4rem;
+		padding: 1.2rem 5rem;
+		font-size: 2.1rem;
 	}
 }
 
@@ -1283,6 +1767,11 @@ ul{
 		width: 77%;
 	}
 
+	.tovar__value--button--addcart{
+		font-size: 1.8rem;
+		padding: 1rem 2rem;
+	}
+
 	// Популярные товары
 
 	.popular__arrow{
@@ -1336,6 +1825,43 @@ ul{
 	.about__ava--img--inner{
 		width: 120px;
 		height: 120px;
+	}
+
+	// Корзина
+
+	.cart__totalsum--inner{
+		margin-top: 3rem;
+		font-size: 2.1rem;
+	}
+
+	.cart__button{
+		margin-top: 2rem;
+		padding: 1.5rem 5rem;
+		font-size: 2.1rem;
+	}
+
+	// Оформление заказа
+
+	.zakaz__inner{
+		flex-direction: column;
+	}
+
+	.zakaz__item--data{
+		width: 100%;
+		order: 2;
+		padding: 0;
+		margin-top: 5rem;
+	}
+
+	.zakaz__item--tovar{
+		width: 100%;
+		padding: 0;
+	}
+
+	.zakaz__confirm--button{
+		margin-top: 3rem;
+		padding: 1rem 3rem;
+		font-size: 1.8rem;
 	}
 }
 
@@ -1413,7 +1939,7 @@ ul{
 	}
 
 	.tovar__value--price{
-		font-size: 3.4rem;
+		font-size: 2.4rem;
 	}
 
 	.tovar__value--point{
@@ -1442,12 +1968,6 @@ ul{
 	.tovar__value--color--bg{
 		width: 45px;
 		height: 45px;
-	}
-
-	.tovar__value--button--addcart{
-		font-size: 2rem;
-		padding: 1.2rem 3rem;
-		margin-top: 3rem;
 	}
 
 	.carousel__min--arrow{
@@ -1497,11 +2017,50 @@ ul{
 		font-size: 1.7rem;
 		font-weight: 500;
 	}
+
+	// Доставка
+
+	.delivery__title{
+		font-size: 1.8rem;
+		margin-top: 3rem;
+	}
+
+	.delivery__text{
+		font-size: 1.5rem;
+		padding-left: 0rem;
+	}
+
+	// Корзина
+
+	.cart__totalsum--inner{
+		margin-top: 2rem;
+		font-size: 1.8rem;
+	}
+
+	.cart__button{
+		padding: 1.2rem 3rem;
+		font-size: 1.8rem;
+	}
+
+	// Оформление заказа
+
+	.zakaz__tovar--img--inner{
+		width: 360px;
+		margin-left: 0;
+	}
+
+	.breadcrops__item{
+		font-size: 1.7rem;
+	}
 }
 
 @media(max-width: 480px){
 	.container{
 		max-width: 300px;
+	}
+
+	.footer__phone--copy{
+		text-align: center;
 	}
 	
 	.logo__box{
@@ -1573,7 +2132,7 @@ ul{
 	}
 
 	.tovar__value--price{
-		font-size: 3rem;
+		font-size: 1.7rem;
 	}
 
 	.tovar__value--color--inner{
@@ -1587,10 +2146,33 @@ ul{
 
 	.tovar__value--button--addcart{
 		font-size: 1.6rem;
-		margin-top: 2rem;
 	}
 
 	.card__inner.popular__carousel{
 		width: 100%;
+	}
+
+	// Оформление заказа
+
+	.zakaz__tovar--item{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.zakaz__tovar--img--inner{
+		width: 230px;
+	}
+
+	.zakaz__tovar--text--inner{
+		margin-left: 0;
+		margin-top: 2rem;
+	}
+
+	.zakaz__item--data{
+		padding: 0 1rem;
+	}
+
+	.breadcrops__item{
+		font-size: 1.5rem;
 	}
 }
