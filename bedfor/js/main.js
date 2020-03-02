@@ -44,6 +44,14 @@ $(document).ready(function(){
 		}
 	});
 
+	// Клик по галлереии пункту
+
+	$(".gallery__point--inner").on("click", function(){
+		$(this).toggleClass("gallery__point--bg");
+		$(this).children('.gallery__point--icon').toggleClass("gallery__point--icon--transform");
+		$(this).siblings('.gallery__point--text--inner').fadeToggle(100).toggleClass("gallery__toggle--flex");
+	});
+
 
 	// Карусельки
 
@@ -87,6 +95,42 @@ $(document).ready(function(){
 		prevArrow: '<div class="popular__arrow popular__arrow--prev"><i class="fas fa-angle-left"></i></div>',
 		nextArrow: '<div class="popular__arrow popular__arrow--next"><i class="fas fa-angle-right"></i></div>',
 		responsive: [
+		    {
+		    	breakpoint: 998,
+		    	settings: {
+		    		slidesToShow: 2
+		      	}
+		    },
+		    {
+		    	breakpoint: 768,
+		    	settings: {
+		    		slidesToShow: 1
+		      	}
+		    }
+		  ]
+	});
+
+	$(".gallery__inner--max").slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		prevArrow: '<div class="gallery__arrow--inner gallery__arrow--right"><i class="fas fa-chevron-right gallery__arrow"></i></div>',
+		nextArrow: '<div class="gallery__arrow--inner gallery__arrow--left"><i class="fas fa-chevron-left gallery__arrow"></i></div>',
+		asNavFor: '.gallery__inner--min',
+	});
+
+	$(".gallery__inner--min").slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		arrows: false,
+		asNavFor: '.gallery__inner--max',
+		focusOnSelect: true,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3
+			  	}
+			},
 		    {
 		    	breakpoint: 998,
 		    	settings: {
