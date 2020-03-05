@@ -13,7 +13,6 @@ body{
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 2.2rem;
-	background: #E5E5E5;
 }
 
 a{
@@ -53,7 +52,7 @@ ul{
 
 .header{
 	width: 100%;
-	background: linear-gradient(to right, #DDDDDD 55%, #424141 45%);
+	background: linear-gradient(to right, #DDDDDD 65%, #424141 35%);
 	padding: 1.5rem 0;
 }
 
@@ -92,6 +91,7 @@ ul{
 	width: 41%;
 	display: flex;
 	align-items: center;
+	justify-content: flex-end;
 }
 
 .header__search--inner{
@@ -143,7 +143,6 @@ ul{
 	width: 100%;
 	padding: 1.5rem 0 1rem 0;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-	background: #fff;
 }
 
 .logo__inner{
@@ -155,6 +154,10 @@ ul{
 .logo__box, .logo__pats--inner{
 	display: flex;
 	align-items: center;
+}
+
+.logo__pats--inner{
+	align-items: flex-end;
 }
 
 .logo__img--inner{
@@ -305,7 +308,6 @@ ul{
 
 .content{
 	padding: 6rem 0;
-	background: #E5E5E5;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -397,8 +399,18 @@ ul{
 	display: flex;
 	flex-direction: column;
 	padding: 2.3rem 2.7rem;
-	width: 23%;
-	margin: 2rem 2rem 0 0;
+	width: 29%;
+	margin: 5rem 5rem 0 0;
+	box-shadow: 0 0 20px #cccccc;
+	transition: .2s linear;
+}
+
+.popular__item{
+	margin: 5rem;
+}
+
+.card__item:hover{
+	box-shadow: 0 0 30px #959595;
 }
 
 .card__item--img--inner, .card__item--img{
@@ -481,7 +493,6 @@ ul{
 
 .breadcrops{
 	padding: 2.3rem 0;
-	background: #fff;
 }
 
 .breadcrops__inner{
@@ -548,12 +559,62 @@ ul{
 	margin-left: 2rem;
 }
 
+// Отзывы
+
+.first__rev{
+	max-width: 640px;
+	margin-right: 4.8rem;
+}
+
+.second__rev{
+	margin-right: 0;
+	max-width: 392px;
+}
+
+.fird__rev{
+	max-width: 240px;
+	margin-right: 2rem;
+}
+
+.forth__rev{
+	max-width: 250px;
+	margin-right: 2rem;
+}
+
+.fifth__rev{
+	max-width: 290px;
+	margin-right: 0rem;
+}
+
+.six__rev{
+	max-width: 250px;
+	margin-right: 2rem;
+}
+
+.seven__rev{
+	max-width: 190px;
+	margin-right: 2rem;
+}
+
+.eight__rev{
+	max-width: 340px;
+	margin-right: 0rem;
+}
+
 
 // Карточка товара
 
+.xbox__img{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 5;
+	cursor: pointer;
+}
+
 .tovar{
 	padding: 2rem 0;
-	background: #E5E5E5;
 }
 
 .tovar__inner{
@@ -658,6 +719,12 @@ ul{
 	margin-right: 2rem;
 }
 
+.tovar__value--size--img--box--card{
+	width: 80px;
+	height: auto;
+	margin-right: 2rem;
+}
+
 .tovar__value--size--img{
 	width: 100%;
 	height: auto;
@@ -691,6 +758,7 @@ ul{
 .tovar__value--cart--box{
 	display: flex;
 	align-items: center;
+	flex-direction: column;
 	margin-top: 4rem;
 }
 
@@ -726,7 +794,7 @@ ul{
 	font-weight: 800;
 	padding: 1.8rem 4.6rem;
 	background: #FF9900;
-	margin-right: 2rem;
+	margin-top: 2rem;
 }
 
 // Карусель товара
@@ -752,6 +820,7 @@ ul{
 .tovar__carousel--max--item{
 	width: 100%;
 	height: auto;
+	position: relative;
 }
 
 .tovar__carousel--max--img{
@@ -879,7 +948,6 @@ ul{
 
 .popular{
 	padding: 4rem 0;
-	background: #E5E5E5;
 }
 
 .card__inner.popular__carousel{
@@ -888,8 +956,8 @@ ul{
 }
 
 .popular__arrow{
-	width: 84px;
-	height: 84px;
+	width: 100px;
+	height: 100px;
 	background: #F0F0F0;
 	border-radius: 50%;
 	display: flex!important;
@@ -1015,7 +1083,7 @@ ul{
 .delivery__title{
 	color: rgba(0, 0, 0, 0.78);
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 900;
 	font-size: 2.1rem;
 	margin-top: 4rem;
 }
@@ -1027,7 +1095,7 @@ ul{
 .delivery__text{
 	margin-top: 1rem;
 	color: #A8A8A8;
-	font-size: 600px;
+	font-weight: 600;
 	font-size: 1.6rem;
 	padding-left: 3rem;
 }
@@ -1295,6 +1363,7 @@ ul{
 	display: block;
 	width: 30px;
 	height: 30px;
+	border: 4px solid #fafafa;
 	border-radius: 50%;
 	background: #CCCCCC;
 	position: absolute;
@@ -1304,6 +1373,7 @@ ul{
 
 .radio:checked + .zakaz__label:before{
 	background: #FF9900;
+	border: 4px solid lighten(#FF9900, 15);
 }
 
 .zakaz__label--title{
@@ -1450,14 +1520,21 @@ ul{
 	width: 65px;
 	height: 65px;
 	border-radius: 50%;
+	border: 5px solid #959595;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: rgba(79, 79, 79, 0.43);
+	background: rgb(79, 79, 79);
+	opacity: .5;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 	z-index: 5;
+	transition: .2s linear;
+}
+
+.gallery__arrow--inner:hover{
+	opacity: 1;
 }
 
 .gallery__arrow{
@@ -1499,6 +1576,7 @@ ul{
 	z-index: 10;
 	width: 65px;
 	height: 65px;
+	border: 5px solid #959595;
 	border-radius: 50%;
 	background: #4F4F4F;
 	display: flex;
@@ -1510,6 +1588,7 @@ ul{
 
 .gallery__point--inner.gallery__point--bg{
 	background: #FF9900;
+	border: 5px solid lighten(#FF9900, 15);
 }
 
 .gallery__point--icon{
@@ -1614,7 +1693,7 @@ ul{
 
 .state__img{
 	width: 100%;
-	height: auto;
+	height: 100%;
 }
 
 .state__content--inner{
@@ -1646,6 +1725,7 @@ ul{
 .state__text{
 	margin-top: 3rem;
 	font-size: 1.6rem;
+	max-width: 600px;
 }
 
 .state__button{
@@ -1668,7 +1748,6 @@ ul{
 	display: flex;
 	align-items: flex-start;
 	flex-wrap: wrap;
-	justify-content: space-around;
 }
 
 .reviews__item{
@@ -1678,7 +1757,7 @@ ul{
 
 .reviews__img--inner{
 	width: 230px;
-	height: auto;
+	height: 230px;
 	flex-shrink: 0;
 }
 
@@ -1690,11 +1769,12 @@ ul{
 .reviews__text--box{
 	background: #fff;
 	display: flex;
-	padding: 1.5rem;
+	padding: 1.2rem;
 	flex-direction: column;
 	align-items: flex-end;
 	justify-content: space-between;
 	width: 100%;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
 }
 
 .reviews__text{
@@ -1705,18 +1785,6 @@ ul{
 .reviews__author{
 	color: #919191;
 	font-size: 1.4rem;
-}
-
-.reviews__text--box--big{
-	max-width: 45%;
-}
-
-.reviews__text--box--medium{
-	max-width: 35%;
-}
-
-.reviews__text--box--small{
-	max-width: 25%;
 }
 
 
@@ -1912,6 +1980,10 @@ ul{
 		font-size: 2rem;
 	}
 
+	.header{
+		background: linear-gradient(to right, #DDDDDD 58%, #424141 42%);
+	}
+
 	.header__nav--inner a{
 		margin-right: 4rem;
 	}
@@ -2077,6 +2149,52 @@ ul{
 	.reviews__text--box--small{
 		max-width: 47%;
 	}
+
+	.popular__item{
+		margin: 3rem;
+	}
+
+	// Отзывы
+
+	.first__rev{
+		max-width: 100%;
+		margin-right: 0;
+	}
+
+	.second__rev{
+		max-width: 100%;
+		margin-right: 0;
+	}
+
+	.fird__rev{
+		max-width: 280px;
+		margin-right: 2rem;
+	}
+
+	.forth__rev{
+		max-width: 280px;
+		margin-right: 0;
+	}
+
+	.fifth__rev{
+		max-width: 280%;
+		margin-right: 2rem;
+	}
+
+	.six__rev{
+		max-width: 280%;
+		margin-right: 0;
+	}
+
+	.seven__rev{
+		max-width: 190px;
+		margin-right: 2rem;
+	}
+
+	.eight__rev{
+		max-width: 340px;
+		margin-right: 0rem;
+	}
 }
 
 @media(max-width: 1200px){
@@ -2097,7 +2215,7 @@ ul{
 	}
 
 	.header{
-		background: linear-gradient(to right, #ddd 50%, #424141 50%);
+		background: linear-gradient(to right, #ddd 60%, #424141 40%);
 	}
 
 	.header__cart--inner{
@@ -2130,7 +2248,12 @@ ul{
 
 	// Карточка товара
 	.card__item{
-		width: 30.3%;
+		width: 28%;
+		margin: 3rem 3rem 0 0;
+	}
+
+	.card__inner{
+		justify-content: space-between;
 	}
 
 	// О нас
@@ -2177,14 +2300,7 @@ ul{
 		padding: 3rem 0 0 0;
 	}
 
-	.tovar__value--cart--box{
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
-	}
-
 	.tovar__value--price{
-		margin-top: 2rem;
 		font-size: 3rem;
 	}
 
@@ -2231,6 +2347,7 @@ ul{
 
 	.state__img--inner{
 		width: 100%;
+		display: flex;
 	}
 
 	.maps__frame{
@@ -2258,6 +2375,52 @@ ul{
 
 	.reviews__text--box--small{
 		max-width: 100%;
+	}
+
+	.popular__item{
+		margin: 3rem;
+	}
+
+	// Отзывы
+
+	.first__rev{
+		max-width: 100%;
+		margin-right: 0;
+	}
+
+	.second__rev{
+		max-width: 100%;
+		margin-right: 0;
+	}
+
+	.fird__rev{
+		max-width: 100%;
+		margin-right: 0;
+	}
+
+	.forth__rev{
+		max-width: 100%;
+		margin-right: 0;
+	}
+
+	.fifth__rev{
+		max-width: 100%;
+		margin-right: 0;
+	}
+
+	.six__rev{
+		max-width: 100%;
+		margin-right: 0;
+	}
+
+	.seven__rev{
+		max-width: 100%;
+		margin-right: 0;
+	}
+
+	.eight__rev{
+		max-width: 100%;
+		margin-right: 0;
 	}
 }
 
@@ -2297,7 +2460,7 @@ ul{
 
 	.logo__box{
 		width: 100%;
-		justify-content: space-between;
+		justify-content: center;
 	}
 
 	.logo__text{
@@ -2543,6 +2706,10 @@ ul{
 		width: 100vw;
 	}
 
+	.reviews__img--inner{
+		height: auto;
+	}
+
 	.footer__inner{
 		flex-direction: column;
 		align-items: center;
@@ -2768,6 +2935,10 @@ ul{
 		font-size: 1.5rem;
 		padding: .6rem 2rem;
 	}
+
+	.popular__item{
+		margin: 2rem!important;
+	}
 }
 
 @media(max-width: 480px){
@@ -2865,7 +3036,7 @@ ul{
 	}
 
 	.card__inner.popular__carousel{
-		width: 80%;
+		width: 100%;
 	}
 
 	// Оформление заказа
@@ -2902,11 +3073,11 @@ ul{
 	}
 
 	.popular__arrow--prev{
-		left: -30px;
+		left: -5px;
 	}
 
 	.popular__arrow--next{
-		right: -30px;
+		right: -5px;
 	}
 
 	.gallery__item--min{

@@ -92,11 +92,12 @@ $(document).ready(function(){
 	$(".popular__carousel").slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
+		centerPadding: '100px',
 		prevArrow: '<div class="popular__arrow popular__arrow--prev"><i class="fas fa-angle-left"></i></div>',
 		nextArrow: '<div class="popular__arrow popular__arrow--next"><i class="fas fa-angle-right"></i></div>',
 		responsive: [
 		    {
-		    	breakpoint: 998,
+		    	breakpoint: 1200,
 		    	settings: {
 		    		slidesToShow: 2
 		      	}
