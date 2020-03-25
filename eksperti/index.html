@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<!-- Meta -->
 	<meta charset="UTF-8">
@@ -30,11 +30,11 @@
 
 					<div class="header__nav--inner">
 						<ul class="header__nav">
-							<li><a href="#">О нас</a></li>
-							<li><a href="#">Программа курса</a></li>
-							<li><a href="#">Цены</a></li>
-							<li><a href="#">Отзывы</a></li>
-							<li><a href="#">Соцсети</a></li>
+							<li><a href="#" class="header__nav--link" data-point="about__point">О нас</a></li>
+							<li><a href="#" class="header__nav--link" data-point="programma__point">Программа курса</a></li>
+							<li><a href="#" class="header__nav--link" data-point="price__point">Цены</a></li>
+							<li><a href="#" class="header__nav--link" data-point="reviews__point">Отзывы</a></li>
+							<li><a href="#" class="header__nav--link" data-point="social__point">Соцсети</a></li>
 						</ul>
 					</div>
 
@@ -42,7 +42,7 @@
 						Записаться
 					</button>
 
-					<div class="start__inner">
+					<div class="start__inner button__sign">
 						<div class="start__icon--inner">
 							<img src="img/start.png" alt="старт" class="start__icon">
 						</div>
@@ -82,7 +82,7 @@
 						</div>
 
 						<div class="main__start--inner">
-							<div class="main__start--box">
+							<div class="main__start--box button__sign">
 								<div class="start__icon--inner">
 									<img src="img/start.png" alt="старт" class="start__icon">
 								</div>
@@ -118,9 +118,10 @@
 				</div>
 			</div>
 		</div>
-
+	
 		<div class="point">
 			<div class="container">
+				<div id="programma__point"></div>
 				<div class="point__inner">
 					<div class="point__title">
 						Марафон стройности-это
@@ -129,7 +130,7 @@
 					<div class="point__box">
 						<div class="point__item">
 							<div class="point__item--img--inner">
-								<img src="img/point1.jpg" alt="преимущество" class="point__item--img">
+								<img src="img/point1.png" alt="преимущество" class="point__item--img">
 							</div>
 
 							<div class="point__item--text--inner">
@@ -146,7 +147,7 @@
 
 						<div class="point__item">
 							<div class="point__item--img--inner">
-								<img src="img/point2.jpg" alt="преимущество" class="point__item--img">
+								<img src="img/point2.png" alt="преимущество" class="point__item--img">
 							</div>
 
 							<div class="point__item--text--inner">
@@ -162,7 +163,7 @@
 
 						<div class="point__item">
 							<div class="point__item--img--inner">
-								<img src="img/point3.jpg" alt="преимущество" class="point__item--img">
+								<img src="img/point3.png" alt="преимущество" class="point__item--img">
 							</div>
 
 							<div class="point__item--text--inner">
@@ -179,7 +180,7 @@
 
 						<div class="point__item">
 							<div class="point__item--img--inner">
-								<img src="img/point4.jpg" alt="преимущество" class="point__item--img">
+								<img src="img/point4.png" alt="преимущество" class="point__item--img">
 							</div>
 
 							<div class="point__item--text--inner">
@@ -193,12 +194,17 @@
 							</div>
 						</div>
 					</div>
+
+					<button class="button card__price--button button__sign">
+						Участвовать
+					</button>
 				</div>
 			</div>
 		</div>
-
+		
 		<div class="creater">
 			<div class="container">
+				<div id="about__point"></div>
 				<div class="creater__inner">
 					<div class="creater__img--inner">
 						<div class="creater__subname creater__subname--mobile">
@@ -259,7 +265,7 @@
 					<div class="point__box">
 						<div class="point__item">
 							<div class="point__item--img--inner">
-								<img src="img/point2-1.jpg" alt="преимущество" class="point__item--img">
+								<img src="img/point2-1.png" alt="преимущество" class="point__item--img">
 							</div>
 
 							<div class="point__item--text--inner">
@@ -276,7 +282,7 @@
 
 						<div class="point__item">
 							<div class="point__item--img--inner">
-								<img src="img/point2-2.jpg" alt="преимущество" class="point__item--img">
+								<img src="img/point2-2.png" alt="преимущество" class="point__item--img">
 							</div>
 
 							<div class="point__item--text--inner">
@@ -293,7 +299,7 @@
 
 						<div class="point__item">
 							<div class="point__item--img--inner">
-								<img src="img/point2-3.jpg" alt="преимущество" class="point__item--img">
+								<img src="img/point2-3.png" alt="преимущество" class="point__item--img">
 							</div>
 
 							<div class="point__item--text--inner">
@@ -310,7 +316,7 @@
 
 						<div class="point__item">
 							<div class="point__item--img--inner">
-								<img src="img/point2-4.jpg" alt="преимущество" class="point__item--img">
+								<img src="img/point2-4.png" alt="преимущество" class="point__item--img">
 							</div>
 
 							<div class="point__item--text--inner">
@@ -325,12 +331,18 @@
 							</div>
 						</div>
 					</div>
+
+					<button class="button card__price--button button__sign">
+						Участвовать
+					</button>
 				</div>
 			</div>
 		</div>
+	
 
 		<div class="result">
 			<div class="container">
+				<div id="reviews__point"></div>
 				<div class="result__inner">
 					<div class="result__title">
 						Результаты участников
@@ -414,9 +426,10 @@
 			</div>
 		</div>
 
-
+		
 		<div class="price">
 			<div class="container">
+				<div id="price__point"></div>
 				<div class="price__inner">
 					<div class="price__title">
 						Стоимость участия
@@ -634,41 +647,123 @@
 
 					<div class="documents__box">
 						<div class="documents__text--inner">
-							<div class="document__text--inner--text document__mobile--fade--text">
-								2 года 6 месяцев я помогаю людям в коррекции веса по своей Авторской международной технологии «Коррекции веса путем правильного и здорового питания»
+							<div class="documents__text--item">
+								<div class="document__text--inner--text document__mobile--fade--text">
+									2 года 6 месяцев я помогаю людям в коррекции веса по своей Авторской международной технологии «Коррекции веса путем правильного и здорового питания»
+								</div>
+
+								<div class="document__text--inner--title">
+									Мои результаты за 4 года работы.:
+								</div>
+
+								<div class="document__text--point--inner">
+									<div class="document__text--inner--text">
+										1. Я являюсь автором международной запатентованной технологии коррекции веса путем правильного и здорового питания.
+									</div>
+
+									<div class="document__text--inner--text">
+										2. Являюсь членом Национального общества диетологов и Нутрициологов России.
+									</div>
+
+									<div class="document__text--inner--text">
+										3. Являюсь Издателем научной статьи для международной научно-практической конференции «Современные инновации».
+									</div>
+
+									<div class="document__text--inner--text">
+										4. Являюсь членом Асоциации Нутрициологов США.
+									</div>
+
+									<div class="document__text--inner--text">
+										5. Так же являюсь Автором более 10 статей в крупных тематических журналах и СМИ.
+									</div>
+
+									<div class="document__text--inner--text">
+										6. Моя технология применяется Чемпионами России по спорту, Участниками Олимпийских игр, участниками Международных чемпионатов.
+									</div>
+
+									<div class="document__text--inner--text">
+										7. Более 13 500 людей получили результаты в коррекции веса по моей Международной Авторской Технологии.
+									</div>
+								</div>
 							</div>
 
-							<div class="document__text--inner--title">
-								Мои результаты за 4 года работы.:
+							<div class="documents__text--item">
+								<div class="document__text--inner--text document__mobile--fade--text">
+									2 года 6 месяцев я помогаю людям в коррекции веса по своей Авторской международной технологии «Коррекции веса путем правильного и здорового питания»
+								</div>
+
+								<div class="document__text--inner--title">
+									Мои результаты за 4 года работы.:
+								</div>
+
+								<div class="document__text--point--inner">
+									<div class="document__text--inner--text">
+										1. Я являюсь автором международной запатентованной технологии коррекции веса путем правильного и здорового питания.
+									</div>
+
+									<div class="document__text--inner--text">
+										2. Являюсь членом Национального общества диетологов и Нутрициологов России.
+									</div>
+
+									<div class="document__text--inner--text">
+										3. Являюсь Издателем научной статьи для международной научно-практической конференции «Современные инновации».
+									</div>
+
+									<div class="document__text--inner--text">
+										4. Являюсь членом Асоциации Нутрициологов США.
+									</div>
+
+									<div class="document__text--inner--text">
+										5. Так же являюсь Автором более 10 статей в крупных тематических журналах и СМИ.
+									</div>
+
+									<div class="document__text--inner--text">
+										6. Моя технология применяется Чемпионами России по спорту, Участниками Олимпийских игр, участниками Международных чемпионатов.
+									</div>
+
+									<div class="document__text--inner--text">
+										7. Более 13 500 людей получили результаты в коррекции веса по моей Международной Авторской Технологии.
+									</div>
+								</div>
 							</div>
 
-							<div class="document__text--point--inner">
-								<div class="document__text--inner--text">
-									1. Я являюсь автором международной запатентованной технологии коррекции веса путем правильного и здорового питания.
+							<div class="documents__text--item">
+								<div class="document__text--inner--text document__mobile--fade--text">
+									2 года 6 месяцев я помогаю людям в коррекции веса по своей Авторской международной технологии «Коррекции веса путем правильного и здорового питания»
 								</div>
 
-								<div class="document__text--inner--text">
-									2. Являюсь членом Национального общества диетологов и Нутрициологов России.
+								<div class="document__text--inner--title">
+									Мои результаты за 4 года работы.:
 								</div>
 
-								<div class="document__text--inner--text">
-									3. Являюсь Издателем научной статьи для международной научно-практической конференции «Современные инновации».
-								</div>
+								<div class="document__text--point--inner">
+									<div class="document__text--inner--text">
+										1. Я являюсь автором международной запатентованной технологии коррекции веса путем правильного и здорового питания.
+									</div>
 
-								<div class="document__text--inner--text">
-									4. Являюсь членом Асоциации Нутрициологов США.
-								</div>
+									<div class="document__text--inner--text">
+										2. Являюсь членом Национального общества диетологов и Нутрициологов России.
+									</div>
 
-								<div class="document__text--inner--text">
-									5. Так же являюсь Автором более 10 статей в крупных тематических журналах и СМИ.
-								</div>
+									<div class="document__text--inner--text">
+										3. Являюсь Издателем научной статьи для международной научно-практической конференции «Современные инновации».
+									</div>
 
-								<div class="document__text--inner--text">
-									6. Моя технология применяется Чемпионами России по спорту, Участниками Олимпийских игр, участниками Международных чемпионатов.
-								</div>
+									<div class="document__text--inner--text">
+										4. Являюсь членом Асоциации Нутрициологов США.
+									</div>
 
-								<div class="document__text--inner--text">
-									7. Более 13 500 людей получили результаты в коррекции веса по моей Международной Авторской Технологии.
+									<div class="document__text--inner--text">
+										5. Так же являюсь Автором более 10 статей в крупных тематических журналах и СМИ.
+									</div>
+
+									<div class="document__text--inner--text">
+										6. Моя технология применяется Чемпионами России по спорту, Участниками Олимпийских игр, участниками Международных чемпионатов.
+									</div>
+
+									<div class="document__text--inner--text">
+										7. Более 13 500 людей получили результаты в коррекции веса по моей Международной Авторской Технологии.
+									</div>
 								</div>
 							</div>
 						</div>
@@ -792,9 +887,10 @@
 				</div>
 			</div>
 		</div>
-
+		
 		<footer class="footer">
 			<div class="container">
+				<div id="social__point"></div>
 				<div class="footer__inner">
 					<div class="footer__item">
 						<div class="footer__item--title">
@@ -853,17 +949,20 @@
 		<div class="modal__menu--inner">
 			<div class="modal__menu--nav--inner">
 				<div class="modal__menu--nav">
-					<li><a href="#">
+					<li><a href="#" class="header__nav--link header__nav--link--mobile" data-point="about__point">
 						О нас
 					</a></li>
-					<li><a href="#">
+					<li><a href="#" class="header__nav--link header__nav--link--mobile" data-point="programma__point">
 						Программа курса
 					</a></li>
-					<li><a href="#">
+					<li><a href="#" class="header__nav--link header__nav--link--mobile" data-point="price__point">
 						Цены
 					</a></li>
-					<li><a href="#">
+					<li><a href="#" class="header__nav--link header__nav--link--mobile" data-point="reviews__point">
 						Отзывы
+					</a></li>
+					<li><a href="#" class="header__nav--link header__nav--link--mobile" data-point="social__point">
+						Соцсети
 					</a></li>
 				</div>
 			</div>
@@ -916,7 +1015,7 @@
 				<img src="img/map-icon.png" alt="город" class="application__input--icon">
 			</div>
 
-			<input type="checkbox" id="agree">
+			<input type="checkbox" id="agree" checked>
 			<label for="agree" class="agree__label">
 				Согласие на обработку персональных данных *
 			</label>
@@ -924,6 +1023,24 @@
 			<button class="button application__button">
 				Записаться
 			</button>
+		</div>
+	</div>
+
+	<!-- Модальное окно поданной заявки -->
+
+	<div class="thankyou__modal">
+		<div class="application__inner">
+			<div class="application__title">
+				Подать заявку на марафон
+			</div>
+
+			<div class="thankyou__text">
+				спасибо! в ближайшее время мы с вами свяжемся.
+			</div>
+
+			<div class="thankyou__close">
+				Закрыть
+			</div>			
 		</div>
 	</div>
 

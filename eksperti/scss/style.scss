@@ -52,19 +52,11 @@ li{
 
 .input::-webkit-input-placeholder {color:#000;}
 
-.scroll{
+.scroll, .scroll__app,.scroll__tnx{
 	overflow: hidden;
 }
 
-.scroll__app{
-	overflow: hidden;
-}
-
-.blur{
-	filter: blur(15px);
-}
-
-.blur__app{
+.blur, .blur__app, .blur__tnx{
 	filter: blur(15px);
 }
 
@@ -331,28 +323,28 @@ li{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: flex-start;
 }
 
 .point__item{
-	width: 30%;
+	width: 48%;
 	border-radius: 1.8rem;
-	overflow: hidden;
 	display: flex;
-	flex-direction: column;
 	margin-top: 8rem;
-	box-shadow: 7px 8px 10px rgba(0, 0, 0, 0.13);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
 }
 
 .point__item--img--inner{
-	width: 100%;
-	height: auto;
+	width: 40%;
+	height: 100%;
 	display: flex;
 	align-items: center;
+	overflow: hidden;
 }
 
 .point__item--img{
 	width: 100%;
-	height: auto;
+	height: 100%;
 }
 
 .point__item--text--inner{
@@ -443,10 +435,12 @@ li{
 	display: none;
 	align-items: center;
 	justify-content: center;
+	transition: .2s linear;
 }
 
 .modal__menu.modal__menu--active{
 	display: flex;
+	background: #fff;
 }
 
 .content{
@@ -531,7 +525,7 @@ li{
 
 // Модальное окно записи
 
-.modal__application{
+.modal__application, .thankyou__modal{
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -546,7 +540,8 @@ li{
 	z-index: 11;
 }
 
-.modal__application.modal__application--active{
+.modal__application.modal__application--active,
+.thankyou__modal.modal__thankyou--active{
 	display: block;
 }
 
@@ -968,6 +963,13 @@ li{
 	align-items: flex-start;
 }
 
+.documents__text--item{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
 .document__text--inner--text{
 	font-size: 1.6rem;
 	font-weight: 300;
@@ -1131,7 +1133,14 @@ li{
 	text-transform: uppercase;
 	font-size: 2.4rem;
 	font-weight: 600;
+	color: rgba(255, 255, 255, .8);
 	border-radius: 1.6rem;
+}
+
+.info__button:hover{
+	opacity: 1;
+	color: rgba(255, 255, 255, 1);
+	background: linear-gradient(to right, rgba(176, 68, 213, 0.81), rgba(250, 59, 173, 0.65));
 }
 
 // Футер
@@ -1188,13 +1197,40 @@ li{
 }
 
 .footer__soc--link{
+	opacity: .6;
 	transition: .2s linear;
 }
 
 .footer__soc--link:hover{
-	opacity: .6;
+	opacity: 1;
 }
 
+.thankyou__text{
+	padding: 2rem;
+	width: 100%;
+	background: linear-gradient(to right, rgba(250, 59, 173, 0.65), rgba(176, 68, 213, 0.81));
+	color: #fff;
+	font-size: 2rem;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 1.6rem;
+	margin-top: 4rem;
+}
+
+.thankyou__close{
+	text-transform: uppercase;
+	margin-top: 5rem;
+	color: rgba(250, 59, 173, 0.65);
+	font-size: 2rem;
+}
+
+.thankyou__modal.modal__thankyou--active,{
+	display: block;
+}
+
+.thankyou__modal{
+	display: none;
+}
 
 
 @media(max-width: 1200px){
@@ -1277,6 +1313,10 @@ li{
 		font-weight: 300;
 		font-size: 1.5rem;
 		margin-top: 1.5rem;
+	}
+
+	.point__item--text{
+		margin-top: 1rem;
 	}
 }
 
@@ -1460,6 +1500,10 @@ li{
 		font-size: 2rem;
 	}
 
+	.point__item{
+		width: 100%;
+	}
+
 }
 
 @media(max-width: 768px){
@@ -1533,10 +1577,14 @@ li{
 		justify-content: center;
 	}
 
+	.main__text{
+		text-align: center;
+	}
+
 	// Преимущества
 
 	.point__item--img--inner{
-		height: 200px;
+		height: auto;
 	}
 
 	.point__item--title{
@@ -1554,10 +1602,6 @@ li{
 	.point__title{
 		text-align: center;
 		font-size: 2rem;
-	}
-
-	.point__item--img--inner{
-		height: auto;
 	}
 
 	// Создатель
@@ -1704,6 +1748,27 @@ li{
 		padding-bottom: 1rem;
 		border-bottom: 2px solid #fff;
 	}
+
+	.price__card--decor1{
+		right: 10px;
+		top: 10%;
+	}
+
+	.price__card--decor2{
+		left: 0px;
+	}
+
+	.price__card--decor3{
+		left: 0px;
+	}
+
+	.price__card--decor4{
+		left: 10px;
+	}
+
+	.price__card--decor5{
+		right: 0px;
+	}
 }
 
 @media(max-width: 480px){
@@ -1720,6 +1785,10 @@ li{
 		margin-right: .5rem;
 	}
 
+	.point__item--img--inner{
+		width: 50%;
+	}
+
 	.start__text--inner{
 		align-items: flex-start;
 	}
@@ -1734,16 +1803,12 @@ li{
 		justify-content: center;
 	}
 
-	.point__item--img--inner{
-		height: 100%;
-	}
-
 	.point__item--title{
-		font-size: 1.5rem;
+		font-size: 1.3rem;
 	}
 
 	.point__item--text{
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 	}
 
 	// Модальное меню
@@ -1758,7 +1823,7 @@ li{
 
 	// Модальное окно подачи заявки
 
-	.modal__application{
+	.modal__application, .thankyou__modal{
 		max-width: 310px;
 	}
 
