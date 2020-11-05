@@ -56,15 +56,8 @@ $(document).ready(function(){
 	});
 
 	$(".header__menu").on("click", function(){
-		$(".modal__menu").addClass("active");
-		$(".modal__menu--icon").addClass("active");
-		$(this).addClass("active");
-	});
-
-	$(".modal__menu--icon").on("click", function(){
-		$(".modal__menu").removeClass("active");
-		$(".header__menu").removeClass("active");
-		$(this).removeClass("active");
+		$(".modal__menu").toggleClass("active");
+		$(this).toggleClass("active");
 	});
 
 	$(".video__preview--inner").on("click", function(){

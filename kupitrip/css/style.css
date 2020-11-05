@@ -190,7 +190,7 @@ ul, li{
 	margin-right: 0;
 }
 
-.header__menu, .modal__menu--icon{
+.header__menu{
 	display: none;
 	flex-direction: column;
 	align-items: flex-start;
@@ -202,10 +202,9 @@ ul, li{
 	z-index: 100;
 }
 
-.modal__menu--icon{
-	position: absolute;
-	top: 30px;
-	right: 20px;
+.header__menu.active .header__menu--item:before,
+.header__menu.active .header__menu--item:after{
+	background: #ccd2db;
 }
 
 .header__menu--item, .modal__menu--icon--item{
