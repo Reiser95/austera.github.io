@@ -477,9 +477,13 @@ ul, li{
 	max-width: 386px;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-end;
 	margin-top: 3rem;
 	position: relative;
+}
+
+.how__item:nth-child(odd){
+	align-items: flex-start;
 }
 
 .how__item:before{
@@ -510,27 +514,26 @@ ul, li{
 	display: none;
 }
 
-.how__item.big:before,
-.how__item.big:after{
-	transform: rotate(156deg);
-    left: -380px;
-    top: 146px;
-    width: 653px;
+.how__item.big:before, .how__item.big:after {
+    transform: rotate(125deg);
+    left: -248px;
+    top: 147px;
+    width: 332px;
 }
 
 .how__item.big:after{
 	opacity: 0;
 }
 
-.how__item.first:before{
-	width: 630px;
-	top: 113px;
-    left: 45%;
-    transform: rotate(19deg);
+.how__item.first:before, 
+.how__item.first:after {
+    width: 280px;
+    top: 118px;
+    left: 85%;
+    transform: rotate(48deg);
 }
 
 .how__item.first:after{
-	width: 630px;
 	opacity: 0;
 }
 
@@ -663,13 +666,13 @@ ul, li{
 	}
 }
 
-.zero{
-	position: absolute;
-	top: 0;
-	left: -398px;
-	width: 708px;
-	border-bottom: 4px dashed #CCD2DB;
-	transform: rotate(6.8deg);
+.zero {
+    position: absolute;
+    top: -9px;
+    left: -385px;
+    width: 872px;
+    border-bottom: 4px dashed #CCD2DB;
+    transform: rotate(6.8deg);
 }
 
 .zero:before{
@@ -678,7 +681,7 @@ ul, li{
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 708px;
+	width: 872px;
 	opacity: 0;
 	border-bottom: 4px dashed #E65656;
 	transition: 1.5s ease-in-out;
@@ -1152,6 +1155,10 @@ ul, li{
 	margin-top: 6rem;
 }
 
+.slick-active.slick-center{
+	opacity: 1;
+}
+
 .reviews__inner{
 	width: 100%;
 	display: flex;
@@ -1169,6 +1176,8 @@ ul, li{
 	flex-direction: column;
 	align-items: flex-end;
 	margin: 0rem 1.5rem;
+	opacity: 0.3;
+	transition: .2s linear;
 }
 
 .reviews__item:focus{
@@ -1479,7 +1488,7 @@ ul, li{
 
 	/* Как забронировать */
 	.zero{
-		left: -425px;
+		left: -409px;
 	}
 }
 
@@ -1577,22 +1586,65 @@ ul, li{
 	}
 
 	.zero{
-		left: -404px;
+		left: -251px;
+		top: -33px;
+		width: 300px;
+		transform: rotate(40deg);
 	}
 
-	.how__item.first:before,
-	.how__item.first:after{
-	    width: 408px;
-	    top: 118px;
-	    left: 43%;
-	    transform: rotate(31deg);
+	.zero:before {
+	    width: 300px;
+	}
+
+	.how__item.first:before, .how__item.first:after {
+	    width: 115px;
+	    top: 86px;
+	    left: -44px;
+	    transform: rotate(90deg);
 	}
 
 	.how__item.big:before, .how__item.big:after {
-	    transform: rotate(142deg);
-	    left: -153px;
-	    top: 146px;
-	    width: 440px;
+	    transform: rotate(90deg);
+	    left: -72px;
+	    top: 118px;
+	    width: 170px;
+	}
+
+	.how__item--title{
+		font-size: 2rem;
+		text-align: left;
+	}
+
+	.how__item--text{
+		font-size: 1.6rem;
+		margin-top: 1rem;
+		text-align: left;
+	}
+
+	.how__item:nth-child(odd){
+		margin-left: 0;
+	}
+
+	.how__item:nth-child(even){
+		margin-right: 0;
+	}
+
+	.how__content, .how__item{
+		align-items: flex-start;
+	}
+
+	.how__item{
+		padding-left: 6rem;
+	}
+
+	.how__item--circle{
+		position: absolute;
+		top: 20px;
+		left: 0px;
+	}
+
+	.how__item, .how__item.big{
+		max-width: 100%;
 	}
 
 @media(max-width: 998px){
@@ -1742,44 +1794,6 @@ ul, li{
 
 	.next__arrow{
 		left: 12%;
-	}
-
-	/* Как забронировать */
-	.how__item--title{
-		font-size: 2rem;
-		text-align: left;
-	}
-
-	.how__item--text{
-		font-size: 1.6rem;
-		margin-top: 1rem;
-		text-align: left;
-	}
-
-	.how__item:nth-child(odd){
-		margin-left: 0;
-	}
-
-	.how__item:nth-child(even){
-		margin-right: 0;
-	}
-
-	.how__content, .how__item{
-		align-items: flex-start;
-	}
-
-	.how__item{
-		padding-left: 6rem;
-	}
-
-	.how__item--circle{
-		position: absolute;
-		top: 20px;
-		left: 0px;
-	}
-
-	.how__item, .how__item.big{
-		max-width: 100%;
 	}
 
 	/* Как бронировать */
@@ -2018,7 +2032,7 @@ ul, li{
 	}
 
 	.visa__img1, .visa__img3{
-		width: 65vw;
+		width: 51vw;
 	}
 
 	/* Отзывы */

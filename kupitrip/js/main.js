@@ -80,6 +80,7 @@ $(document).ready(function(){
 		slidesToScroll: 1,
 		adaptiveHeight: true,
 		infinite: true,
+		centerMode: true,
 		prevArrow: '<div class="arrow__carousel prev__arrow"><svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 1L1 10M1 10L10 19M1 10H25" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
 		nextArrow: '<div class="arrow__carousel next__arrow"><svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 1L25 10M25 10L16 19M25 10H1" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
 		responsive: [
