@@ -110,11 +110,6 @@ ul, li{
 
 .header{
 	padding: 1.5rem 0;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background: none;
 	transition: .2s linear;
 	z-index: 10;
 }
@@ -331,7 +326,7 @@ ul, li{
 .main{
 	background: url("../img/main-bg.jpg") center no-repeat;
 	background-size: cover;
-	padding: 16rem 0;
+	padding: 0 0 16rem 0;
 	min-height: 850px;
 }
 
@@ -345,6 +340,7 @@ ul, li{
 .main__title{
 	font-size: 4rem;
 	color: #fff;
+	margin-top: 10rem;
 	font-weight: 700;
 	line-height: 52.8px;
 	text-align: center;
@@ -1520,7 +1516,7 @@ ul, li{
 	}
 
 	.main{
-		padding: 12rem 0;
+		padding: 0 0 12rem 0;
 	}
 
 	/* Услуги */
@@ -1677,7 +1673,7 @@ ul, li{
 	}
 
 	.main{
-		padding: 14rem 0;
+		padding: 0 0 14rem 0;
 	}
 
 	/* Услуги */
@@ -1820,6 +1816,10 @@ ul, li{
 	    top: 118px;
 	    width: 168px;
 	}
+
+	.reviews__item{
+		opacity: 1;
+	}
 }
 
 @media(max-width: 768px){
@@ -1844,7 +1844,7 @@ ul, li{
 	}
 
 	.main{
-		padding: 12rem 0;
+		padding: 0 0 12rem 0;
 	}
 
 	.title:before{

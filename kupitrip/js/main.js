@@ -100,12 +100,14 @@ $(document).ready(function(){
 		      breakpoint: 998,
 		      settings: {
 		        slidesToShow: 2,
+		        centerMode: false
 		      }
 		    },
 		    {
 		      breakpoint: 690,
 		      settings: {
 		        slidesToShow: 1,
+		    	centerMode: false
 		      }
 		    }
 		  ]
