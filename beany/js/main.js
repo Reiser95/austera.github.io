@@ -4,7 +4,12 @@ $(document).ready(function(){
 		e.preventDefault();
 		let point = $(this).attr("data-point");
 		let top = $("#"+point).offset().top;
+		close();
 		$('body,html').animate({scrollTop: top}, 500);
+	});
+
+	$(".up__button").on("click", function(){
+		$('body,html').animate({scrollTop: 0}, 500);
 	});
 
 	function close(){
