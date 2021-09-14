@@ -9,7 +9,7 @@
 }
 
 html{
-	--font: 'Libre Baskerville', serif;
+	--font: 'Libre Baskerville', sans-serif;
 }
 
 body{
@@ -17,7 +17,7 @@ body{
 	padding: 0;
 	overflow-x: hidden;
 	font-size: 1.6rem;
-	font-family: 'Gilroy';
+	font-family: 'Gilroy', sans-serif;
 	background: #342745;
 }
 
@@ -29,7 +29,7 @@ body{
 
 a, button, input{
 	transition: .2s linear;
-	font-family: 'Gilroy';
+	font-family: 'Gilroy', sans-serif;
 	font-size: 1.6rem;
 }
 
@@ -196,7 +196,7 @@ input::-webkit-inner-spin-button{
 }
 
 .team{
-	background: url("../img/team-bg.jpg") center no-repeat;
+	background: url("../img/team-bg2.png") center no-repeat;
 	background-size: cover;
 }
 
@@ -1094,7 +1094,7 @@ input::-webkit-inner-spin-button{
 
 .who{
 	padding: 4.6rem 0rem 14rem 0;
-	background: url("../img/who-bg.jpg") center no-repeat;
+	background: url("../img/who-bg2.png") center no-repeat;
 	background-size: cover;
 	border-bottom: 1px solid #708DD1;
 }
@@ -1124,7 +1124,7 @@ input::-webkit-inner-spin-button{
 
 .who__text--inner{
 	margin-top: 2rem;
-	width: 100%;
+	width: 81%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -1139,11 +1139,11 @@ input::-webkit-inner-spin-button{
 }
 
 .who__text--text{
-	text-align: right;
 	font-size: 2.4rem;
 	color: #dfdede;
 	width: 100%;
 	max-width: 370px;
+	text-align: center;
 }
 
 .who__content{
@@ -1420,6 +1420,10 @@ input::-webkit-inner-spin-button{
 	.who__point{
 		padding: 9rem 0rem 0rem 6rem;
 	}
+
+	.who__text--inner{
+		width: 84%;
+	}
 }
 
 @media(max-width: 1200px){
@@ -1495,6 +1499,10 @@ input::-webkit-inner-spin-button{
 
 	.who__point{
 		padding: 7rem 0rem 0rem 6rem;
+	}
+
+	.who__text--inner{
+		width: 89%;
 	}
 }
 
@@ -1630,6 +1638,10 @@ input::-webkit-inner-spin-button{
 
 	.who__img--wrapper{
 		margin-right: 0;
+	}
+
+	.who__text--inner{
+		width: 100%;
 	}
 }
 
