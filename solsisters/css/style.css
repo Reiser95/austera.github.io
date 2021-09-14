@@ -137,10 +137,11 @@ input::-webkit-inner-spin-button{
 
 .header__button{
 	text-transform: uppercase;
-	color: #fff;
+	color: #D229FB;
 	padding: 1.1rem 1.8rem;
 	border-radius: 10px;
 	border: 1px solid #fff;
+	background: #fff;
 	font-weight: 500;
 }
 
@@ -997,7 +998,7 @@ input::-webkit-inner-spin-button{
 
 .genesis{
 	padding: 8rem 0;
-	background: url("../img/genesis-bg.jpg") center no-repeat;
+	background: url("../img/genesis-bg2.png") center no-repeat;
 	background-size: cover;
 	border-bottom: 1px solid #708DD1;
 }

@@ -9,14 +9,14 @@ $(document).ready(function(){
 	path = path.split("#")[1];
 	if(path != undefined){
 		close();
-		let pointTop2 = $("#"+path).offset().top;
+		let pointTop2 = $("#"+path+"Scroll").offset().top;
 		$('body,html').animate({scrollTop: pointTop2}, 500);
 	}
 
 	let count = 1;
 	const editImg = (count) => {
-		$(".attr__img").attr('src', `img/img${count}.jpg`);
-		$(".who__img").attr('src', `img/img${count}.jpg`);
+		$(".attr__img").attr('src', `img/${count}.png`);
+		$(".who__img").attr('src', `img/${count}.png`);
 		if(count >= 4){
 			count = 1;
 		}
@@ -73,7 +73,7 @@ $(document).ready(function(){
 	$(".goto").on('click', function(){
 		close();
 		let point = $(this).attr("data-point");
-		let pointTop = $("#"+point).offset().top;
+		let pointTop = $("#"+point+"Scroll").offset().top;
 		$('body,html').animate({scrollTop: pointTop}, 500);
 	});
 });
