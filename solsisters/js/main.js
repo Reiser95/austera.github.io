@@ -5,6 +5,14 @@ $(document).ready(function(){
 		$(".modal__menu").removeClass("active");
 	}
 
+	let path = $(location).attr('href');
+	path = path.split("#")[1];
+	if(path != undefined){
+		close();
+		let pointTop2 = $("#"+path).offset().top;
+		$('body,html').animate({scrollTop: pointTop2}, 500);
+	}
+
 	let count = 1;
 	const editImg = (count) => {
 		$(".attr__img").attr('src', `img/img${count}.jpg`);
@@ -60,5 +68,12 @@ $(document).ready(function(){
 		$(this).addClass("active");
 		let tab = $(this).attr("data-tab");
 		$(".attr__content[data-tab="+tab+"]").addClass("active");
+	});
+
+	$(".goto").on('click', function(){
+		close();
+		let point = $(this).attr("data-point");
+		let pointTop = $("#"+point).offset().top;
+		$('body,html').animate({scrollTop: pointTop}, 500);
 	});
 });
