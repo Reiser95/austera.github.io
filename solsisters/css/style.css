@@ -3,9 +3,14 @@
 }
 
 @font-face {
-    font-family: 'Gilroy';
-    font-display: swap;
-    src: url("../fonts/gilroyRegular.ttf") format("ttf");
+	font-family: 'Gilroy';
+	src: url('../fonts/gilroyRegular.eot');
+	src: url('../fonts/gilroyRegular.woff2') format('woff2'),
+	    url('../fonts/Gilroy-Regular.woff') format('woff'),
+	    url('../fonts/gilroyMedium.ttf') format('truetype'),
+	    url('../fonts/Gilroy-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 html{
