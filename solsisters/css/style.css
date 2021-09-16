@@ -524,7 +524,7 @@ input::-webkit-inner-spin-button{
 /* Главная */
 .main{
 	padding: 13rem 0rem 30rem 0;
-	background: url("../img/main-bg.jpg") center no-repeat;
+	background: url("../img/main-bg.png") center no-repeat;
 	background-size: cover;
 	position: relative;
 }
@@ -545,7 +545,8 @@ input::-webkit-inner-spin-button{
 
 .main__img{
 	width: 100%;
-	height: auto;
+	height: 100%;
+	object-fit: cover;
 }
 
 .main__text--inner{
@@ -600,7 +601,7 @@ input::-webkit-inner-spin-button{
 	height: auto;
 	margin: 0rem 1rem;
 	position: relative;
-	top: 5px;
+	top: 8px;
 }
 
 .main__social{
@@ -1248,6 +1249,60 @@ input::-webkit-inner-spin-button{
 	color: #dfdede;
 }
 
+/* Арт */
+.art{
+	padding: 7rem 0rem 15rem 0;
+	background: url("../img/art-bg.png") center no-repeat;
+	background-size: cover;
+	border-bottom: 1px solid #708DD1;
+}
+
+.art__inner{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.art__content{
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-top: 3rem;
+}
+
+.art__text--inner{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.art__video--inner{
+	width: 100%;
+	max-width: 610px;
+	height: 340px;
+	margin-right: 14rem;
+	display: flex;
+}
+
+.art__video{
+	width: 100%;
+	height: 100%;
+}
+
+.who__subtext.art__subtext{
+	margin-top: 0;
+}
+
+.art__text{
+	color: #fff;
+	margin-top: 4rem;
+	font-weight: 500;
+	font-size: 2.4rem;
+}
+
 /* Подвал */
 .footer{
 	padding: 3.5rem 0;
@@ -1499,6 +1554,10 @@ input::-webkit-inner-spin-button{
 	.who__text--inner{
 		width: 89%;
 	}
+
+	.art__video--inner{
+		margin-right: 7rem;
+	}
 }
 
 @media(max-width: 998px){
@@ -1638,6 +1697,19 @@ input::-webkit-inner-spin-button{
 	.who__text--inner{
 		width: 100%;
 	}
+
+	.art__content{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.art__video--inner{
+		margin-right: 0;
+	}
+
+	.art__text--inner{
+		margin-top: 3rem;
+	}
 }
 
 @media(max-width: 768px){
@@ -1754,6 +1826,8 @@ input::-webkit-inner-spin-button{
 
 	.main__logo{
 		width: 48px;
+		top: 6px;
+		margin: 0rem .5rem;
 	}
 
 	.main__text--title{
@@ -1810,8 +1884,8 @@ input::-webkit-inner-spin-button{
 		margin-right: 2rem;
 	}
 
-	.genesis__title{
-		font-size: 3rem;
+	.genesis__title, .who__text--title{
+		font-size: 2.5rem;
 	}
 
 	.genesis__text{
@@ -1852,16 +1926,25 @@ input::-webkit-inner-spin-button{
 		margin-top: 4rem;
 	}
 
-	.who__text--title{
-		font-size: 3rem;
-	}
-
 	.who__img--wrapper{
 		max-width: 100%;
 	}
 
 	.who__img--inner{
 		height: 460px;
+	}
+
+	.art{
+		padding: 4rem 0;
+	}
+
+	.art__text{
+		font-size: 1.8rem;
+		margin-top: 2rem;
+	}
+
+	.who__subtext{
+		padding: 0.8rem 2rem;
 	}
 }
 
@@ -1958,5 +2041,9 @@ input::-webkit-inner-spin-button{
 
 	.who__img--total, .who__img--value{
 		font-size: 1.8rem;
+	}
+
+	.art__video--inner{
+		height: 170px;
 	}
 }
