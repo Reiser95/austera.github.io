@@ -597,11 +597,11 @@ input::-webkit-inner-spin-button{
 }
 
 .main__logo{
-	width: 78px;
+	width: 70px;
 	height: auto;
 	margin: 0rem 1rem;
 	position: relative;
-	top: 8px;
+	top: 3px;
 }
 
 .main__social{
