@@ -115,7 +115,7 @@ input::-webkit-inner-spin-button{
 	content: "";
 	display: block;
 	width: 49%;
-	height: 60px;
+	height: 95px;
 	background: #fff;
 	position: absolute;
 	top: 0;
@@ -138,7 +138,7 @@ input::-webkit-inner-spin-button{
 .header__button{
 	text-transform: uppercase;
 	color: #D229FB;
-	padding: 1.1rem 1.8rem;
+	padding: 1.1rem 3.8rem;
 	border-radius: 10px;
 	border: 1px solid #fff;
 	background: #fff;
@@ -594,6 +594,20 @@ input::-webkit-inner-spin-button{
 	margin-top: 1rem;
 	font-family: var(--font);
 	line-height: 1.5;
+}
+
+.text__wrap{
+	margin-top: .5rem;
+	user-select: none;
+	color: #fff;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+}
+
+.wrap{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .main__logo{
@@ -1577,7 +1591,7 @@ input::-webkit-inner-spin-button{
 		padding: 1.5rem 0;
 	}
 
-	.header:before, .header__button{
+	.header:before, .wrap{
 		display: none;
 	}
 
