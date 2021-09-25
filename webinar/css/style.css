@@ -296,6 +296,12 @@ input::-webkit-inner-spin-button{
 	justify-content: center;
 }
 
+.slider__cars{
+	width: 100%;
+	margin-top: 5rem;
+	max-width: 825px;
+}
+
 .countdown-row{
 	display: flex;
 	align-items: flex-start;
@@ -605,9 +611,9 @@ input::-webkit-inner-spin-button{
 }
 
 .cars__img{
-	margin-top: 7rem;
 	width: 100%;
-	max-width: 826px;
+	height: 550px!important;
+	object-fit: cover;
 }
 
 .cars__subtitle{
@@ -859,7 +865,7 @@ input::-webkit-inner-spin-button{
 		font-size: 2.5rem;
 	}
 
-	.cars__img{
+	.slider__cars{
 		width: 85%;
 		max-width: 100%;
 		margin-top: 3rem;
@@ -894,6 +900,10 @@ input::-webkit-inner-spin-button{
 	.register__timer{
 		bottom: 20px;
 	}
+
+	.cars__img{
+		height: 430px!important;
+	}
 }
 
 @media(max-width: 768px){
@@ -903,6 +913,10 @@ input::-webkit-inner-spin-button{
 
 	.countdown-amount{
 		font-size: 6.5rem;
+	}
+
+	.cars__img{
+		height: 260px!important;
 	}
 
 	.button{
@@ -975,6 +989,10 @@ input::-webkit-inner-spin-button{
 @media(max-width: 480px){
 	.container{
 		max-width: 300px;
+	}
+
+	.cars__img{
+		height: 170px!important;
 	}
 
 	.main__data--inner{
