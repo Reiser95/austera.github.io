@@ -966,6 +966,10 @@ input::-webkit-inner-spin-button{
 	.register__wrapper{
 		margin-top: 2rem;
 	}
+
+	.know:before{
+		top: -1px;
+	}
 }
 
 @media(max-width: 480px){
@@ -1020,6 +1024,7 @@ input::-webkit-inner-spin-button{
 	}
 
 	.timer__inner{
+		top: 100%;
 		padding: 2rem 1rem;
 	}
 
@@ -1058,5 +1063,9 @@ input::-webkit-inner-spin-button{
 
 	.speaker__content{
 		margin-top: 3rem;
+	}
+
+	.register__timer{
+		top: auto;
 	}
 }
