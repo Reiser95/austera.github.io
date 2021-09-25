@@ -456,6 +456,8 @@ input::-webkit-inner-spin-button{
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	position: relative;
+	z-index: 2;
 }
 
 .speaker__title{
@@ -699,5 +701,360 @@ input::-webkit-inner-spin-button{
 
 	.register__text--text{
 		font-size: 3rem;
+	}
+}
+
+@media(max-width: 1260px){
+	.container{
+		max-width: 978px;
+	}
+
+	.main__inner{
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+
+	.main__img{
+		max-width: 700px;
+	}
+
+	.main__img--inner{
+		align-items: center;
+	}
+
+	.main__text--inner{
+		max-width: 100%;
+		margin-top: 4rem;
+	}
+
+	.main{
+		padding: 5rem 0rem 19rem 0;
+	}
+
+	.timer__inner{
+		left: 50%;
+		transform: translateX(-50%);
+		top: 102%;
+	}
+
+	.for__point{
+		font-size: 2rem;
+	}
+
+	.why__img{
+		display: none;
+	}
+
+	.why__wrapper{
+		max-width: 100%;
+	}
+
+	.why__button, .why__content{
+		margin-top: 5rem;
+	}
+
+	.register__inner{
+		max-width: 100%;
+	}
+
+	.register__label{
+		display: none;
+	}
+
+	.register{
+		padding: 6rem 0rem 40rem 0;
+	}
+
+	.register__timer{
+		bottom: 40px;
+		top: auto;
+	}
+}
+
+@media(max-width: 998px){
+	.container{
+		max-width: 748px;
+	}
+
+	.for__content{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.for__img{
+		order: 3;
+		margin-top: 3rem;
+	}
+
+	.for__point--inner{
+		max-width: 100%;
+	}
+
+	.for__point:first-child{
+		margin-top: 3rem;
+	}
+
+	.title{
+		font-size: 3.5rem;
+	}
+
+	.for__point{
+		width: 100%;
+	}
+
+	.main__text--title{
+		font-size: 4.5rem;
+	}
+
+	.main__text--title br{
+		display: none;
+	}
+
+	.for{
+		padding: 25rem 0rem 5rem 0;
+	}
+
+	.know{
+		padding: 9rem 0rem;
+	}
+
+	.know__item{
+		max-width: 48%;
+	}
+
+	.know__item, .know__item:nth-child(3){
+		margin-top: 4rem;
+	}
+
+	.know__item--text{
+		font-size: 2rem;
+	}
+
+	.know__content{
+		margin-top: 5rem;
+	}
+
+	.speaker{
+		padding: 8rem 0;
+	}
+
+	.speaker__inner{
+		max-width: 100%;
+	}
+
+	.speaker__content{
+		margin-top: 5rem;
+	}
+
+	.speaker__point{
+		margin-top: 3rem;
+	}
+
+	.why{
+		padding: 6rem 0rem 18rem 0;
+	}
+
+	.why__item--text{
+		margin-left: 3rem;
+		font-size: 2.5rem;
+	}
+
+	.cars__img{
+		width: 85%;
+		max-width: 100%;
+		margin-top: 3rem;
+	}
+
+	.cars__subtitle{
+		margin-top: 3rem;
+		font-size: 2.4rem;
+	}
+
+	.cars__inner{
+		padding: 6rem 0;
+	}
+
+	.register__title{
+		font-size: 4rem;
+	}
+
+	.register__subtitle{
+		font-size: 2rem;
+		margin-top: 1rem;
+	}
+
+	.register__text--title{
+		font-size: 3.5rem;
+	}
+
+	.register__text--text{
+		font-size: 2rem;
+	}
+
+	.register__timer{
+		bottom: 20px;
+	}
+}
+
+@media(max-width: 768px){
+	.container{
+		max-width: 460px;
+	}
+
+	.countdown-amount{
+		font-size: 6.5rem;
+	}
+
+	.button{
+		padding: 1.5rem 2.5rem;
+		font-size: 2rem;
+	}
+
+	.timer__inner{
+		top: 105%;
+	}
+
+	.main__text--text{
+		font-size: 2rem;
+	}
+
+	.for__img{
+		max-width: 100%;
+	}
+
+	.know__item{
+		max-width: 100%;
+	}
+
+	.know__item:nth-child(2){
+		margin-top: 4rem;
+	}
+
+	.main__data--date{
+		font-size: 5rem;
+	}
+
+	.main__data--icon{
+		width: 50px;
+	}
+
+	.register__timer{
+		top: auto;
+	}
+
+	.title{
+		font-size: 2.6rem;
+	}
+
+	.cars__inner{
+		top: -60px;
+	}
+
+	.why{
+		padding: 6rem 0rem 10rem 0;
+	}
+
+	.register__wrapper{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.register__gift{
+		margin-right: 0;
+	}
+
+	.register__wrapper{
+		margin-top: 2rem;
+	}
+}
+
+@media(max-width: 480px){
+	.container{
+		max-width: 300px;
+	}
+
+	.main__data--inner{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.main__data--item{
+		margin: 2rem 0rem 0rem 0rem;
+	}
+
+	.main__data--item:first-child{
+		margin-top: 0;
+	}
+
+	.main__text--suptitle{
+		font-size: 2.4rem;
+	}
+
+	.main__text--title{
+		font-size: 3rem;
+	}
+
+	.main__text--text, .timer__title, .timer__text{
+		font-size: 1.8rem;
+	}
+
+	.timer__text{
+		margin-top: 1.5rem;
+	}
+
+	.countdown-row{
+		flex-wrap: wrap;
+		justify-content: space-between
+	}
+
+	.countdown-section{
+		margin-right: 0;
+		width: 48%;
+	}
+
+	.timer__button--inner{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.timer__social--inner{
+		margin-top: 2rem;
+	}
+
+	.for{
+		padding: 43rem 0rem 5rem 0;
+	}
+
+	.know__item--num{
+		font-size: 8rem;
+	}
+
+	.speaker__img{
+		display: none;
+	}
+
+	.why__item{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.why__item--text{
+		margin: 2rem 0rem 0rem 0rem;
+	}
+
+	.register__title{
+		font-size: 3rem;
+	}
+
+	.register{
+		padding: 6rem 0rem 60rem 0;
+	}
+
+	.why__item--text{
+		font-size: 2rem;
+	}
+
+	.speaker__content{
+		margin-top: 3rem;
 	}
 }
