@@ -1,0 +1,703 @@
+:root{
+	font-size: 10px;
+}
+
+@font-face{
+	font-family: MusioSansT;
+	src: url("../fonts/MuseoSansCyrl.otf");
+}
+
+@font-face{
+	font-family: MusioSansL;
+	src: url("../fonts/MuseoSansCyrl0.otf");
+}
+
+@font-face{
+	font-family: MusioSansS;
+	src: url("../fonts/MuseoSansCyrl1.otf");
+}
+
+@font-face{
+	font-family: MusioSansB;
+	src: url("../fonts/MuseoSansCyrl2.otf");
+}
+
+@font-face{
+	font-family: MusioSansBlack;
+	src: url("../fonts/MuseoSansCyrl3.otf");
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	font-size: 2.4rem;
+	font-family: MusioSansL, sans-serif;
+}
+
+*,
+*:after,
+*:before{
+	box-sizing: border-box;
+}
+
+a, button, input{
+	transition: .2s linear;
+	font-size: 2.4rem;
+	font-family: MusioSansB, sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h5, p{
+	margin: 0;
+	font-weight: normal;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+	appearance: none;
+}
+
+.button{
+	padding: 2.3rem 3.9rem;
+	border-radius: 7px;
+	color: #fff;
+	text-transform: uppercase;
+	background: linear-gradient(180deg, #FE7736 0%, #FD4626 100%);
+	box-shadow: 0px 10px 50px 10px rgba(253, 70, 38, 0.32);
+	border: 0;
+	cursor: pointer;
+}
+
+.input{
+	
+}
+
+.input::placeholder{
+
+}
+
+.input:focus::placeholder{
+	opacity: 0;	
+}
+
+.container{
+	width: 100%;
+	max-width: 1240px;
+	margin: 0 auto;
+}
+
+/* Главный экран */
+.main{
+	padding: 5.5rem 0rem 0rem 0rem;
+	background: url("../img/main-bg.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.main__inner{
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	position: relative;
+}
+
+.main__text--inner{
+	width: 100%;
+	max-width: 675px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex-shrink: 0;
+}
+
+.main__text--suptitle{
+	text-transform: uppercase;
+	color: #fff;
+	position: relative;
+	padding-bottom: 1.4rem;
+}
+
+.main__text--suptitle:before{
+	content: "";
+	display: block;
+	width: 100%;
+	background: rgba(229, 229, 229, 0.11);
+	height: 3px;
+	border-radius: 10px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.main__text--suptitle:after{
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border-radius: 10px;
+	background: #FD4626;
+	width: 38px;
+	height: 3px;
+}
+
+.main__text--title{
+	text-transform: uppercase;
+	font-size: 6rem;
+	color: #fff;
+	font-family: MusioSansB;
+	margin-top: 3rem;
+}
+
+.main__text--text{
+	color: #fff;
+	margin-top: 1.5rem;
+}
+
+.main__img--inner{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.main__img{
+	width: 100%;
+	height: auto;
+}
+
+.main__data--inner{
+	display: flex;
+	align-items: center;
+}
+
+.main__data--item{
+	display: flex;
+	align-items: center;
+	margin-right: 6rem;
+}
+
+.main__data--item:last-child{
+	margin-right: 0;
+}
+
+.main__data--wrapper{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.main__data--icon{
+	width: 66px;
+	height: auto;
+	margin-right: 1.2rem;
+}
+
+.main__data--date{
+	font-size: 8rem;
+	text-transform: uppercase;
+	color: #fd4626;
+	margin-right: 1.2rem;
+}
+
+.main__data--text{
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 1.8rem;
+}
+
+.main__data--value{
+	text-transform: uppercase;
+	color: #fff;
+	font-family: MusioSansB;
+}
+
+.timer__inner{
+	width: 100%;
+	max-width: 600px;
+	background: #0A0C1B;
+	box-shadow: 0px 15px 30px rgba(10, 12, 27, 0.5);
+	position: absolute;
+	left: 0;
+	top: 75%;
+	padding: 2.2rem 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.timer__title{
+	font-family: MusioSansB;
+	color: #fff;
+}
+
+.timer__text{
+	color: #fff;
+}
+
+.timer__button--inner{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	margin-top: 4rem;
+	justify-content: space-between;
+}
+
+.timer__social--inner{
+	display: flex;
+	align-items: center;
+}
+
+.timer__social--link{
+	display: flex;
+	position: relative;
+	top: 5px;
+}
+
+/* Для кого вебинар */
+.for{
+	padding: 25rem 0rem 12rem 0;
+	background: #fff;
+}
+
+.for__inner{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.title{
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	max-width: 510px;
+	font-size: 4.8rem;
+	font-family: MusioSansB;
+}
+
+.is-countdown{
+	width: 100%;
+	margin-top: 3rem;
+	display: flex;
+	justify-content: center;
+}
+
+.countdown-row{
+	display: flex;
+	align-items: flex-start;
+}
+
+.countdown-section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #fff;
+	margin-right: 3rem;
+}
+
+.countdown-section:last-child{
+	margin-right: 0;
+}
+
+.countdown-period{
+	font-size: 1.8rem;
+}
+
+.countdown-amount{
+	font-size: 8.2rem;
+	font-family: MusioSansB;
+}
+
+.for__content{
+	width: 100%;
+	margin-top: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.for__point--inner{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+	max-width: 400px;
+}
+
+.for__point{
+	font-family: MusioSansB;
+	position: relative;
+	padding: 4rem 0rem 0rem 5rem;
+	margin-top: 3rem;
+}
+
+.for__point:first-child{
+	margin-top: 0;
+}
+
+.for__point:before{
+	content: "";
+	display: block;
+	width: 60px;
+	height: 56px;
+	background: url("../img/point-img.png") center no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* Вы узнаете */
+.know{
+	padding: 13rem 0rem 20rem 0;
+	background: #000211;
+	position: relative;
+}
+
+.know:before{
+	content: "";
+	display: block;
+	width: 127px;
+	height: 41px;
+	background: url("../img/poly.svg") center no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.know__inner{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.know__title{
+	color: #fff;
+	max-width: 100%;
+}
+
+.know__content{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 10rem;
+	justify-content: space-between;
+}
+
+.know__item{
+	width: 100%;
+	max-width: 30%;
+	display: flex;
+	align-items: flex-start;
+	margin-top: 7rem;
+}
+
+.know__item:first-child, .know__item:nth-child(2), .know__item:nth-child(3){
+	margin-top: 0;
+}
+
+.know__item--num{
+	position: relative;
+	color: #fff;
+	font-size: 9.6rem;
+	font-family: MusioSansB;
+}
+
+.know__item--text{
+	color: #fff;
+	font-size: 3.1rem;
+	margin: 5rem 0 0 3rem;
+}
+
+.know__item--icon{
+	position: absolute;
+	width: 50px;
+	height: auto;
+	bottom: 10px;
+	right: -20px;
+}
+
+/* Спикер */
+.speaker{
+	position: relative;
+	padding: 12rem 0rem 19rem 0;
+	background: url("../img/speaker-bg.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.speaker__img{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: auto;
+	max-height: 100%;
+}
+
+.speaker__inner{
+	width: 100%;
+	max-width: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.speaker__title{
+	text-align: left;
+	color: #fff;
+}
+
+.speaker__content{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-top: 11rem;
+}
+
+.speaker__point{
+	width: 100%;
+	margin-top: 6rem;
+	color: #fff;
+	font-family: MusioSansB;
+	padding-left: 3.5rem;
+	position: relative;
+}
+
+.speaker__point:before{
+	content: "";
+	display: block;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 15px;
+	left: 0;
+	background: none;
+	border: 2px solid #FD4626;
+}
+
+.speaker__point:first-child{
+	margin-top: 0;
+}
+
+/* Почему стоит начать */
+.why{
+	padding: 11rem 0rem 20rem;
+	position: relative;
+}
+
+.why__img{
+	position: absolute;
+	right: 50px;
+	top: 50%;
+	transform: translateY(-50%);
+	height: auto;
+	max-height: 100%;
+	z-index: -1;
+}
+
+.why__inner{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.why__title{
+	max-width: 650px;
+}
+
+.why__content{
+	width: 100%;
+	margin-top: 11rem;
+}
+
+.why__wrapper{
+	width: 100%;
+	max-width: 800px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.why__item{
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	margin-top: 5rem;
+}
+
+.why__item:first-child{
+	margin-top: 0;
+}
+
+.bold{
+	font-family: MusioSansB;
+}
+
+.why__item--num{
+	width: 67px;
+	height: 67px;
+	border-radius: 50%;
+	border: 5px solid rgba(0, 2, 17, 0.57);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	position: relative;
+	font-size: 3.6rem;
+}
+
+.why__item--text{
+	width: 100%;
+	margin-left: 7rem;
+	font-size: 3.6rem;
+}
+
+.why__item--circle{
+	position: absolute;
+	top: -29px;
+	right: -39px;
+}
+
+.why__button{
+	margin-top: 11rem;
+}
+
+/* Машины */
+.cars{
+	background: url("../img/cars-bg.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.cars__inner{
+	width: 100%;
+	padding: 11.5rem 0rem 8rem;
+	background: #000211;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	top: -120px;
+}
+
+.cars__title{
+	color: #fff;
+	max-width: 640px;
+}
+
+.cars__img{
+	margin-top: 7rem;
+	width: 100%;
+	max-width: 826px;
+}
+
+.cars__subtitle{
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 3.6rem;
+	font-family: MusioSansB;
+	margin-top: 5rem;
+}
+
+/* Регистрация */
+.register{
+	padding: 11rem 0rem 9rem 0;
+	background: #fff;
+	position: relative;
+}
+
+.register__label{
+	position: absolute;
+	bottom: 20px;
+	left: 55%;
+	transform: translateX(-50%);
+	display: flex;
+	align-items: flex-end;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.register__arrow{
+	margin-left: 1rem;
+}
+
+.register__timer{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	left: auto;
+}
+
+.register__inner{
+	width: 100%;
+	max-width: 800px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.register__title{
+	text-transform: uppercase;
+	font-size: 6.4rem;
+	font-family: MusioSansBlack;
+}
+
+.register__subtitle{
+	margin-top: 3rem;
+	font-family: MusioSansB;
+}
+
+.register__wrapper{
+	margin-top: 6rem;
+	display: flex;
+	align-items: center;
+}
+
+.register__gift{
+	margin-right: 3rem;
+	flex-shrink: 0;
+}
+
+.register__text--inner{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.register__text--title{
+	font-size: 4.8rem;
+	font-family: MusioSansBlack;
+}
+
+.register__text--text{
+	font-size: 3.6rem;
+	margin-top: 1rem;
+}
+
+@media(max-width: 1560px){
+	.register__inner{
+		max-width: 560px;
+	}
+
+	.register__text--text{
+		font-size: 3rem;
+	}
+}
