@@ -56,4 +56,17 @@ $(document).ready(function(){
 	    }
 	});
 
+	if($(window).scrollTop > 20){
+		$(".header").addClass("top");
+	}
+
+	$(document).on("scroll", function(){
+		if($(window).scrollTop() > 20){
+			$(".header").addClass("top");
+		}
+		else{
+			$(".header").removeClass("top");
+		}
+	});
+
 });
