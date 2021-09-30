@@ -82,6 +82,10 @@ input::-webkit-inner-spin-button{
 	z-index: 10;
 }
 
+.header.top{
+	background: rgba(0, 0, 0, .5);
+}
+
 .header__inner{
 	width: 100%;
 	display: flex;
@@ -102,7 +106,7 @@ input::-webkit-inner-spin-button{
 .header__nav--link{
 	color: #fff;
 	font-family: 'Montserrat', sans-serif;
-	margin-right: 4.5rem;
+	margin-right: 3.5rem;
 }
 
 .header__social--link{
@@ -199,7 +203,7 @@ input::-webkit-inner-spin-button{
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	width: 45%;
+	width: 46.5%;
 	display: flex;
 	justify-content: flex-end;
 }
@@ -381,7 +385,8 @@ input::-webkit-inner-spin-button{
 /* Tokenomics */
 .token{
 	padding: 5rem 0;
-	background: #030A20;
+	background: url("../img/token-bg.jpg") center no-repeat;
+	background-size: cover;
 	border-bottom: 1px solid #2253F4;
 }
 
@@ -709,6 +714,13 @@ input::-webkit-inner-spin-button{
 	color: #fff;
 	margin-top: 2rem;
 	display: none;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.particles-js-canvas-el{
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 /* Social */
