@@ -80,6 +80,7 @@ input::-webkit-inner-spin-button{
 	padding: 2rem 0;
 	border-bottom: 1px solid #484848;
 	z-index: 10;
+	opacity: 0.5;
 }
 
 .header.top{
@@ -146,6 +147,11 @@ input::-webkit-inner-spin-button{
 	background: url("../img/main-bg.jpg") center no-repeat;
 	background-size: cover;
 	position: relative;
+}
+
+.main .container{
+	position: relative;
+	z-index: 10;
 }
 
 .main__inner{
@@ -216,6 +222,17 @@ input::-webkit-inner-spin-button{
 	background: #2253F4;
 	box-shadow: 0 0 20px rgba(34, 83, 244, 0.76);
 	border-radius: 5px;
+}
+
+.main__button2:hover, .ico__button:hover, .road__button:hover{
+	background: #2d3039;
+	box-shadow: 0 0 20px #2d3039;
+}
+
+.main__button3:hover{
+	background: #2253F4;
+	box-shadow: 0 0 20px rgba(34, 83, 244, 0.76);
+	color: #fff;
 }
 
 .main__button3{
