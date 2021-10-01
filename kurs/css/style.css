@@ -1145,4 +1145,8 @@ input::-webkit-inner-spin-button{
 	.main__text--suptitle{
 		font-size: 2.4rem;
 	}
+
+	.package__item{
+		padding: 8rem 3rem 14rem 3rem;
+	}
 }
