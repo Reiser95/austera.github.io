@@ -147,6 +147,12 @@ input::-webkit-inner-spin-button{
 .header__city--inner{
 	display: flex;
 	align-items: center;
+	transition: .2s linear;
+	cursor: pointer;
+}
+
+.header__city--inner:hover{
+	opacity: 0.6;
 }
 
 .city__icon{
@@ -350,7 +356,7 @@ input::-webkit-inner-spin-button{
 	padding: 0rem 3.5rem 4rem 3.5rem;
 	border-radius: 10px;
 	background: #fff;
-	display: flex;
+	display: flex!important;
 	flex-direction: column;
 	align-items: flex-start;
 	margin-right: 7rem;
@@ -380,6 +386,10 @@ input::-webkit-inner-spin-button{
 	width: 100px;
 	display: flex;
 	margin-right: 5rem;
+}
+
+.link__hover:hover{
+	opacity: 0.6;
 }
 
 .store__item--name{
@@ -798,6 +808,29 @@ input::-webkit-inner-spin-button{
 	display: flex;
 	position: relative;
 	top: -25px;
+	border-radius: 15px;
+}
+
+.book__img--pages{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 4rem;
+	background: rgba(0, 0, 0, .5);
+	color: #fff;
+	border-radius: 15px;
+	transition: .2s linear;
+	opacity: 0;
+	font-family: CeraRoundProBold, sans-serif;
+}
+
+.book__img--inner:hover .book__img--pages{
+	opacity: 1;
 }
 
 .book__img{
@@ -842,6 +875,12 @@ input::-webkit-inner-spin-button{
 .book__map--inner{
 	display: flex;
 	align-items: center;
+	cursor: pointer;
+	transition: .2s linear;
+}
+
+.book__map--inner:hover{
+	opacity: 0.6;
 }
 
 .book__button{
@@ -851,6 +890,13 @@ input::-webkit-inner-spin-button{
 	background: #25bfa0;
 	border-radius: 8px;
 	font-family: CeraRoundProMedium, sans-serif;
+	transition: .2s linear;
+	border: 1px solid #25bfa0;
+}
+
+.book__button:hover{
+	background: #fff;
+	color: #25bfa0;
 }
 
 .book__wrapper{
@@ -987,10 +1033,16 @@ input::-webkit-inner-spin-button{
 	color: #353331;
 	font-size: 3.8rem;
 	font-family: CeraRoundProMedium, sans-serif;
+	word-break: break-all;
 }
 
 .review__like{
 	display: flex;
+	margin-left: 2rem;
+}
+
+.review__like:hover, .footer__social--link:hover{
+	opacity: 0.6;
 }
 
 .review__text{
@@ -1024,12 +1076,30 @@ input::-webkit-inner-spin-button{
 	color: rgba(51, 53, 49, .6);
 }
 
-.review__read{
-	margin-top: 1rem;
+.link__arrow:hover{
+	opacity: 0.6;
 }
 
 .read__img{
 	margin-left: 1rem;
+}
+
+.review__read--inner{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 1rem;
+}
+
+.review__logo--inner{
+	width: 40px;
+	display: flex;
+}
+
+.review__logo{
+	width: 100%;
+	height: auto;
 }
 
 /* Подвал */
@@ -1368,6 +1438,10 @@ input::-webkit-inner-spin-button{
 
 	.arrows__inner{
 		margin-top: 2rem;
+	}
+
+	.review__name{
+		font-size: 2.7rem;
 	}
 }
 @media(max-width: 1200px){
