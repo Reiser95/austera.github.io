@@ -1872,6 +1872,10 @@ input::-webkit-inner-spin-button{
 		font-size: 2rem;
 	}
 
+	.city__input{
+		font-size: 2.7rem;
+	}
+
 	.review__content{
 		margin-top: 7rem;
 	}
