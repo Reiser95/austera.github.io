@@ -479,16 +479,22 @@ input::-webkit-inner-spin-button{
 	flex-shrink: 0;
 }
 
-.city__wrapper--title{
+.city__wrapper--title, .city__input{
 	color: #353331;
 	font-size: 2.7rem;
-	padding-bottom: 3rem;
-	border-bottom: 1px solid #000;
+	margin-bottom: 3rem;
+}
+
+.city__input{
+	display: none;
+	width: 100%;
+	padding: 0;
 }
 
 .city__wrapper--content{
 	width: 100%;
-	margin-top: 3rem;
+	border-top: 1px solid #000;
+	padding-top: 3rem;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -510,9 +516,25 @@ input::-webkit-inner-spin-button{
 
 .city__values{
 	width: 100%;
+}
+
+.city__item{
+	width: 100%;
 	display: flex;
 	align-items: flex-start;
 	flex-wrap: wrap;
+	position: absolute;
+	transition: .3s ease-in-out;
+	opacity: 0;
+	z-index: -1;
+	transform: translateX(-10%);
+}
+
+.city__item.active{
+	position: relative;
+	opacity: 1;
+	z-index: 2;
+	transform: translateX(0);
 }
 
 .city__value{

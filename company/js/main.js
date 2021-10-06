@@ -35,6 +35,17 @@ $(document).ready(function(){
 		giveActiveClass($(this), "city__wrapper--item");
 	});
 
+	$(".city__wrapper--title").on('click', function(){
+		$(this).fadeOut(0);
+		$(".city__input").fadeIn(0).focus();
+	});
+
+	$(".city__wrapper--item").on('click', function(){
+		let data = $(this).attr('data-letter');
+		$(".city__item").removeClass("active");
+		$(".city__item[data-letter="+data+"]").addClass("active");
+	});
+
 	// Карусели
 	$(".store__content").slick({
 		slidesToShow: 4,
