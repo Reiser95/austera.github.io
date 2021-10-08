@@ -524,7 +524,6 @@ input::-webkit-inner-spin-button{
 	align-items: flex-start;
 	flex-wrap: wrap;
 	position: absolute;
-	transition: .3s ease-in-out;
 	opacity: 0;
 	z-index: -1;
 	transform: translateX(-10%);
@@ -535,6 +534,7 @@ input::-webkit-inner-spin-button{
 	opacity: 1;
 	z-index: 2;
 	transform: translateX(0);
+	transition: .3s ease-in-out;
 }
 
 .city__value{
@@ -678,11 +678,27 @@ input::-webkit-inner-spin-button{
 	color: #353331;
 }
 
+.rec__wrapper{
+	width: 100%;
+}
+
 .rec__item--weight--inner{
 	padding: 0rem 2rem;
 	display: flex;
 	align-items: center;
 	margin-top: 3rem;
+	opacity: 0;
+	transform: translateX(-20px);
+	position: absolute;
+	z-index: -1;
+}
+
+.rec__item--weight--inner.active{
+	opacity: 1;
+	transform: translateX(0);
+	position: relative;
+	z-index: 2;
+	transition: .3s ease-in-out;
 }
 
 .rec__item--weight--line{
@@ -713,6 +729,16 @@ input::-webkit-inner-spin-button{
 .rec__item--price--inner{
 	display: flex;
 	align-items: center;
+	position: absolute;
+	transform: translateX(-20px);
+	opacity: 0;
+}
+
+.rec__item--price--inner.active{
+	transform: translateX(0);
+	opacity: 1;
+	position: relative;
+	transition: .3s ease-in-out;
 }
 
 .rec__item--price{
@@ -729,20 +755,29 @@ input::-webkit-inner-spin-button{
 }
 
 .btn{
-	width: 60px;
-	height: 60px;
+	padding: .5rem 1rem;
+	overflow: hidden;
+	width: 100%;
 	border-radius: 10px;
 	background: #fff;
 	border: none;
-	padding: 0;
 	display: flex;
 	align-items: center;
-	justify-content: center;
 	box-shadow: 0px 0px 26.6px 1.4px rgba(0, 0, 0, 0.04);
+	font-size: 1.4rem;
+	color: #000;
+	width: 40px;
+	white-space: nowrap;
 }
 
 .btn:hover{
 	background: #25bfa0;
+	color: #fff;
+	width: 100%;
+}
+
+.cart__button:hover{
+	width: 111px;
 }
 
 .rec__item--button{
@@ -768,9 +803,21 @@ input::-webkit-inner-spin-button{
 	margin-top: 1rem;
 }
 
+.btn__img--inner{
+	flex-shrink: 0;
+	width: 25px;
+	height: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 0.5rem;
+}
+
 .cart__icon{
-	max-width: 50%;
-	max-height: 50%;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 /* Журналы */
@@ -1343,16 +1390,11 @@ input::-webkit-inner-spin-button{
 	}
 
 	.rec__item--price{
-		font-size: 2.2rem;
+		font-size: 2rem;
 	}
 
 	.rec__item--price--prev{
 		font-size: 1.8rem;
-	}
-
-	.btn{
-		width: 45px;
-		height: 45px;
 	}
 
 	.city__value{
@@ -1567,6 +1609,20 @@ input::-webkit-inner-spin-button{
 	.main__text--inner{
 		max-width: 410px;
 	}
+
+	.rec__item--price--inner{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.rec__item--price{
+		margin-right: 0;
+	}
+
+	.rec__item--sale{
+		font-size: 2.2rem;
+		padding: 1rem 2rem;
+	}
 }
 @media(max-width: 998px){
 	.container{
@@ -1623,6 +1679,10 @@ input::-webkit-inner-spin-button{
 
 	.button{
 		font-size: 2.2rem;
+	}
+
+	.btn{
+		font-size: 1.4rem;
 	}
 
 	.review__content{
@@ -1716,6 +1776,14 @@ input::-webkit-inner-spin-button{
 	.main__text--title{
 		font-size: 5rem;
 	}
+
+	.btn{
+		width: 100%;
+	}
+
+	.cart__button, .cart__button:hover{
+		width: auto;
+	}
 }
 @media(max-width: 768px){
 	.container{
@@ -1752,7 +1820,8 @@ input::-webkit-inner-spin-button{
 	}
 
 	.btn{
-		padding: 0;
+		font-size: 1.4rem;
+		padding: 0.5rem 1rem;
 	}
 
 	.why__wrapper{
@@ -1834,6 +1903,12 @@ input::-webkit-inner-spin-button{
 
 	.modal__menu{
 		width: 75%;
+	}
+
+	.why__point{
+		flex-direction: column;
+		align-items: flex-start;
+		display: flex;
 	}
 }
 @media(max-width: 480px){

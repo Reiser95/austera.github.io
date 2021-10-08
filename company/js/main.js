@@ -29,6 +29,21 @@ $(document).ready(function(){
 
 	$(".rec__item--button").on('click', function(){
 		giveActiveClass($(this), "rec__item--button");
+		let price = $(this).attr('data-price');
+		let img = $(this).attr('data-img');
+
+		$(this).parent(".rec__item--button--inner").siblings(".rec__wrapper")
+		.children(".rec__item--weight--inner").removeClass('active');
+		$(this).parent(".rec__item--button--inner").siblings(".rec__wrapper")
+		.children(".rec__item--weight--inner[data-price="+price+"]").addClass('active');
+
+		$(this).parent(".rec__item--button--inner").parent(".book__wrapper").siblings(".rec__item--cart--inner")
+		.children(".rec__item--price--inner").removeClass('active');
+		$(this).parent(".rec__item--button--inner").parent(".book__wrapper").siblings(".rec__item--cart--inner")
+		.children(".rec__item--price--inner[data-price="+price+"]").addClass('active');
+
+		$(this).parent(".rec__item--button--inner").siblings(".rec__item--wrapper").children(".rec__item--img--inner")
+		.children(".rec__item--img").attr("src", "img/" + img);
 	});
 
 	$(".city__wrapper--item").on('click', function(){
@@ -45,6 +60,43 @@ $(document).ready(function(){
 		$(".city__item").removeClass("active");
 		$(".city__item[data-letter="+data+"]").addClass("active");
 	});
+
+	const check = () => {
+		let s_top = $("html").scrollTop();
+		let yes = $(".total__value").offset().top;
+
+		if(s_top > yes - 500 && s_top < yes){
+		    $(".total__value").spincrement({
+		    	to: 1953,
+		    	duration: 2000,
+		    	thousandSeparator: ""
+		    });
+
+		    $(".total__value2").spincrement({
+		    	to: 1953,
+		    	duration: 2000,
+		    	thousandSeparator: ""
+		    });
+
+		    $(".total__value3").spincrement({
+		    	to: 1953,
+		    	duration: 2000,
+		    	thousandSeparator: ""
+		    });
+
+		    $(".total__value4").spincrement({
+		    	to: 1953,
+		    	duration: 2000,
+		    	thousandSeparator: ""
+		    });
+		}
+	}
+
+	$(document).scroll(function(){
+	    check();
+	});
+
+	check();
 
 	// Карусели
 	$(".store__content").slick({
