@@ -50,6 +50,12 @@ $(document).ready(function(){
 		giveActiveClass($(this), "city__wrapper--item");
 	});
 
+	$(".contact__feedback--role").on('click', function(){
+		giveActiveClass($(this), "contact__feedback--role");
+		let role = $(this).text().trim();
+		$(".feedback__role").text(role);
+	});
+
 	$(".city__wrapper--title").on('click', function(){
 		$(this).fadeOut(0);
 		$(".city__input").fadeIn(0).focus();
