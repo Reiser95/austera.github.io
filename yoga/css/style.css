@@ -334,6 +334,8 @@ input::-webkit-inner-spin-button{
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	position: relative;
+	z-index: 2;
 }
 
 .web__content{
@@ -878,5 +880,13 @@ input::-webkit-inner-spin-button{
 	.welcome__button{
 		font-size: 2rem;
 		padding: 1.5rem 2rem;
+	}
+
+	.web__text--inner{
+		background: #fff;
+	}
+
+	.web__title{
+		font-size: 2.5rem;
 	}
 }

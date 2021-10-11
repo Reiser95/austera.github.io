@@ -480,6 +480,8 @@ input::-webkit-inner-spin-button{
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	position: relative;
+	z-index: 3;
 }
 
 .teacher__title{
@@ -1085,5 +1087,13 @@ input::-webkit-inner-spin-button{
 
 	.wait__content{
 		margin-top: 4rem;
+	}
+
+	.desc__content, .teacher__content{
+		background: #fff;
+	}
+
+	.teacher__point, .teacher__name{
+		color: #000;
 	}
 }
