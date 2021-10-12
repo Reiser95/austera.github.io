@@ -98,11 +98,13 @@ $(document).ready(function(){
 		}
 	}
 
-	$(document).scroll(function(){
-	    check();
-	});
+	if($(".total__value").length){
+		$(document).scroll(function(){
+		    check();
+		});
 
-	check();
+		check();
+	}
 
 	// Карусели
 	$(".store__content").slick({
