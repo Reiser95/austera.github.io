@@ -284,7 +284,8 @@ input::-webkit-inner-spin-button{
 	font-size: 2rem;
 	font-weight: 300;
 	color: #e1e1e1;
-	margin-top: 2rem;
+	margin-top: 3rem;
+	line-height: 183.5%;
 }
 
 .what__circle{
@@ -1051,6 +1052,10 @@ input::-webkit-inner-spin-button{
 	.roadmap{
 		padding: 3rem 0;
 	}
+
+	.what__text--text{
+		font-size: 1.8rem;
+	}
 }
 
 @media(max-width: 480px){
@@ -1104,5 +1109,9 @@ input::-webkit-inner-spin-button{
 
 	.opacity{
 		left: 190px;
+	}
+
+	.title{
+		font-size: 2.5rem;
 	}
 }
