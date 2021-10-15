@@ -1056,6 +1056,10 @@ input::-webkit-inner-spin-button{
 	.what__text--text{
 		font-size: 1.8rem;
 	}
+
+	.token__item--title, .token__item--text{
+		color: #e1e1e1;
+	}
 }
 
 @media(max-width: 480px){
