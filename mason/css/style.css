@@ -388,7 +388,9 @@ input::-webkit-inner-spin-button{
 .token__item--text{
 	font-size: 2rem;
 	margin-top: 1rem;
-	color: #fff;
+	font-weight: 300;
+	line-height: 183.5%;
+	color: #e1e1e1;
 }
 
 .token__wrapper{
@@ -454,10 +456,12 @@ input::-webkit-inner-spin-button{
 
 .token__wrapper--item--point{
 	font-size: 2rem;
-	color: #e1e1e1;
 	padding-left: 1.7rem;
 	position: relative;
 	margin-top: 0.5rem;
+	font-weight: 300;
+	line-height: 183.5%;
+	color: #e1e1e1;
 }
 
 .token__wrapper--item--point:first-child{
@@ -472,7 +476,7 @@ input::-webkit-inner-spin-button{
 	background: url("../img/arrow.svg") center no-repeat;
 	background-size: cover;
 	position: absolute;
-	top: 9px;
+	top: 12px;
 	left: 0;
 }
 
