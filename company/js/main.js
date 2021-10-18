@@ -42,6 +42,11 @@ $(document).ready(function(){
 		$(this).parent(".rec__item--button--inner").parent(".book__wrapper").siblings(".rec__item--cart--inner")
 		.children(".rec__item--price--inner[data-price="+price+"]").addClass('active');
 
+		$(this).parent(".rec__item--button--inner").siblings(".rec__item--wrapper")
+		.children(".rec__item--content").children(".rec__item--sale").removeClass('active');
+		$(this).parent(".rec__item--button--inner").siblings(".rec__item--wrapper")
+		.children(".rec__item--content").children(".rec__item--sale[data-price="+price+"]").addClass('active');
+
 		$(this).parent(".rec__item--button--inner").siblings(".rec__item--wrapper").children(".rec__item--img--inner")
 		.children(".rec__item--img").attr("src", "img/" + img);
 	});
@@ -65,6 +70,12 @@ $(document).ready(function(){
 		let data = $(this).attr('data-letter');
 		$(".city__item").removeClass("active");
 		$(".city__item[data-letter="+data+"]").addClass("active");
+	});
+
+	$(".filter__item--title").on("click", function(){
+		if($(window).width() < 768){
+			$(this).siblings(".filter__item--content").slideToggle(150);
+		}
 	});
 
 	const check = () => {

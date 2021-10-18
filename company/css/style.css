@@ -646,6 +646,18 @@ input::-webkit-inner-spin-button{
 	background: #f54747;
 	border-radius: 10px;
 	text-align: center;
+	opacity: 0;
+	transform: translateX(-20px);
+	position: absolute;
+	z-index: -1;
+}
+
+.rec__item--sale.active{
+	z-index: 1;
+	position: relative;
+	transform: translateX(0);
+	opacity: 1;
+	transition: .2s linear;
 }
 
 .rec__item--content{
@@ -2667,6 +2679,10 @@ input::-webkit-inner-spin-button{
 
 	.citywith__store{
 		width: 40px;
+	}
+
+	.filter__item--content{
+		display: none;
 	}
 }
 @media(max-width: 480px){
