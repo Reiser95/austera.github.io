@@ -93,6 +93,11 @@ input::-webkit-inner-spin-button{
 	top: 0;
 	left: 0;
 	z-index: 10;
+	background: transparent;
+	transition: .2s linear;
+}
+
+.header.active{
 	background: #1C1831;
 }
 
@@ -183,6 +188,8 @@ input::-webkit-inner-spin-button{
 	display: flex;
 	align-items: flex-end;
 	justify-content: space-between;
+	position: relative;
+	z-index: 4;
 }
 
 .main__text--inner{
@@ -193,8 +200,8 @@ input::-webkit-inner-spin-button{
 }
 
 .main__img--inner{
-	width: 450px;
-	height: 350px;
+	width: 490px;
+	height: 450px;
 	margin-left: 2rem;
 	flex-shrink: 0;
 	display: flex;

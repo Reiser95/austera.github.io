@@ -46,4 +46,17 @@ $(document).ready(function(){
 		}
 	});
 
+	if($(window).scrollTop > 20){
+		$(".header").addClass("active");
+	}
+
+	$(document).on("scroll", function(){
+		if($(window).scrollTop() > 20){
+			$(".header").addClass("active");
+		}
+		else{
+			$(".header").removeClass("active");
+		}
+	});
+
 });
