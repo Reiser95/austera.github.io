@@ -151,11 +151,11 @@ input::-webkit-inner-spin-button{
 .header__button:last-child{
 	margin-right: 0;
 	border: none;
-	background: #3ED4EC;
+	background: linear-gradient(86.81deg, #3DDEED -1.06%, #42B1E9 28.95%, #4690E6 50.75%, #B180E4 86.75%, #F776E2 110.24%);
 }
 
 .header__button:last-child:hover{
-	background: #119CB2;
+	opacity: 0.5;
 }
 
 .menu{
@@ -165,7 +165,7 @@ input::-webkit-inner-spin-button{
 
 /* Главный блок */
 .main{
-	padding: 12rem 0rem 10rem 0;
+	padding: 25rem 0rem 10rem 0;
 	overflow-x: hidden;
 	overflow-y: hidden;
 }
@@ -298,11 +298,11 @@ input::-webkit-inner-spin-button{
 	padding: 1.4rem 3.4rem;
 	border-radius: 5px;
 	font-size: 2.4rem;
-	background: #3ED4EC;
+	background: linear-gradient(86.81deg, #3DDEED -1.06%, #42B1E9 28.95%, #4690E6 50.75%, #B180E4 86.75%, #F776E2 110.24%);
 }
 
 .main__open--link:hover{
-	background: #119CB2;
+	opacity: 0.5;
 }
 
 .main__token--link{
@@ -363,14 +363,14 @@ input::-webkit-inner-spin-button{
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	animation: spin 3s linear infinite;
+	animation: spin 6s linear infinite;
 }
 
 .what__img2{
 	left: 0;
 	top: 47%;
 	transform: translateY(-50%);
-	animation: espin 3s linear infinite;
+	animation: espin 6s linear infinite;
 }
 
 @keyframes spin{
