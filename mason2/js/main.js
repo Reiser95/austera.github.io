@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+	$(".main__img").addClass("active");
+	$(".main__img--abs").addClass("active");
+
 	const close = () => {
 		$("body").removeClass("scroll");
 		$(".modal__menu").removeClass("active");
