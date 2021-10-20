@@ -85,6 +85,10 @@ input::-webkit-inner-spin-button{
 	-webkit-text-fill-color: transparent;
 }
 
+.blue{
+	color: #42d6ec;
+}
+
 /* Шапка */
 .header{
 	padding: 1.5rem 0;
@@ -224,6 +228,16 @@ input::-webkit-inner-spin-button{
 	transform: translateY(80px);
 	position: relative;
 	top: 30px;
+	animation: spinn 6s linear infinite;
+}
+
+@keyframes spinn{
+	0%{
+		transform: translateY(0px) rotateY(0);
+	}
+	100%{
+		transform: translateY(0px) rotateY(360deg);
+	}
 }
 
 .main__img.active, .main__img--abs.active{
@@ -626,8 +640,9 @@ input::-webkit-inner-spin-button{
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	font-family: 'Syncopate', sans-serif;
-	font-size: 7rem;
+	font-size: 6rem;
 	font-weight: 700;
+	text-transform: uppercase;
 }
 
 .token__shadow{
