@@ -117,6 +117,21 @@ $(document).ready(function(){
 		check();
 	}
 
+	$(".modal__promo--item--tab").on('click', function(){
+		let tab = $(this).attr('data-tab');
+
+		if($(".tab[data-tab="+tab+"]").hasClass("active")){
+			$(this).removeClass("active");
+			$(".tab[data-tab="+tab+"]").removeClass("active").slideUp(200);
+		}
+		else{
+			$(".modal__promo--item--tab").removeClass("active");
+			$(this).addClass("active");
+			$(".tab").removeClass("active").slideUp(200);
+			$(".tab[data-tab="+tab+"]").addClass("active").slideDown(200);
+		}
+	});
+
 	// Карусели
 	$(".store__content").slick({
 		slidesToShow: 4,
