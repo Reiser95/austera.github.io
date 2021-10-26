@@ -1,10 +1,19 @@
 $(document).ready(function(){
 
+	function copytext(el) {
+	    var $tmp = $("<textarea>");
+	    $("body").append($tmp);
+	    $tmp.val($(el).text()).select();
+	    document.execCommand("copy");
+	    $tmp.remove();
+	}
+
 	const close = () => {
 		$("body").removeClass("scroll");
 		$(".modal__menu").removeClass("active");
 	}
 
+	// Мобильное меню
 	$(".burger").on('click', function(){
 		$("body").addClass("scroll");
 		$(".modal__menu").addClass("active");
@@ -27,6 +36,7 @@ $(document).ready(function(){
 		}
 	}
 
+	// Смена веса товара
 	$(".rec__item--button").on('click', function(){
 		giveActiveClass($(this), "rec__item--button");
 		let price = $(this).attr('data-price');
@@ -72,10 +82,16 @@ $(document).ready(function(){
 		$(".city__item[data-letter="+data+"]").addClass("active");
 	});
 
+	// Складывание фильтров при мобилке
 	$(".filter__item--title").on("click", function(){
 		if($(window).width() < 768){
 			$(this).siblings(".filter__item--content").slideToggle(150);
 		}
+	});
+
+	// Копирование текста
+	$(".copy__promo").on('click', function(){
+		copytext($(".modal__promo--value"));
 	});
 
 	const check = () => {
@@ -130,6 +146,18 @@ $(document).ready(function(){
 			$(".tab").removeClass("active").slideUp(200);
 			$(".tab[data-tab="+tab+"]").addClass("active").slideDown(200);
 		}
+	});
+
+	$(".modal__close").on('click', function(){
+		$("body").removeClass("scroll2");
+		$(".modal__promo").removeClass("active");
+		$(".modal__promo--item--tab").removeClass("active");
+		$(".tab").removeClass("active").slideUp(200);
+	});
+
+	$(".modal__open").on('click', function(){
+		$("body").addClass("scroll2");
+		$(".modal__promo").addClass("active");
 	});
 
 	// Карусели
