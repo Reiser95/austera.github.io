@@ -2031,8 +2031,13 @@ input::-webkit-inner-spin-button{
 	display: flex;
 	align-items: center;
 	margin-top: 1rem;
-	color: #161616;
+	color: #757575;
 	cursor: pointer;
+	transition: .2s linear;
+}
+
+.modal__promo--item--tab.active{
+	color: #000;
 }
 
 .modal__promo--item--tab:first-child{
