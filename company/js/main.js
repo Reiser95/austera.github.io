@@ -160,6 +160,20 @@ $(document).ready(function(){
 		$(".modal__promo").addClass("active");
 	});
 
+	var alph = ["A", "Б", "В", "Г", "Д", "Е", "Я"];
+	let min = 0;
+	let max = 6;
+	$(".filter__slider").slider({
+		range: true,
+	    min,
+	    max,
+	    values: [min, max],
+	    slide: function(event, ui){
+	        $('.first__value').text(alph[ui.values[0]]);
+	        $('.second__value').text(alph[ui.values[1]]);
+	    }
+	});
+
 	// Карусели
 	$(".store__content").slick({
 		slidesToShow: 4,
