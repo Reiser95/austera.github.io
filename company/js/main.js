@@ -163,7 +163,7 @@ $(document).ready(function(){
 	var alph = ["A", "Б", "В", "Г", "Д", "Е", "Я"];
 	let min = 0;
 	let max = 6;
-	$(".filter__slider").slider({
+	$(".filter__slider--word").slider({
 		range: true,
 	    min,
 	    max,
@@ -171,6 +171,17 @@ $(document).ready(function(){
 	    slide: function(event, ui){
 	        $('.first__value').text(alph[ui.values[0]]);
 	        $('.second__value').text(alph[ui.values[1]]);
+	    }
+	});
+
+	$(".filter__slider--date").slider({
+		range: true,
+	    min: 2010,
+	    max: 2021,
+	    values: [2010, 2021],
+	    slide: function(event, ui){
+	        $('.first__value').text(ui.values[0]);
+	        $('.second__value').text(ui.values[1]);
 	    }
 	});
 
