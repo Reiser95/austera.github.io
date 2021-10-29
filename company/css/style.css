@@ -1067,7 +1067,8 @@ input::-webkit-inner-spin-button{
 }
 
 .review__button{
-	margin-top: 6rem;
+	margin-top: 4rem;
+	padding: 1.4rem 3rem;
 }
 
 .review__wrapper{
@@ -1208,6 +1209,148 @@ input::-webkit-inner-spin-button{
 
 .red{
 	color: #f54747;
+}
+
+.review__feedback{
+	width: 100%;
+	max-width: 1360px;
+	margin-top: 4rem;
+	display: flex;
+	align-items: flex-end;
+}
+
+.review__feedback--content{
+	width: 100%;
+	border-radius: 15px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #dedcda;
+	align-items: flex-start;
+}
+
+.review__feedback--wrapper{
+	width: 100%;
+	max-width: 360px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-left: 4rem;
+}
+
+.review__feedback--textarea{
+	resize: none;
+	width: 100%;
+	height: 220px;
+	border-radius: 15px;
+	border: none;
+	padding: 2rem;
+	font-size: 2.7rem;
+	background: #fff;
+}
+
+.review__feedback--textarea:placeholder{
+	color: rgba(53, 51, 49, .5);
+}
+
+.review__feedback--quality{
+	width: 100%;
+	padding: 1rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #fff;
+	border-top: 1px solid #dedcda;
+}
+
+.review__feedback--quality--item{
+	width: 31%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.review__feedback--quality--title{
+	font-size: 1.7rem;
+	color: #353331;
+	font-weight: 700;
+}
+
+.white{
+	background: #fff;
+}
+
+.review__check--inner{
+	margin-top: 2rem;
+	width: 100%;
+	display: flex;
+}
+
+.review__check{
+	display: none;
+}
+
+.review__check:checked + .review__check--label:after{
+	opacity: 1;
+}
+
+.review__check--label{
+	padding-left: 3rem;
+	position: relative;
+	cursor: pointer;
+}
+
+.review__check--label:before{
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #dedcda;
+	border-radius: 2px;
+	position: absolute;
+	top: 4px;
+	left: 0;
+	background: #fff;
+}
+
+.review__check--label:after{
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url("../img/check.png") center no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 4px;
+	left: 0;
+	transition: .2s linear;
+	opacity: 0;
+}
+
+.review__feedback--item{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	margin-top: 1.5rem;
+}
+
+.review__feedback--like--inner{
+	display: flex;
+	font-size: 1.6rem;
+	font-weight: 700;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.review__quality--slider{
+	width: 100%;
+	margin: 0rem 1rem;
+}
+
+.review__feedback--like--img{
+	width: 15px;
+	height: auto;
+	margin-left: 0.4rem;
 }
 
 /* Подвал */
@@ -1805,6 +1948,94 @@ input::-webkit-inner-spin-button{
 	align-items: flex-start;
 }
 
+.citywith__item{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	margin-top: 5rem;
+}
+
+.citywith__item:first-child{
+	margin-top: 0;
+}
+
+.citywith__item--img--inner{
+	width: 335px;
+	display: flex;
+	flex-shrink: 0;
+	top: 0;
+}
+
+.citywith__item--img{
+	width: 100%;
+	height: auto;
+}
+
+.citywith__item--content{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background: #fff;
+	padding: 2rem;
+	border-radius: 0 15px 15px 0;
+}
+
+.citywith__item--location--inner{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.citywith__item--location--name{
+	display: flex;
+	align-items: center;
+}
+
+.citywith__item--location--img{
+	width: 45px;
+	height: auto;
+	margin-right: 0.7rem;
+}
+
+.citywith__item--name{
+	font-size: 2.5rem;
+}
+
+.citywith__item--title{
+	font-size: 3rem;
+	margin-top: 2rem;
+}
+
+.citywith__item--text{
+	font-size: 2.5rem;
+	margin-top: 2rem;
+}
+
+.citywith__item--date{
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 3rem;
+}
+
+.citywith__item--button--inner{
+	width: 100%;
+	display: flex;
+	align-items: flex-end;
+	margin-top: 1rem;
+	justify-content: space-between;
+}
+
+.citywith__item--pages{
+	font-size: 2.5rem;
+}
+
+.citywith__item--button{
+	font-weight: 700;
+	padding: 1.3rem 3rem;
+}
+
 .citywith__store--inner{
 	display: flex;
 	align-items: center;
@@ -2173,6 +2404,10 @@ input::-webkit-inner-spin-button{
 	margin-top: 8rem;
 }
 
+.review__feedback--button{
+	margin-top: 2rem;
+}
+
 .modal__promo--review--buttons{
 	margin-top: 2rem;
 	display: flex;
@@ -2276,7 +2511,7 @@ input::-webkit-inner-spin-button{
 
 .word__content{
 	width: 100%;
-	margin-top: 3rem;
+	margin-top: 4rem;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -2740,6 +2975,18 @@ input::-webkit-inner-spin-button{
 	.word__item{
 		width: 25%;
 	}
+
+	.citywith__item--title{
+		font-size: 2.5rem;
+	}
+
+	.citywith__item--text, .citywith__item--date, .citywith__item--pages{
+		font-size: 2rem;
+	}
+
+	.citywith__item--img--inner{
+		width: 290px;
+	}
 }
 @media(max-width: 1200px){
 	.container, .modal__promo--inner{
@@ -2871,6 +3118,23 @@ input::-webkit-inner-spin-button{
 
 	.network__wrapper--text{
 		font-size: 2.2rem;
+	}
+
+	.citywith__item--img--inner{
+		width: 250px;
+	}
+
+	.citywith__item--text, .citywith__item--date, .citywith__item--title{
+		margin-top: 1rem;
+	}
+
+	.review__feedback--wrapper{
+		max-width: 300px;
+		margin-left: 2rem;
+	}
+
+	.review__feedback--button{
+		font-size: 2rem;
 	}
 }
 @media(max-width: 998px){
@@ -3081,6 +3345,24 @@ input::-webkit-inner-spin-button{
 
 	.network__title{
 		margin-top: 4rem;
+	}
+
+	.citywith__item{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.citywith__item--content{
+		border-radius: 15px;
+	}
+
+	.review__feedback{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.review__feedback--wrapper{
+		margin: 3rem 0rem 0rem 0rem;
 	}
 }
 @media(max-width: 768px){
@@ -3364,6 +3646,24 @@ input::-webkit-inner-spin-button{
 		top: -20px;
 		padding: 3rem 4rem;
 	}
+
+	.review__feedback--quality{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.review__feedback--quality--item{
+		width: 100%;
+		margin-top: 1rem;
+	}
+
+	.review__feedback--quality--item:first-child{
+		margin-top: 0;
+	}
+
+	.review__feedback--textarea{
+		height: 170px;
+	}
 }
 @media(max-width: 480px){
 	.container, .modal__promo--inner{
@@ -3486,5 +3786,9 @@ input::-webkit-inner-spin-button{
 
 	.network__wrapper--text{
 		font-size: 2rem;
+	}
+
+	.citywith__item--img--inner{
+		width: 100%;
 	}
 }

@@ -65,6 +65,13 @@ $(document).ready(function(){
 		giveActiveClass($(this), "city__wrapper--item");
 	});
 
+	$(".word__link").on('click', function(){
+		giveActiveClass($(this), "word__link");
+		let word = $(this).attr("data-word");
+		$(".word__item--word").removeClass("active");
+		$(".word__item--word[data-word="+word+"]").addClass("active");
+	});
+
 	$(".contact__feedback--role").on('click', function(){
 		giveActiveClass($(this), "contact__feedback--role");
 		let role = $(this).text().trim();
@@ -183,6 +190,11 @@ $(document).ready(function(){
 	        $('.first__value').text(ui.values[0]);
 	        $('.second__value').text(ui.values[1]);
 	    }
+	});
+
+	$(".review__quality--slider").slider({
+	    min: 2,
+	    max: 5
 	});
 
 	// Карусели
