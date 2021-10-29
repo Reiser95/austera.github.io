@@ -65,7 +65,8 @@ $(document).ready(function(){
 		giveActiveClass($(this), "city__wrapper--item");
 	});
 
-	$(".word__link").on('click', function(){
+	$(".word__link").on('click', function(e){
+		e.preventDefault();
 		giveActiveClass($(this), "word__link");
 		let word = $(this).attr("data-word");
 		$(".word__item--word").removeClass("active");
