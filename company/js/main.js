@@ -168,6 +168,24 @@ $(document).ready(function(){
 		$(".modal__promo").addClass("active");
 	});
 
+
+
+	$(".promo__tab").on('click', function(e){
+		e.preventDefault();
+		let tab = $(this).attr('data-tab');
+
+		if($(".promotab[data-tab="+tab+"]").hasClass("active")){
+			$(this).removeClass("active");
+			$(".promotab[data-tab="+tab+"]").removeClass("active").slideUp(200);
+		}
+		else{
+			$(".modal__promo--item--tab").removeClass("active");
+			$(this).addClass("active");
+			$(".promotab").removeClass("active").slideUp(200);
+			$(".promotab[data-tab="+tab+"]").addClass("active").slideDown(200);
+		}
+	});
+
 	var alph = ["A", "Б", "В", "Г", "Д", "Е", "Я"];
 	let min = 0;
 	let max = 6;

@@ -1867,6 +1867,22 @@ input::-webkit-inner-spin-button{
 	text-align: right;
 }
 
+.citywith__wrapper.promo__wrapper{
+	align-items: flex-end;
+}
+
+.promostore__item.promo__wrapper--item{
+	width: 100%;
+	max-width: 100%;
+	margin: 4rem 0rem 0rem 0rem;
+}
+
+.promostore__item.promo__wrapper--item:nth-child(2),
+.promostore__item.promo__wrapper--item:nth-child(3),
+.promostore__item.promo__wrapper--item:nth-child(4){
+	margin: 4rem 0rem 0rem 0rem;
+}
+
 /* Карта */
 .map{
 	padding: 3rem 0;
@@ -2479,7 +2495,7 @@ input::-webkit-inner-spin-button{
 	padding: 1.4rem 3rem;
 }
 
-.tab{
+.tab, .promo__tab--inner.promotab{
 	display: none;
 }
 
@@ -2879,10 +2895,58 @@ input::-webkit-inner-spin-button{
 	margin-top: 1rem;
 }
 
+.promo__wrapper--store{
+	align-items: flex-end;
+}
+
 .promostore__dots{
 	cursor: pointer;
 	flex-shrink: 0;
 	margin-left: 2rem;
+}
+
+.promo__button{
+	margin-top: 1rem;
+}
+
+.promo__block{
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.promo__button--inner{
+	width: 100%;
+	max-width: 380px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.promo__tabs{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-top: 2rem;
+}
+
+.promo__button--inner .promostore__date{
+	margin-top: 0;
+}
+
+.promo__tab{
+	color: #fff;
+	text-decoration: underline;
+	margin-top: 1rem;
+}
+
+.promotab{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 }
 
 /* Отзывы о магазине */
@@ -3722,6 +3786,21 @@ input::-webkit-inner-spin-button{
 	.review__item:first-child{
 		margin-top: 6rem;
 	}
+
+	.promo__wrapper--store{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.promo__button--inner{
+		align-items: center;
+		margin-top: 2rem;
+		max-width: 100%;
+	}
+
+	.promo__tab--inner .modal__promo--review--item{
+		padding: 10rem 2rem 2.5rem 2rem;
+	}
 }
 @media(max-width: 768px){
 	.container, .modal__promo--inner{
@@ -4056,6 +4135,22 @@ input::-webkit-inner-spin-button{
 
 	.reviewstore__reply{
 		max-width: 90%;
+	}
+
+	.promostore__info--img{
+		width: 60px;
+	}
+
+	.promostore__info--title{
+		font-size: 2.2rem;
+	}
+
+	.promostore__info--text{
+		font-size: 2rem;
+	}
+
+	.promo__tab{
+		font-size: 1.8rem;
 	}
 }
 @media(max-width: 480px){
