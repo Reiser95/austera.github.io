@@ -2686,6 +2686,8 @@ input::-webkit-inner-spin-button{
 .network__wrapper--img{
 	width: 210px;
 	height: 210px;
+	position: relative;
+	z-index: 2;
 }
 
 .network__wrapper--item--block{
@@ -2698,7 +2700,13 @@ input::-webkit-inner-spin-button{
 	align-items: center;
 	position: relative;
 	top: -80px;
-	z-index: -1;
+}
+
+.network__wrapper--normal .network__wrapper--item--block{
+	padding: 1rem 2rem;
+	top: 0;
+	background: none;
+	margin-top: 2rem;
 }
 
 .network__wrapper--text{
@@ -3024,6 +3032,64 @@ input::-webkit-inner-spin-button{
 	font-size: 2.7rem;
 }
 
+/* Конкретный журнал */
+.book__slider--inner{
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+}
+
+.book__slider--mini{
+	width: 130px;
+	margin-right: 3rem;
+	flex-shrink: 0;
+}
+
+.book__slider--main--inner{
+	width: 100%;
+	max-width: 1350px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.book__slider--main{
+	width: 100%;
+}
+
+.book__slide--mini{
+	margin-top: 1.5rem;
+}
+
+.book__slide--mini:first-child{
+	margin-top: 0;
+}
+
+.book__slider--arrow--inner{
+	margin-top: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.book__slider--arrow{
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #dedcd8;
+	margin: 0rem 0.5rem;
+	cursor: pointer;
+	transition: .2s linear;
+}
+
+.book__slider--arrow:hover{
+	opacity: 0.6;
+}
+
 /* Адаптив */
 @media(max-width: 1870px){
 	.container, .modal__promo--inner{
@@ -3065,6 +3131,10 @@ input::-webkit-inner-spin-button{
 
 	.why__point--num{
 		font-size: 5rem;
+	}
+
+	.itemfor3:nth-child(4n){
+		margin-right: 3rem;
 	}
 
 	.item{
@@ -3161,7 +3231,7 @@ input::-webkit-inner-spin-button{
 	}
 
 	.itemfor3:nth-child(4), .itemfor3{
-		margin-top: 3rem;
+		margin-top: 5rem;
 	}
 
 	.copy__promo{
@@ -3207,6 +3277,10 @@ input::-webkit-inner-spin-button{
 	.promostore__promo--button:last-child{
 		margin-top: 1rem;
 	}
+
+	.book__slider--main--inner{
+		max-width: 880px;
+	}
 }
 @media(max-width: 1400px){
 	.container, .modal__promo--inner{
@@ -3242,7 +3316,11 @@ input::-webkit-inner-spin-button{
 	}
 
 	.item:nth-child(3n){
-		margin-right: 0
+		margin-right: 0;
+	}
+
+	.itemfor3:nth-child(3n){
+		margin-right: 3rem;
 	}
 
 	.item:nth-child(4n){
@@ -3301,15 +3379,11 @@ input::-webkit-inner-spin-button{
 	}
 
 	.itemfor3:nth-child(4), .itemfor3, .itemfor3:nth-child(3){
-		margin-top: 3rem;
+		margin-top: 5rem;
 	}
 
 	.itemfor3:nth-child(2n){
 		margin-right: 0;
-	}
-
-	.itemfor3:nth-child(3n){
-		margin-right: 3rem;
 	}
 
 	.modal__promo--item--content{
@@ -3363,6 +3437,16 @@ input::-webkit-inner-spin-button{
 
 	.reviewstore__feedback .review__feedback--wrapper{
 		margin: 2rem 0rem 0rem 0rem;
+	}
+
+	.book__slider--wrapper{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.book__slider--inner{
+		justify-content: center;
+		margin-top: 3rem;
 	}
 }
 @media(max-width: 1200px){
@@ -3525,6 +3609,15 @@ input::-webkit-inner-spin-button{
 
 	.near__item{
 		width: 31.28%;
+	}
+
+	.book__slider--main--inner{
+		max-width: 845px;
+	}
+
+	.book__slider--mini{
+		width: 110px;
+		margin-right: 2rem;
 	}
 }
 @media(max-width: 998px){
@@ -3717,11 +3810,11 @@ input::-webkit-inner-spin-button{
 	}
 
 	.itemfor3:nth-child(3){
-		margin: 3rem 0 0 0;
+		margin: 5rem 0 0 0;
 	}
 
 	.itemfor3:nth-child(2), .citywith__item--inner{
-		margin-top: 3rem;
+		margin-top: 5rem;
 	}
 
 	.modal__promo--promo{
@@ -3783,10 +3876,6 @@ input::-webkit-inner-spin-button{
 		margin-right: 0;
 	}
 
-	.review__item:first-child{
-		margin-top: 6rem;
-	}
-
 	.promo__wrapper--store{
 		flex-direction: column;
 		align-items: flex-start;
@@ -3800,6 +3889,14 @@ input::-webkit-inner-spin-button{
 
 	.promo__tab--inner .modal__promo--review--item{
 		padding: 10rem 2rem 2.5rem 2rem;
+	}
+
+	.book__slider--main--inner{
+		max-width: 618px;
+	}
+
+	.reviewstore__item{
+		margin-bottom: 5rem;
 	}
 }
 @media(max-width: 768px){
@@ -4152,6 +4249,10 @@ input::-webkit-inner-spin-button{
 	.promo__tab{
 		font-size: 1.8rem;
 	}
+
+	.book__slider--main--inner{
+		max-width: 330px;
+	}
 }
 @media(max-width: 480px){
 	.container, .modal__promo--inner{
@@ -4291,5 +4392,13 @@ input::-webkit-inner-spin-button{
 
 	.reviewstore__block--item .review__read{
 		margin-top: 1rem;
+	}
+
+	.book__slider--mini{
+		display: none!important;
+	}
+
+	.book__slider--main--inner{
+		max-width: 300px;
 	}
 }

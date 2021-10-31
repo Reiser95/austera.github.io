@@ -252,4 +252,45 @@ $(document).ready(function(){
 		nextArrow: '<div class="main__arrow main__arrow--next"><img src="img/next.png" alt="Стрелка" class="main__arrow--icon"></div>'
 	});
 
+	$(".book__slider--mini").slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		asNavFor: '.book__slider--main',
+		arrows: false,
+		focusOnSelect: true,
+		vertical: true,
+		verticalSwiping: true,
+		responsive: [
+		    {
+		        breakpoint: 1870,
+		        settings: {
+			        slidesToShow: 3
+		        }
+		    },
+		    {
+		        breakpoint: 998,
+		        settings: {
+			        slidesToShow: 2
+		        }
+		    }
+		]
+	});
+
+	$(".book__slider--main").slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		asNavFor: '.book__slider--mini',
+		nextArrow: '<div class="book__slider--arrow"><img src="img/next.png" alt="Стрелка" class="book__slider--arrow--img"></div>',
+		prevArrow: '<div class="book__slider--arrow"><img src="img/prev.png" alt="Стрелка" class="book__slider--arrow--img"></div>',
+		appendArrows: '.book__slider--arrow--inner',
+		responsive: [
+		    {
+		        breakpoint: 998,
+		        settings: {
+			        slidesToShow: 1
+		        }
+		    }
+		]
+	});
+
 });
