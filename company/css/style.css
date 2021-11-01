@@ -2456,7 +2456,7 @@ input::-webkit-inner-spin-button{
 	border-radius: 10px;
 	border-left: 15px solid #75d1bc;
 	display: flex;
-	margin-top: 5rem;
+	margin-top: 2rem;
 	position: relative;
 }
 
@@ -2496,6 +2496,7 @@ input::-webkit-inner-spin-button{
 	align-items: flex-start;
 	padding: 1rem;
 	border-radius: 6px;
+	margin-top: 1rem;
 }
 
 .modal__promo--box--review--buttons .modal__promo--review--buttons{
@@ -3098,8 +3099,27 @@ input::-webkit-inner-spin-button{
 	width: 100%;
 }
 
-.book__slide--mini{
+.book__slide--mini--block{
+	width: 100%;
+	position: relative;
+	display: flex!important;
 	margin-top: 1.5rem;
+	transition: .2s linear;
+}
+
+.book__slide--mini--block.slick-current.slick-active:before{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.book__slide--mini{
+	width: 100%;
 }
 
 .book__slide--mini:first-child{
@@ -3136,8 +3156,154 @@ input::-webkit-inner-spin-button{
 	width: 100%;
 }
 
-.book__slide--mini.slick-current.slick-active{
-	border: 1px solid #000!important;
+/* Карточка товара */
+.tovar__title{
+	margin-top: 1rem;
+	font-size: 5rem;
+	font-weight: 700;
+	color: #353331;
+}
+
+.tovar__text{
+	font-size: 2.7rem;
+	color: #353331;
+}
+
+.tovar__content{
+	width: 100%;
+	margin-top: 6rem;
+	display: flex;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.tovar__img--inner{
+	position: relative;
+	width: 100%;
+	max-width: 515px;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tovar__img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.tovar__text--inner{
+	background: #fff;
+	padding: 2.5rem 3rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.tovar__weight{
+	display: flex;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+.tovar__logo--block{
+	display: flex;
+	align-items: center;
+}
+
+.tovar__text--text, .tovar__logo--inner{
+	margin-top: 2rem;
+}
+
+.tovar__logo{
+	width: 100px;
+	height: auto;
+	margin-right: 1.5rem;
+}
+
+.tovar__logo:last-child{
+	margin-right: 0;
+}
+
+.tovar__logo--inner, .tovar__date--inner{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.tovar__logo--buttons{
+	display: flex;
+	align-items: center;
+}
+
+.tovar__logo--button{
+	padding: 1rem 2rem;
+	margin-right: 1.5rem;
+}
+
+.tovar__logo--link{
+	font-size: 2.7rem;
+	color: rgba(53, 51, 49, .6);
+}
+
+.tovar__logo--link:hover{
+	color: rgba(53, 51, 49, 1);
+}
+
+.tovar__img--fav{
+	width: 55px;
+	height: 55px;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 15px;
+	left: 20px;
+	background: #fff;
+	cursor: pointer;
+	transition: .2s linear;
+}
+
+.tovar__img--fav:hover{
+	opacity: 0.6;
+}
+
+.tovar__img--fav--icon{
+	max-width: 70%;
+	max-height: 70%;
+}
+
+.tovar__date--content{
+	display: flex;
+	align-items: center;
+}
+
+.tovar__date--sale{
+	padding: 0.7rem 2rem;
+	border-radius: 8px;
+	color: #fff;
+	font-size: 1.9rem;
+	background: #e84c4c;
+	margin-right: 1.5rem;
+}
+
+.tovar__date--logo{
+	width: 45px;
+	height: auto;
+	margin-right: 1.5rem;
+}
+
+.blue{
+	color: #1abc9c;
+}
+
+.tovar__date--text{
+	font-size: 2.5rem;
 }
 
 /* Адаптив */
@@ -3326,6 +3492,18 @@ input::-webkit-inner-spin-button{
 	.book__slider--main--inner{
 		max-width: 880px;
 	}
+
+	.tovar__title{
+		font-size: 3.5rem;
+	}
+
+	.tovar__logo{
+		width: 50px;
+	}
+
+	.tovar__logo--link, .tovar__logo--button{
+		font-size: 2.2rem;
+	}
 }
 @media(max-width: 1400px){
 	.container, .modal__promo--inner{
@@ -3488,6 +3666,10 @@ input::-webkit-inner-spin-button{
 	.book__slider--inner{
 		justify-content: center;
 		margin-top: 3rem;
+	}
+
+	.tovar__img--inner{
+		max-width: 400px;
 	}
 }
 @media(max-width: 1200px){
@@ -3659,6 +3841,23 @@ input::-webkit-inner-spin-button{
 	.book__slide--mini--wrapper{
 		width: 110px;
 		margin-right: 2rem;
+	}
+
+	.tovar__title{
+		font-size: 2.7rem;
+	}
+
+	.tovar__img--inner{
+		max-width: 320px;
+	}
+
+	.tovar__logo--inner{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.tovar__logo--buttons{
+		margin-top: 1rem;
 	}
 }
 @media(max-width: 998px){
@@ -3943,6 +4142,32 @@ input::-webkit-inner-spin-button{
 	.modal__promo--item--button{
 		font-size: 1.6rem;
 	}
+
+	.tovar__date--content{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.tovar__date--sale, .tovar__date--logo, .tovar__logo--button{
+		margin: 0rem 0rem 1rem 0;
+	}
+
+	.tovar__date--inner{
+		align-items: flex-start;
+	}
+
+	.tovar__logo--buttons{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.tovar__text--text{
+		font-size: 1.8rem;
+	}
+
+	.tovar__text{
+		font-size: 2.2rem;
+	}
 }
 @media(max-width: 768px){
 	.container, .modal__promo--inner{
@@ -4189,10 +4414,6 @@ input::-webkit-inner-spin-button{
 		height: 40px;
 	}
 
-	.modal__promo--review--box{
-		margin-top: 3rem;
-	}
-
 	.modal__promo--review--item{
 		margin-top: 6rem;
 	}
@@ -4297,6 +4518,23 @@ input::-webkit-inner-spin-button{
 
 	.book__slider--main--inner{
 		max-width: 330px;
+	}
+
+	.tovar__content{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.tovar__img--inner{
+		max-width: 100%;
+	}
+
+	.tovar__text{
+		font-size: 2rem;
+	}
+
+	.tovar__title{
+		font-size: 2.2rem;
 	}
 }
 @media(max-width: 480px){
@@ -4445,5 +4683,9 @@ input::-webkit-inner-spin-button{
 
 	.book__slider--main--inner{
 		max-width: 300px;
+	}
+
+	.tovar__text--inner{
+		padding: 1rem 1.5rem;
 	}
 }
