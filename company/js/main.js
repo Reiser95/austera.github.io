@@ -216,6 +216,20 @@ $(document).ready(function(){
 	    max: 5
 	});
 
+	let min1 = 100;
+	let max1 = 1500;
+	$(".filter__slider--price").slider({
+		range: true,
+	    min: min1,
+	    max: max1,
+	    step: 10,
+	    values: [min1, max1],
+	    slide: function(event, ui){
+	        $('.first__value').text(ui.values[0]);
+	        $('.second__value').text(ui.values[1]);
+	    }
+	});
+
 	// Карусели
 	$(".store__content").slick({
 		slidesToShow: 4,
