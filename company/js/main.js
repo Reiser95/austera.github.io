@@ -252,6 +252,12 @@ $(document).ready(function(){
 		nextArrow: '<div class="main__arrow main__arrow--next"><img src="img/next.png" alt="Стрелка" class="main__arrow--icon"></div>'
 	});
 
+	$(".book__slider--main").on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+	    var i = (currentSlide ? currentSlide : 0) + 1;
+	    $(".all__slide").text(slick.slideCount);
+	    $(".current__slide").text(i);
+	});
+
 	$(".book__slider--mini").slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,

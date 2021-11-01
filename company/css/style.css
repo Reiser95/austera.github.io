@@ -1221,7 +1221,6 @@ input::-webkit-inner-spin-button{
 	max-width: 1360px;
 	margin-top: 4rem;
 	display: flex;
-	align-items: flex-end;
 }
 
 .review__feedback--content{
@@ -1240,6 +1239,7 @@ input::-webkit-inner-spin-button{
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	justify-content: space-between;
 	margin-left: 4rem;
 }
 
@@ -1252,6 +1252,17 @@ input::-webkit-inner-spin-button{
 	padding: 2rem;
 	font-size: 2.7rem;
 	background: #fff;
+}
+
+.review__feedback--block{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.review__feedback--block .review__feedback--input{
+	margin-bottom: 1rem;
 }
 
 .review__feedback--textarea:placeholder{
@@ -2957,6 +2968,15 @@ input::-webkit-inner-spin-button{
 	align-items: flex-end;
 }
 
+.modal__promo--input--inner{
+	width: 100%;
+	max-width: 950px;
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
 /* Отзывы о магазине */
 .reviewstore__content{
 	width: 100%;
@@ -3040,9 +3060,30 @@ input::-webkit-inner-spin-button{
 }
 
 .book__slider--mini{
+	width: 100%;
+}
+
+.book__slider--slides{
+	display: flex;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+.current__slide{
+	margin-right: 1rem;
+}
+
+.all__slide{
+	margin-left: 1rem;
+}
+
+.book__slide--mini--wrapper{
 	width: 130px;
 	margin-right: 3rem;
 	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 .book__slider--main--inner{
@@ -3088,6 +3129,15 @@ input::-webkit-inner-spin-button{
 
 .book__slider--arrow:hover{
 	opacity: 0.6;
+}
+
+.review__feedback--input{
+	background: #fff;
+	width: 100%;
+}
+
+.book__slide--mini.slick-current.slick-active{
+	border: 1px solid #000!important;
 }
 
 /* Адаптив */
@@ -3261,9 +3311,8 @@ input::-webkit-inner-spin-button{
 		font-size: 2.2rem;
 	}
 
-	.promostore__wrapper .modal__promo--item--buttons{
-		flex-direction: column;
-		align-items: flex-start;
+	.promostore__promo--button{
+		font-size: 1.6rem;
 	}
 
 	.promostore__info--title{
@@ -3272,10 +3321,6 @@ input::-webkit-inner-spin-button{
 
 	.promostore__item{
 		padding: 2rem 1rem 1rem 1rem;
-	}
-
-	.promostore__promo--button:last-child{
-		margin-top: 1rem;
 	}
 
 	.book__slider--main--inner{
@@ -3388,10 +3433,6 @@ input::-webkit-inner-spin-button{
 
 	.modal__promo--item--content{
 		flex-wrap: wrap;
-	}
-
-	.modal__promo--item--buttons{
-		margin-top: 2rem;
 	}
 
 	.word__item{
@@ -3615,7 +3656,7 @@ input::-webkit-inner-spin-button{
 		max-width: 845px;
 	}
 
-	.book__slider--mini{
+	.book__slide--mini--wrapper{
 		width: 110px;
 		margin-right: 2rem;
 	}
@@ -3897,6 +3938,10 @@ input::-webkit-inner-spin-button{
 
 	.reviewstore__item{
 		margin-bottom: 5rem;
+	}
+
+	.modal__promo--item--button{
+		font-size: 1.6rem;
 	}
 }
 @media(max-width: 768px){
@@ -4394,7 +4439,7 @@ input::-webkit-inner-spin-button{
 		margin-top: 1rem;
 	}
 
-	.book__slider--mini{
+	.book__slide--mini--wrapper{
 		display: none!important;
 	}
 
