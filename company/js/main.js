@@ -168,7 +168,21 @@ $(document).ready(function(){
 		$(".modal__promo").addClass("active");
 	});
 
+	$(".sort__view--img").on('click', function(){
+		let view = $(this).attr("data-view");
+		if(!$(".citywith__item--inner[data-view="+view+"]").hasClass("active")){
+			$(".citywith__item--inner").removeClass("active");
+			$(".citywith__item--inner[data-view="+view+"]").addClass("active");
+		}
+	});
 
+	$(".tovar__card--click").on('click', function(){
+		let store = $(this).attr("data-store");
+		$(".tovar__date--inner").removeClass("active");
+		$(".tovar__weight").removeClass("active");
+		$(".tovar__date--inner[data-store="+store+"]").addClass("active");
+		$(".tovar__weight[data-store="+store+"]").addClass("active");
+	});
 
 	$(".promo__tab").on('click', function(e){
 		e.preventDefault();
