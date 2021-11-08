@@ -416,8 +416,8 @@ input::-webkit-inner-spin-button{
 
 .collection__coin{
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 20px;
+	right: 20px;
 	z-index: -1;
 }
 
@@ -1027,6 +1027,11 @@ input::-webkit-inner-spin-button{
 @media(max-width: 480px){
 	.container{
 		max-width: 300px;
+	}
+
+	.collection__coin{
+		top: 0;
+		right: 0;
 	}
 
 	.footer__dog{
