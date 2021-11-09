@@ -3396,6 +3396,10 @@ input::-webkit-inner-spin-button{
 	opacity: 0.6;
 }
 
+.citywith__item--inner--active{
+	display: flex;
+}
+
 .tovar__img--fav--icon{
 	max-width: 70%;
 	max-height: 70%;
