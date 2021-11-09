@@ -37,7 +37,7 @@ $(document).ready(function(){
 	}
 
 	// Смена веса товара
-	$(".rec__item--button").on('click', function(){
+	$(".for3__button").on('click', function(){
 		giveActiveClass($(this), "rec__item--button");
 		let price = $(this).attr('data-price');
 		let img = $(this).attr('data-img');
@@ -59,6 +59,30 @@ $(document).ready(function(){
 
 		$(this).parent(".rec__item--button--inner").siblings(".rec__item--wrapper").children(".rec__item--img--inner")
 		.children(".rec__item--img").attr("src", "img/" + img);
+	});
+
+	$(".full__button").on('click', function(){
+		giveActiveClass($(this), "rec__item--button");
+		let price = $(this).attr('data-price');
+		let img = $(this).attr('data-img');
+
+		$(this).parent(".rec__item--button--inner").siblings(".item__point")
+		.children(".rec__item--weight--inner").removeClass('active');
+		$(this).parent(".rec__item--button--inner").siblings(".item__point")
+		.children(".rec__item--weight--inner[data-price="+price+"]").addClass('active');
+
+		$(this).parent(".rec__item--button--inner").siblings(".item__point").children(".item__wrapper")
+		.children(".rec__item--price--inner").removeClass('active');
+		$(this).parent(".rec__item--button--inner").siblings(".item__point").children(".item__wrapper")
+		.children(".rec__item--price--inner[data-price="+price+"]").addClass('active');
+
+		$(this).parent(".rec__item--button--inner").siblings(".item__point")
+		.children(".item__wrapper").children(".rec__item--sale").removeClass('active');
+		$(this).parent(".rec__item--button--inner").siblings(".item__point")
+		.children(".item__wrapper").children(".rec__item--sale[data-price="+price+"]").addClass('active');
+
+		$(this).parent(".rec__item--button--inner").parent(".item__full--content").siblings(".item__full--img--inner")
+		.children(".item__full--img").attr("src", "img/" + img);
 	});
 
 	$(".city__wrapper--item").on('click', function(){
