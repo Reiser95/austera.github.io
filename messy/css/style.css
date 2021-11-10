@@ -518,6 +518,11 @@ input::-webkit-inner-spin-button{
 	z-index: -1;
 	top: 10px;
 	left: -15px;
+	transition: .2s linear;
+}
+
+.road__block:hover:before{
+	background: #F7A443;
 }
 
 .road__block--title{
