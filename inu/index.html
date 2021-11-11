@@ -16,6 +16,7 @@
 
 	<!-- Style -->
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.min.css">
 
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon.png">
@@ -28,7 +29,7 @@
 </head>
 <body>
 	
-	<header class="header">
+	<header class="header wow animate__animated animate__fadeIn">
 		<div class="container">
 			<div class="header__inner">
 				<a href="/" class="header__logo--inner">
@@ -44,7 +45,7 @@
 		</div>
 	</header>
 
-	<section class="main">
+	<section class="main wow animate__animated animate__fadeIn">
 		<div class="main__abs">
 			.Inu
 		</div>
@@ -69,7 +70,7 @@
 		</div>
 	</section>
 
-	<section class="name">
+	<section class="name wow animate__animated animate__fadeIn">
 		<img src="img/username-bone1.svg" alt="Кость" class="name__bone rellax">
 
 		<div class="container">
@@ -97,15 +98,15 @@
 
 		<div class="container">
 			<div class="our__inner">
-				<h2 class="title our__title">
+				<h2 class="title our__title wow animate__animated animate__fadeIn">
 					Our future
 				</h2>
 
-				<p class="text our__text">
+				<p class="text our__text wow animate__animated animate__fadeIn">
 					No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services.
 				</p>
 
-				<div class="our__content">
+				<div class="our__content wow animate__animated animate__fadeIn">
 					<div class="our__item">
 						<div class="our__img--inner">
 							<img src="img/inu1.png" alt="Картинка" class="our__img">
@@ -140,7 +141,7 @@
 		</div>
 	</section>
 
-	<section class="web">
+	<section class="web wow animate__animated animate__fadeIn">
 		<div class="web__abs">
 			.Inu
 		</div>
@@ -179,11 +180,11 @@
 			</div>
 			
 			<div class="domen__inner">
-				<p class="domen__text">
+				<p class="domen__text wow animate__animated animate__fadeIn">
 					You can also use ENS with DNS names you already own. ENS supports most DNS names, including:
 				</p>
 
-				<div class="domen__block">
+				<div class="domen__block wow animate__animated animate__fadeIn">
 					<p class="domen__block--title">
 						Use Traditional Domains
 					</p>
@@ -227,12 +228,12 @@
 
 		<div class="container">
 			<div class="get__inner">
-				<h2 class="title get__title">
+				<h2 class="title get__title wow animate__animated animate__fadeIn">
 					Get Involved
 				</h2>
 
 				<div class="get__content">
-					<div class="get__item">
+					<div class="get__item wow animate__animated animate__fadeIn">
 						<div class="get__item--img--inner">
 							<img src="img/social1.png" alt="Картинка" class="get__item--img">
 						</div>
@@ -248,7 +249,7 @@
 						</div>
 					</div>
 
-					<div class="get__item">
+					<div class="get__item wow animate__animated animate__fadeIn">
 						<div class="get__item--img--inner">
 							<img src="img/social2.png" alt="Картинка" class="get__item--img">
 						</div>
@@ -264,7 +265,7 @@
 						</div>
 					</div>
 
-					<div class="get__item">
+					<div class="get__item wow animate__animated animate__fadeIn">
 						<div class="get__item--img--inner">
 							<img src="img/social3.png" alt="Картинка" class="get__item--img">
 						</div>
@@ -280,7 +281,7 @@
 						</div>
 					</div>
 
-					<div class="get__item">
+					<div class="get__item wow animate__animated animate__fadeIn">
 						<div class="get__item--img--inner">
 							<img src="img/social4.png" alt="Картинка" class="get__item--img">
 						</div>
@@ -300,7 +301,7 @@
 		</div>
 	</section>
 
-	<footer class="footer">
+	<footer class="footer wow animate__animated animate__fadeIn">
 		<div class="container">
 			<div class="footer__inner">
 				<div class="footer__social--inner">
@@ -338,9 +339,11 @@
 	
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/rellax.min.js"></script>
+	<script src="js/wow.min.js"></script>
 	<script src="js/main.js"></script>
 	<script>
 		var rellax = new Rellax('.rellax');
+		new WOW().init();
 	</script>
 </body>
 </html>
