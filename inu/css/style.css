@@ -93,6 +93,7 @@ input::-webkit-inner-spin-button{
 	align-items: center;
 	color: #fff;
 	font-size: 2.5rem;
+	text-transform: uppercase;
 }
 
 .header__logo{
@@ -117,10 +118,9 @@ input::-webkit-inner-spin-button{
 
 /* Главный блок */
 .main{
-	padding: 30rem 0 20rem 0;
+	padding: 23rem 0 0rem 0;
 	position: relative;
-	background: url("../img/main-bg.svg") center no-repeat;
-	background-size: cover;
+	border-bottom: 1px solid #4D4D4D;
 }
 
 .main__inner{
@@ -128,6 +128,7 @@ input::-webkit-inner-spin-button{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
 }
 
 .main__title{
@@ -173,7 +174,8 @@ input::-webkit-inner-spin-button{
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	top: 320px;
+	top: 153px;
+	background: #446DFF;
 }
 
 .main__bone{
@@ -193,7 +195,7 @@ input::-webkit-inner-spin-button{
 
 /* Username */
 .name{
-	padding: 16rem 0rem 13rem 0;
+	padding: 19rem 0rem 13rem 0;
 	position: relative;
 }
 
@@ -226,6 +228,7 @@ input::-webkit-inner-spin-button{
 }
 
 .name__img{
+	max-width: 700px;
 	position: relative;
 	z-index: 2;
 }
@@ -583,11 +586,7 @@ input::-webkit-inner-spin-button{
 /* Адаптив */
 @media(max-width: 1500px){
 	.main{
-		padding: 25rem 0rem 0rem 0;
-	}
-
-	.main__circle--dog{
-		top: 120px;
+		padding: 22rem 0rem 0rem 0;
 	}
 
 	.get__img{
@@ -639,6 +638,9 @@ input::-webkit-inner-spin-button{
 	.main__circle--dog{
 		width: 250px;
 		height: 250px;
+		position: absolute;
+		bottom: -280px;
+		top: auto;
 	}
 
 	.main__dog{
@@ -733,6 +735,10 @@ input::-webkit-inner-spin-button{
 
 	.web{
 		padding: 5rem 0rem;
+	}
+
+	.main{
+		padding: 18rem 0rem 16rem 0;
 	}
 }
 @media(max-width: 768px){
@@ -849,7 +855,7 @@ input::-webkit-inner-spin-button{
 	}
 
 	.main{
-		padding: 13rem 0rem 0rem 0;
+		padding: 13rem 0rem 16rem 0;
 	}
 
 	.main__abs{

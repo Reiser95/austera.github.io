@@ -317,17 +317,26 @@ input::-webkit-inner-spin-button{
 
 .about__img--inner{
 	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 	margin-top: 9rem;
 	transform: rotate(-6deg);
+	flex-shrink: 0;
+	width: auto;
+}
+
+.about__img--wrapper{
+	width: 100%;
+	display: flex;
 }
 
 .about__img{
 	width: 260px;
 	height: auto;
 	border-radius: 40px;
+	margin-right: 3rem;
+}
+
+.about__img:last-child{
+	margin-right: 0;
 }
 
 .about__question--img--inner{
@@ -337,8 +346,6 @@ input::-webkit-inner-spin-button{
 	height: 415px;
 	border-radius: 40px;
 	overflow: hidden;
-	transform: rotate(-6deg);
-	margin-top: 8rem;
 }
 
 .about__question--img{
@@ -404,6 +411,85 @@ input::-webkit-inner-spin-button{
 .about__lapa6{
 	right: 120px;
 	bottom: 160px;
+}
+
+.about__title2{
+	margin-top: 14rem;
+}
+
+.about__content{
+	width: 100%;
+	margin-top: 6rem;
+	border-radius: 23px;
+	border: 1px solid #F7A443;
+	padding: 2rem 10rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.about__block{
+	width: 100%;
+	max-width: 505px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.about__block--title{
+	width: 100%;
+	border-radius: 20px 20px 0 0;
+	background: #fff;
+	text-align: center;
+	padding: 1.5rem 2rem;
+	font-weight: 700;
+	font-size: 4.8rem;
+	color: rgba(33, 33, 36, .73);
+	font-family: 'Balsamiq Sans', cursive;
+}
+
+.about__block--price{
+	padding: 2rem 3rem;
+	background: #9DC5F0;
+	color: #fff;
+	font-size: 4.8rem;
+	text-align: center;
+	width: 100%;
+	font-family: 'Balsamiq Sans', cursive;
+}
+
+.about__block--content{
+	width: 100%;
+	border-radius: 0 0 20px 20px;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem 3rem;
+}
+
+.about__block--content--subtext{
+	margin-top: 2.5rem;
+	text-align: center;
+	color: #656565;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	font-size: 2rem;
+}
+
+.about__block--content--button{
+	margin-top: 2.5rem;
+}
+
+.about__block--content .road__text--star{
+	font-size: 2rem;
+}
+
+.about__count--inner{
+	margin-top: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* Road */
@@ -1247,8 +1333,6 @@ input::-webkit-inner-spin-button{
 
 	.about__img--inner{
 		margin-top: 7rem;
-		flex-shrink: 0;
-		width: auto;
 	}
 
 	.about__img{

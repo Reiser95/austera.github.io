@@ -58,4 +58,15 @@ $(document).ready(function(){
 	}
 	setTimeout(() => editImg(count), 400);
 
+	function rotate(){
+		let scroll = $(".about__img--inner").scrollTop();
+		let winScroll = $(window).scrollTop();
+		scroll = winScroll - (scroll + 1400);
+		$(".about__img--wrapper").css("transform", "translateX("+scroll/10+"px)");
+	}
+	rotate();
+	$(document).scroll(function(){
+		rotate();
+	});
+
 });
