@@ -266,24 +266,6 @@ input::-webkit-inner-spin-button{
 	max-width: 100%;
 }
 
-.main__circle{
-	position: absolute;
-	pointer-events: none;
-	z-index: -1;
-	bottom: -180px;
-	right: 0;
-	animation: spin 10s linear infinite;
-}
-
-@keyframes spin{
-	0%{
-		transform: rotate(0deg);
-	}
-	100%{
-		transform: rotate(-360deg);
-	}
-}
-
 /* О нас */
 .about{
 	padding: 5rem 0;
@@ -1177,11 +1159,6 @@ input::-webkit-inner-spin-button{
 	    right: 49px;
 	}
 
-	.main__circle{
-		width: 170px;
-		bottom: -100px;
-	}
-
 	.team__social--item{
 		padding: 2.5rem 1.5rem;
 	}
@@ -1263,10 +1240,6 @@ input::-webkit-inner-spin-button{
 
 	.main__img--inner{
 		width: 300px;
-	}
-
-	.main__circle{
-		bottom: -120px;
 	}
 
 	.about__img{
@@ -1433,11 +1406,6 @@ input::-webkit-inner-spin-button{
 		width: 120px;
 		top: -15px;
 		right: 10px;
-	}
-
-	.main__circle{
-		width: 110px;
-		bottom: -80px;
 	}
 
 	.title, .faq__block--text--title{
