@@ -21,6 +21,22 @@ $(document).ready(function(){
 		$('body,html').animate({scrollTop: $("#"+point).offset().top}, 500);
 	});
 
+	$(".minus").on('click', function(){
+		let value = parseInt($(".about__count--input").val());
+		if(value >= 1){
+			value -= 1;
+		}
+		$(".about__count--input").val(value);
+	});
+
+	$(".plus").on('click', function(){
+		let value = parseInt($(".about__count--input").val());
+		if(value <= 100){
+			value += 1;
+		}
+		$(".about__count--input").val(value);
+	});
+
 	$(window).resize(function(){
 		if($(window).width() > 998){
 			close();
@@ -67,6 +83,60 @@ $(document).ready(function(){
 	rotate();
 	$(document).scroll(function(){
 		rotate();
-	});
+		let sc = $(window).scrollTop();
+		if(sc >= 2500){
+			$(".start").addClass("active");
+		}
+		else{
+			$(".start").removeClass("active");
+		}
 
+		if(sc >= 2800){
+			$(".25").addClass("active");
+		}
+		else{
+			$(".25").removeClass("active");
+		}
+
+		if(sc >= 3000){
+			$(".50").addClass("active");
+		}
+		else{
+			$(".50").removeClass("active");
+		}
+
+		if(sc >= 3300){
+			$(".75").addClass("active");
+		}
+		else{
+			$(".75").removeClass("active");
+		}
+
+		if(sc >= 3850){
+			$(".100").addClass("active");
+		}
+		else{
+			$(".100").removeClass("active");
+		}
+
+		if(sc >= 4400){
+			$(".finish").addClass("active");
+		}
+		else{
+			$(".finish").removeClass("active");
+		}
+
+		let off = $(".road__content").offset().top;
+		if(sc - off > -320 && sc - off <= 2000){
+			if($(window).width() <= 768){
+				$(".road__progress").css("transform", "translateX(-30%) translateY("+(sc - off + 300)+"px)");
+			}
+			else{
+				$(".road__progress").css("transform", "translateX(-50%) translateY("+(sc - off + 300)+"px)");
+			}
+		}
+		else if($(window).width() <= 480 && sc - off > -320 && sc - off <= 2600){
+			$(".road__progress").css("transform", "translateX(-30%) translateY("+(sc - off + 300)+"px)");
+		}
+	});
 });
