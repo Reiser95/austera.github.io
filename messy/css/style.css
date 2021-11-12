@@ -530,21 +530,8 @@ input::-webkit-inner-spin-button{
 	position: relative;
 }
 
-.road__content:before{
-	content: "";
-	display: block;
-	height: 100%;
-	width: 7px;
-	background: #9DC5F0;
+.duo__lapa{
 	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: translateX(-50%);
-}
-
-.road__progress{
-	position: absolute;
-	z-index: 3;
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
@@ -560,80 +547,93 @@ input::-webkit-inner-spin-button{
 
 .road__item{
 	width: 100%;
+	margin-top: 3rem;
 	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	margin-top: 7rem;
+	justify-content: flex-start;
 }
 
 .road__item:first-child{
 	margin-top: 0;
 }
 
-.road__item--text{
-	width: 100%;
-	max-width: 455px;
-	text-align: right;
-	font-size: 4.8rem;
-	color: #9dc5f0;
-	font-family: 'Balsamiq Sans', cursive;
-	margin-right: 10rem;
-	transition: .2s linear;
-	margin-top: 3rem;
+.road__item:nth-child(2n){
+	justify-content: flex-end;
 }
 
-.road__item--text.active{
-	color: #f7a443;
-}
-
-.road__item--content{
+.road__block{
 	width: 100%;
-	max-width: 455px;
+	max-width: 519px;
+	position: relative;
+	padding: 4rem;
 	background: #fff;
 	border-radius: 30px;
-	padding: 3rem 4rem;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	margin-left: 10rem;
-}
-
-.road__item--content--title{
-	font-family: 'Balsamiq Sans', cursive;
-	font-size: 4.8rem;
-	color: rgba(33, 33, 36, .73);
-}
-
-.road__item--content--text, .road__item--content--text--star{
-	font-family: 'Montserrat', sans-serif;
-	font-size: 1.8rem;
-	color: #656565;
-	margin-top: 1.5rem;
-}
-
-.road__item--content--text--star{
-	position: relative;
-	padding-left: 2.5rem;
-}
-
-.road__item--content--text--star:before{
-	content: "";
-	display: block;
-	background: url("../img/star.svg") center no-repeat;
-	background-size: cover;
-	width: 14px;
-	height: 14px;
-	position: absolute;
-	top: 2px;
-	left: 0;
 }
 
 .road__cat{
 	position: absolute;
 	z-index: -1;
 	pointer-events: none;
-	top: 1050px;
-	left: 150px;
+	left: 100px;
+	top: 900px;
+}
+
+.road__block:before{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: #B2D5F8;
+	border-radius: 30px;
+	position: absolute;
+	z-index: -1;
+	top: 10px;
+	left: -15px;
+	transition: .2s linear;
+}
+
+.road__block:hover:before{
+	background: #F7A443;
+}
+
+.road__block--title{
+	font-size: 3.6rem;
+	color: rgba(33, 33, 36, .73);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	transition: .2s linear;
+}
+
+.road__block--text, .road__text--star{
+	font-family: 'Montserrat', sans-serif;
+	color: #656565;
+	margin-top: 1.5rem;
+	line-height: 1.5;
+}
+
+.road__text--star{
+	padding-left: 2.5rem;
+	position: relative;
+}
+
+.road__text--star:before{
+	content: "";
+	display: block;
+	width: 14px;
+	height: 14px;
+	background: url("../img/star.svg") center no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 2px;
+	left: 0;
+}
+
+.road__line{
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -2;
+	pointer-events: none;
 }
 
 /* Faq */
@@ -1003,7 +1003,7 @@ input::-webkit-inner-spin-button{
 	cursor: pointer;
 }
 
-.orange{
+.orange, .road__block--title.active{
 	color: rgba(255, 138, 0, .73);
 }
 
@@ -1020,14 +1020,23 @@ input::-webkit-inner-spin-button{
 	.container{
 		max-width: 1180px;
 	}
-
-	.road__cat{
-		left: 0;
-	}
 }
 @media(max-width: 1200px){
 	.container{
 		max-width: 978px;
+	}
+
+	.duo__lapa{
+		display: none;
+	}
+
+	.about__content{
+		padding: 2rem;
+	}
+
+	.about__question--img--inner2{
+		width: 345px;
+		height: auto;
 	}
 
 	.header__logo--inner{
@@ -1058,6 +1067,7 @@ input::-webkit-inner-spin-button{
 	.about__question--img--inner{
 		width: 350px;
 		height: 330px;
+		margin-top: 4rem;
 	}
 
 	.about__lapa{
@@ -1096,12 +1106,8 @@ input::-webkit-inner-spin-button{
 		width: 50px;
 	}
 
-	.about__content{
-		padding: 2rem;
-	}
-
-	.road__item{
-		margin-top: 8rem;
+	.road__cat{
+		left: 0;
 	}
 }
 @media(max-width: 998px){
@@ -1111,6 +1117,11 @@ input::-webkit-inner-spin-button{
 
 	.header__social, .header__nav, .header__button{
 		display: none;
+	}
+
+	.about__content{
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.modal__menu--wrapper .header__button{
@@ -1176,38 +1187,17 @@ input::-webkit-inner-spin-button{
 		bottom: 150px;
 	}
 
-	.road__lapa{
-		width: 150px;
-		top: 120px;
-	}
-
-	.about__content{
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.about__block{
-		margin-top: 3rem;
-	}
-
 	.road__cat{
 		display: none;
 	}
 
-	.road__item--content{
-		margin-left: 5rem;
+	.road__item{
+		margin-top: 6rem;
 	}
 
-	.road__item--text{
-		margin-right: 5rem;
-	}
-
-	.road__item--text, .road__item--content--title{
-		font-size: 3.5rem;
-	}
-
-	.road__item--content{
-		padding: 2rem;
+	.road__lapa{
+		width: 150px;
+		top: 120px;
 	}
 }
 @media(max-width: 768px){
@@ -1264,6 +1254,8 @@ input::-webkit-inner-spin-button{
 
 	.about__img--inner{
 		margin-top: 7rem;
+		flex-shrink: 0;
+		width: auto;
 	}
 
 	.about__img{
@@ -1347,34 +1339,16 @@ input::-webkit-inner-spin-button{
 		bottom: 470px;
 	}
 
-	.about__block--title, .about__block--price{
+	.road__block{
+		max-width: 100%;
+	}
+
+	.road__block--title{
 		font-size: 3.5rem;
 	}
 
-	.about__content{
-		margin-top: 3rem;
-	}
-
-	.about__title2{
-		margin-top: 6rem;
-	}
-
-	.road__item--text{
-		display: none;
-	}
-
-	.road__content:before, .road__progress{
-		left: 0;
-		transform: translateX(0);
-	}
-
-	.road__item{
-		margin-top: 10rem;
-	}
-
-	.road__progress{
-		width: 40px;
-		transform: translateX(-20%);
+	.about__question--img--inner2{
+		width: 100%;
 	}
 }
 @media(max-width: 480px){
@@ -1415,12 +1389,6 @@ input::-webkit-inner-spin-button{
 	.about__question--img--inner{
 		width: 80%;
 		height: auto;
-		margin-top: 4rem;
-	}
-
-	.about__question--img--inner2{
-		width: 100%;
-		height: auto
 	}
 
 	.about__img--inner{
@@ -1447,15 +1415,23 @@ input::-webkit-inner-spin-button{
 		width: 110px;
 	}
 
-	.about__block--content{
-		padding: 2rem 1rem;
+	.road__block--title{
+		font-size: 3rem;
 	}
 
-	.road{
-		padding: 3rem 0;
+	.road__block{
+		padding: 2rem;
 	}
 
-	.road__item{
-		margin-top: 3rem;
+	.road__content{
+		margin-top: 4rem;
+	}
+
+	.road__block:before{
+		left: -5px;
+	}
+
+	.road__item:nth-child(2n) .road__block:before{
+		left: 5px;
 	}
 }
