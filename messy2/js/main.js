@@ -75,6 +75,11 @@ $(document).ready(function(){
 	setTimeout(() => editImg(count), 400);
 
 	const rotate = () => {
+		let scroll = $(".about__img--inner").scrollTop();
+		let winScroll = $(window).scrollTop();
+		scroll = winScroll - (scroll + 1400);
+		$(".about__img--wrapper").css("transform", "translateX("+scroll/10+"px)");
+		
 		let sc = $(window).scrollTop();
 		if(sc >= 2800){
 			$(".start").addClass("active");
