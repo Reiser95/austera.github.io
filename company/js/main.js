@@ -36,6 +36,32 @@ $(document).ready(function(){
 		}
 	}
 
+	$(".rec__circle").on('click', function(){
+		$(this).siblings('.select__block').slideToggle(150);
+	});
+
+	$(".select__block--item").on('click', function(){
+		let data = $(this).attr("data-item");
+
+		switch(data){
+			case 'weight':
+				let weight = $(this).children(".rec__item--weight").text().trim();
+				let weightPrice = $(this).children(".rec__item--weight--price").text().trim();
+				$(this).parent(".select__block").siblings(".rec__item--weight").text(weight);
+				$(this).parent(".select__block").siblings(".rec__item--weight--price").text(weightPrice);
+				break;
+			case 'price':
+				let price = $(this).children(".rec__item--price").text().trim();
+				let pricePrev = $(this).children(".rec__item--price--prev").text().trim();
+				$(this).parent(".select__block").siblings(".rec__item--price").text(price);
+				$(this).parent(".select__block").siblings(".rec__item--price--prev").text(pricePrev);
+				break;
+			default:
+				break;
+		}
+		$('.select__block').slideUp(150);
+	});
+
 	// Смена веса товара
 	$(".for3__button").on('click', function(){
 		giveActiveClass($(this), "rec__item--button");
@@ -59,6 +85,8 @@ $(document).ready(function(){
 
 		$(this).parent(".rec__item--button--inner").siblings(".rec__item--wrapper").children(".rec__item--img--inner")
 		.children(".rec__item--img").attr("src", "img/" + img);
+
+		$('.select__block').slideUp(150);
 	});
 
 	$(".full__button").on('click', function(){
@@ -83,6 +111,8 @@ $(document).ready(function(){
 
 		$(this).parent(".rec__item--button--inner").parent(".item__full--content").siblings(".item__full--img--inner")
 		.children(".item__full--img").attr("src", "img/" + img);
+
+		$('.select__block').slideUp(150);
 	});
 
 	$(".city__wrapper--item").on('click', function(){
