@@ -89,6 +89,34 @@ $(document).ready(function(){
 		$('.select__block').slideUp(150);
 	});
 
+	$(".forlist__button").on('click', function(){
+		giveActiveClass($(this), "rec__item--button");
+		let price = $(this).attr('data-price');
+		let img = $(this).attr('data-img');
+
+		$(this).parent(".rec__item--button--inner").siblings(".rec__item--weight--inner").removeClass('active');
+		$(this).parent(".rec__item--button--inner")
+		.siblings(".rec__item--weight--inner[data-price="+price+"]").addClass('active');
+
+		$(this).parent(".rec__item--button--inner").parent(".shop__block--content")
+		.parent(".shop__block--wrapper").siblings(".shop__block--inner").children(".rec__item--price--inner").removeClass('active');
+		$(this).parent(".rec__item--button--inner").parent(".shop__block--content")
+		.parent(".shop__block--wrapper").siblings(".shop__block--inner")
+		.children(".rec__item--price--inner[data-price="+price+"]").addClass('active');
+
+		$(this).parent(".rec__item--button--inner").parent(".shop__block--content")
+		.parent(".shop__block--wrapper").siblings(".shop__block--inner").children(".shop__block--sales")
+		.children(".rec__item--sale").removeClass('active');
+		$(this).parent(".rec__item--button--inner").parent(".shop__block--content")
+		.parent(".shop__block--wrapper").siblings(".shop__block--inner").children(".shop__block--sales")
+		.children(".rec__item--sale[data-price="+price+"]").addClass('active');
+
+		$(this).parent(".rec__item--button--inner").parent(".shop__block--content").siblings(".shop__block--img--inner")
+		.children(".shop__block--img").attr("src", "img/" + img);
+
+		$('.select__block').slideUp(150);
+	});
+
 	$(".full__button").on('click', function(){
 		giveActiveClass($(this), "rec__item--button");
 		let price = $(this).attr('data-price');
@@ -372,6 +400,34 @@ $(document).ready(function(){
 		prevArrow: '<div class="book__slider--arrow"><img src="img/prev.png" alt="Стрелка" class="book__slider--arrow--img"></div>',
 		appendArrows: '.book__slider--arrow--inner',
 		responsive: [
+		    {
+		        breakpoint: 998,
+		        settings: {
+			        slidesToShow: 1
+		        }
+		    }
+		]
+	});
+
+	$(".shop__block--change--slider").slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		nextArrow: '<div class="book__slider--arrow"><img src="img/next.png" alt="Стрелка" class="book__slider--arrow--img"></div>',
+		prevArrow: '<div class="book__slider--arrow"><img src="img/prev.png" alt="Стрелка" class="book__slider--arrow--img"></div>',
+		appendArrows: '.shop__block--change--arrows',
+		responsive: [
+		    {
+		        breakpoint: 1870,
+		        settings: {
+			        slidesToShow: 1
+		        }
+		    },
+		    {
+		        breakpoint: 1400,
+		        settings: {
+			        slidesToShow: 2
+		        }
+		    },
 		    {
 		        breakpoint: 998,
 		        settings: {
