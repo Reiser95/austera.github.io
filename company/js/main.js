@@ -282,6 +282,16 @@ $(document).ready(function(){
 		}
 	});
 
+	$(".open__list").on('click', function(e){
+		e.preventDefault();
+		$(".modal__list").addClass("active");
+		close();
+	});
+
+	$(".modal__list--cross").on('click', function(){
+		$(".modal__list").removeClass("active");
+	});
+
 	var alph = ["A", "Б", "В", "Г", "Д", "Е", "Я"];
 	let min = 0;
 	let max = 6;

@@ -46,7 +46,7 @@
 
 						<div class="header__nav">
 							<div class="header__menu">
-								<img src="img/menu.png" alt="Меню" class="menu">
+								<img src="img/menu.png" alt="Меню" class="menu open__list">
 							</div>
 
 							<a href="#" class="header__nav--link">
@@ -1205,7 +1205,7 @@
 				Журнал
 			</a>
 
-			<a href="#" class="modal__nav--link">
+			<a href="#" class="modal__nav--link open__list">
 				Список покупок
 			</a>
 		</div>
@@ -1215,6 +1215,708 @@
 
 			Вход/Регистрация
 		</a>
+	</div>
+
+	<div class="modal__list">
+		<img src="img/cross.png" alt="Закрыть" class="modal__list--cross">
+
+		<div class="modal__list--title--inner">
+			<img src="img/cart2.png" alt="Картинка" class="modal__list--title--icon">
+
+			<h2 class="modal__list--title">
+				Список покупок
+			</h2>
+		</div>
+
+		<div class="modal__list--content">
+			<div class="modal__list--item">
+				<div class="modal__list--number--inner">
+					<div class="modal__list--number">
+						1
+					</div>
+
+					Чипсы
+				</div>
+
+				<div class="shop__block--item">
+					<div class="shop__block--wrapper">
+						<div class="shop__block--img--inner">
+							<img src="img/product1.png" alt="Продукт" class="shop__block--img">
+
+							<img src="img/store2.png" alt="Магазин" class="shop__block--img--logo">
+						</div>
+
+						<div class="shop__block--content">
+							<p class="shop__block--title">
+								Пельмени «Мираторг», из говядины, 980 г
+							</p>
+
+							<div class="rec__item--weight--inner active" data-price="1">
+								<p class="rec__item--weight">
+									980 г
+								</p>
+
+								<div class="rec__item--weight--line"></div>
+
+								<p class="rec__item--weight--price">
+									980 ₽ за 1 кг 
+								</p>
+
+								<div class="rec__circle">
+									<img src="img/arrow-down.png" alt="Стрелка" class="rec__select">
+								</div>
+
+								<div class="select__block">
+									<div class="select__block--item" data-item="weight">
+										<p class="rec__item--weight">
+											780 г
+										</p>
+
+										<div class="rec__item--weight--line"></div>
+
+										<p class="rec__item--weight--price">
+											780 ₽ за 1 кг 
+										</p>
+									</div>
+
+									<div class="select__block--item" data-item="weight">
+										<p class="rec__item--weight">
+											880 г
+										</p>
+
+										<div class="rec__item--weight--line"></div>
+
+										<p class="rec__item--weight--price">
+											880 ₽ за 1 кг 
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="rec__item--weight--inner" data-price="2">
+								<p class="rec__item--weight">
+									800 г
+								</p>
+
+								<div class="rec__item--weight--line"></div>
+
+								<p class="rec__item--weight--price">
+									980 ₽ за 1 кг 
+								</p>
+
+								<div class="rec__circle">
+									<img src="img/arrow-down.png" alt="Стрелка" class="rec__select">
+								</div>
+
+								<div class="select__block">
+									<div class="select__block--item" data-item="weight">
+										<p class="rec__item--weight">
+											780 г
+										</p>
+
+										<div class="rec__item--weight--line"></div>
+
+										<p class="rec__item--weight--price">
+											780 ₽ за 1 кг 
+										</p>
+									</div>
+
+									<div class="select__block--item" data-item="weight">
+										<p class="rec__item--weight">
+											880 г
+										</p>
+
+										<div class="rec__item--weight--line"></div>
+
+										<p class="rec__item--weight--price">
+											880 ₽ за 1 кг 
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="rec__item--button--inner">
+								<button class="button rec__item--button forlist__button active" data-price="1" data-img="product1.png">
+									980 г
+								</button>
+
+								<button class="button rec__item--button forlist__button" data-price="2" data-img="product2.png">
+									800 г
+								</button>
+							</div>
+
+							<div class="shop__block--value--inner">
+								<p class="shop__block--value--text">
+									Количество
+								</p>
+
+								<input type="number" class="input shop__block--value" value="1">
+							</div>
+						</div>
+					</div>
+
+					<div class="shop__block--inner">
+						<div class="shop__block--sales">
+							<div class="rec__item--sale active" data-price="1">
+								-30%
+							</div>
+
+							<div class="rec__item--sale" data-price="2">
+								-20%
+							</div>
+
+							<div class="shop__block--button">
+								<img src="img/fav.png" alt="Картинка" class="shop__block--icon">
+							</div>
+
+							<div class="shop__block--button">
+								<img src="img/copy.png" alt="Картинка" class="shop__block--icon">
+							</div>
+
+							<div class="shop__block--button">
+								<img src="img/delete.png" alt="Картинка" class="shop__block--icon">
+							</div>
+						</div>
+
+						<div class="rec__item--price--inner active" data-price="1">
+							<p class="rec__item--price">
+								699.99 ₽
+							</p>
+
+							<p class="rec__item--price--prev">
+								980.99 ₽
+							</p>
+
+							<div class="rec__circle">
+								<img src="img/arrow-down.png" alt="Стрелка" class="rec__select">
+							</div>
+
+							<div class="select__block">
+								<div class="select__block--item" data-item="price">
+									<p class="rec__item--price">
+										499.99 ₽
+									</p>
+
+									<p class="rec__item--price--prev">
+										880.99 ₽
+									</p>
+								</div>
+
+								<div class="select__block--item" data-item="price">
+									<p class="rec__item--price">
+										799.99 ₽
+									</p>
+
+									<p class="rec__item--price--prev">
+										980.99 ₽
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="rec__item--price--inner" data-price="2">
+							<p class="rec__item--price">
+								599.99 ₽
+							</p>
+
+							<p class="rec__item--price--prev">
+								1080.99 ₽
+							</p>
+
+							<div class="rec__circle">
+								<img src="img/arrow-down.png" alt="Стрелка" class="rec__select">
+							</div>
+
+							<div class="select__block">
+								<div class="select__block--item" data-item="price">
+									<p class="rec__item--price">
+										499.99 ₽
+									</p>
+
+									<p class="rec__item--price--prev">
+										880.99 ₽
+									</p>
+								</div>
+
+								<div class="select__block--item" data-item="price">
+									<p class="rec__item--price">
+										799.99 ₽
+									</p>
+
+									<p class="rec__item--price--prev">
+										980.99 ₽
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal__list--item">
+				<div class="modal__list--number--inner">
+					<div class="modal__list--number">
+						2
+					</div>
+
+					Пельмени
+				</div>
+
+				<div class="shop__block--item">
+					<div class="shop__block--wrapper">
+						<div class="shop__block--img--inner">
+							<img src="img/product1.png" alt="Продукт" class="shop__block--img">
+
+							<img src="img/store2.png" alt="Магазин" class="shop__block--img--logo">
+						</div>
+
+						<div class="shop__block--content">
+							<p class="shop__block--title">
+								Пельмени «Мираторг», из говядины, 980 г
+							</p>
+
+							<div class="rec__item--weight--inner active" data-price="1">
+								<p class="rec__item--weight">
+									980 г
+								</p>
+
+								<div class="rec__item--weight--line"></div>
+
+								<p class="rec__item--weight--price">
+									980 ₽ за 1 кг 
+								</p>
+
+								<div class="rec__circle">
+									<img src="img/arrow-down.png" alt="Стрелка" class="rec__select">
+								</div>
+
+								<div class="select__block">
+									<div class="select__block--item" data-item="weight">
+										<p class="rec__item--weight">
+											780 г
+										</p>
+
+										<div class="rec__item--weight--line"></div>
+
+										<p class="rec__item--weight--price">
+											780 ₽ за 1 кг 
+										</p>
+									</div>
+
+									<div class="select__block--item" data-item="weight">
+										<p class="rec__item--weight">
+											880 г
+										</p>
+
+										<div class="rec__item--weight--line"></div>
+
+										<p class="rec__item--weight--price">
+											880 ₽ за 1 кг 
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="rec__item--weight--inner" data-price="2">
+								<p class="rec__item--weight">
+									800 г
+								</p>
+
+								<div class="rec__item--weight--line"></div>
+
+								<p class="rec__item--weight--price">
+									980 ₽ за 1 кг 
+								</p>
+
+								<div class="rec__circle">
+									<img src="img/arrow-down.png" alt="Стрелка" class="rec__select">
+								</div>
+
+								<div class="select__block">
+									<div class="select__block--item" data-item="weight">
+										<p class="rec__item--weight">
+											780 г
+										</p>
+
+										<div class="rec__item--weight--line"></div>
+
+										<p class="rec__item--weight--price">
+											780 ₽ за 1 кг 
+										</p>
+									</div>
+
+									<div class="select__block--item" data-item="weight">
+										<p class="rec__item--weight">
+											880 г
+										</p>
+
+										<div class="rec__item--weight--line"></div>
+
+										<p class="rec__item--weight--price">
+											880 ₽ за 1 кг 
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="rec__item--button--inner">
+								<button class="button rec__item--button forlist__button active" data-price="1" data-img="product1.png">
+									980 г
+								</button>
+
+								<button class="button rec__item--button forlist__button" data-price="2" data-img="product2.png">
+									800 г
+								</button>
+							</div>
+
+							<div class="shop__block--value--inner">
+								<p class="shop__block--value--text">
+									Количество
+								</p>
+
+								<input type="number" class="input shop__block--value" value="1">
+							</div>
+						</div>
+					</div>
+
+					<div class="shop__block--inner">
+						<div class="shop__block--sales">
+							<div class="rec__item--sale active" data-price="1">
+								-30%
+							</div>
+
+							<div class="rec__item--sale" data-price="2">
+								-20%
+							</div>
+
+							<div class="shop__block--button">
+								<img src="img/fav.png" alt="Картинка" class="shop__block--icon">
+							</div>
+
+							<div class="shop__block--button">
+								<img src="img/copy.png" alt="Картинка" class="shop__block--icon">
+							</div>
+
+							<div class="shop__block--button">
+								<img src="img/delete.png" alt="Картинка" class="shop__block--icon">
+							</div>
+						</div>
+
+						<div class="rec__item--price--inner active" data-price="1">
+							<p class="rec__item--price">
+								699.99 ₽
+							</p>
+
+							<p class="rec__item--price--prev">
+								980.99 ₽
+							</p>
+
+							<div class="rec__circle">
+								<img src="img/arrow-down.png" alt="Стрелка" class="rec__select">
+							</div>
+
+							<div class="select__block">
+								<div class="select__block--item" data-item="price">
+									<p class="rec__item--price">
+										499.99 ₽
+									</p>
+
+									<p class="rec__item--price--prev">
+										880.99 ₽
+									</p>
+								</div>
+
+								<div class="select__block--item" data-item="price">
+									<p class="rec__item--price">
+										799.99 ₽
+									</p>
+
+									<p class="rec__item--price--prev">
+										980.99 ₽
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="rec__item--price--inner" data-price="2">
+							<p class="rec__item--price">
+								599.99 ₽
+							</p>
+
+							<p class="rec__item--price--prev">
+								1080.99 ₽
+							</p>
+
+							<div class="rec__circle">
+								<img src="img/arrow-down.png" alt="Стрелка" class="rec__select">
+							</div>
+
+							<div class="select__block">
+								<div class="select__block--item" data-item="price">
+									<p class="rec__item--price">
+										499.99 ₽
+									</p>
+
+									<p class="rec__item--price--prev">
+										880.99 ₽
+									</p>
+								</div>
+
+								<div class="select__block--item" data-item="price">
+									<p class="rec__item--price">
+										799.99 ₽
+									</p>
+
+									<p class="rec__item--price--prev">
+										980.99 ₽
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal__list--item">
+				<div class="modal__list--number--inner">
+					<div class="modal__list--number">
+						3
+					</div>
+
+					Макароны
+				</div>
+
+				<div class="shop__block--item">
+					<div class="shop__block--wrapper">
+						<div class="shop__block--img--inner">
+							<img src="img/product1.png" alt="Продукт" class="shop__block--img">
+
+							<img src="img/store2.png" alt="Магазин" class="shop__block--img--logo">
+						</div>
+
+						<div class="shop__block--content">
+							<p class="shop__block--title">
+								Пельмени «Мираторг», из говядины, 980 г
+							</p>
+
+							<div class="rec__item--weight--inner active" data-price="1">
+								<p class="rec__item--weight">
+									980 г
+								</p>
+
+								<div class="rec__item--weight--line"></div>
+
+								<p class="rec__item--weight--price">
+									980 ₽ за 1 кг 
+								</p>
+
+								<div class="rec__circle">
+									<img src="img/arrow-down.png" alt="Стрелка" class="rec__select">
+								</div>
+
+								<div class="select__block">
+									<div class="select__block--item" data-item="weight">
+										<p class="rec__item--weight">
+											780 г
+										</p>
+
+										<div class="rec__item--weight--line"></div>
+
+										<p class="rec__item--weight--price">
+											780 ₽ за 1 кг 
+										</p>
+									</div>
+
+									<div class="select__block--item" data-item="weight">
+										<p class="rec__item--weight">
+											880 г
+										</p>
+
+										<div class="rec__item--weight--line"></div>
+
+										<p class="rec__item--weight--price">
+											880 ₽ за 1 кг 
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="rec__item--weight--inner" data-price="2">
+								<p class="rec__item--weight">
+									800 г
+								</p>
+
+								<div class="rec__item--weight--line"></div>
+
+								<p class="rec__item--weight--price">
+									980 ₽ за 1 кг 
+								</p>
+
+								<div class="rec__circle">
+									<img src="img/arrow-down.png" alt="Стрелка" class="rec__select">
+								</div>
+
+								<div class="select__block">
+									<div class="select__block--item" data-item="weight">
+										<p class="rec__item--weight">
+											780 г
+										</p>
+
+										<div class="rec__item--weight--line"></div>
+
+										<p class="rec__item--weight--price">
+											780 ₽ за 1 кг 
+										</p>
+									</div>
+
+									<div class="select__block--item" data-item="weight">
+										<p class="rec__item--weight">
+											880 г
+										</p>
+
+										<div class="rec__item--weight--line"></div>
+
+										<p class="rec__item--weight--price">
+											880 ₽ за 1 кг 
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="rec__item--button--inner">
+								<button class="button rec__item--button forlist__button active" data-price="1" data-img="product1.png">
+									980 г
+								</button>
+
+								<button class="button rec__item--button forlist__button" data-price="2" data-img="product2.png">
+									800 г
+								</button>
+							</div>
+
+							<div class="shop__block--value--inner">
+								<p class="shop__block--value--text">
+									Количество
+								</p>
+
+								<input type="number" class="input shop__block--value" value="1">
+							</div>
+						</div>
+					</div>
+
+					<div class="shop__block--inner">
+						<div class="shop__block--sales">
+							<div class="rec__item--sale active" data-price="1">
+								-30%
+							</div>
+
+							<div class="rec__item--sale" data-price="2">
+								-20%
+							</div>
+
+							<div class="shop__block--button">
+								<img src="img/fav.png" alt="Картинка" class="shop__block--icon">
+							</div>
+
+							<div class="shop__block--button">
+								<img src="img/copy.png" alt="Картинка" class="shop__block--icon">
+							</div>
+
+							<div class="shop__block--button">
+								<img src="img/delete.png" alt="Картинка" class="shop__block--icon">
+							</div>
+						</div>
+
+						<div class="rec__item--price--inner active" data-price="1">
+							<p class="rec__item--price">
+								699.99 ₽
+							</p>
+
+							<p class="rec__item--price--prev">
+								980.99 ₽
+							</p>
+
+							<div class="rec__circle">
+								<img src="img/arrow-down.png" alt="Стрелка" class="rec__select">
+							</div>
+
+							<div class="select__block">
+								<div class="select__block--item" data-item="price">
+									<p class="rec__item--price">
+										499.99 ₽
+									</p>
+
+									<p class="rec__item--price--prev">
+										880.99 ₽
+									</p>
+								</div>
+
+								<div class="select__block--item" data-item="price">
+									<p class="rec__item--price">
+										799.99 ₽
+									</p>
+
+									<p class="rec__item--price--prev">
+										980.99 ₽
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="rec__item--price--inner" data-price="2">
+							<p class="rec__item--price">
+								599.99 ₽
+							</p>
+
+							<p class="rec__item--price--prev">
+								1080.99 ₽
+							</p>
+
+							<div class="rec__circle">
+								<img src="img/arrow-down.png" alt="Стрелка" class="rec__select">
+							</div>
+
+							<div class="select__block">
+								<div class="select__block--item" data-item="price">
+									<p class="rec__item--price">
+										499.99 ₽
+									</p>
+
+									<p class="rec__item--price--prev">
+										880.99 ₽
+									</p>
+								</div>
+
+								<div class="select__block--item" data-item="price">
+									<p class="rec__item--price">
+										799.99 ₽
+									</p>
+
+									<p class="rec__item--price--prev">
+										980.99 ₽
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal__list--total">
+			Общая стоимость: <span class="span bold">1398</span> ₽
+		</div>
+
+		<div class="modal__list--button--inner">
+			<button class="button modal__list--button">
+				Сделать дешевле
+			</button>
+
+			<div class="modal__list--list">
+				Список покупок
+
+				<img src="img/next.png" alt="Стрелка" class="modal__list--list--icon">
+			</div>
+		</div>
 	</div>
 	
 	<script src="js/jquery-3.4.1.min.js"></script>
