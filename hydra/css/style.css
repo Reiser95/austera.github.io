@@ -645,15 +645,15 @@ input::-webkit-inner-spin-button{
 
 /* Подвал */
 .footer{
-	padding: 2rem 0;
+	padding: 3rem 0;
 	background: #1B5279;
 }
 
 .footer__inner{
 	width: 100%;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
 }
 
 .footer__logo{
@@ -665,6 +665,7 @@ input::-webkit-inner-spin-button{
 	color: rgba(255, 255, 255, .75);
 	font-weight: 300;
 	font-size: 1.4rem;
+	margin-top: 2rem;
 }
 
 .title{
@@ -703,6 +704,70 @@ input::-webkit-inner-spin-button{
 	line-height: 165%;
 	text-align: center;
 	margin-top: 1.5rem;
+}
+
+.footer__logo--inner{
+	max-width: 130px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.footer__content{
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.footer__item{
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.footer__item--title{
+	color: #fff;
+	line-height: 98.5%;
+	font-weight: 700;
+}
+
+.footer__item--nav{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-top: 2rem;
+}
+
+.footer__item--link, .footer__item--text{
+	color: rgba(255, 255, 255, 0.68);
+	margin-top: 1rem;
+}
+
+.footer__item--link:first-child{
+	margin-top: 0;
+}
+
+.footer__item--link:hover{
+	color: rgba(255, 255, 255, 1);
+}
+
+.footer__item--text{
+	margin-top: 2rem;
+	max-width: 280px;
+}
+
+.footer__social{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 1rem;
+}
+
+.footer__social--link{
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* Модальное меню */
@@ -874,6 +939,19 @@ input::-webkit-inner-spin-button{
 	.per__content--item{
 		width: 50%;
 	}
+
+	.footer__content{
+		flex-wrap: wrap;
+	}
+
+	.footer__item{
+		width: 50%;
+		margin-top: 3rem;
+	}
+
+	.footer__item:nth-child(2){
+		margin-top: 0;
+	}
 }
 @media(max-width: 768px){
 	.container{
@@ -932,6 +1010,15 @@ input::-webkit-inner-spin-button{
 	.price__text--inner .main__button{
 		margin-top: 3rem;
 	}
+
+	.main__buttons--inner{
+		width: 100%;
+		align-items: center;
+	}
+
+	.main__button{
+		margin-right: 0;
+	}
 }
 @media(max-width: 480px){
 	.container{
@@ -982,13 +1069,8 @@ input::-webkit-inner-spin-button{
 		padding: 10rem 0rem 5rem 0;
 	}
 
-	.footer__inner{
-		flex-direction: column;
-		align-items: center;
-	}
-
 	.footer__copy{
-		margin-top: 1rem;
+		margin-top: 3rem;
 		text-align: center;
 	}
 
@@ -1021,5 +1103,27 @@ input::-webkit-inner-spin-button{
 
 	.per__wrapper{
 		margin-top: 3rem;
+	}
+
+	.footer__item{
+		width: 100%;
+	}
+
+	.footer__item:nth-child(2){
+		margin-top: 3rem;
+	}
+
+	.footer__content, .footer__item, .footer__item--nav{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer__item--title{
+		text-align: center;
+	}
+
+	.footer__item--text{
+		max-width: 100%;
+		text-align: center;
 	}
 }
