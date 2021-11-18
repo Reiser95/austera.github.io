@@ -169,6 +169,10 @@ input::-webkit-inner-spin-button{
 	cursor: pointer;
 }
 
+.header__block--wrapper{
+	position: relative;
+}
+
 .header__city--inner:hover{
 	opacity: 0.6;
 }
@@ -197,6 +201,41 @@ input::-webkit-inner-spin-button{
 	flex-shrink: 0;
 }
 
+.header__citylist--content{
+	width: 100%;
+	margin-top: 2rem;
+	display: flex;
+	align-items: flex-start;
+}
+
+.header__citylist--item{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.header__citylist--point{
+	font-size: 1.8rem;
+	margin-top: 0.5rem;
+}
+
+.header__citylist--point:first-child{
+	margin-top: 0;
+}
+
+.header__citylist--point:hover{
+	color: #1abc9c;
+}
+
+.headerlist__cross{
+	width: 20px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
 .logo{
 	width: 100%;
 	height: auto;
@@ -205,6 +244,17 @@ input::-webkit-inner-spin-button{
 .header__search--inner{
 	margin-right: 3.5rem;
 	position: relative;
+}
+
+.header__citylist--search--inner{
+	width: 100%;
+	position: relative;
+}
+
+.header__citylist--search--inner .header__search--input{
+	width: 100%;
+	padding: 1rem 4.5rem 1rem 1rem;
+	font-size: 2rem;
 }
 
 .header__search--input{
@@ -261,6 +311,42 @@ input::-webkit-inner-spin-button{
 .burger{
 	display: none;
 	cursor: pointer;
+}
+
+.header__user--inner{
+	display: flex;
+	align-items: center;
+	margin-left: 4rem;
+}
+
+.header__top--wrapper{
+	display: flex;
+	align-items: center;
+}
+
+.header__top{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header__user--img, .header__cart--img{
+	width: 25px;
+	margin-right: 1rem;
+}
+
+.header__user--text, .header__cart--text{
+	font-size: 1.8rem;
+}
+
+.header__cart--inner{
+	display: flex;
+	align-items: center;
+}
+
+.header__cart--inner:hover, .header__user--inner:hover{
+	opacity: 0.6;
 }
 
 /* Главный экран */
@@ -2214,6 +2300,7 @@ input::-webkit-inner-spin-button{
 	justify-content: center;
 	border-radius: 15px 0 0 15px;
 	overflow: hidden;
+	position: relative;
 }
 
 .item__full--img{
@@ -4073,11 +4160,13 @@ input::-webkit-inner-spin-button{
 	top: 0px;
 	right: 0px;
 	z-index: 1000;
+	pointer-events: none;
 	transform: translateY(-110%);
 }
 
 .modal__list.active{
 	transform: translateY(0);
+	pointer-events: auto;
 }
 
 .modal__list--cross{
@@ -4211,6 +4300,25 @@ input::-webkit-inner-spin-button{
 
 .modal__list--item .shop__block--item{
 	border: 1px solid #f2f2f2;
+}
+
+.header__citylist{
+	width: 420px;
+	display: none;
+	flex-direction: column;
+	align-items: flex-start;
+	position: absolute;
+	left: 0px;
+	top: 100%;
+	background: #fff;
+	border-radius: 10px;
+	border: 1px solid #d7d7d7;
+	padding: 5rem 2rem 2rem 2rem;
+	z-index: 12;
+}
+
+.header__citylist.active{
+	display: flex;
 }
 
 /* Адаптив */
@@ -4621,22 +4729,8 @@ input::-webkit-inner-spin-button{
 		margin-bottom: 2rem;
 	}
 
-	.shop__content{
-		flex-direction: column;
-		align-items: center;
-	}
-
 	.shop__info{
-		margin-left: 0;
-	}
-
-	.shop__block{
-		padding-right: 1rem;
-	}
-
-	.shop__info{
-		width: 100%;
-		margin-top: 3rem;
+		max-width: 440px;
 	}
 }
 @media(max-width: 1200px){
@@ -4839,6 +4933,24 @@ input::-webkit-inner-spin-button{
 	.modal__promo--review--textarea{
 		height: 415px;
 		padding: 1.5rem 1.5rem 26rem 1.5rem;
+	}
+
+	.shop__content{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.shop__info{
+		margin-left: 0;
+	}
+
+	.shop__block{
+		padding-right: 1rem;
+	}
+
+	.shop__info{
+		width: 100%;
+		margin-top: 3rem;
 	}
 }
 @media(max-width: 998px){
@@ -5194,6 +5306,16 @@ input::-webkit-inner-spin-button{
 
 	.item__full--content{
 		border-radius: 0 0 15px 15px;
+	}
+
+	.header__user--inner, .header__cart--inner{
+		display: none;
+	}
+
+	.modal__menu .header__user--inner,
+	.modal__menu .header__cart--inner{
+		display: flex;
+		margin: 1.5rem 0rem 0rem 0rem;
 	}
 }
 @media(max-width: 768px){
@@ -5851,5 +5973,23 @@ input::-webkit-inner-spin-button{
 	.modal__list--cross{
 		top: 15px;
 		right: 15px;
+	}
+
+	.header__citylist{
+		width: 300px;
+	}
+
+	.header__citylist--content{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.header__citylist--item{
+		width: 100%;
+		margin-top: .5rem
+	}
+
+	.header__citylist--item:first-child{
+		margin-top: 0;
 	}
 }

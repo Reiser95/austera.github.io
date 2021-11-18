@@ -42,6 +42,7 @@ $(document).ready(function(){
 
 	$(".select__block--item").on('click', function(){
 		let data = $(this).attr("data-item");
+		let img = $(this).children(".item__store--img").attr("src");
 
 		switch(data){
 			case 'weight':
@@ -55,6 +56,18 @@ $(document).ready(function(){
 				let pricePrev = $(this).children(".rec__item--price--prev").text().trim();
 				$(this).parent(".select__block").siblings(".rec__item--price").text(price);
 				$(this).parent(".select__block").siblings(".rec__item--price--prev").text(pricePrev);
+				$(this).parent(".select__block").siblings(".item__store--img").attr("src", img);
+				$(this).parent(".select__block").parent(".rec__item--price--inner").parent(".rec__item--cart--inner")
+				.siblings(".book__wrapper").children(".rec__item--wrapper").children(".rec__item--img--inner")
+				.children(".rec__item--logo").attr("src", img);
+
+				$(this).parent(".select__block").parent(".rec__item--price--inner").parent(".item__wrapper")
+				.parent(".item__point").parent(".item__full--content").siblings(".item__full--img--inner")
+				.children(".rec__item--logo").attr("src", img);
+
+				$(this).parent(".select__block").parent(".rec__item--price--inner").parent(".shop__block--inner")
+				.siblings(".shop__block--wrapper").children(".shop__block--img--inner")
+				.children(".shop__block--img--logo").attr("src", img);
 				break;
 			default:
 				break;
@@ -177,6 +190,14 @@ $(document).ready(function(){
 		if($(window).width() < 768){
 			$(this).siblings(".filter__item--content").slideToggle(150);
 		}
+	});
+
+	$(".header__city--inner").on('click', function(){
+		$(".header__citylist").addClass("active");
+	});
+
+	$(".headerlist__cross").on('click', function(){
+		$(".header__citylist").removeClass("active");
 	});
 
 	// Копирование текста
@@ -428,18 +449,6 @@ $(document).ready(function(){
 		responsive: [
 		    {
 		        breakpoint: 1870,
-		        settings: {
-			        slidesToShow: 1
-		        }
-		    },
-		    {
-		        breakpoint: 1400,
-		        settings: {
-			        slidesToShow: 2
-		        }
-		    },
-		    {
-		        breakpoint: 998,
 		        settings: {
 			        slidesToShow: 1
 		        }
