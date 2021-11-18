@@ -16,6 +16,7 @@
 
 	<!-- Style -->
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.min.css">
 
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon.png">
@@ -68,7 +69,7 @@
 
 		<div class="container">
 			<div class="main__inner">
-				<div class="main__text--inner">
+				<div class="main__text--inner wow animate__animated animate__fadeIn">
 					<h2 class="main__text--title">
 						HydraDao
 					</h2>
@@ -102,7 +103,7 @@
 					</div>
 				</div>
 
-				<div class="main__img--inner">
+				<div class="main__img--inner wow animate__animated animate__fadeIn">
 					<img src="img/main-circle.png" alt="Картинка" class="main__img">
 				</div>
 			</div>
@@ -112,11 +113,11 @@
 	<section class="how">
 		<div class="container">
 			<div class="how__inner">
-				<h2 class="title how__title">
+				<h2 class="title how__title wow animate__animated animate__fadeIn">
 					How HydraDao Works
 				</h2>
 
-				<div class="how__content">
+				<div class="how__content wow animate__animated animate__fadeIn">
 					<div class="how__item">
 						<div class="how__item--img--inner">
 							<img src="img/how1.png" alt="Картинка" class="how__item--img">
@@ -169,7 +170,7 @@
 
 		<div class="container">
 			<div class="per__inner">
-				<div class="per__item">
+				<div class="per__item wow animate__animated animate__fadeIn">
 					<div class="price__text--inner">
 						<h2 class="title price__text--title">
 							Let's FOMO the bonding!
@@ -191,12 +192,12 @@
 
 				<div id="per"></div>
 				<div class="per__content">
-					<h2 class="title per__title">
+					<h2 class="title per__title wow animate__animated animate__fadeIn">
 						Percentages
 					</h2>
 
 					<div class="per__wrapper">
-						<div class="per__content--item">
+						<div class="per__content--item wow animate__animated animate__fadeIn">
 							<p class="per__item--num title">
 								40%
 							</p>
@@ -206,7 +207,7 @@
 							</p>
 						</div>
 
-						<div class="per__content--item">
+						<div class="per__content--item wow animate__animated animate__fadeIn">
 							<p class="per__item--num title">
 								30%
 							</p>
@@ -216,7 +217,7 @@
 							</p>
 						</div>
 
-						<div class="per__content--item">
+						<div class="per__content--item wow animate__animated animate__fadeIn">
 							<p class="per__item--num title">
 								29%
 							</p>
@@ -226,7 +227,7 @@
 							</p>
 						</div>
 
-						<div class="per__content--item">
+						<div class="per__content--item wow animate__animated animate__fadeIn">
 							<p class="per__item--num title">
 								1%
 							</p>
@@ -238,7 +239,7 @@
 					</div>
 				</div>
 
-				<div class="per__item">
+				<div class="per__item wow animate__animated animate__fadeIn">
 					<div class="price__text--inner">
 						<h2 class="title price__text--title">
 							Queue up the unstakers
@@ -265,13 +266,15 @@
 	<section class="stand">
 		<div class="container">
 			<div class="stand__inner">
-				<div class="stand__img--inner">
+				<div class="stand__img--inner wow animate__animated animate__fadeIn">
 					<img src="img/frog-img.png" alt="Картинка" class="stand__img">
 				</div>
 
-				<div class="stand__text--inner">
+				<div class="stand__text--inner wow animate__animated animate__fadeIn">
 					<div class="stand__title--inner">
-						<img src="img/frog1.png" alt="Лягушка" class="stand__title--img">
+						<div class="stand__title--img--inner">
+							<img src="img/frog1.png" alt="Лягушка" class="stand__title--img">
+						</div>
 
 						<h2 class="title stand__title">
 							We stand with frog Nation and ohmies!
@@ -305,7 +308,7 @@
 
 		<div class="container">
 			<div class="price__inner">
-				<div class="price__item">
+				<div class="price__item wow animate__animated animate__fadeIn">
 					<div class="price__text--inner">
 						<h2 class="title price__text--title">
 							Stability of the price
@@ -322,7 +325,7 @@
 					</div>
 				</div>
 
-				<div class="price__item">
+				<div class="price__item wow animate__animated animate__fadeIn">
 					<div class="price__text--inner">
 						<h2 class="title price__text--title">
 							New DAO with an eco-conscience
@@ -348,7 +351,7 @@
 
 	<footer class="footer">
 		<div class="container">
-			<div class="footer__inner">
+			<div class="footer__inner wow animate__animated animate__fadeIn">
 				<a href="/" class="footer__logo">
 					<img src="img/logo.svg" alt="Логотип" class="logo">
 				</a>
@@ -393,6 +396,10 @@
 	</div>
 	
 	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/wow.min.js"></script>
 	<script src="js/main.js"></script>
+	<script>
+		new WOW().init();
+	</script>
 </body>
 </html>
