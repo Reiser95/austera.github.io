@@ -175,6 +175,12 @@ input::-webkit-inner-spin-button{
 .menu{
 	display: none;
 	cursor: pointer;
+	margin-left: 2rem;
+}
+
+.header__wrapper{
+	display: flex;
+	align-items: center;
 }
 
 /* Главный блок */
@@ -868,7 +874,7 @@ input::-webkit-inner-spin-button{
 		max-width: 748px;
 	}
 
-	.header__nav, .header__button{
+	.header__nav{
 		display: none;
 	}
 
@@ -1125,5 +1131,10 @@ input::-webkit-inner-spin-button{
 	.footer__item--text{
 		max-width: 100%;
 		text-align: center;
+	}
+
+	.header__button{
+		padding: 0.8rem 1.5rem;
+		font-size: 1.6rem;
 	}
 }
