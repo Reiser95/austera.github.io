@@ -40,9 +40,75 @@ $(document).ready(function(){
 		$(this).siblings('.select__block').slideToggle(150);
 	});
 
+	$(".editview__button").on('click', function(){
+		giveActiveClass($(this), "rec__item--button");
+		let price = $(this).attr('data-price');
+
+		let pattern = $(this).parent(".rec__item--button--inner");
+		let pattern2 = $(this).parent(".rec__item--button--inner");
+
+
+
+
+		pattern2.siblings(".rec__wrapper")
+		.children(".rec__item--weight--inner").removeClass('active');
+		pattern2.siblings(".rec__wrapper")
+		.children(".rec__item--weight--inner[data-price="+price+"]").addClass('active');
+		pattern2.parent(".book__wrapper").siblings(".rec__item--cart--inner")
+		.children(".rec__item--price--inner").removeClass('active');
+		pattern2.parent(".book__wrapper").siblings(".rec__item--cart--inner")
+		.children(".rec__item--price--inner[data-price="+price+"]").addClass('active');
+		pattern2.siblings(".rec__item--wrapper")
+		.children(".rec__item--content").children(".rec__item--sale").removeClass('active');
+		pattern2.siblings(".rec__item--wrapper")
+		.children(".rec__item--content").children(".rec__item--sale[data-price="+price+"]").addClass('active');
+
+		pattern2.siblings(".rec__item--wrapper").children(".rec__item--img--inner")
+		.children(".rec__item--img").attr("src", "img/" + img);
+
+		$('.select__block').slideUp(150);
+	});
+
+	$(".editview__button--full").on('click', function(){
+		giveActiveClass($(this), "rec__item--button");
+		let price = $(this).attr('data-price');
+		let img = $(this).attr('data-img');
+		let item = $(this).attr('data-item');
+
+		let pattern = $(".citywith__item--inner[data-view='square'] .itemfor3[data-item="+item+"]");
+		let pattern2 = $(this).parent(".rec__item--button--inner").siblings(".item__point");
+
+		pattern.children(".book__wrapper").children(".rec__item--button--inner").children(".rec__item--button").removeClass("active");
+		pattern.children(".book__wrapper").children(".rec__item--button--inner").children(".rec__item--button[data-price="+price+"]").addClass("active");
+		pattern.children(".book__wrapper").children(".rec__wrapper").children(".rec__item--weight--inner").removeClass('active');
+		pattern.children(".book__wrapper").children(".rec__wrapper").children(".rec__item--weight--inner[data-price="+price+"]").addClass('active');
+		pattern.children(".rec__item--cart--inner").children(".rec__item--price--inner").removeClass('active');
+		pattern.children(".rec__item--cart--inner").children(".rec__item--price--inner[data-price="+price+"]").addClass('active');
+		pattern.children(".book__wrapper").children(".rec__item--wrapper").children(".rec__item--content")
+		.children(".rec__item--sale").removeClass('active');
+		pattern.children(".book__wrapper").children(".rec__item--wrapper").children(".rec__item--content")
+		.children(".rec__item--sale[data-price="+price+"]").addClass('active');
+
+
+		pattern2.children(".rec__item--weight--inner").removeClass('active');
+		pattern2.children(".rec__item--weight--inner[data-price="+price+"]").addClass('active');
+		pattern2.children(".item__wrapper").children(".rec__item--price--inner").removeClass('active');
+		pattern2.children(".item__wrapper").children(".rec__item--price--inner[data-price="+price+"]").addClass('active');
+		pattern2.children(".item__wrapper").children(".rec__item--sale").removeClass('active');
+		pattern2.children(".item__wrapper").children(".rec__item--sale[data-price="+price+"]").addClass('active');
+		pattern.children(".book__wrapper").children(".rec__item--wrapper").children(".rec__item--img--inner")
+		.children(".rec__item--img").attr("src", "img/" + img);
+		$(this).parent(".rec__item--button--inner").parent(".item__full--content").siblings(".item__full--img--inner")
+		.children(".item__full--img").attr("src", "img/" + img);
+
+		$('.select__block').slideUp(150);
+	});
+
 	$(".select__block--item").on('click', function(){
 		let data = $(this).attr("data-item");
 		let img = $(this).children(".item__store--img").attr("src");
+		let view = 1;
+		let item = 1;
 
 		switch(data){
 			case 'weight':
@@ -79,24 +145,25 @@ $(document).ready(function(){
 	$(".for3__button").on('click', function(){
 		giveActiveClass($(this), "rec__item--button");
 		let price = $(this).attr('data-price');
-		let img = $(this).attr('data-img');
 
-		$(this).parent(".rec__item--button--inner").siblings(".rec__wrapper")
+		let pattern = $(this).parent(".rec__item--button--inner");
+
+		pattern.siblings(".rec__wrapper")
 		.children(".rec__item--weight--inner").removeClass('active');
-		$(this).parent(".rec__item--button--inner").siblings(".rec__wrapper")
+		pattern.siblings(".rec__wrapper")
 		.children(".rec__item--weight--inner[data-price="+price+"]").addClass('active');
 
-		$(this).parent(".rec__item--button--inner").parent(".book__wrapper").siblings(".rec__item--cart--inner")
+		pattern.parent(".book__wrapper").siblings(".rec__item--cart--inner")
 		.children(".rec__item--price--inner").removeClass('active');
-		$(this).parent(".rec__item--button--inner").parent(".book__wrapper").siblings(".rec__item--cart--inner")
+		pattern.parent(".book__wrapper").siblings(".rec__item--cart--inner")
 		.children(".rec__item--price--inner[data-price="+price+"]").addClass('active');
 
-		$(this).parent(".rec__item--button--inner").siblings(".rec__item--wrapper")
+		pattern.siblings(".rec__item--wrapper")
 		.children(".rec__item--content").children(".rec__item--sale").removeClass('active');
-		$(this).parent(".rec__item--button--inner").siblings(".rec__item--wrapper")
+		pattern.siblings(".rec__item--wrapper")
 		.children(".rec__item--content").children(".rec__item--sale[data-price="+price+"]").addClass('active');
 
-		$(this).parent(".rec__item--button--inner").siblings(".rec__item--wrapper").children(".rec__item--img--inner")
+		pattern.siblings(".rec__item--wrapper").children(".rec__item--img--inner")
 		.children(".rec__item--img").attr("src", "img/" + img);
 
 		$('.select__block').slideUp(150);
@@ -107,21 +174,19 @@ $(document).ready(function(){
 		let price = $(this).attr('data-price');
 		let img = $(this).attr('data-img');
 
+		let pattern2 = $(this).parent(".rec__item--button--inner").parent(".shop__block--content");
+
 		$(this).parent(".rec__item--button--inner").siblings(".rec__item--weight--inner").removeClass('active');
 		$(this).parent(".rec__item--button--inner")
 		.siblings(".rec__item--weight--inner[data-price="+price+"]").addClass('active');
 
-		$(this).parent(".rec__item--button--inner").parent(".shop__block--content")
-		.parent(".shop__block--wrapper").siblings(".shop__block--inner").children(".rec__item--price--inner").removeClass('active');
-		$(this).parent(".rec__item--button--inner").parent(".shop__block--content")
-		.parent(".shop__block--wrapper").siblings(".shop__block--inner")
+		pattern2.parent(".shop__block--wrapper").siblings(".shop__block--inner").children(".rec__item--price--inner").removeClass('active');
+		pattern2.parent(".shop__block--wrapper").siblings(".shop__block--inner")
 		.children(".rec__item--price--inner[data-price="+price+"]").addClass('active');
 
-		$(this).parent(".rec__item--button--inner").parent(".shop__block--content")
-		.parent(".shop__block--wrapper").siblings(".shop__block--inner").children(".shop__block--sales")
+		pattern2.parent(".shop__block--wrapper").siblings(".shop__block--inner").children(".shop__block--sales")
 		.children(".rec__item--sale").removeClass('active');
-		$(this).parent(".rec__item--button--inner").parent(".shop__block--content")
-		.parent(".shop__block--wrapper").siblings(".shop__block--inner").children(".shop__block--sales")
+		pattern2.parent(".shop__block--wrapper").siblings(".shop__block--inner").children(".shop__block--sales")
 		.children(".rec__item--sale[data-price="+price+"]").addClass('active');
 
 		$(this).parent(".rec__item--button--inner").parent(".shop__block--content").siblings(".shop__block--img--inner")
@@ -134,21 +199,16 @@ $(document).ready(function(){
 		giveActiveClass($(this), "rec__item--button");
 		let price = $(this).attr('data-price');
 		let img = $(this).attr('data-img');
+		let item = $(this).attr('data-item');
 
-		$(this).parent(".rec__item--button--inner").siblings(".item__point")
-		.children(".rec__item--weight--inner").removeClass('active');
-		$(this).parent(".rec__item--button--inner").siblings(".item__point")
-		.children(".rec__item--weight--inner[data-price="+price+"]").addClass('active');
+		let pattern2 = $(this).parent(".rec__item--button--inner").siblings(".item__point");
 
-		$(this).parent(".rec__item--button--inner").siblings(".item__point").children(".item__wrapper")
-		.children(".rec__item--price--inner").removeClass('active');
-		$(this).parent(".rec__item--button--inner").siblings(".item__point").children(".item__wrapper")
-		.children(".rec__item--price--inner[data-price="+price+"]").addClass('active');
-
-		$(this).parent(".rec__item--button--inner").siblings(".item__point")
-		.children(".item__wrapper").children(".rec__item--sale").removeClass('active');
-		$(this).parent(".rec__item--button--inner").siblings(".item__point")
-		.children(".item__wrapper").children(".rec__item--sale[data-price="+price+"]").addClass('active');
+		pattern2.children(".rec__item--weight--inner").removeClass('active');
+		pattern2.children(".rec__item--weight--inner[data-price="+price+"]").addClass('active');
+		pattern2.children(".item__wrapper").children(".rec__item--price--inner").removeClass('active');
+		pattern2.children(".item__wrapper").children(".rec__item--price--inner[data-price="+price+"]").addClass('active');
+		pattern2.children(".item__wrapper").children(".rec__item--sale").removeClass('active');
+		pattern2.children(".item__wrapper").children(".rec__item--sale[data-price="+price+"]").addClass('active');
 
 		$(this).parent(".rec__item--button--inner").parent(".item__full--content").siblings(".item__full--img--inner")
 		.children(".item__full--img").attr("src", "img/" + img);
