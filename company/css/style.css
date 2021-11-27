@@ -789,6 +789,10 @@ input::-webkit-inner-spin-button{
 	justify-content: space-between;
 }
 
+.rec__item.disable{
+	display: none;
+}
+
 .rec__item--wrapper{
 	width: 100%;
 	display: flex;
@@ -1028,11 +1032,7 @@ input::-webkit-inner-spin-button{
 .item{
 	width: 100%;
 	max-width: 410px;
-	margin: 6rem 7rem 0 0;
-}
-
-.item:first-child, .item:nth-child(2), .item:nth-child(3), .item:nth-child(4){
-	margin-top: 0;
+	margin: 4rem 7rem 0 0;
 }
 
 .item:nth-child(4n){
@@ -2357,7 +2357,6 @@ input::-webkit-inner-spin-button{
 .citywith__item--inner{
 	width: 100%;
 	display: none;
-	margin-top: 4rem;
 	flex-wrap: wrap;
 }
 
@@ -2371,8 +2370,8 @@ input::-webkit-inner-spin-button{
 	margin-top: 4rem;
 }
 
-.item__full:first-child{
-	margin-top: 0;
+.item__full.disable{
+	display: none;
 }
 
 .item__full--img--inner{
