@@ -120,6 +120,8 @@ $(document).ready(function(){
 		$(".rec__item[data-filter="+filter+"]").removeClass("disable");
 		$(".item__full[data-item="+item+"]").addClass("disable");
 		$(".item__full[data-filter="+filter+"]").removeClass("disable");
+		$(".shop__block--item[data-item="+item+"]").addClass("disable");
+		$(".shop__block--item[data-filter="+filter+"]").removeClass("disable");
 
 		switch(data){
 			case 'weight':

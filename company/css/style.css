@@ -3816,7 +3816,7 @@ input::-webkit-inner-spin-button{
 
 .shop__content{
 	width: 100%;
-	margin-top: 5rem;
+	margin-top: 1rem;
 	display: flex;
 	align-items: flex-start;
 }
@@ -3836,23 +3836,20 @@ input::-webkit-inner-spin-button{
 .shop__block--item{
 	width: 100%;
 	margin-top: 4rem;
-}
-
-.shop__block--item:first-child{
-	margin-top: 0;
-}
-
-.shop__block--item.disabled{
-	opacity: 0.6;
-	pointer-events: none;
-}
-
-.shop__block--item{
 	border-radius: 15px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	background: #fff;
+}
+
+.shop__block--item.disable{
+	display: none;
+}
+
+.shop__block--item.disabled{
+	opacity: 0.6;
+	pointer-events: none;
 }
 
 .shop__block--wrapper{
@@ -3889,7 +3886,7 @@ input::-webkit-inner-spin-button{
 .shop__info{
 	width: 580px;
 	flex-shrink: 0;
-	margin-left: 4rem;
+	margin: 4rem 0 0 4rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
