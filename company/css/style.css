@@ -26,7 +26,7 @@ body{
 	background: #f7f5f3;
 }
 
-.scroll, .scroll2{
+.scroll, .scroll2, .scroll3{
 	overflow: hidden;
 }
 
@@ -1645,7 +1645,7 @@ input::-webkit-inner-spin-button{
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 100;
+	z-index: 151;
 	transition: .3s ease-in-out;
 	transform: translateX(-110%);
 }
@@ -4235,12 +4235,13 @@ input::-webkit-inner-spin-button{
 	align-items: flex-start;
 	width: 100%;
 	max-width: 960px;
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	right: 0px;
 	z-index: 1000;
 	pointer-events: none;
 	transform: translateY(-110%);
+	height: 100vh;
 }
 
 .modal__list.active{
@@ -4310,7 +4311,7 @@ input::-webkit-inner-spin-button{
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	max-height: 750px;
+	height: calc(100vh - 60px - 31px - 51px - 67px);
 	overflow-y: auto;
 	overflow-x: hidden;
 }
@@ -5901,6 +5902,11 @@ input::-webkit-inner-spin-button{
 		font-size: 2.5rem;
 	}
 
+	.modal__list--button{
+		padding: 1rem 2rem;
+		font-size: 1.8rem;
+	}
+
 	.sub__button{
 		width: 100%;
 		padding: 1.3rem 2rem;
@@ -5926,6 +5932,15 @@ input::-webkit-inner-spin-button{
 
 	.input{
 		font-size: 2rem;
+	}
+
+	.shop__block--item{
+		margin-top: 2rem;
+	}
+
+	.modal__list--number{
+		width: 35px;
+		height: 35px;
 	}
 
 	.city__input{

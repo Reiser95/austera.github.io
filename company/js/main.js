@@ -380,11 +380,13 @@ $(document).ready(function(){
 
 	$(".open__list").on('click', function(e){
 		e.preventDefault();
+		$("body").addClass("scroll3");
 		$(".modal__list").addClass("active");
 		close();
 	});
 
 	$(".modal__list--cross").on('click', function(){
+		$("body").removeClass("scroll3");
 		$(".modal__list").removeClass("active");
 	});
 
