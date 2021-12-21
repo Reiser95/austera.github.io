@@ -74,4 +74,31 @@ $(document).ready(function(){
 		}
 	});
 
+	$(".graph__value").on('click', function(){
+		if(!$(this).hasClass("active")){
+			$(this).parent(".graph__button").siblings(".graph__button").children(".graph__value").removeClass("active");
+			$(this).addClass("active");
+		}
+	});
+
+	const rotate = () => {
+		if($(window).width() > 768){
+			let items = $(".road__item");
+			let sc = $(window).scrollTop();
+			for(let i = 0; i < items.length; i++){
+				if(sc >= items[i].offsetTop - 500){
+					$(items[i]).children(".road__item--circle").addClass("big")
+				}
+				else{
+					$(items[i]).children(".road__item--circle").removeClass("big")
+				}
+			}
+		}
+	}
+
+	rotate();
+	$(document).scroll(function(){
+		rotate();
+	});
+
 });

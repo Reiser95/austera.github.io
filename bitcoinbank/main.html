@@ -12,12 +12,18 @@
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cabin&family=Open+Sans&display=swap" rel="stylesheet">
 
 	<!-- Style -->
 	<link rel="stylesheet" href="css/style.css">
 
 	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 
 </head>
 <body>
@@ -141,7 +147,118 @@
 					</p>
 				</div>
 
-				<img src="img/graph.png" alt="Картинка" class="invest__graph--img">
+				<div class="invest__wrapper">
+					<div class="invest__profit">
+						<div class="invest__profit--content">
+							<img src="img/arrow-green.svg" alt="Картинка" class="invest__profit--plus">
+
+							422.4%
+						</div>
+
+						<p class="invest__profit--value">
+							$7.58
+						</p>
+					</div>
+
+					<p class="invest__date">
+						Nov 22, 2021 12.28 PM
+					</p>
+				</div>
+
+				<div class="graph__inner">
+					<div class="graph__content">
+						<div class="graph__buttons">
+							<div class="graph__button">
+								<p class="graph__value active">
+									All
+								</p>
+							</div>
+
+							<div class="graph__button">
+								<p class="graph__value">
+									1 y
+								</p>
+							</div>
+
+							<div class="graph__button">
+								<p class="graph__value">
+									6 m
+								</p>
+							</div>
+
+							<div class="graph__button">
+								<p class="graph__value">
+									3 m
+								</p>
+							</div>
+
+							<div class="graph__button">
+								<p class="graph__value">
+									1 m
+								</p>
+							</div>
+						</div>
+
+						<div class="graph__graph">
+							<img src="img/graph.svg" alt="Граф" class="graph__img">
+						</div>
+					</div>
+
+					<div class="graph__filter">
+						<div class="filter__wrapper">
+							<p class="filter__title">
+								Currency
+							</p>
+
+							<select class="filter__select">
+								<option>All currencies</option>
+								<option>All currencies</option>
+							</select>
+						</div>
+
+						<div class="filter__wrapper">
+							<p class="filter__title">
+								Type
+							</p>
+
+							<select class="filter__select">
+								<option>All types</option>
+								<option>All types</option>
+							</select>
+						</div>
+
+						<div class="filter__wrapper">
+							<p class="filter__title">
+								Status
+							</p>
+
+							<select class="filter__select">
+								<option>All statuses</option>
+								<option>All statuses</option>
+							</select>
+						</div>
+
+						<div class="filter__wrapper--full">
+							<p class="filter__title">
+								Date
+							</p>
+
+							<div class="filter__date--inner">
+								<div class="filter__date--wrapper">
+									<img src="img/calendar.svg" alt="Календарь" class="filter__input--icon">
+
+									<input type="text" class="input filter__date--input" placeholder="DD.MM.YYYY">
+								</div>
+
+								<div class="filter__date--wrapper">
+									<img src="img/calendar.svg" alt="Календарь" class="filter__input--icon">
+
+									<input type="text" class="input filter__date--input" placeholder="DD.MM.YYYY">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

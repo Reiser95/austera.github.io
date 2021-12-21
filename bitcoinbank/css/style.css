@@ -1124,17 +1124,21 @@ path{
 	background: rgba(55, 146, 59, 0.2);
 	position: relative;
 	flex-shrink: 0;
+	margin: 1.85rem;
+	transition: .3s linear;
 }
 
 .road__item--circle.big{
 	width: 81px;
 	height: 81px;
+	margin: 0rem;
 }
 
 .road__item--circle.big:before{
 	width: 48px;
 	height: 48px;
 	border: none;
+	transition: .3s linear;
 }
 
 .road__item--circle:before{
@@ -1149,6 +1153,7 @@ path{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	transition: .3s linear;
 }
 
 .road__item:first-child:before{
@@ -1201,7 +1206,13 @@ path{
 
 .social__link{
 	display: flex;
-	margin-right: 5rem;
+	margin-right: 2.5rem;
+	width: 30px;
+}
+
+.social__icon{
+	width: 100%;
+	height: auto;
 }
 
 .social__link:hover{
@@ -1225,6 +1236,7 @@ path{
 	margin-right: 3.5rem;
 	font-weight: 500;
 	color: rgba(255, 255, 255, .8);
+	font-size: 1.8rem;
 }
 
 .footer__nav--link:hover{
@@ -1250,7 +1262,7 @@ path{
 
 .footer__text{
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	width: 100%;
 	max-width: 280px;
 	color: rgba(255, 255, 255, .68);
@@ -1266,12 +1278,12 @@ path{
 	text-decoration: underline;
 	color: #fff;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 }
 
 .footer__copy{
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	color: rgba(174, 174, 174, 1);
 	margin-top: 1.5rem;
 }
@@ -1281,7 +1293,7 @@ path{
 	align-items: center;
 	color: rgba(255, 255, 255, 0.68);
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	margin-top: 1rem;
 }
 
@@ -1768,10 +1780,199 @@ path{
 	margin-top: 0;
 }
 
-.invest__graph--img{
+.invest__wrapper{
+	width: 100%;
+	margin-top: 1.5rem;
+	padding: 1.5rem 3rem;
+	border-radius: 8px;
+	background: #F9F9F9;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.invest__date{
+	font-size: 1.4rem;
+	font-weight: 500;
+	color: rgba(0, 0, 0, .5);
+}
+
+.invest__profit{
+	display: flex;
+	align-items: center;
+}
+
+.invest__profit--content{
+	margin-right: 2.3rem;
+	padding-right: 2.3rem;
+	border-right: 1px solid rgba(55, 146, 59, .4);
+	color: #37923B;
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+
+.invest__profit--value{
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+
+.invest__profit--plus{
+	margin-right: 1rem;
+}
+
+.graph__inner{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-top: 1.5rem;
+}
+
+.graph__content{
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+}
+
+.graph__buttons{
+	flex-shrink: 0;
+	width: 100%;
+	max-width: 50px;
+	margin-right: 2rem;
+	background: #F2FAF3;
+	padding: 1rem 0.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.graph__graph{
+	width: 100%;
+	display: flex;
+}
+
+.graph__img{
 	width: 100%;
 	height: auto;
+}
+
+.graph__filter{
+	width: 100%;
 	margin-top: 2rem;
+	border: 2px solid #E5E5E5;
+	border-radius: 8px;
+	padding: 1rem 3rem;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.graph__button{
+	padding: 0.7rem 0;
+	border-bottom: 1px solid rgba(0, 0, 0, .15);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.graph__button:last-child{
+	border-bottom: none;
+}
+
+.graph__value{
+	width: 100%;
+	font-family: 'Cabin', sans-serif;
+	font-size: 1.6rem;
+	padding: 0.8rem .5rem;
+	cursor: pointer;
+	transition: .2s linear;
+	border-radius: 2px;
+	text-align: center;
+}
+
+.graph__value.active{
+	background: #79E390;
+}
+
+.filter__wrapper, .filter__wrapper--full{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+	max-width: 150px;
+}
+
+.filter__wrapper--full{
+	width: auto;
+	max-width: 100%;
+}
+
+.filter__title{
+	color: rgba(0, 0, 0, .5);
+	font-size: 1.6rem;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.filter__select{
+	width: 100%;
+	margin-top: 1rem;
+	padding: 0.8rem 1rem;
+	border: 1px solid #D6D6D6;
+	border-radius: 4px;
+	font-size: 1.6rem;
+	color: rgba(0, 0, 0, .75);
+	font-family: 'Open Sans', sans-serif;
+	outline: none;
+}
+
+.filter__date--inner{
+	width: 100%;
+	display: flex;
+	margin-top: 1rem;
+}
+
+.filter__date--wrapper{
+	position: relative;
+	margin-right: 1rem;
+	padding-right: 1.9rem;
+}
+
+.filter__date--wrapper:after{
+	content: "";
+	display: block;
+	width: 9px;
+	height: 1px;
+	background: #000;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+.filter__date--wrapper:last-child:after{
+	display: none;
+}
+
+.filter__date--input{
+	border: 1px solid #D6D6D6;
+	border-radius: 4px;
+	padding: 0.8rem 1rem .8rem 3rem;
+	width: 150px;
+	font-size: 1.6rem;
+	font-family: 'Open Sans', sans-serif;
+	color: #000;
+}
+
+.filter__date--input::placeholder{
+	color: #000;
+}
+
+.filter__input--icon{
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	transform: translateY(-50%);
 }
 
 /* Адаптив */
@@ -1787,6 +1988,19 @@ path{
 
 	.earn__button:first-child{
 		margin-top: 0;
+	}
+}
+@media(max-width: 1450px){
+	.graph__filter{
+		flex-wrap: wrap;
+	}
+
+	.filter__wrapper--full{
+		width: 100%;
+	}
+
+	.filter__wrapper{
+		margin-bottom: 1rem;
 	}
 }
 @media(max-width: 1300px){
@@ -2082,6 +2296,10 @@ path{
 	.connect__button{
 		margin-top: 1rem;
 	}
+
+	.filter__wrapper{
+		margin-right: 2rem;
+	}
 }
 @media(max-width:  825px){
 	.content__content{
@@ -2285,6 +2503,19 @@ path{
 	.invest__title{
 		font-size: 2.5rem;
 	}
+
+	.invest__wrapper{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.invest__date{
+		margin-top: 1rem;
+	}
+
+	.filter__wrapper{
+		max-width: 100%;
+	}
 }
 @media(max-width:  645px){
 	.earn__content{
@@ -2366,5 +2597,36 @@ path{
 
 	.invest__inner{
 		padding: 2rem 2rem 15rem 2rem;
+	}
+
+	.graph__filter{
+		padding: 1rem 1.5rem;
+	}
+
+	.filter__wrapper{
+		margin-right: 0;
+	}
+
+	.filter__date--inner{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.filter__date--wrapper{
+		width: 100%;
+		padding: 0;
+		margin: 0 0 1rem 0;
+	}
+
+	.filter__date--input{
+		width: 100%;
+	}
+
+	.filter__date--wrapper:last-child{
+		margin: 0;
+	}
+
+	.filter__date--wrapper:after{
+		display: none;
 	}
 }
