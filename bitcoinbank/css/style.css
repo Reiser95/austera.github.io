@@ -501,11 +501,37 @@ path{
 .how__img--inner{
 	display: flex;
 	max-width: 100%;
+	position: relative;
 }
 
 .how__img{
 	width: 100%;
 	height: auto;
+}
+
+.how__star--text--inner{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.how__star--text{
+	font-weight: 700;
+	color: #fff;
+	font-size: 2rem;
+}
+
+.how__img--wrapper{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.how__star--text--inner{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 /* Point */
@@ -1361,10 +1387,6 @@ path{
 	box-shadow: 2px 0px 20px rgba(0, 0, 0, 0.1);
 	border-radius: 0px 18px 18px 0px;
 	flex-shrink: 0;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 100;
 	padding: 2rem;
 	display: flex;
 	flex-direction: column;
@@ -1435,7 +1457,6 @@ path{
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	margin-left: 338px;
 }
 
 .content__title--inner{
@@ -1865,6 +1886,7 @@ path{
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .graph__button{
@@ -1975,6 +1997,18 @@ path{
 	transform: translateY(-50%);
 }
 
+.filter__button--wrapper{
+	width: 100%;
+	margin-top: 2rem;
+	display: flex;
+	justify-content: center;
+}
+
+.filter__button{
+	padding: 1.5rem 5rem;
+	text-transform: uppercase;
+}
+
 /* Адаптив */
 @media(max-width: 1580px){
 	.earn__button--inner{
@@ -1991,10 +2025,6 @@ path{
 	}
 }
 @media(max-width: 1450px){
-	.graph__filter{
-		flex-wrap: wrap;
-	}
-
 	.filter__wrapper--full{
 		width: 100%;
 	}
