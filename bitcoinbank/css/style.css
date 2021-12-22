@@ -632,6 +632,8 @@ path{
 
 .deposit__title{
 	color: #fff;
+	position: relative;
+	z-index: 10;
 }
 
 .deposit__inner{
@@ -657,6 +659,7 @@ path{
 
 .deposit__item--wrapper{
 	width: 100%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -672,6 +675,12 @@ path{
 	max-width: 480px;
 	background: #fff;
 	border-radius: 18px;
+}
+
+.deposit__item2{
+	max-width: 48%;
+	filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.1));
+	height: 100%;
 }
 
 .deposit__wrapper{
@@ -870,6 +879,7 @@ path{
 	padding: 1rem 1rem;
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .deposit__choose--item{
@@ -1373,6 +1383,13 @@ path{
 	cursor: pointer;
 }
 
+.current__wrapper{
+	width: 100%;
+	margin: 3rem 0;
+	display: flex;
+	justify-content: space-between;
+}
+
 /* Fund */
 .content{
 	width: 100%;
@@ -1382,7 +1399,7 @@ path{
 .sidebar{
 	width: 100%;
 	max-width: 338px;
-	height: 100vh;
+	min-height: 100vh;
 	background: #F9F9F9;
 	box-shadow: 2px 0px 20px rgba(0, 0, 0, 0.1);
 	border-radius: 0px 18px 18px 0px;
@@ -2023,6 +2040,15 @@ path{
 	.earn__button:first-child{
 		margin-top: 0;
 	}
+
+	.deposit__choose--item{
+		width: 33%;
+	}
+
+	.deposit__choose--item, .deposit__choose--item.active, .deposit__choose--item:first-child,
+	.deposit__choose--item.active + .deposit__choose--item{
+		border: none;
+	}
 }
 @media(max-width: 1450px){
 	.filter__wrapper--full{
@@ -2031,6 +2057,20 @@ path{
 
 	.filter__wrapper{
 		margin-bottom: 1rem;
+	}
+
+	.current__wrapper{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.deposit__item2{
+		max-width: 100%;
+		margin-top: 3rem;
+	}
+
+	.deposit__item2:first-child{
+		margin-top: 0;
 	}
 }
 @media(max-width: 1300px){
@@ -2104,10 +2144,6 @@ path{
 		max-width: 280px;
 	}
 
-	.content__inner{
-		margin-left: 280px;
-	}
-
 	.content__content{
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
@@ -2118,6 +2154,10 @@ path{
 
 	.invest__bg{
 		width: 450px;
+	}
+
+	.deposit__item2{
+		max-width: 100%;
 	}
 }
 @media(max-width: 998px){
@@ -2446,18 +2486,8 @@ path{
 		font-size: 1.8rem;
 	}
 
-	.deposit__choose--content{
-		flex-wrap: wrap;
-	}
-
 	.deposit__choose--item{
 		width: 50%;
-		border: none;
-	}
-
-	.deposit__choose--item.active,
-	.deposit__choose--item:first-child, .deposit__choose--item.active + .deposit__choose--item{
-		border: none;
 	}
 
 	.road__item--circle, .road__item:first-child:before, .road__item:last-child:before,
@@ -2483,12 +2513,10 @@ path{
 		margin: 1rem 0rem 0rem 0rem;
 	}
 
-	.content__inner{
-		margin-left: 0;
-	}
-
 	.sidebar{
 		transform: translateX(-110%);
+		position: absolute;
+		z-index: 50;
 	}
 
 	.sidebar.active{
