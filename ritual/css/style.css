@@ -1087,6 +1087,15 @@ input::-webkit-inner-spin-button{
 		align-items: flex-start;
 	}
 
+	.auto__point, .ip__item, .ip__item:first-child, .ip__item:nth-child(2), .ip__item:nth-child(3), .ip__item:nth-child(4){
+		align-items: center;
+		width: 100%;
+	}
+
+	.ip__item--text--inner{
+		width: 100%;
+	}
+
 	.header__contact, .key__content, .footer__text--text{
 		margin-top: 3rem;
 	}
@@ -1143,5 +1152,11 @@ input::-webkit-inner-spin-button{
 	.footer__form, .adv__wrapper{
 		padding: 1.5rem;
 		border-radius: 10px;
+	}
+
+	.auto__point .h5c, .ip__item--text, .ip__item--text--inner .h5c, .ip__item:nth-child(2) .ip__item--text,
+	.ip__item:first-child .ip__item--text, .ip__item:nth-child(3) .ip__item--text, .ip__item:nth-child(4) .ip__item--text{
+		text-align: center;
+		width: 100%;
 	}
 }
