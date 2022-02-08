@@ -62,7 +62,7 @@ $(document).ready(function(){
 	    if(i > $(".main__bull").length){
 	    	clearInterval(timeout);
 	    }
-	}, 3000);
+	}, 2000);
 
 	$(".menu").on('click', function(){
 		$("body").addClass("scroll");
