@@ -97,6 +97,7 @@ input::-webkit-inner-spin-button{
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	position: relative;
 }
 
 .header__inner{
@@ -246,8 +247,8 @@ input::-webkit-inner-spin-button{
 	height: 597px;
 	display: flex;
 	position: absolute;
-	bottom: 0;
-	right: 100px;
+	bottom: -180px;
+	right: -50px;
 	z-index: -1;
 }
 
@@ -740,7 +741,7 @@ li.slick-active{
 /* Footer */
 .footer{
 	padding: 26rem 0rem 14rem 0;
-	background: url("../img/footer-img.jpg") center no-repeat;
+	background: url("../img/footer-img.webp") center no-repeat;
 	background-size: cover;
 }
 
@@ -1131,6 +1132,10 @@ li.slick-active{
 	}
 
 	.main__bull--inner{
+		bottom: -400px;
+	}
+
+	.main__bull--inner{
 		right: auto;
 		left: 50%;
 		transform: translateX(-50%);
@@ -1238,6 +1243,10 @@ li.slick-active{
 
 	.main{
 		padding: 1.3rem 0rem 25rem 0;
+	}
+
+	.main__bull--inner{
+		bottom: -250px;
 	}
 
 	.nft__img{
