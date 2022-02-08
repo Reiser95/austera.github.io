@@ -24,31 +24,31 @@ $(document).ready(function(){
 	});
 
 	rotate();
-	$(document).scroll(function(){
-		rotate();
+	const ofset = 350;
+	// $(document).scroll(function(){
+	// 	rotate();
 
-		const ofset = 350;
-		let temp = $(".road__content").offset().top;
-		let heightBlock = $(".road__content").height();
-		let items = $(".road__item");
-		let winScroll = $(window).scrollTop();
+	// 	let temp = $(".road__content").offset().top;
+	// 	let heightBlock = $(".road__content").height();
+	// 	let items = $(".road__item");
+	// 	let winScroll = $(window).scrollTop();
 
-		for(let i = 0; i < items.length; i++){
-			if(winScroll + ofset >= items[i].offsetTop + temp){
-				$(items[i]).addClass("active");
-			}
-			else{
-				$(items[i]).removeClass("active");
-			}
-		}
-		let hei = winScroll - $(".road__content").offset().top + ofset;
-		if(hei <= heightBlock){
-			$(".road__line").css("height", hei + "px");
-		}
-		else{
-			$(".road__line").css("height", heightBlock + "px");
-		}
-	});
+	// 	for(let i = 0; i < items.length; i++){
+	// 		if(winScroll + ofset >= items[i].offsetTop + temp){
+	// 			$(items[i]).addClass("active");
+	// 		}
+	// 		else{
+	// 			$(items[i]).removeClass("active");
+	// 		}
+	// 	}
+	// 	let hei = winScroll - $(".road__content").offset().top + ofset;
+	// 	if(hei <= heightBlock){
+	// 		$(".road__line").css("height", hei + "px");
+	// 	}
+	// 	else{
+	// 		$(".road__line").css("height", heightBlock + "px");
+	// 	}
+	// });
 
 	const changeMainImg = (num) => {
 		$(".main__bull").removeClass("active");
