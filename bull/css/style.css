@@ -55,14 +55,6 @@ input::-webkit-inner-spin-button{
 	color: #000;
 }
 
-.input{
-	
-}
-
-.input::placeholder{
-
-}
-
 .input:focus::placeholder{
 	opacity: 0;	
 }
